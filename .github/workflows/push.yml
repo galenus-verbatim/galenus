@@ -4,4 +4,5 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: "curl -i -X POST -H 'Content-Type: text/plain' -d ' ${{ github.event_name }} on ${{ github.repository }}.' https://galenus-verbatim.huma-num.fr/test/github.php"
+      - run: "curl -i -X POST -H 'X-Github-Sha: ${{ github.sha }}' -d ' ${{ github.event_name }} on ${{ github.repository }}.' https://galenus-verbatim.huma-num.fr/test/github.php"
+GITHUB_SHA
