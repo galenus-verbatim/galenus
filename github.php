@@ -1,10 +1,17 @@
-<?php 
-$out = fopen(__DIR__ . '/github.log', 'a+');
-fwrite($out, request() . "\n\n");
-fclose($out);
-echo "Thanks";
+<?php
 
-function request() {
+$file = __DIR__ . '/github.log';
+// avoid log attack
+if (filesize($file) < 2000000) {
+    $out = fopen($file, 'a+');
+    fwrite($out, log_event() . "\n\n");
+    fclose($out);    
+}
+// get the sha 
+
+
+
+function log_event() {
     $request = '';
     /*
     $request = "$_SERVER[REQUEST_METHOD] $_SERVER[REQUEST_URI] $_SERVER[SERVER_PROTOCOL]\n";

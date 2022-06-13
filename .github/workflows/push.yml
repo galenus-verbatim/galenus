@@ -1,7 +1,8 @@
-name: Test a simple push action
+name: Inform server of a push
 on: [push]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: "curl -i -X POST  -d '${{ github.event_name }} on ${{ github.repository }}. ${{ github.sha }}' https://galenus-verbatim.huma-num.fr/test/github.php"
+      - run: "curl -i -X POST -H 'Content-Type: text/plain' -H 'X-Github-Sha: ${{ github.sha }}' -d '${{ github.event_name }} on ${{ github.repository }}. ${{ github.sha }}' https://galenus-verbatim.huma-num.fr/test/github.php"
+
