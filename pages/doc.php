@@ -224,7 +224,7 @@ echo '
     </div>';
     
     // add some javascript info for page resolution
-    $file = dirname(__DIR__) . '/theme/vols.json';
+    $file = __DIR__ . '/vols.json';
     while (file_exists($file)) {
         $json = file_get_contents($file);
         $vols = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
