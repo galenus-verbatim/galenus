@@ -18,7 +18,7 @@ if (!isset($headers['X-Github-Sha'])) {
 // get the sha
 $sha = $headers['X-Github-Sha'];
 
-fwrite($fopen, "\n================\n");
+fwrite($fopen, "\n\n================\n");
 fwrite($fopen, '    ## ' . date(DATE_ATOM) . ' ' . $sha . "\n");
 
 
@@ -36,15 +36,14 @@ $cwd = getcwd();
 // 1. git pull verbatim
 chdir('../verbatim');
 exec("git reset --hard HEAD 2>&1", $lines);
-fwrite($fopen, implode("\n", $lines));
 exec("git pull 2>&1", $lines);
-fwrite($fopen, implode("\n", $lines));
 chdir($cwd);
 
 // 2. git pull galenus
 exec("git reset --hard HEAD 2>&1", $lines);
-fwrite($fopen, implode("\n", $lines));
 exec("git pull 2>&1", $lines);
+
+// lines correctly appended ?
 fwrite($fopen, implode("\n", $lines));
 
 
