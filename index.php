@@ -12,21 +12,36 @@ Verbatim::connect(Galenus::db_file());
 
 // Get a language to route correctly
 
-// Register messages for the app
-I18n::load(require_once(Route::app_dir() .'fr.php'));
+// Register verbatim messages for the app
+I18n::load(Route::app_dir() .'fr.tsv');
+// Register galenus specific messages
+I18n::load(__DIR__ .'/fr.tsv');
 
-
+// try a redirection to a Kühn reference
+Route::get('/([\dIVX].*)', __DIR__ . '/pages/kuhn.php', array('kuhn' => '$1'), null);
+// try an urn:cts redirection like 
+// https://www.digitalathenaeus.org/tools/KaibelText/cts_urn_retriever.php
+// urn:cts:greekLit:tlg0008.tlg001.perseus-grc2:3.7
+// some server may 403 on ':' in url, support '_'
+Route::get(
+    'urn[:_].*', 
+    Route::app_dir() . 'pages/cts.php', 
+    array('URN' => '$0'), 
+    null
+);
 // register the template in which include content
 Route::template(__DIR__ . '/template.php');
-// welcome page
-Route::get('/', __DIR__ . '/pages/welcome.html');
-// a tlg content, array to pass params extracted from url path
+// a tlg opus
+Route::get('/(tlg\d+\.tlg\d+)', Route::app_dir() . 'pages/opus.php', array('cts' => '$1'));
+// a tlg content, array to pass params extracted from url path, local page
 Route::get('/(tlg.*)', __DIR__ . '/pages/doc.php', array('cts' => '$1'));
-// try if a php content is available
-Route::get('/(.*)', $verbadir . 'pages/$1.php'); 
- // try if an html content is available
-Route::get('/(.*)', $verbadir . 'pages/$1.html');
-// catch all
+// welcome page
+Route::get('/', __DIR__ . '/pages/ostium.html');
+// try if a local html content is available
+Route::get('/(.*)', __DIR__ . '/pages/$1.html');
+// try if a tool page is available  
+Route::get('/(.*)',  Route::app_dir() . 'pages/$1.php'); 
+// local catch all
 Route::route('/404', __DIR__ . '/pages/404.html');
 // No Route has worked
 echo "Bad routage, 404.";

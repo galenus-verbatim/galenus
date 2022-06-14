@@ -17,7 +17,9 @@ if (!isset($headers['X-Github-Sha'])) {
 
 // get the sha
 $sha = $headers['X-Github-Sha'];
-fwrite($fopen, date(DATE_ATOM) . ' ' . $sha . "\n");
+
+fwrite($fopen, "\n================\n");
+fwrite($fopen, '    ## ' . date(DATE_ATOM) . ' ' . $sha . "\n");
 
 
 // check last sha

@@ -14,6 +14,7 @@ declare(strict_types=1);
 
 require_once(dirname(__DIR__) . '/verbatim/Verbatim.php');
 
+use Oeuvres\Kit\{Xml};
 use Psr\Log\{LoggerInterface, NullLogger};
 
 Galenus::init();
@@ -22,7 +23,7 @@ class Galenus
     /** Logger */
     private static $logger;
     /** The sqlite file, hard coded */
-    private static $db_file = __FILE__ . '/galenus.db';
+    private static $db_file = __DIR__ . '/galenus.db';
     /**
      * Set logger
      */
@@ -52,17 +53,14 @@ class Galenus
      */
     static function zotero($rdf_file = __DIR__ . "/galenus-verbatim.rdf")
     {
-        Xml::setLogger(new LoggerDev());
-        $base = dirname(__DIR__) . '/corpus.db';
-        Verbatim::connect($base);
+        Xml::setLogger(self::$logger);
         $dom = Xml::load($rdf_file);
-
         /* editiones */
         $editiones = Xml::transformToXml(
-            __DIR__ . "/galenzot_editiones.xsl",
+            __DIR__ . "/build/galenzot_editiones.xsl",
             $dom
         );
-        file_put_contents(dirname(__DIR__) . "/pages/editiones.html", $editiones);
+        file_put_contents(__DIR__ . "/pages/editiones.html", $editiones);
 
 
         Verbatim::$pdo->beginTransaction();
@@ -81,32 +79,29 @@ class Galenus
             if (!$num) continue;
             $ins->execute(array($bibl[$i], $clavis[$i]));
         }
-
         Verbatim::$pdo->commit();
 
         /* opera */
         $opera = Xml::transformToXml(
-            __DIR__ . "/galenzot_opera.xsl",
+            __DIR__ . "/build/galenzot_opera.xsl",
             $dom
         );
-        file_put_contents(dirname(__DIR__) . "/pages/opera.html", $opera);
+        file_put_contents(__DIR__ . "/pages/opera.html", $opera);
         // load opus records
 
         Verbatim::$pdo->exec("DELETE FROM opus;");
-
         Verbatim::$pdo->beginTransaction();
-
         $re = '@<section class="opus" id="([^"]+)">.*?</section>@s';
         preg_match_all($re, $opera, $matches);
         $clavis = $matches[1];
         $bibl = $matches[0];
-
         $sql = "INSERT INTO opus (clavis, bibl) VALUES (?, ?);";
         $insOpus = Verbatim::$pdo->prepare($sql);
-
         for ($i = 0, $max = count($bibl); $i < $max; $i++) {
             $insOpus->execute(array($clavis[$i], $bibl[$i]));
         }
         Verbatim::$pdo->commit();
+
     }
 }
+

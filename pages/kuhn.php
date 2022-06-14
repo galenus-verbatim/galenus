@@ -4,7 +4,7 @@
  * Copyright (c) 2021 Nathalie Rousseau
  * MIT License https://opensource.org/licenses/mit-license.php
  */
-require_once(dirname(__DIR__) . "/Verbatim.php");
+require_once(dirname(__DIR__) . "/Galenus.php");
 
 use Oeuvres\Kit\{I18n,Web};
 
