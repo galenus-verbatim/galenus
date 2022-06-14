@@ -17,6 +17,9 @@ I18n::load(Route::app_dir() .'fr.tsv');
 // Register galenus specific messages
 I18n::load(__DIR__ .'/fr.tsv');
 
+// register the template in which include content
+Route::template(__DIR__ . '/template.php');
+
 // try a redirection to a Kühn reference
 Route::get('/([\dIVX].*)', __DIR__ . '/pages/kuhn.php', array('kuhn' => '$1'), null);
 // try an urn:cts redirection like 
@@ -29,8 +32,6 @@ Route::get(
     array('URN' => '$0'), 
     null
 );
-// register the template in which include content
-Route::template(__DIR__ . '/template.php');
 // a tlg opus
 Route::get('/(tlg\d+\.tlg\d+)', Route::app_dir() . 'pages/opus.php', array('cts' => '$1'));
 // a tlg content, array to pass params extracted from url path, local page
