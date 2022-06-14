@@ -1,0 +1,17 @@
+.ed1page,
+.ed2page {
+    padding-left: 0.5ex;
+    background-color: var(--link2);
+}
+
+.ed1page.page1,
+.ed2page.page1 {
+    /* no index for first page */
+    padding-left: 0;
+    background-color: transparent;
+}
+
+.ed1page:hover,
+.ed2page:hover {
+    background-color: var(--bg2);
+}
