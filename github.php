@@ -31,6 +31,8 @@ file_put_contents($sha_file, $sha);
 
 // git pull
 $lines=array();
+exec("git reset --hard HEAD 2>&1", $lines);
+fwrite($fopen, implode("\n", $lines));
 exec("git pull 2>&1", $lines);
 fwrite($fopen, implode("\n", $lines));
 fclose($fopen);
