@@ -31,20 +31,20 @@ if ($sha == $sha_last) return;
 file_put_contents($sha_file, $sha);
 
 
-$lines=array();
 $cwd = getcwd();
 // 1. git pull verbatim
 chdir('../verbatim');
-exec("git reset --hard HEAD 2>&1", $lines);
-exec("git pull 2>&1", $lines);
+exec("git reset --hard HEAD 2>&1", $output);
+fwrite($fopen, implode("\n", $output) . "\n\n");
+exec("git pull 2>&1", $output);
+fwrite($fopen, implode("\n", $output). "\n\n");
 chdir($cwd);
 
 // 2. git pull galenus
-exec("git reset --hard HEAD 2>&1", $lines);
-exec("git pull 2>&1", $lines);
-
-// lines correctly appended ?
-fwrite($fopen, implode("\n", $lines));
+exec("git reset --hard HEAD 2>&1", $output);
+fwrite($fopen, implode("\n", $output). "\n\n");
+exec("git pull 2>&1", $output);
+fwrite($fopen, implode("\n", $output). "\n\n");
 
 
 fclose($fopen);
