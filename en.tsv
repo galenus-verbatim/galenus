@@ -1,4 +1,5 @@
-key	message
+key	message simple
+key	"<a href=""blah"">Message with quote</a>"
 cts.label	Accès rapide
 cts.title	urn:cts ou référérence Kühn brève (ex : 18b.26.4)
 cts.placeholder	18a.553.3 ; urn:cts:greekLit:tlg0057…
