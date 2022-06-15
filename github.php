@@ -1,5 +1,9 @@
 <?php
 
+use Psr\Log\{LogLevel};
+use Oeuvres\Kit\{LoggerCli};
+
+
 $log_file = __DIR__ . '/github.log';
 // 2Mb log ? Something is wrong
 if (file_exists($log_file) && filesize($log_file) > 2000000) return;
@@ -36,16 +40,24 @@ $cwd = getcwd();
 chdir('../verbatim');
 $output = [];
 exec("git reset --hard HEAD 2>&1", $output);
+$output[] = '';
 exec("git pull 2>&1", $output);
+$output[] = '';
 chdir($cwd);
 
 // 2. git pull galenus
 exec("git reset --hard HEAD 2>&1", $output);
+$output[] = '';
 exec("git pull 2>&1", $output);
+$output[] = '';
 
 fwrite($fopen, implode("\n", $output). "\n\n");
 
 // 3. transform odt
+$logger = new LoggerCli(LogLevel::DEBUG);
+Galenus::setLogger($logger);
+Galenus::pages();
+
 
 
 fclose($fopen);

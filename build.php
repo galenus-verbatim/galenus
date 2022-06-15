@@ -12,4 +12,4 @@ Galenus::setLogger($logger);
 // generate sitemap.xml ??
 // require_once(dirname(__DIR__) . "/sitemap.php");
 // generate odt pages
-Galenus::pages(true);
+Galenus::pages();
