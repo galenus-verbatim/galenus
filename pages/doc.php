@@ -224,13 +224,55 @@ echo '
     </div>';
     
     // add some javascript info for page resolution
-    $file = __DIR__ . '/vols.json';
-
-        break;
-    }
+    js_images($doc);
     echo "\n</div>";
 }
 
-function 
-?>
+function js_images(&$doc)
+{
+    $file = __DIR__ . '/vols.json';
+    if (!file_exists($file)) return;
+    $json = file_get_contents($file);
+    $vols = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
+    
+    $vars = array();
+
+    // if not in kuhn, nothing to display ?
+    if (!isset($vols['kuhn']) || !isset($vols['kuhn'][$doc['volumen']])) {
+        return;
+    }
+
+    $vars['kuhn'] = $vols['kuhn'][$doc['volumen']];
+    $vars['kuhn']['vol'] = $doc['volumen'];
+    $vars['kuhn']['abbr'] = 'K';
+
+    list($book) = explode('_', $doc['clavis']);
+    $info = $vols[$book];
+    $chartier = null;
+    $bale = null;
+    if ($info) {
+        if (isset($info['chartier'])) {
+            $chartier = $vols['chartier'][$info['chartier']];
+        }
+        if (isset($info['bale'])) {
+            $bale = $vols['bale'][$info['bale']];
+        }
+    }
+    if ($chartier) {
+        $chartier['abbr'] = 'Chart.';
+        $chartier['vol'] = $info['chartier'];
+        $vars['chartier'] = $chartier;
+    }
+    if ($bale) {
+        $bale['abbr'] = 'Bas.';
+        $bale['vol'] = $info['bale'];
+        $vars['bale'] = $bale;
+    }
+
+    echo "<script>\n";
+    foreach ($vars as $name => $dat) {
+        echo 'const img' . $name .'='.json_encode($dat, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES).";\n";
+    }
+    echo "</script>\n";
+}
 
