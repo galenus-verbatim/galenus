@@ -1,3 +1,7 @@
 *.log
 autodel.php
 *.db
+.~*
+pages/*.html
+pages/*.xml
+

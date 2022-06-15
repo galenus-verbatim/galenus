@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Part of galenus-verbatim https://github.com/galenus-verbatim/galenus
  * Copyright (c) 2021 Nathalie Rousseau
@@ -15,6 +16,7 @@ declare(strict_types=1);
 require_once(dirname(__DIR__) . '/verbatim/Verbatim.php');
 
 use Oeuvres\Kit\{Xml};
+use Oeuvres\Odette\{OdtChain};
 use Psr\Log\{LoggerInterface, NullLogger};
 
 Galenus::init();
@@ -48,6 +50,41 @@ class Galenus
     {
         return self::$db_file;
     }
+
+    /**
+     * Update from odt
+     */
+    static public function pages($force = false)
+    {
+        $odt_dir = __DIR__ . '/odt/';
+        $dst_dir = __DIR__ . '/pages/';
+        $reflector = new \ReflectionClass('Oeuvres\Teinte\Teinte');
+        $teinte_dir = dirname($reflector->getFileName());
+        foreach (glob($odt_dir . '*.odt') as $odt_file) {
+            $name = pathinfo($odt_file, PATHINFO_FILENAME);
+            $html_file = $dst_dir . $name . '.html';
+            // freshness ?
+            if ($force);
+            else if (!file_exists($html_file)); 
+            else  if (filemtime($html_file) > filemtime($odt_file)) continue;
+
+            $odt = new OdtChain($odt_file);
+            // dst path is needed for images, but optimizatoin should be possible with dom
+            $tei_file =  $dst_dir . $name . '.xml';
+            $odt->save($tei_file);
+            $tei_dom = Xml::load($tei_file);
+            unlink($tei_file);
+
+            $xsl_file =$teinte_dir . '/tei_html_article.xsl';
+            Xml::transformToUri(
+                $xsl_file,
+                $tei_dom,
+                $html_file
+            );
+            self::$logger->info($odt_file . ' ->- ' . $html_file);
+        }
+    }
+
     /**
      * 
      */
@@ -101,7 +138,5 @@ class Galenus
             $insOpus->execute(array($clavis[$i], $bibl[$i]));
         }
         Verbatim::$pdo->commit();
-
     }
 }
-
