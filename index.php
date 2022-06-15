@@ -22,7 +22,7 @@ Route::template(__DIR__ . '/template.php');
 
 // try a redirection to a Kühn reference
 Route::get('/([\dIVX].*)', __DIR__ . '/pages/kuhn.php', array('kuhn' => '$1'), null);
-// try an urn:cts redirection like 
+// urn:cts redirection, see spec 
 // https://www.digitalathenaeus.org/tools/KaibelText/cts_urn_retriever.php
 // urn:cts:greekLit:tlg0008.tlg001.perseus-grc2:3.7
 // some server may 403 on ':' in url, support '_'
