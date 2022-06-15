@@ -3,7 +3,7 @@
 require_once(__DIR__.'/Galenus.php');
 
 use Psr\Log\{LogLevel};
-use Oeuvres\Kit\{LoggerCli};
+use Oeuvres\Kit\{LoggerFile};
 
 
 $log_file = __DIR__ . '/github.log';
@@ -56,7 +56,7 @@ $output[] = '';
 fwrite($fopen, implode("\n", $output). "\n\n");
 
 // 3. transform odt
-$logger = new LoggerCli(LogLevel::DEBUG);
+$logger = new LoggerFile($log_file, LogLevel::DEBUG);
 Galenus::setLogger($logger);
 Galenus::pages();
 
