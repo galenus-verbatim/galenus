@@ -41,19 +41,15 @@ file_put_contents($sha_file, $sha);
 $cwd = getcwd();
 chdir('../verbatim');
 $output = [];
-exec("git reset --hard HEAD 2>&1", $output);
-$output[] = '';
-exec("git pull 2>&1", $output);
-$output[] = '';
+exec("git fetch --force 2>&1", $output);
+fwrite($fopen, implode("\n", $output). "\n\n");
 chdir($cwd);
 
 // 2. git pull galenus
-exec("git reset --hard HEAD 2>&1", $output);
-$output[] = '';
-exec("git pull 2>&1", $output);
-$output[] = '';
-
+$output = [];
+exec("git fetch --force 2>&1", $output);
 fwrite($fopen, implode("\n", $output). "\n\n");
+
 
 // 3. transform odt
 $logger = new LoggerFile($log_file, LogLevel::DEBUG);
