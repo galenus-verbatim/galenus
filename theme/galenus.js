@@ -176,3 +176,53 @@ if (div) {
         return s.substring(s.length - width);
     }
 })();
+(function() {
+    const id = 'selnav';
+    const select = document.getElementById(id);
+    if (!select) return;
+
+    function show(value) {
+        if (!select.last) select.last = document.getElementById('TitLa');
+        const show = document.getElementById(value);
+        if (!show) return;
+        localStorage.setItem(id, value);
+        select.last.style.display = 'none';
+        select.last = show;
+        show.style.display = 'block';
+    }
+    // on load last value
+    window.addEventListener("load", function(e) {
+        const value = localStorage.getItem(id);
+        console.log("Stored ? " + value);
+        if (value) {
+            select.value = value;
+            show(value);
+        }
+    })
+
+    select.addEventListener("change", function(e) {
+        const value = select.value;
+        show(value);
+    });
+}());
+(function() {
+    const navs = document.getElementById('navs');
+    if (!navs) return;
+    navs.addEventListener('click', function(e) {
+        let a = selfOrAncestor(e.target, 'a');
+        if (!a) return;
+        if (document.lasta) document.lasta.classList.remove('selected');
+        document.lasta = a;
+        a.classList.add('selected');
+    });
+
+    function selfOrAncestor(el, name) {
+        while (el.tagName.toLowerCase() != name) {
+            el = el.parentNode;
+            if (!el) return false;
+            let tag = el.tagName.toLowerCase();
+            if (tag == 'div' || tag == 'nav' || tag == 'body') return false;
+        }
+        return el;
+    }
+}());

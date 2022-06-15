@@ -1,10 +1,17 @@
 key	message
 cts.label	Accès rapide
 cts.title	urn:cts ou référérence Kühn brève (ex : 18b.26.4)
-cts.placeholder	18a.553.3 ; urn:cts:greekLit:tlg0057…
+cts.placeholder	 e.g. XVIII B, 559; 18a.553.3 ; urn:cts:greekLit:tlg0057.tlg001.1st1K-grc1…
 de	À propos /<br/>Crédits
 galenus.moto	Naviguer dans le texte de Galien de Pergame, éd. Kühn (1821–1833) &amp; al.
-opera	Table des<br/>traités
-ostium	Accueil
+opera	Accueil /<br/>Table des traités
 title	Verbatim
 verba	Table<br/>fréquentielle
+zotero.TitLa	Titre latin
+zotero.fichtner	N° Fichtner
+zotero.kuhn	Édition Kühn
+zotero.AbbrLa	Abréviation CMG
+zotero.TitGrcCMG	Titre grec
+zotero.TitFrBM	Titre français
+zotero.TitEnCGT	Titre anglais
+zotero.AbbrEnCGT	Abréviation CGT

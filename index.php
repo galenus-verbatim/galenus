@@ -37,7 +37,7 @@ Route::get('/(tlg\d+\.tlg\d+)', Route::app_dir() . 'pages/opus.php', array('cts'
 // a tlg content, array to pass params extracted from url path, local page
 Route::get('/(tlg.*)', __DIR__ . '/pages/doc.php', array('cts' => '$1'));
 // welcome page
-Route::get('/', __DIR__ . '/pages/ostium.html');
+Route::get('/', __DIR__ . '/pages/opera.php');
 // try if a local html content is available
 Route::get('/(.*)', __DIR__ . '/pages/$1.html');
 // try if a tool page is available  

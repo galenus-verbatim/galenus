@@ -3789,7 +3789,7 @@
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:BookSection rdf:about="#item_11438">
+    <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg095">
         <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
             <bib:Book>
@@ -3830,7 +3830,8 @@
                 </rdf:li>
             </rdf:Seq>
         </bib:editors>
-        <link:link rdf:resource="#item_11439"/>
+        <dcterms:isReferencedBy rdf:resource="#item_12702"/>
+        <link:link rdf:resource="#item_12703"/>
         <link:link rdf:resource="#item_11440"/>
         <dc:title>De Humero iis Modis Prolapso quos Hippocrates non Vidit</dc:title>
         <dc:date>1829</dc:date>
@@ -3839,20 +3840,22 @@
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg095.1st1K-grc1</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg095</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <bib:pages>346-422</bib:pages>
     </bib:BookSection>
-    <z:Attachment rdf:about="#item_11439">
+    <bib:Memo rdf:about="#item_12702">
+        <rdf:value>&lt;p&gt;&lt;span style=&quot;color: #000000;&quot;&gt;Le texte imprim&amp;eacute; par K&amp;uuml;hn sous le titre De Humero iis Modis Prolapso quos Hippocrates non Vidit (n&amp;deg; 106) constitue en r&amp;eacute;alit&amp;eacute; une partie du livre I du trait&amp;eacute; In Hippocratis De articulis commentaria (n&amp;deg; 105); il est ici pr&amp;eacute;sent&amp;eacute; &amp;agrave; la suite du texte du livre I, &amp;agrave; la place qu'il occupe dans l'&amp;eacute;dition de K&amp;uuml;hn.&lt;/span&gt;&lt;/p&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_12703">
         <z:itemType>attachment</z:itemType>
         <dc:title>Galenus Verbatim</dc:title>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg096.1st1K-grc1</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg095.1st1K-grc1_1.excursus</rdf:value>
             </dcterms:URI>
         </dc:identifier>
-        <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <z:Attachment rdf:about="#item_11440">
@@ -4070,7 +4073,7 @@
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg095">
+    <bib:Book rdf:about="#item_11453">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -4112,9 +4115,8 @@
        <rdf:value>4AbbrEnCGT: Hipp. Art.</rdf:value>
     </bib:Memo>
     <bib:Memo rdf:about="#item_12695">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;&lt;span style=&quot;color: #000000&quot;&gt;Le texte imprimé par Kühn sous le titre De Humero iis Modis Prolapso quos Hippocrates non Vidit (n°&amp;nbsp;106) constitue en réalité le livre&amp;nbsp;II du traité In Hippocratis De articulis (n°&amp;nbsp;105) commentaria. La numérotation proposée par Fitchner est erronée, ces deux textes ont été ici regroupés en un seul (&lt;/span&gt;&lt;span style=&quot;color: #808080&quot;&gt;In Hippocratis De Articulis commentaria liber I-III.&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;color: #808080&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;
+&lt;p&gt;&lt;span style=&quot;color: #000000;&quot;&gt;Le texte imprim&amp;eacute; par K&amp;uuml;hn sous le titre De Humero iis Modis Prolapso quos Hippocrates non Vidit (n&amp;deg; 106) constitue en r&amp;eacute;alit&amp;eacute; une partie du livre I du trait&amp;eacute; In Hippocratis De articulis commentaria (n&amp;deg; 105); il est ici pr&amp;eacute;sent&amp;eacute; &amp;agrave; la suite du texte du livre I, &amp;agrave; la place qu'il occupe dans l'&amp;eacute;dition de K&amp;uuml;hn.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;</rdf:value>
     </bib:Memo>
     <z:Attachment rdf:about="#item_11458">
@@ -5470,7 +5472,7 @@
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg073.1st1K-grc2">
+    <bib:BookSection rdf:about="#item_11558">
         <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
            <bib:Book></bib:Book>
@@ -5499,11 +5501,6 @@
         <dc:subject>
            <dcterms:LCC><rdf:value>076</rdf:value></dcterms:LCC>
         </dc:subject>
-        <dc:identifier>
-            <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg073.1st1K-grc2</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
     </bib:BookSection>
     <z:Attachment rdf:about="#item_11559">
         <z:itemType>attachment</z:itemType>
@@ -5527,7 +5524,7 @@
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg073.1st1K-grc1">
+    <bib:BookSection rdf:about="#item_11561">
         <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
             <bib:Book>
@@ -5575,11 +5572,6 @@
         <dc:subject>
            <dcterms:LCC><rdf:value>076</rdf:value></dcterms:LCC>
         </dc:subject>
-        <dc:identifier>
-            <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg073.1st1K-grc1</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
         <bib:pages>343-356</bib:pages>
     </bib:BookSection>
     <z:Attachment rdf:about="#item_11562">
@@ -6949,7 +6941,7 @@
        <rdf:value>3TitEnCGT: Synopsis on the Pulse</rdf:value>
     </bib:Memo>
     <bib:Memo rdf:about="#item_11661">
-       <rdf:value>&lt;p&gt;4AbbrEnCGT: Syn. Puls.&lt;/p&gt;</rdf:value>
+       <rdf:value>4AbbrEnCGT: Syn. Puls.</rdf:value>
     </bib:Memo>
     <bib:Memo rdf:about="#item_11662">
         <rdf:value>&lt;p&gt;Note: selon la Galenus und [Galenus]- Gesamt&amp;uuml;bersicht du CMG, la paternit&amp;eacute; de ce trait&amp;eacute; est discut&amp;eacute;e. Le texte grec s&amp;rsquo;arr&amp;ecirc;te &amp;agrave; la p. 533 mais la traduction latine va jusqu&amp;rsquo;&amp;agrave; la p. 549&lt;/p&gt;</rdf:value>
@@ -10007,7 +9999,7 @@
        <rdf:value>3TitEnCGT: Barley Gruel</rdf:value>
     </bib:Memo>
     <bib:Memo rdf:about="#item_11875">
-       <rdf:value>&lt;p&gt;4AbbrEnCGT: Ptis.&lt;/p&gt;</rdf:value>
+       <rdf:value>4AbbrEnCGT: Ptis.</rdf:value>
     </bib:Memo>
     <bib:Memo rdf:about="#item_11876">
         <rdf:value>&lt;p&gt;Note: selon la Galenus und [Galenus]- Gesamt&amp;uuml;bersicht du CMG, la paternit&amp;eacute; de ce trait&amp;eacute; est discut&amp;eacute;e&lt;/p&gt;</rdf:value>
@@ -10707,7 +10699,7 @@
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035.1st1K-grc3">
+    <bib:BookSection rdf:about="#item_11929">
         <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
            <bib:Book></bib:Book>
@@ -10736,11 +10728,6 @@
         <dc:subject>
            <dcterms:LCC><rdf:value>036</rdf:value></dcterms:LCC>
         </dc:subject>
-        <dc:identifier>
-            <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg035.1st1K-grc3</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
         <bib:pages>187-189</bib:pages>
     </bib:BookSection>
     <z:Attachment rdf:about="#item_11930">
@@ -10909,7 +10896,7 @@
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035.1st1K-grc2">
+    <bib:BookSection rdf:about="#item_11944">
         <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
             <bib:Book>
@@ -10957,11 +10944,6 @@
         <dc:subject>
            <dcterms:LCC><rdf:value>036</rdf:value></dcterms:LCC>
         </dc:subject>
-        <dc:identifier>
-            <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg035.1st1K-grc2</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
         <bib:pages>911-914</bib:pages>
     </bib:BookSection>
     <z:Attachment rdf:about="#item_11945">
@@ -12564,7 +12546,7 @@
         <z:numberOfVolumes>274</z:numberOfVolumes>
     </bib:Book>
     <bib:Memo rdf:about="#item_12053">
-        <rdf:value>1TitGrcCMG: Περὶ χρείας τῶν ἐν ἀνθρώπου σώματι μορίων</rdf:value>
+        <rdf:value>1TitGrcCMG: &amp;Pi;&amp;epsilon;&amp;rho;ὶ &amp;chi;&amp;rho;&amp;epsilon;ί&amp;alpha;&amp;sigmaf; &amp;tau;ῶ&amp;nu; ἐ&amp;nu; ἀ&amp;nu;&amp;theta;&amp;rho;ώ&amp;pi;&amp;omicron;&amp;upsilon; &amp;sigma;ώ&amp;mu;&amp;alpha;&amp;tau;&amp;iota; &amp;mu;&amp;omicron;&amp;rho;ί&amp;omega;&amp;nu;</rdf:value>
     </bib:Memo>
     <bib:Memo rdf:about="#item_12054">
        <rdf:value>2TitFrBM: Utilité des parties du corps</rdf:value>
@@ -12576,7 +12558,7 @@
        <rdf:value>4AbbrEnCGT: UP</rdf:value>
     </bib:Memo>
     <bib:Memo rdf:about="#item_12057">
-        <rdf:value>Note: éd. Kühn: livres I à XI dans le vol. 3 (p. 1-939), livres XII à XVI dans le vol. 4 (p. 1-366)</rdf:value>
+        <rdf:value>&lt;p&gt;Note: &amp;eacute;d. K&amp;uuml;hn: livres I &amp;agrave; XI dans le vol. 3 (p. 1-939), livres XII &amp;agrave; XVII dans le vol. 4 (p. 1-366)&lt;/p&gt;</rdf:value>
     </bib:Memo>
     <z:Attachment rdf:about="#item_12058">
         <z:itemType>attachment</z:itemType>
@@ -14320,6 +14302,7 @@
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Oeuvres]. Tome VIII, Tome VIII,</dc:title>
         <dc:date>2008</dc:date>
         <z:language>Greek, Ancient</z:language>
@@ -14354,6 +14337,7 @@
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Oeuvres]. Tome VIII, Tome VIII,</dc:title>
         <dc:date>2008</dc:date>
         <z:language>Greek, Ancient</z:language>
@@ -14398,6 +14382,7 @@
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Les os pour les débutants: l'anatomie des muscles</dc:title>
         <dc:date>2005</dc:date>
         <z:language>Contains texts of Galen's Peri oston tois eisagomenois and Peri myon anatomes in Greek and parallel French translation on facing pages, numbered in duplicate; introductions and commentary in French</z:language>
@@ -14443,6 +14428,7 @@
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Les os pour les débutants: l'anatomie des muscles</dc:title>
         <dc:date>2005</dc:date>
         <z:language>Contains texts of Galen's Peri oston tois eisagomenois and Peri myon anatomes in Greek and parallel French translation on facing pages, numbered in duplicate; introductions and commentary in French</z:language>
@@ -14468,27 +14454,14 @@
             </rdf:Seq>
         </bib:authors>
         <link:link rdf:resource="#item_12435"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>fiebres</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Galeno</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Giorgio Valla</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>pronóstico</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Pseudo-Galeno</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>René Charterius</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>sudoración</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>fiebres</dc:subject>
+        <dc:subject>Galeno</dc:subject>
+        <dc:subject>Giorgio Valla</dc:subject>
+        <dc:subject>pronóstico</dc:subject>
+        <dc:subject>Pseudo-Galeno</dc:subject>
+        <dc:subject>René Charterius</dc:subject>
+        <dc:subject>sudoración</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Pseudo-Galeno, Praesagitio omnino vera expertaque: primera edición crítica</dc:title>
         <dcterms:abstract>Resumen
 					Se trata de una composición tardía sobre el pronóstico, hecha a partir de textos de Hipócrates y Galeno, tomados en su mayoría de compiladores. Se encuentra en tres manuscritos del siglo XV, Parisinus gr. 2269, Mutinensis gr. α. U. 9. 04 (61 Puntoni), y Palatinus gr. 143. No existen traducciones medievales. La primera edición es de René Chartier en 1639, hecha sobre el Parisino. Giorgio Valla tradujo el texto del Mutinense (1498). Se recogen los loci similes, así como rasgos de la transmisión y de la lengua. Esta es la primera edición crítica del tratado, a la que se añade stemma codicum y traducción al castellano.</dcterms:abstract>
@@ -14554,6 +14527,7 @@
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On the anomalous dyskrasia (de inaequali intemperie)</dc:title>
         <dc:date>2012</dc:date>
         <z:language>English</z:language>
@@ -14589,11 +14563,8 @@
         <link:link rdf:resource="#item_12437"/>
         <link:link rdf:resource="#item_12438"/>
         <link:link rdf:resource="#item_12436"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Hochschulschrift</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Hochschulschrift</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni libellus de captionibus quae per dictionem fiunt ad fidem unius qui superest codicis editus</dc:title>
         <dc:date>1903</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -14659,6 +14630,7 @@
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Commentators and commentaries on Aristotle's Sophistici elenchi. a study of post-Aristotelian ancient and medieval writings on fallacies: Appendices, Danish summary, indices Vol. 3 Vol. 3</dc:title>
         <dc:date>1981</dc:date>
         <z:language>Latin</z:language>
@@ -14701,14 +14673,9 @@ OCLC: 926705081</dc:description>
         <link:link rdf:resource="#item_12439"/>
         <link:link rdf:resource="#item_12440"/>
         <link:link rdf:resource="#item_12442"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>CMG</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>Hippocrates v460-v370. De superfetatione / Kommentar</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>CMG</dc:subject>
+        <dc:subject>Hippocrates v460-v370. De superfetatione / Kommentar</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Über Nachempfängnis, Geburtshilfe und Schwangerschaftsleiden</dc:title>
         <dc:date>1973</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -14784,6 +14751,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On respiration and the arteries: an edition with English translation and commentary of De usu respirationis, An in arteriis natura sanguis contineatur, De usu pulsuum, and De causis respirationis</dc:title>
         <dc:date>1984</dc:date>
         <z:language>English</z:language>
@@ -14823,6 +14791,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On respiration and the arteries: an edition with English translation and commentary of De usu respirationis, An in arteriis natura sanguis contineatur, De usu pulsuum, and De causis respirationis</dc:title>
         <dc:date>1984</dc:date>
         <z:language>English</z:language>
@@ -14866,46 +14835,15 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12443"/>
         <link:link rdf:resource="#item_12444"/>
         <link:link rdf:resource="#item_12445"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galen. De constitutione artis medicae</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Galenus *129-199*. De constitutione artis medicae</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*History of Medicine, Ancient</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medizinische Ausbildung</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>AV Corpus Medicorum Graecorum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>History of Medicine, Ancient - Greece</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>History of Medicine, Ancient - Rome</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medicine, Greek and Roman</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Galen. De constitutione artis medicae</dc:subject>
+        <dc:subject>*Galenus *129-199*. De constitutione artis medicae</dc:subject>
+        <dc:subject>*History of Medicine, Ancient</dc:subject>
+        <dc:subject>*Medizinische Ausbildung</dc:subject>
+        <dc:subject>AV Corpus Medicorum Graecorum</dc:subject>
+        <dc:subject>History of Medicine, Ancient - Greece</dc:subject>
+        <dc:subject>History of Medicine, Ancient - Rome</dc:subject>
+        <dc:subject>Medicine, Greek and Roman</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>A Patrofilo sulla costituzione della medicina</dc:title>
         <dc:date>1997</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -14962,6 +14900,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         </dcterms:isPartOf>
         <dcterms:isReferencedBy rdf:resource="#item_12447"/>
         <link:link rdf:resource="#item_12448"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Gal. Purg.Med.Fac. Ehlert</dc:title>
         <dc:identifier>
             <dcterms:URI>
@@ -15017,6 +14956,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12449"/>
         <link:link rdf:resource="#item_12450"/>
         <link:link rdf:resource="#item_12451"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni in Hippocratis prorrheticum I, de comate secundum Hippocratem, in Hippocratis prognosticum</dc:title>
         <dc:date>1915</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -15086,6 +15026,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12453"/>
         <link:link rdf:resource="#item_12454"/>
         <link:link rdf:resource="#item_12452"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Doxographi Graeci</dc:title>
         <dc:date>1929</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -15146,6 +15087,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
             </rdf:Seq>
         </bib:authors>
         <link:link rdf:resource="#item_12455"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Prof. Dr. Rainer Degen Korreferent: Prof. Dr. Reinhard Weipert Drittgutachter: Prof. Dr. Manfred Ullmann Tag der mündlichen Prüfung: 14.02.2005</dc:title>
         <z:language>de</z:language>
         <z:libraryCatalog>Zotero</z:libraryCatalog>
@@ -15187,6 +15129,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni De differentiis febrium libri duo Arabice conversi</dc:title>
         <dc:date>2011</dc:date>
         <z:language>Italian</z:language>
@@ -15218,6 +15161,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12456"/>
         <link:link rdf:resource="#item_12457"/>
         <link:link rdf:resource="#item_12458"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>1. Part: Books I - V</dc:title>
         <dc:date>2005</dc:date>
         <z:shortTitle>1. Part</z:shortTitle>
@@ -15298,27 +15242,12 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12459"/>
         <link:link rdf:resource="#item_12460"/>
         <link:link rdf:resource="#item_12461"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199* / Textkritik</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Geschichte</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medicine, Greek and Roman</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Spermatogenese</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Semen - Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Galenus *129-199* / Textkritik</dc:subject>
+        <dc:subject>*Geschichte</dc:subject>
+        <dc:subject>*Medicine, Greek and Roman</dc:subject>
+        <dc:subject>*Spermatogenese</dc:subject>
+        <dc:subject>Semen - Early works to 1800</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On semen</dc:title>
         <dc:date>1992</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -15400,21 +15329,10 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12463"/>
         <link:link rdf:resource="#item_12464"/>
         <link:link rdf:resource="#item_12466"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>AV Corpus Medicorum Graecorum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Galenus *129-199*. De elementis secundum Hippocratem / Textkritik</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*History of Medicine, Medieval</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>AV Corpus Medicorum Graecorum</dc:subject>
+        <dc:subject>*Galenus *129-199*. De elementis secundum Hippocratem / Textkritik</dc:subject>
+        <dc:subject>*History of Medicine, Medieval</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On the elements according to Hippocrates</dc:title>
         <dc:date>1996</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -15495,9 +15413,8 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <dcterms:isReferencedBy rdf:resource="#item_12468"/>
         <link:link rdf:resource="#item_12467"/>
         <link:link rdf:resource="#item_12469"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>CMG</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>CMG</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni De propriorum animi cuiuslibet affectum dignotione et curatione</dc:title>
         <dc:date>1937</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -15547,6 +15464,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
             </rdf:Seq>
         </bib:authors>
         <dcterms:isReferencedBy rdf:resource="#item_12470"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Per un'edizione critica del:OpS ZKRcW di Galeno</dc:title>
         <dc:date>1990</dc:date>
         <z:language>Italian</z:language>
@@ -15595,9 +15513,8 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12471"/>
         <link:link rdf:resource="#item_12472"/>
         <link:link rdf:resource="#item_12474"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>CMG</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>CMG</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni De propriorum animi cuiuslibet affectum dignotione et curatione</dc:title>
         <dc:date>1937</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -15677,9 +15594,8 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12475"/>
         <link:link rdf:resource="#item_12476"/>
         <link:link rdf:resource="#item_12478"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>CMG</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>CMG</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni De propriorum animi cuiuslibet affectum dignotione et curatione</dc:title>
         <dc:date>1937</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -15749,6 +15665,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galen, De diebus decretoriis, from Greek into Arabic: a critical edition, with translation and commentary, of Hunayn ibn Ishaq, Kitab ayyam al-buhran</dc:title>
         <dc:date>2011</dc:date>
         <z:language>Arabic</z:language>
@@ -15791,50 +15708,17 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12480"/>
         <link:link rdf:resource="#item_12482"/>
         <link:link rdf:resource="#item_12479"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>AV Corpus Medicorum Graecorum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medicine, Greek and Roman</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*De foetuum formatione</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Embryologie</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*. De foetuum formatione</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Embryologie</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Fetus -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Geschichte</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Premature infants -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>AV Corpus Medicorum Graecorum</dc:subject>
+        <dc:subject>*Medicine, Greek and Roman</dc:subject>
+        <dc:subject>*De foetuum formatione</dc:subject>
+        <dc:subject>*Embryologie</dc:subject>
+        <dc:subject>*Galenus *129-199*</dc:subject>
+        <dc:subject>*Galenus *129-199*. De foetuum formatione</dc:subject>
+        <dc:subject>Embryologie</dc:subject>
+        <dc:subject>Fetus -- Early works to 1800</dc:subject>
+        <dc:subject>Geschichte</dc:subject>
+        <dc:subject>Premature infants -- Early works to 1800</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Über die Ausformung der Keimlinge</dc:title>
         <dc:date>2001</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -15915,58 +15799,19 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12483"/>
         <link:link rdf:resource="#item_12484"/>
         <link:link rdf:resource="#item_12485"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*History of Medicine, Ancient</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>AV Corpus Medicorum Graecorum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medicine, Greek and Roman</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Galen</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Galenus *129-199*. De propriis placitis / Galenus *129-199*. De propriis placitis</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Galenus *129-199*. De propriis placitis / Galenus *129-199*. De propriis placitis / Textgeschichte</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Galen</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Greek World</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>History of Medicine, Ancient</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medicine, Ancient</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Philosophy, Medical</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Roman World</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*History of Medicine, Ancient</dc:subject>
+        <dc:subject>AV Corpus Medicorum Graecorum</dc:subject>
+        <dc:subject>Medicine, Greek and Roman</dc:subject>
+        <dc:subject>*Galen</dc:subject>
+        <dc:subject>*Galenus *129-199*. De propriis placitis / Galenus *129-199*. De propriis placitis</dc:subject>
+        <dc:subject>*Galenus *129-199*. De propriis placitis / Galenus *129-199*. De propriis placitis / Textgeschichte</dc:subject>
+        <dc:subject>Galen</dc:subject>
+        <dc:subject>Greek World</dc:subject>
+        <dc:subject>History of Medicine, Ancient</dc:subject>
+        <dc:subject>Medicine, Ancient</dc:subject>
+        <dc:subject>Philosophy, Medical</dc:subject>
+        <dc:subject>Roman World</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On my own opinions</dc:title>
         <dc:date>1999</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -16043,6 +15888,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
             </rdf:Seq>
         </bib:authors>
         <link:link rdf:resource="#item_12348"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galien ressuscité : édition princeps du texte grec du De propriis placitis</dc:title>
         <dcterms:abstract>Cet article offre l'édition princeps du texte grec intégral du traité de Galien De propriis placitis basé sur un manuscrit grec récemment découvert de Thessalonique, le Vlatadon 14, du XVe siècle. Avant cette découverte, le De propriis placitis était seulement connu par un petit nombre de fragments en grec, et ne nous avait été transmis dans son intégralité que par une traduction médiévale arabo-latine sur lesquels est basée la dernière édition de V. Nutton (CMG V 3, 2, Berlin 1999). Nous offrons donc ici, pour la première fois le texte grec intégral du traité galénique De propriis placitis.</dcterms:abstract>
         <dc:date>2005</dc:date>
@@ -16113,6 +15959,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>L'anima e il dolore: De indolentia, De propriis placitis</dc:title>
         <dc:date>2012</dc:date>
         <z:language>Italian</z:language>
@@ -16161,6 +16008,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Oeuvres. Tome IV, Tome IV,</dc:title>
         <dc:date>2010</dc:date>
         <z:language>Texto en griego y traducci??n paralela en franc??s, introducci??n y notas en franc??s</z:language>
@@ -16208,6 +16056,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galien. Art médical Tome II, Tome II,</dc:title>
         <dc:date>2000</dc:date>
         <z:language>Text in Greek, with facing French translation (opposite pages bear duplicate numbering) ; introduction and commentary in French</z:language>
@@ -16261,16 +16110,9 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12349"/>
         <link:link rdf:resource="#item_12350"/>
         <link:link rdf:resource="#item_12351"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Hippocrates *v460-v370*. De hebdomadibus</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medizin / Griechisch</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Hippocrates *v460-v370*. De hebdomadibus</dc:subject>
+        <dc:subject>*Medizin / Griechisch</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Pseudogaleni In Hippocratis De septimanis commentarium ab Hunaino Q. F. Arabice versum</dc:title>
         <dc:date>1914</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -16344,11 +16186,8 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12354"/>
         <link:link rdf:resource="#item_12356"/>
         <link:link rdf:resource="#item_12355"/>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>Galien, Claude (0131?-0201?). Subfiguratio empirica</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Galien, Claude (0131?-0201?). Subfiguratio empirica</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>De Claudii Galeni Subfiguratione empirica</dc:title>
         <dc:date>1872</dc:date>
         <z:language>latin</z:language>
@@ -16427,6 +16266,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Die griechische Empirikerschule: Sammlung der Fragmente und Darstellung der Lehre, von Karl Deichgr??ber.</dc:title>
         <dc:date>1930</dc:date>
         <z:language>German</z:language>
@@ -16449,6 +16289,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galen &quot;Uber die Stimme&quot; Testimonien d. verlorenen Schrift Peri phones, Pseudo-Galen de voce et hanelitu. Kommentar</dc:title>
         <dc:date>1963</dc:date>
         <z:language>German</z:language>
@@ -16490,14 +16331,9 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12357"/>
         <link:link rdf:resource="#item_12358"/>
         <link:link rdf:resource="#item_12360"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>CMG</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Galenus 129-199. De optima doctrina</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>CMG</dc:subject>
+        <dc:subject>Galenus 129-199. De optima doctrina</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Sull'ottima maniera d'insegnare</dc:title>
         <dc:date>1991</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -16565,6 +16401,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Oeuvres]. Tome II, Tome II,</dc:title>
         <dc:date>2000</dc:date>
         <z:language>French</z:language>
@@ -16612,19 +16449,10 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12369"/>
         <link:link rdf:resource="#item_12370"/>
         <link:link rdf:resource="#item_12368"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medizin / Griechisch</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Disease / etiology</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Causality</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Medizin / Griechisch</dc:subject>
+        <dc:subject>*Disease / etiology</dc:subject>
+        <dc:subject>Causality</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni de cavsis procatarcticis libellvs a Nicolao Regino in sermonem Latinvm translatvs</dc:title>
         <dc:date>1937</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -16694,11 +16522,8 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12374"/>
         <link:link rdf:resource="#item_12375"/>
         <link:link rdf:resource="#item_12372"/>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>Galenus 129-199. An in arteriis natura sanguis contineatur / Hochschulschrift</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Galenus 129-199. An in arteriis natura sanguis contineatur / Hochschulschrift</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni libellus An in arteriis natura sanguis contineatur</dc:title>
         <dc:date>1911</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -16767,6 +16592,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galenos, Peri kriseon: Uberlieferung und Text</dc:title>
         <dc:date>1967</dc:date>
         <z:language>German</z:language>
@@ -16805,6 +16631,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On respiration and the arteries: an edition with English translation and commentary of De usu respirationis, An in arteriis natura sanguis contineatur, De usu pulsuum, and De causis respirationis</dc:title>
         <dc:date>1984</dc:date>
         <z:language>English</z:language>
@@ -16847,14 +16674,9 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12364"/>
         <link:link rdf:resource="#item_12365"/>
         <link:link rdf:resource="#item_12367"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>CMG</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Galenus 129-199. De optima doctrina</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>CMG</dc:subject>
+        <dc:subject>Galenus 129-199. De optima doctrina</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Sull'ottima maniera d'insegnare</dc:title>
         <dc:date>1991</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -16932,6 +16754,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galen on antecedent causes</dc:title>
         <dc:date>1998</dc:date>
         <z:language>English</z:language>
@@ -16981,6 +16804,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12594"/>
         <link:link rdf:resource="#item_12595"/>
         <link:link rdf:resource="#item_12596"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni in Hippocratis epidemiarum Libr. III</dc:title>
         <dc:date>1936</dc:date>
         <z:libraryCatalog>Library Catalog - vzlbs.gbv.de</z:libraryCatalog>
@@ -17064,6 +16888,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:editors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galien. Tome III, Tome III,</dc:title>
         <dc:date>2009</dc:date>
         <z:language>Text in Greek, with facing French translation (opposite pages bear duplicate numbering) ; introduction and commentary in French</z:language>
@@ -17094,6 +16919,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:editors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galien. Tome X</dc:title>
         <dc:date>2021</dc:date>
         <z:language>Introduction and critical matter in French ; original texts in Greek with French translation on facing pages, numbered in duplicate</z:language>
@@ -17125,6 +16951,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:editors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galien. Tome VI, Tome VI,</dc:title>
         <dc:date>2016</dc:date>
         <z:language>Introduction and critical matter in French ; original texts in Greek with French translation on facing pages, numbered in duplicate</z:language>
@@ -17161,6 +16988,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Ps.-Galeni De dignotione ex insomniis: Ausgabe mit Ubersetzung und Kommentar</dc:title>
         <dc:date>1972</dc:date>
         <z:language>German</z:language>
@@ -17209,20 +17037,11 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12586"/>
         <link:link rdf:resource="#item_12587"/>
         <link:link rdf:resource="#item_12588"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Greek World</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Roman World</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Medicine</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Galenus *129-199*</dc:subject>
+        <dc:subject>Greek World</dc:subject>
+        <dc:subject>Roman World</dc:subject>
+        <dc:subject>*Medicine</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni in Hippocratis epidemiarum librum VI commentaria I-VIII</dc:title>
         <dc:date>1956</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -17309,20 +17128,11 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12590"/>
         <link:link rdf:resource="#item_12591"/>
         <link:link rdf:resource="#item_12593"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Greek World</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Roman World</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Medicine</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Galenus *129-199*</dc:subject>
+        <dc:subject>Greek World</dc:subject>
+        <dc:subject>Roman World</dc:subject>
+        <dc:subject>*Medicine</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni in Hippocratis epidemiarum librum VI commentaria I-VIII</dc:title>
         <dc:date>1956</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -17415,21 +17225,10 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12598"/>
         <link:link rdf:resource="#item_12599"/>
         <link:link rdf:resource="#item_12601"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galen / In Hippocratis Epidemiarum libros</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Galenus *129-199* / Hippocrates *v460-v370*. Epidemiae</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Hippocrates / Epidemics</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Galen / In Hippocratis Epidemiarum libros</dc:subject>
+        <dc:subject>*Galenus *129-199* / Hippocrates *v460-v370*. Epidemiae</dc:subject>
+        <dc:subject>Hippocrates / Epidemics</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galens Kommentare zu den Epidemien des Hippokrates: Indizes der aus dem Arabischen übersetzten Namen und Wörter</dc:title>
         <dc:date>1960</dc:date>
         <z:shortTitle>Galens Kommentare zu den Epidemien des Hippokrates</z:shortTitle>
@@ -17507,11 +17306,8 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12602"/>
         <link:link rdf:resource="#item_12603"/>
         <link:link rdf:resource="#item_12605"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Hippocrates v460-v370. Epidemiae</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Hippocrates v460-v370. Epidemiae</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni in Hippocratis epidemiarum librum commentaria</dc:title>
         <dc:date>1934-</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -17590,37 +17386,14 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12607"/>
         <link:link rdf:resource="#item_12609"/>
         <link:link rdf:resource="#item_12606"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Clinical Competence</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Diagnosis</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Medicine -- Ability testing -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Physicians</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>Diagnosis -- Methodology -- Evaluation -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Physicians -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>Physicians -- Rating of -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Clinical Competence</dc:subject>
+        <dc:subject>*Diagnosis</dc:subject>
+        <dc:subject>*Medicine -- Ability testing -- Early works to 1800</dc:subject>
+        <dc:subject>*Physicians</dc:subject>
+        <dc:subject>Diagnosis -- Methodology -- Evaluation -- Early works to 1800</dc:subject>
+        <dc:subject>Physicians -- Early works to 1800</dc:subject>
+        <dc:subject>Physicians -- Rating of -- Early works to 1800</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On examinations by which the best physicians are recognized</dc:title>
         <dc:date>1988</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -17702,37 +17475,14 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12610"/>
         <link:link rdf:resource="#item_12613"/>
         <link:link rdf:resource="#item_12611"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Clinical Competence</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Diagnosis</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Medicine -- Ability testing -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Physicians</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>Diagnosis -- Methodology -- Evaluation -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Physicians -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>Physicians -- Rating of -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Clinical Competence</dc:subject>
+        <dc:subject>*Diagnosis</dc:subject>
+        <dc:subject>*Medicine -- Ability testing -- Early works to 1800</dc:subject>
+        <dc:subject>*Physicians</dc:subject>
+        <dc:subject>Diagnosis -- Methodology -- Evaluation -- Early works to 1800</dc:subject>
+        <dc:subject>Physicians -- Early works to 1800</dc:subject>
+        <dc:subject>Physicians -- Rating of -- Early works to 1800</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On examinations by which the best physicians are recognized</dc:title>
         <dc:date>1988</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -17812,11 +17562,8 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12614"/>
         <link:link rdf:resource="#item_12615"/>
         <link:link rdf:resource="#item_12616"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Hippocrates v460-v370. Epidemiae</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Hippocrates v460-v370. Epidemiae</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni in Hippocratis epidemiarum librum commentaria</dc:title>
         <dc:date>1934-</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -17895,28 +17642,13 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12618"/>
         <link:link rdf:resource="#item_12619"/>
         <link:link rdf:resource="#item_12620"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medicine, Greek and Roman</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Greek World</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Roman World</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*. Adversus Lycum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Muscles</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Medicine</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Medicine, Greek and Roman</dc:subject>
+        <dc:subject>Greek World</dc:subject>
+        <dc:subject>Roman World</dc:subject>
+        <dc:subject>*Galenus *129-199*. Adversus Lycum</dc:subject>
+        <dc:subject>*Muscles</dc:subject>
+        <dc:subject>Medicine</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni adversus Lycum et adversus Iulianum Libelli</dc:title>
         <dc:date>1951</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -17996,28 +17728,13 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12622"/>
         <link:link rdf:resource="#item_12623"/>
         <link:link rdf:resource="#item_12624"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medicine, Greek and Roman</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Greek World</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Roman World</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*. Adversus Lycum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Muscles</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Medicine</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Medicine, Greek and Roman</dc:subject>
+        <dc:subject>Greek World</dc:subject>
+        <dc:subject>Roman World</dc:subject>
+        <dc:subject>*Galenus *129-199*. Adversus Lycum</dc:subject>
+        <dc:subject>*Muscles</dc:subject>
+        <dc:subject>Medicine</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni adversus Lycum et adversus Iulianum Libelli</dc:title>
         <dc:date>1951</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -18091,11 +17808,8 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12627"/>
         <link:link rdf:resource="#item_12629"/>
         <link:link rdf:resource="#item_12626"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Galenus 129-199 / Hochschulschrift</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Galenus 129-199 / Hochschulschrift</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni qui fertur de qualitatibus in corporeis libellus</dc:title>
         <dc:date>1906</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -18180,6 +17894,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12631"/>
         <link:link rdf:resource="#item_12630"/>
         <link:link rdf:resource="#item_12632"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni In Hippocratis de natura hominis, In Hippocratis de victu acutorum, De diaeta Hippocratis in morbis acutis</dc:title>
         <dc:date>1914</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -18239,6 +17954,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Die Schrift Galens Peri t??n en tais kair??n und ihre Uberlieferung</dc:title>
         <dc:date>1960</dc:date>
         <z:language>German</z:language>
@@ -18252,6 +17968,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
     <bib:Book rdf:about="#item_12266">
         <z:itemType>book</z:itemType>
         <link:link rdf:resource="#item_12634"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>pas d'information</dc:title>
         <dc:subject>
            <dcterms:LCC><rdf:value>035</rdf:value></dcterms:LCC>
@@ -18311,6 +18028,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12635"/>
         <link:link rdf:resource="#item_12637"/>
         <link:link rdf:resource="#item_12636"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Peri psychēs pathōn kai hamartēmatōn: peri tēs aristēs didaskalias ; peri tu dia tēs smikras sphairas gymnasiu ; protreptikos</dc:title>
         <dc:date>1884</dc:date>
         <z:shortTitle>Peri psychēs pathōn kai hamartēmatōn</z:shortTitle>
@@ -18382,6 +18100,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12640"/>
         <link:link rdf:resource="#item_12641"/>
         <link:link rdf:resource="#item_12639"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni qui fertur De partibus philosophiae libellus primum ed.</dc:title>
         <dc:date>1882</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -18456,6 +18175,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galen's commentary on the Hippocratic treatise, Airs, waters, places: in the Hebrew translation of Solomon ha-Me'ati</dc:title>
         <dc:date>1983</dc:date>
         <z:language>Hebrew</z:language>
@@ -18491,6 +18211,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On medical experience</dc:title>
         <dc:date>1944</dc:date>
         <z:language>Undetermined</z:language>
@@ -18526,14 +18247,9 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12644"/>
         <link:link rdf:resource="#item_12645"/>
         <link:link rdf:resource="#item_12643"/>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Galenus *129-199*. An animal sit quod est in utero / Textgeschichte / Hochschulschrift</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Dissertation</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Galenus *129-199*. An animal sit quod est in utero / Textgeschichte / Hochschulschrift</dc:subject>
+        <dc:subject>Dissertation</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni qui fertur libellus Ei zōon to kata gastros</dc:title>
         <dc:date>1914</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -18612,28 +18328,13 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12648"/>
         <link:link rdf:resource="#item_12649"/>
         <link:link rdf:resource="#item_12647"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Medicine</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Galen -- De partium homoeomerium differentia</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Greek World</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Hochschulschrift</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Roman World</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Human anatomy</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Medicine</dc:subject>
+        <dc:subject>*Galen -- De partium homoeomerium differentia</dc:subject>
+        <dc:subject>*Greek World</dc:subject>
+        <dc:subject>*Hochschulschrift</dc:subject>
+        <dc:subject>*Roman World</dc:subject>
+        <dc:subject>Human anatomy</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Über die Verschiedenheit der homoiomeren Körperteile</dc:title>
         <dc:date>1970</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -18685,6 +18386,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
     <bib:Book rdf:about="#item_12273">
         <z:itemType>book</z:itemType>
         <link:link rdf:resource="#item_12651"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>pas d'information</dc:title>
         <dc:subject>
            <dcterms:LCC><rdf:value>107</rdf:value></dcterms:LCC>
@@ -18704,6 +18406,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
     <bib:Book rdf:about="#item_12274">
         <z:itemType>book</z:itemType>
         <link:link rdf:resource="#item_12652"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>pas d'information</dc:title>
         <dc:subject>
            <dcterms:LCC><rdf:value>323</rdf:value></dcterms:LCC>
@@ -18759,21 +18462,10 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12654"/>
         <link:link rdf:resource="#item_12657"/>
         <link:link rdf:resource="#item_12653"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*History of Medicine, Ancient</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medizin / Griechisch</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Gesammelte Schr.</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*History of Medicine, Ancient</dc:subject>
+        <dc:subject>*Medizin / Griechisch</dc:subject>
+        <dc:subject>Medizin, Gesammelte Schr.</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni de consvetvdinibvs</dc:title>
         <dc:date>1941</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -18863,21 +18555,10 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12659"/>
         <link:link rdf:resource="#item_12660"/>
         <link:link rdf:resource="#item_12658"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*History of Medicine, Ancient</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medizin / Griechisch</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Gesammelte Schr.</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*History of Medicine, Ancient</dc:subject>
+        <dc:subject>*Medizin / Griechisch</dc:subject>
+        <dc:subject>Medizin, Gesammelte Schr.</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni de consvetvdinibvs</dc:title>
         <dc:date>1941</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -18946,6 +18627,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Ps.-Galeni liber de humoribus critice editus, adnotationibus instructus</dc:title>
         <dc:date>1964</dc:date>
         <z:language>German</z:language>
@@ -18967,6 +18649,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni In Hippocratis Aphorismos VI commentaria / Testo, traduzione e note di commento / Christina Savino.</dc:title>
         <dcterms:abstract>Die hippokratischen Aphorismen geh??ren zu den wirkungsm??chtigsten Zeugnissen der antiken Medizin, und Galens Kommentar dazu bildete den Schl??ssel zu ihrem Verst??ndnis in der sp??teren Rezeption - sowohl im Osten wie im Westen. Trotz seines interessanten und vielf??ltigen Inhaltes ist der Kommentar bisher kaum untersucht und noch nie ediert worden. Dieser Band bietet die erste kritische Edition des sechsten Buches mit italienischer Ubersetzung und Erl??uterungen. The Hippocratic aphorisms are a crucial source of information about ancient medicine, and Galen's commentary on them a key to their interpretation and reception in later times. But until now, this wide-ranging and fascinating commentary has largely been overlooked, and never edited. This first critical edition of the sixth book includes a translation and commentary in Italian.</dcterms:abstract>
         <dc:date>2020</dc:date>
@@ -19009,6 +18692,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>De motu musculorum</dc:title>
         <dc:date>2009</dc:date>
         <z:language>Italian, Greek, Ancient - 1453</z:language>
@@ -19053,6 +18737,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Gal??nou, t??n ois to peri chum??n Ippokratous upomn??mat??n biblia g'. Keimenon kata ton k??dika 5491 t??s Ethnik??s biblioth??k??s t??n Parisi??n kai scholia upo Adamantios Kora??. Eis??g??sis Aristotelous P. Kouz??s.</dc:title>
         <dc:date>1952</dc:date>
         <z:language>Greek, Modern</z:language>
@@ -19065,6 +18750,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
     </bib:Book>
     <bib:Book rdf:about="#item_12283">
         <z:itemType>book</z:itemType>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>pas d'information</dc:title>
         <dc:subject>
            <dcterms:LCC><rdf:value>092</rdf:value></dcterms:LCC>
@@ -19073,6 +18759,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
     <bib:Book rdf:about="#item_12284">
         <z:itemType>book</z:itemType>
         <link:link rdf:resource="#item_12663"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>pas d'information</dc:title>
         <dc:subject>
            <dcterms:LCC><rdf:value>057</rdf:value></dcterms:LCC>
@@ -19095,6 +18782,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
            <z:Website></z:Website>
         </dcterms:isPartOf>
         <link:link rdf:resource="#item_12664"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Tum.Pr.Nat. Reedy</dc:title>
         <dc:identifier>
             <dcterms:URI>
@@ -19146,14 +18834,9 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12666"/>
         <link:link rdf:resource="#item_12665"/>
         <link:link rdf:resource="#item_12668"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>CMG</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>Hippocrates v460-v370. De superfetatione / Kommentar</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>CMG</dc:subject>
+        <dc:subject>Hippocrates v460-v370. De superfetatione / Kommentar</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Über Nachempfängnis, Geburtshilfe und Schwangerschaftsleiden</dc:title>
         <dc:date>1973</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -19229,6 +18912,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galen, De plenitudine</dc:title>
         <dc:date>2001</dc:date>
         <z:language>German</z:language>
@@ -19272,16 +18956,9 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12670"/>
         <link:link rdf:resource="#item_12669"/>
         <link:link rdf:resource="#item_12673"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medicine, Greek and Roman</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Prognosis -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Medicine, Greek and Roman</dc:subject>
+        <dc:subject>Prognosis -- Early works to 1800</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On prognosis</dc:title>
         <dc:date>1979</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -19356,6 +19033,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On problematical movements</dc:title>
         <dcterms:abstract>&quot;In this forgotten treatise, preserved largely in medieval translations into Arabic and Latin, the greatest medical scientist of antiquity investigates the relationship between conscious and unconscious movements. He looks at the structure of the tongue and the oesophagus, and asks why mental perceptions can have physical effects on the body. Some of his questions still trouble modern scientists, although they would not accept most of his answers. The extensive Introduction and Commentary explain the medical background for non-medical specialists, and discuss the place of this treatise and of anatomy in medieval medicine down to Leonardo da Vinci. As well as being the first English translation of this important work, this is also the first comparative study of medieval translations of the same ancient text, and is based on new editions and collations of all three. The Commentary pays special attention to the linguistic elements involved in making these translations&quot;--R??sum?? de l'??diteur</dcterms:abstract>
         <dc:date>2015</dc:date>
@@ -19393,11 +19071,8 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12674"/>
         <link:link rdf:resource="#item_12676"/>
         <link:link rdf:resource="#item_12675"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Galenus 129-199 / Hochschulschrift</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Galenus 129-199 / Hochschulschrift</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni peri chreias anapnois libellus</dc:title>
         <dc:date>1915</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -19472,6 +19147,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On respiration and the arteries: an edition with English translation and commentary of De usu respirationis, An in arteriis natura sanguis contineatur, De usu pulsuum, and De causis respirationis</dc:title>
         <dc:date>1984</dc:date>
         <z:language>English</z:language>
@@ -19514,50 +19190,17 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12679"/>
         <link:link rdf:resource="#item_12678"/>
         <link:link rdf:resource="#item_12680"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>AV Corpus Medicorum Graecorum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medicine, Greek and Roman</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*De foetuum formatione</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Embryologie</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*. De foetuum formatione</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Embryologie</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Fetus -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Geschichte</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Premature infants -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>AV Corpus Medicorum Graecorum</dc:subject>
+        <dc:subject>*Medicine, Greek and Roman</dc:subject>
+        <dc:subject>*De foetuum formatione</dc:subject>
+        <dc:subject>*Embryologie</dc:subject>
+        <dc:subject>*Galenus *129-199*</dc:subject>
+        <dc:subject>*Galenus *129-199*. De foetuum formatione</dc:subject>
+        <dc:subject>Embryologie</dc:subject>
+        <dc:subject>Fetus -- Early works to 1800</dc:subject>
+        <dc:subject>Geschichte</dc:subject>
+        <dc:subject>Premature infants -- Early works to 1800</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Über die Ausformung der Keimlinge</dc:title>
         <dc:date>2001</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -19637,9 +19280,8 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12683"/>
         <link:link rdf:resource="#item_12682"/>
         <link:link rdf:resource="#item_12684"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Galenus 129-199</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Galenus 129-199</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galen: über die Anatomie der Gebärmutter</dc:title>
         <dc:date>1971</dc:date>
         <z:shortTitle>Galen</z:shortTitle>
@@ -19731,6 +19373,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12486"/>
         <link:link rdf:resource="#item_12488"/>
         <link:link rdf:resource="#item_12487"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Hoti ho aristos iatros kai philosophos: peri ethōn ; hoti tais tu sōmatos krasesin ; peri tēs taxeōs tōn idiōn bibliōn pros eugenianon ; peri tōn idiōn bibliōn</dc:title>
         <dc:date>1891</dc:date>
         <z:shortTitle>Hoti ho aristos iatros kai philosophos</z:shortTitle>
@@ -19804,6 +19447,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galien. Tome I, Tome I,</dc:title>
         <dc:date>2007</dc:date>
         <z:language>French</z:language>
@@ -19857,6 +19501,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12491"/>
         <link:link rdf:resource="#item_12493"/>
         <link:link rdf:resource="#item_12490"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Hoti ho aristos iatros kai philosophos: peri ethōn ; hoti tais tu sōmatos krasesin ; peri tēs taxeōs tōn idiōn bibliōn pros eugenianon ; peri tōn idiōn bibliōn</dc:title>
         <dc:date>1891</dc:date>
         <z:shortTitle>Hoti ho aristos iatros kai philosophos</z:shortTitle>
@@ -19930,6 +19575,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galien. Tome I, Tome I,</dc:title>
         <dc:date>2007</dc:date>
         <z:language>French</z:language>
@@ -19983,6 +19629,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12494"/>
         <link:link rdf:resource="#item_12496"/>
         <link:link rdf:resource="#item_12495"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Hoti ho aristos iatros kai philosophos: peri ethōn ; hoti tais tu sōmatos krasesin ; peri tēs taxeōs tōn idiōn bibliōn pros eugenianon ; peri tōn idiōn bibliōn</dc:title>
         <dc:date>1891</dc:date>
         <z:shortTitle>Hoti ho aristos iatros kai philosophos</z:shortTitle>
@@ -20056,6 +19703,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galien. Tome I, Tome I,</dc:title>
         <dc:date>2007</dc:date>
         <z:language>French</z:language>
@@ -20109,6 +19757,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12498"/>
         <link:link rdf:resource="#item_12501"/>
         <link:link rdf:resource="#item_12499"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Hoti ho aristos iatros kai philosophos: peri ethōn ; hoti tais tu sōmatos krasesin ; peri tēs taxeōs tōn idiōn bibliōn pros eugenianon ; peri tōn idiōn bibliōn</dc:title>
         <dc:date>1891</dc:date>
         <z:shortTitle>Hoti ho aristos iatros kai philosophos</z:shortTitle>
@@ -20172,6 +19821,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galenou oti tais tou somatos krasesin hai tes psyches dynameis hepontai</dc:title>
         <dc:date>2011</dc:date>
         <z:language>Greek, Ancient</z:language>
@@ -20213,50 +19863,17 @@ OCLC: 994828635</dc:description>
         <link:link rdf:resource="#item_12502"/>
         <link:link rdf:resource="#item_12504"/>
         <link:link rdf:resource="#item_12503"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>AV Corpus Medicorum Graecorum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medicine, Greek and Roman</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*De foetuum formatione</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Embryologie</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*. De foetuum formatione</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Embryologie</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Fetus -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Geschichte</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Premature infants -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>AV Corpus Medicorum Graecorum</dc:subject>
+        <dc:subject>*Medicine, Greek and Roman</dc:subject>
+        <dc:subject>*De foetuum formatione</dc:subject>
+        <dc:subject>*Embryologie</dc:subject>
+        <dc:subject>*Galenus *129-199*</dc:subject>
+        <dc:subject>*Galenus *129-199*. De foetuum formatione</dc:subject>
+        <dc:subject>Embryologie</dc:subject>
+        <dc:subject>Fetus -- Early works to 1800</dc:subject>
+        <dc:subject>Geschichte</dc:subject>
+        <dc:subject>Premature infants -- Early works to 1800</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Über die Ausformung der Keimlinge</dc:title>
         <dc:date>2001</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -20336,50 +19953,17 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12506"/>
         <link:link rdf:resource="#item_12508"/>
         <link:link rdf:resource="#item_12507"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>AV Corpus Medicorum Graecorum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Medicine, Greek and Roman</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*De foetuum formatione</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Embryologie</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Galenus *129-199*. De foetuum formatione</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Embryologie</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Fetus -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Geschichte</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Premature infants -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>AV Corpus Medicorum Graecorum</dc:subject>
+        <dc:subject>*Medicine, Greek and Roman</dc:subject>
+        <dc:subject>*De foetuum formatione</dc:subject>
+        <dc:subject>*Embryologie</dc:subject>
+        <dc:subject>*Galenus *129-199*</dc:subject>
+        <dc:subject>*Galenus *129-199*. De foetuum formatione</dc:subject>
+        <dc:subject>Embryologie</dc:subject>
+        <dc:subject>Fetus -- Early works to 1800</dc:subject>
+        <dc:subject>Geschichte</dc:subject>
+        <dc:subject>Premature infants -- Early works to 1800</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Über die Ausformung der Keimlinge</dc:title>
         <dc:date>2001</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -20459,6 +20043,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12511"/>
         <link:link rdf:resource="#item_12510"/>
         <link:link rdf:resource="#item_12512"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni in Hippocratis prorrheticum I, de comate secundum Hippocratem, in Hippocratis prognosticum</dc:title>
         <dc:date>1915</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -20541,6 +20126,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12513"/>
         <link:link rdf:resource="#item_12514"/>
         <link:link rdf:resource="#item_12515"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni In Hippocratis de natura hominis, In Hippocratis de victu acutorum, De diaeta Hippocratis in morbis acutis</dc:title>
         <dc:date>1914</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -20619,16 +20205,9 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12518"/>
         <link:link rdf:resource="#item_12519"/>
         <link:link rdf:resource="#item_12517"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Geschichte</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Sammelw.</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Medizin, Geschichte</dc:subject>
+        <dc:subject>Medizin, Sammelw.</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Die partibus artis medicativae. De causis contentivis. De diaeta in morbus acutis secundum Hippocratem.</dc:title>
         <dc:date>1969</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -20705,16 +20284,9 @@ Series Title: Corpus medicorum Graecorum : Suppl. Orientale</dc:description>
         <link:link rdf:resource="#item_12521"/>
         <link:link rdf:resource="#item_12522"/>
         <link:link rdf:resource="#item_12520"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Geschichte</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Sammelw.</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Medizin, Geschichte</dc:subject>
+        <dc:subject>Medizin, Sammelw.</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Die partibus artis medicativae. De causis contentivis. De diaeta in morbus acutis secundum Hippocratem.</dc:title>
         <dc:date>1969</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -20791,16 +20363,9 @@ Series Title: Corpus medicorum Graecorum : Suppl. Orientale</dc:description>
         <link:link rdf:resource="#item_12524"/>
         <link:link rdf:resource="#item_12525"/>
         <link:link rdf:resource="#item_12523"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Geschichte</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Sammelw.</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Medizin, Geschichte</dc:subject>
+        <dc:subject>Medizin, Sammelw.</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Die partibus artis medicativae. De causis contentivis. De diaeta in morbus acutis secundum Hippocratem.</dc:title>
         <dc:date>1969</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -20879,6 +20444,7 @@ Series Title: Corpus medicorum Graecorum : Suppl. Orientale</dc:description>
         <link:link rdf:resource="#item_12527"/>
         <link:link rdf:resource="#item_12528"/>
         <link:link rdf:resource="#item_12526"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni In Hippocratis de officina medici commentariorum: versionem Arabicam, quoad exstat, ex codice Scorialensi et excerpta, quae ʿAlī Ibn Riḍwān ex eis sumpsit</dc:title>
         <dc:date>1963</dc:date>
         <z:shortTitle>Galeni In Hippocratis de officina medici commentariorum</z:shortTitle>
@@ -20969,16 +20535,9 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12532"/>
         <link:link rdf:resource="#item_12533"/>
         <link:link rdf:resource="#item_12531"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Plato -- Timaeus</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Plato *v427-v347*. Timaeus / Medizin / Griechisch</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Plato -- Timaeus</dc:subject>
+        <dc:subject>*Plato *v427-v347*. Timaeus / Medizin / Griechisch</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni in Platonis Timaeum commentarii fragmenta</dc:title>
         <dc:date>1934</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -21038,6 +20597,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Ein unbekanntes Exzerpt aus Galens Timaioskommentar</dc:title>
         <dc:date>1991</dc:date>
         <z:language>German</z:language>
@@ -21049,6 +20609,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
     </bib:Book>
     <bib:Book rdf:about="#item_12312">
         <z:itemType>book</z:itemType>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Kraus (1937) l'édition n'est pas notée</dc:title>
         <dc:subject>
            <dcterms:LCC><rdf:value>412</rdf:value></dcterms:LCC>
@@ -21093,6 +20654,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni compendium Timaei Platonis aliorumque dialogorum synopsis quae extant fragmenta</dc:title>
         <dc:date>1951</dc:date>
         <z:language>Notes in Latin and Greek; index in Greek and Arabic</z:language>
@@ -21114,6 +20676,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galen's On phlebotomy against the Erasistrateans in Rome (Galeni De venae sectione adversvs Erasistrateos Romae degentes).</dc:title>
         <dc:date>1970</dc:date>
         <dc:subject>
@@ -21154,19 +20717,10 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12536"/>
         <link:link rdf:resource="#item_12537"/>
         <link:link rdf:resource="#item_12535"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Galenus 129-199</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechische Philologie, Literatur</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Gesammelte Schr.</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Medizin, Gesammelte Schr.</dc:subject>
+        <dc:subject>Galenus 129-199</dc:subject>
+        <dc:subject>Griechische Philologie, Literatur</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Über das Riechorgan</dc:title>
         <dc:date>1964</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -21255,19 +20809,10 @@ Series Title: Corpus medicorum Graecorum. Supplementum. - Berlin : Walter de Gru
         <link:link rdf:resource="#item_12542"/>
         <link:link rdf:resource="#item_12544"/>
         <link:link rdf:resource="#item_12541"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Gesammelte Schr.</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Galenus 129-199</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechische Philologie, Literatur</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Medizin, Gesammelte Schr.</dc:subject>
+        <dc:subject>Galenus 129-199</dc:subject>
+        <dc:subject>Griechische Philologie, Literatur</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Über das Riechorgan</dc:title>
         <dc:date>1964</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -21355,37 +20900,14 @@ Series Title: Corpus medicorum Graecorum. Supplementum. - Berlin : Walter de Gru
         <link:link rdf:resource="#item_12547"/>
         <link:link rdf:resource="#item_12548"/>
         <link:link rdf:resource="#item_12549"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Fachliteratur</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechenland &lt;Altertum&gt; / Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechisch / Literatur</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>AV Galen als Vollender, Interpret und Vermittler der antiken Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>De sanitate tuenda</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Galenus</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Gesundheitslehre</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Fachliteratur</dc:subject>
+        <dc:subject>Griechenland &lt;Altertum&gt; / Medizin</dc:subject>
+        <dc:subject>Griechisch / Literatur</dc:subject>
+        <dc:subject>AV Galen als Vollender, Interpret und Vermittler der antiken Medizin</dc:subject>
+        <dc:subject>De sanitate tuenda</dc:subject>
+        <dc:subject>Galenus</dc:subject>
+        <dc:subject>Gesundheitslehre</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni De sanitate tvenda</dc:title>
         <dc:date>1923</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -21462,6 +20984,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum. - Berlin : Walter de Gru
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni Puero epileptico consilium: Ausgabe und Kommentar</dc:title>
         <dc:date>1959</dc:date>
         <z:language>Latin</z:language>
@@ -21500,6 +21023,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum. - Berlin : Walter de Gru
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>La dieta dimagrante</dc:title>
         <dc:date>1973</dc:date>
         <z:language>Multiple languages</z:language>
@@ -21542,37 +21066,14 @@ Series Title: Corpus medicorum Graecorum. Supplementum. - Berlin : Walter de Gru
         <link:link rdf:resource="#item_12552"/>
         <link:link rdf:resource="#item_12553"/>
         <link:link rdf:resource="#item_12554"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Fachliteratur</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechenland &lt;Altertum&gt; / Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechisch / Literatur</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>AV Galen als Vollender, Interpret und Vermittler der antiken Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>De sanitate tuenda</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Galenus</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Gesundheitslehre</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Fachliteratur</dc:subject>
+        <dc:subject>Griechenland &lt;Altertum&gt; / Medizin</dc:subject>
+        <dc:subject>Griechisch / Literatur</dc:subject>
+        <dc:subject>AV Galen als Vollender, Interpret und Vermittler der antiken Medizin</dc:subject>
+        <dc:subject>De sanitate tuenda</dc:subject>
+        <dc:subject>Galenus</dc:subject>
+        <dc:subject>Gesundheitslehre</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni De sanitate tvenda</dc:title>
         <dc:date>1923</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -21660,6 +21161,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum. - Berlin : Walter de Gru
         <link:link rdf:resource="#item_12559"/>
         <link:link rdf:resource="#item_12557"/>
         <link:link rdf:resource="#item_12561"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galenou Eisagoge dialektike</dc:title>
         <dc:date>1896</dc:date>
         <z:language>grec ancien (jusqu'â 1453)</z:language>
@@ -21749,6 +21251,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum. - Berlin : Walter de Gru
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Die neuplatonische, f??lschlich dem Galen zugeschriebene Schrift: Pros Gauron peri tou pos empsychoutai ta embrya</dc:title>
         <dc:date>1895</dc:date>
         <z:language>In lat. und griech. Schr</z:language>
@@ -21791,37 +21294,14 @@ Series Title: Corpus medicorum Graecorum. Supplementum. - Berlin : Walter de Gru
         <link:link rdf:resource="#item_12563"/>
         <link:link rdf:resource="#item_12565"/>
         <link:link rdf:resource="#item_12562"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>*Clinical Competence</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Diagnosis</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Medicine -- Ability testing -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Physicians</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>Diagnosis -- Methodology -- Evaluation -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Physicians -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>Physicians -- Rating of -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>*Clinical Competence</dc:subject>
+        <dc:subject>*Diagnosis</dc:subject>
+        <dc:subject>*Medicine -- Ability testing -- Early works to 1800</dc:subject>
+        <dc:subject>*Physicians</dc:subject>
+        <dc:subject>Diagnosis -- Methodology -- Evaluation -- Early works to 1800</dc:subject>
+        <dc:subject>Physicians -- Early works to 1800</dc:subject>
+        <dc:subject>Physicians -- Rating of -- Early works to 1800</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>On examinations by which the best physicians are recognized</dc:title>
         <dc:date>1988</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -21883,6 +21363,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 <foaf:name>Teubner</foaf:name>
             </foaf:Organization>
         </dc:publisher>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Metrologicorum scriptorum reliquiae 1, 1,</dc:title>
         <dc:date>1864</dc:date>
         <z:language>Teilw. in griech. Schr</z:language>
@@ -21935,6 +21416,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12567"/>
         <link:link rdf:resource="#item_12568"/>
         <link:link rdf:resource="#item_12566"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Peri aireseōn tois eisagomenois: thrasybulos ; peri physikōn dynameōn</dc:title>
         <dc:date>1893</dc:date>
         <z:shortTitle>Peri aireseōn tois eisagomenois</z:shortTitle>
@@ -22026,6 +21508,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12571"/>
         <link:link rdf:resource="#item_12573"/>
         <link:link rdf:resource="#item_12570"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Peri aireseōn tois eisagomenois: thrasybulos ; peri physikōn dynameōn</dc:title>
         <dc:date>1893</dc:date>
         <z:shortTitle>Peri aireseōn tois eisagomenois</z:shortTitle>
@@ -22117,6 +21600,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12575"/>
         <link:link rdf:resource="#item_12576"/>
         <link:link rdf:resource="#item_12574"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Peri aireseōn tois eisagomenois: thrasybulos ; peri physikōn dynameōn</dc:title>
         <dc:date>1893</dc:date>
         <z:shortTitle>Peri aireseōn tois eisagomenois</z:shortTitle>
@@ -22180,6 +21664,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galien. IX, 1ere partie, IX, 1ere partie,</dc:title>
         <dc:date>2019</dc:date>
         <z:language>Texto en griego con traducci??n al franc??s, introducci??n y notas en franc??s</z:language>
@@ -22228,6 +21713,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12578"/>
         <link:link rdf:resource="#item_12579"/>
         <link:link rdf:resource="#item_12580"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni In Hippocratis de natura hominis, In Hippocratis de victu acutorum, De diaeta Hippocratis in morbis acutis</dc:title>
         <dc:date>1914</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -22306,6 +21792,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galien. Tome V, Tome V,</dc:title>
         <dc:date>2013</dc:date>
         <z:language>Text in Greek, with facing French translation (opposite pages bear duplicate numbering); introduction and commentary in French</z:language>
@@ -22349,37 +21836,14 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12582"/>
         <link:link rdf:resource="#item_12583"/>
         <link:link rdf:resource="#item_12584"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Fachliteratur</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechenland &lt;Altertum&gt; / Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechisch / Literatur</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>AV Galen als Vollender, Interpret und Vermittler der antiken Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>De sanitate tuenda</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Galenus</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Gesundheitslehre</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Fachliteratur</dc:subject>
+        <dc:subject>Griechenland &lt;Altertum&gt; / Medizin</dc:subject>
+        <dc:subject>Griechisch / Literatur</dc:subject>
+        <dc:subject>AV Galen als Vollender, Interpret und Vermittler der antiken Medizin</dc:subject>
+        <dc:subject>De sanitate tuenda</dc:subject>
+        <dc:subject>Galenus</dc:subject>
+        <dc:subject>Gesundheitslehre</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni De sanitate tvenda</dc:title>
         <dc:date>1923</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -22463,37 +21927,14 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12387"/>
         <link:link rdf:resource="#item_12388"/>
         <link:link rdf:resource="#item_12389"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Fachliteratur</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechenland &lt;Altertum&gt; / Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechisch / Literatur</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>AV Galen als Vollender, Interpret und Vermittler der antiken Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>De sanitate tuenda</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Galenus</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Gesundheitslehre</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Fachliteratur</dc:subject>
+        <dc:subject>Griechenland &lt;Altertum&gt; / Medizin</dc:subject>
+        <dc:subject>Griechisch / Literatur</dc:subject>
+        <dc:subject>AV Galen als Vollender, Interpret und Vermittler der antiken Medizin</dc:subject>
+        <dc:subject>De sanitate tuenda</dc:subject>
+        <dc:subject>Galenus</dc:subject>
+        <dc:subject>Gesundheitslehre</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni De sanitate tvenda</dc:title>
         <dc:date>1923</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -22566,6 +22007,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Handschriftliche Studien zu Galen 2. 2.</dc:title>
         <dc:date>1911</dc:date>
         <z:language>German</z:language>
@@ -22606,9 +22048,8 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12393"/>
         <link:link rdf:resource="#item_12394"/>
         <link:link rdf:resource="#item_12392"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>CMG</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>CMG</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Libros I- VIII continens</dc:title>
         <dc:date>1907</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -22687,6 +22128,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12397"/>
         <link:link rdf:resource="#item_12398"/>
         <link:link rdf:resource="#item_12396"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Libros IX - XVII continens</dc:title>
         <dc:date>1909</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -22766,6 +22208,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12401"/>
         <link:link rdf:resource="#item_12402"/>
         <link:link rdf:resource="#item_12400"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galenu peri kraseōn tria</dc:title>
         <dc:date>1904</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -22842,29 +22285,12 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12406"/>
         <link:link rdf:resource="#item_12407"/>
         <link:link rdf:resource="#item_12405"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>AV Corpus Medicorum Graecorum/Latinorum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Fachliteratur</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechenland &lt;Altertum&gt; / Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechisch / Literatur</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Galenus / De optima corporis constitutione</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>AV Corpus Medicorum Graecorum/Latinorum</dc:subject>
+        <dc:subject>Fachliteratur</dc:subject>
+        <dc:subject>Griechenland &lt;Altertum&gt; / Medizin</dc:subject>
+        <dc:subject>Griechisch / Literatur</dc:subject>
+        <dc:subject>Galenus / De optima corporis constitutione</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>De optima corporis constitutione. Idem de bono habitu</dc:title>
         <dc:date>1901</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -22938,29 +22364,12 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12410"/>
         <link:link rdf:resource="#item_12411"/>
         <link:link rdf:resource="#item_12409"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>AV Corpus Medicorum Graecorum/Latinorum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Fachliteratur</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechenland &lt;Altertum&gt; / Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechisch / Literatur</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Galenus / De optima corporis constitutione</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>AV Corpus Medicorum Graecorum/Latinorum</dc:subject>
+        <dc:subject>Fachliteratur</dc:subject>
+        <dc:subject>Griechenland &lt;Altertum&gt; / Medizin</dc:subject>
+        <dc:subject>Griechisch / Literatur</dc:subject>
+        <dc:subject>Galenus / De optima corporis constitutione</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>De optima corporis constitutione. Idem de bono habitu</dc:title>
         <dc:date>1901</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -23039,6 +22448,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12413"/>
         <link:link rdf:resource="#item_12414"/>
         <link:link rdf:resource="#item_12415"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni in Hippocratis prorrheticum I, de comate secundum Hippocratem, in Hippocratis prognosticum</dc:title>
         <dc:date>1915</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -23116,37 +22526,14 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12416"/>
         <link:link rdf:resource="#item_12417"/>
         <link:link rdf:resource="#item_12420"/>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Fachliteratur</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechenland &lt;Altertum&gt; / Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechisch / Literatur</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>AV Galen als Vollender, Interpret und Vermittler der antiken Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>De sanitate tuenda</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Galenus</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Gesundheitslehre</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Fachliteratur</dc:subject>
+        <dc:subject>Griechenland &lt;Altertum&gt; / Medizin</dc:subject>
+        <dc:subject>Griechisch / Literatur</dc:subject>
+        <dc:subject>AV Galen als Vollender, Interpret und Vermittler der antiken Medizin</dc:subject>
+        <dc:subject>De sanitate tuenda</dc:subject>
+        <dc:subject>Galenus</dc:subject>
+        <dc:subject>Gesundheitslehre</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni De sanitate tvenda</dc:title>
         <dc:date>1923</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -23228,16 +22615,9 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12422"/>
         <link:link rdf:resource="#item_12423"/>
         <link:link rdf:resource="#item_12421"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Geschichte</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Sammelw.</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Medizin, Geschichte</dc:subject>
+        <dc:subject>Medizin, Sammelw.</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Die partibus artis medicativae. De causis contentivis. De diaeta in morbus acutis secundum Hippocratem.</dc:title>
         <dc:date>1969</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -23314,16 +22694,9 @@ Series Title: Corpus medicorum Graecorum : Suppl. Orientale</dc:description>
         <link:link rdf:resource="#item_12425"/>
         <link:link rdf:resource="#item_12426"/>
         <link:link rdf:resource="#item_12424"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Geschichte</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Sammelw.</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Medizin, Geschichte</dc:subject>
+        <dc:subject>Medizin, Sammelw.</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Die partibus artis medicativae. De causis contentivis. De diaeta in morbus acutis secundum Hippocratem.</dc:title>
         <dc:date>1969</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -23400,53 +22773,18 @@ Series Title: Corpus medicorum Graecorum : Suppl. Orientale</dc:description>
         <link:link rdf:resource="#item_12427"/>
         <link:link rdf:resource="#item_12428"/>
         <link:link rdf:resource="#item_12429"/>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medicine, Greek and Roman</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Galen</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>*Galenus *129-199*. De symptomatum differentiis</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>*Symptom</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>AV Corpus Medicorum Graecorum/Latinorum</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Fachliteratur</rdf:value></z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Galenus / De symptomatum differentiis</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechenland &lt;Altertum&gt; / Medizin</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Griechisch / Literatur</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-            <z:AutomaticTag>
-                <rdf:value>Medicine -- Terminology -- Early works to 1800</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
-           <z:AutomaticTag><rdf:value>Symptom</rdf:value></z:AutomaticTag>
-        </dc:subject>
+        <dc:subject>Medicine, Greek and Roman</dc:subject>
+        <dc:subject>*Galen</dc:subject>
+        <dc:subject>*Galenus *129-199*. De symptomatum differentiis</dc:subject>
+        <dc:subject>*Symptom</dc:subject>
+        <dc:subject>AV Corpus Medicorum Graecorum/Latinorum</dc:subject>
+        <dc:subject>Fachliteratur</dc:subject>
+        <dc:subject>Galenus / De symptomatum differentiis</dc:subject>
+        <dc:subject>Griechenland &lt;Altertum&gt; / Medizin</dc:subject>
+        <dc:subject>Griechisch / Literatur</dc:subject>
+        <dc:subject>Medicine -- Terminology -- Early works to 1800</dc:subject>
+        <dc:subject>Symptom</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Über die Verschiedenheit der Symptome</dc:title>
         <dc:date>2009</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
@@ -23538,6 +22876,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <link:link rdf:resource="#item_12432"/>
         <link:link rdf:resource="#item_12434"/>
         <link:link rdf:resource="#item_12431"/>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Peri aireseōn tois eisagomenois: thrasybulos ; peri physikōn dynameōn</dc:title>
         <dc:date>1893</dc:date>
         <z:shortTitle>Peri aireseōn tois eisagomenois</z:shortTitle>
@@ -23616,6 +22955,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Anatomicarum administrationum libri qui supersunt novem: earundem interpretatio arabica Hunaino Isaaci filio ascripta : tomus alter libros V-IX continens</dc:title>
         <dc:date>2000</dc:date>
         <z:language>Parallel Greek text with facing Arabian translation; title page and apparatus in Latin; introductory material in Italian</z:language>
@@ -23645,6 +22985,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Anatomicarum administrationum libri qui supersunt novem: earundem interpretatio Arabica Hunaino Isaaci filio ascripta</dc:title>
         <dc:date>1986</dc:date>
         <z:language>Texto en ??rabe y griego. Portada en lat??n e introducci??n en Italiano</z:language>
@@ -23877,7 +23218,79 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
             </dcterms:URI>
         </dc:identifier>
     </bib:Book>
-   <bib:Memo rdf:about="#item_12694"><z:itemType>note</z:itemType></bib:Memo>
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg092">
+        <z:itemType>book</z:itemType>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>In Hippocratis Aphorismos</dc:title>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>101</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg092</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <z:numberOfVolumes>17b-18a</z:numberOfVolumes>
+    </bib:Book>
+    <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg092.1st1K-grc1">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                        <dc:title>Medicorum graecorum opera quae exstant [sic]</dc:title>
+                        <dc:identifier>17b-18a</dc:identifier>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <prism:volume>17b-18a</prism:volume>
+                <dc:title>Opera omnia</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Lipsiae</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>in officina C. Cnoblochii</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kühn</foaf:surname>
+                        <foaf:givenName>Karl Gottlob</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>In Hippocratis Aphorismos</dc:title>
+        <dc:date>1827</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>101</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg092.1st1K-grc1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>345-887 196-245</bib:pages>
+    </bib:BookSection>
     <z:Collection rdf:about="#collection_18">
         <dc:title>Editiones criticae</dc:title>
         <dcterms:hasPart rdf:resource="urn:isbn:978-2-251-00544-7"/>
@@ -24058,8 +23471,8 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg078.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg077.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg074.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg073.1st1K-grc2"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg073.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="#item_11558"/>
+        <dcterms:hasPart rdf:resource="#item_11561"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg071.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg072.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg070.1st1K-grc1"/>
@@ -24100,9 +23513,9 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg039.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg036.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg038.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035.1st1K-grc3"/>
+        <dcterms:hasPart rdf:resource="#item_11929"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg034.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035.1st1K-grc2"/>
+        <dcterms:hasPart rdf:resource="#item_11944"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg034.1st1K-grc2"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg028.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg032.1st1K-grc1"/>
@@ -24132,6 +23545,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg091.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg090.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg089.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg092.1st1K-grc1"/>
     </z:Collection>
     <z:Collection rdf:about="#collection_20">
         <dc:title>Editiones veterae</dc:title>
@@ -24184,7 +23598,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg100"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg099"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg093"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg095"/>
+        <dcterms:hasPart rdf:resource="#item_11453"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg094"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg088"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg087"/>
@@ -24196,7 +23610,6 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg077"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg076"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg075"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg073"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg072"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg074"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg071"/>
@@ -24237,7 +23650,6 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg041"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg038"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg036"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg034"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg028"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg032"/>
@@ -24265,6 +23677,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg091"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg090"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg089"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg092"/>
     </z:Collection>
     <z:Collection rdf:about="#collection_22">
         <dc:title>Oribasii excerpta</dc:title>
@@ -24272,6 +23685,7 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035"/>
     </z:Collection>
     <z:Collection rdf:about="#collection_23">
-       <dc:title>Orphani</dc:title><dcterms:hasPart rdf:resource="#item_11438"/>
+        <dc:title>Orphani</dc:title>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg095"/>
     </z:Collection>
 </rdf:RDF>

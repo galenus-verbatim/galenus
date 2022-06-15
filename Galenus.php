@@ -91,7 +91,22 @@ class Galenus
     static function zotero($rdf_file = __DIR__ . "/galenus-verbatim.rdf")
     {
         Xml::setLogger(self::$logger);
-        $dom = Xml::load($rdf_file);
+        // wash a bit rdf before
+        $xml = file_get_contents($rdf_file);
+        $xml = preg_replace(
+            array(
+                '@<rdf:value>&lt;p&gt;(\d\w+:.*)&lt;/p&gt;</rdf:value>@',
+            ), 
+            array(
+                '<rdf:value>$1</rdf:value>'
+            ), 
+            $xml
+        );
+        file_put_contents($rdf_file, $xml); // record the wased rdf
+
+        $dom = Xml::loadXml($xml);
+        
+        
         /* editiones */
         $editiones = Xml::transformToXml(
             __DIR__ . "/build/galenzot_editiones.xsl",
@@ -119,17 +134,24 @@ class Galenus
         Verbatim::$pdo->commit();
 
         /* opera */
-        $opera = Xml::transformToXml(
-            __DIR__ . "/build/galenzot_opera.xsl",
+        $html = Xml::transformToXml(
+            __DIR__ . "/build/galenzot_opera_navs.xsl",
             $dom
         );
-        file_put_contents(__DIR__ . "/pages/opera.html", $opera);
+        file_put_contents(__DIR__ . "/pages/opera_navs.html", $html);
+
+        $html = Xml::transformToXml(
+            __DIR__ . "/build/galenzot_opera_bib.xsl",
+            $dom
+        );
+        file_put_contents(__DIR__ . "/pages/opera_bib.html", $html);
+
         // load opus records
 
         Verbatim::$pdo->exec("DELETE FROM opus;");
         Verbatim::$pdo->beginTransaction();
         $re = '@<section class="opus" id="([^"]+)">.*?</section>@s';
-        preg_match_all($re, $opera, $matches);
+        preg_match_all($re, $html, $matches);
         $clavis = $matches[1];
         $bibl = $matches[0];
         $sql = "INSERT INTO opus (clavis, bibl) VALUES (?, ?);";

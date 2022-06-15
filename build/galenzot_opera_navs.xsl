@@ -26,62 +26,21 @@
 
 
   <xsl:template match="/">
-    <xsl:call-template name="opera"/>
+    <div>
+      <xsl:call-template name="nav_TitLa"/>
+      <xsl:call-template name="nav_fichtner"/>
+      <xsl:call-template name="nav_kuhn"/>
+      <xsl:call-template name="nav_AbbrLa"/>
+      <xsl:call-template name="nav_TitGrcCMG"/>
+      <xsl:call-template name="nav_TitFrBM"/>
+      <xsl:call-template name="nav_TitEnCGT"/>
+      <xsl:call-template name="nav_AbbrEnCGT"/>
+    </div>
   </xsl:template>
   
-  <xsl:template name="opera">
-    <article id="opera">
-      <div id="biblio">
-        <div id="presentation">
-          <!--
-          <p>Pour accéder à la description bibliographique complète des ouvrages cités <i>infra</i> (Zotero), cliquer sur [bibl. GV].</p>
-          -->
-          <p>Les titres et abréviations des titres en latin, ainsi que les titres grecs, sont repris à la « <a href="http://cmg.bbaw.de/epubl/online/galges.html" class="external" target="_blank" rel="noopener">Gesamtübersicht</a> » du Corpus Medicorum Graecorum de Berlin. Les titres en français sont repris à l’ouvrage de V. Boudon-Millot, <i>Galien de Pergame. Un médecin grec à Rome</i>, Paris : Les Belles Lettres, 2012, p. 351-374. Les titres et abréviations des titres en anglais sont repris au 1<sup>er</sup> volume de la collection Cambridge Galen Translations (CGT), Galen, <i>Psychological  Writings</i>, éd. P.N. Singer &amp; <i>al</i>., Cambridge : CUP, 2013, p. 429-442.</p>
-        </div>
-        <xsl:for-each select="/*/bib:Book[@rdf:about = $opera_ids]">
-          <xsl:sort select="dc:subject/dcterms:LCC/rdf:value"/>
-          <xsl:apply-templates select="." mode="opus"/>
-        </xsl:for-each>
-      </div>
-      <aside id="navs">
-        <select id="selnav" autocomplete="off">
-          <option value="fichtner" selected="selected">N° Fichtner</option>
-          <option value="kuhn">Édition Kühn</option>
-          <option value="TitLa">Titre latin</option>
-          <option value="AbbrLa">Abréviation CMG</option>
-          <option value="TitGrcCMG">Titre grec</option>
-          <option value="TitFrBM">Titre français</option>
-          <option value="TitEnCGT">Titre anglais</option>
-          <option value="AbbrEnCGT">Abréviation CGT</option>
-        </select>
-        <xsl:call-template name="nav_fichtner"/>
-        <xsl:call-template name="nav_kuhn"/>
-        <xsl:call-template name="nav_TitLa"/>
-        <xsl:call-template name="nav_AbbrLa"/>
-        <xsl:call-template name="nav_TitGrcCMG"/>
-        <xsl:call-template name="nav_TitFrBM"/>
-        <xsl:call-template name="nav_TitEnCGT"/>
-        <xsl:call-template name="nav_AbbrEnCGT"/>
-        <script>
-(function () {
-    const select = document.getElementById('selnav');
-    select.addEventListener("change", function() {
-        if (!select.last) select.last = document.getElementById('fichtner');
-        const id = select.value;
-        const show = document.getElementById(id);
-        if (!show) return;
-        select.last.style.display = 'none';
-        select.last = show;
-        show.style.display = 'block';
-    });
-}());
-        </script>
-      </aside>
-    </article>
-  </xsl:template>
   
   <xsl:template name="nav_fichtner">
-    <nav id="fichtner" class="bibl">
+    <nav id="fichtner" style="display:none" class="bibl">
       <xsl:for-each select="/*/bib:*[@rdf:about = $opera_ids]">
         <xsl:sort select="dc:subject/dcterms:LCC/rdf:value"/>
         <a>
@@ -117,7 +76,7 @@
   </xsl:template>
   
   <xsl:template name="nav_TitLa">
-    <nav id="TitLa" style="display:none" class="bibl">
+    <nav id="TitLa" class="bibl">
       <xsl:for-each select="/*/bib:*[@rdf:about = $opera_ids]">
         <xsl:sort select="normalize-space(dc:title)"/>
         <a>

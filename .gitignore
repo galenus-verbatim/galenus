@@ -4,6 +4,7 @@ autodel.php
 .~*
 odt/*.docx
 pages/*.html
+!pages/opera*
 pages/*.xml
 
 # Mac ignore 

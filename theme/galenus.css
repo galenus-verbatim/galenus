@@ -15,3 +15,12 @@
 .ed2page:hover {
     background-color: var(--bg2);
 }
+
+section.opus {
+    padding: 1rem;
+}
+
+.biblio .presentation {
+    padding: 1rem;
+    text-indent: 0;
+}

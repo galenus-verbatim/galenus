@@ -44,8 +44,7 @@ $cts = Web::par('kuhn', '');
                     value="<?= htmlspecialchars($cts) ?>"
                 />
             </form>
-            <?= Route::tab('', I18n::_('ostium')) ?>
-            <?= Route::tab('opera', I18n::_('opera')) ?>
+            <?= Route::tab('', I18n::_('opera')) ?>
             <?php 
             if ($page == 'tlg') {
                 // if doc visible, add a buttoon search in doc search in doc
@@ -56,7 +55,6 @@ $cts = Web::par('kuhn', '');
             }
             
             ?>
-            <?= Route::tab('verba', I18n::_('verba')) ?>
             <?= Route::tab('de', I18n::_('de')) ?>
         </nav>
         <div class="container">
