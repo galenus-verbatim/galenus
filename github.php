@@ -25,7 +25,7 @@ if (!isset($headers['X-Github-Sha'])) {
 $sha = $headers['X-Github-Sha'];
 
 fwrite($fopen, "\n\n================\n");
-fwrite($fopen, '    ## ' . date(DATE_ATOM) . ' ' . $sha . "\n");
+fwrite($fopen, '## ' . date(DATE_ATOM) . ' ' . $sha . "\n");
 
 
 // check last sha
@@ -41,13 +41,15 @@ file_put_contents($sha_file, $sha);
 $cwd = getcwd();
 chdir('../verbatim');
 $output = [];
-exec("git fetch --force 2>&1", $output);
+exec("git reset --hard HEAD 2>&1", $output);
+exec("git pull 2>&1", $output);
 fwrite($fopen, implode("\n", $output). "\n\n");
 chdir($cwd);
 
 // 2. git pull galenus
 $output = [];
-exec("git fetch --force 2>&1", $output);
+exec("git reset --hard HEAD 2>&1", $output);
+exec("git pull 2>&1", $output);
 fwrite($fopen, implode("\n", $output). "\n\n");
 
 
