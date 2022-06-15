@@ -1,5 +1,7 @@
 <?php
 
+require_once(__DIR__.'/Galenus.php');
+
 use Psr\Log\{LogLevel};
 use Oeuvres\Kit\{LoggerCli};
 
