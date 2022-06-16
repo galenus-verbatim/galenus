@@ -4,36 +4,6 @@
 const image = document.getElementById('image');
 const div = document.getElementById('viewcont');
 if (div) {
-    var pageViewer = new Viewer(div, {
-        title: function(image) {
-            return image.alt;
-        },
-        transition: false,
-        inline: true,
-        navbar: 0,
-        // minWidth: '100%', 
-        toolbar: {
-            width: function() {
-                let cwidth = div.offsetWidth;
-                let iwidth = pageViewer.imageData.naturalWidth;
-                let zoom = cwidth / iwidth;
-                pageViewer.zoomTo(zoom);
-                pageViewer.moveTo(0, pageViewer.imageData.y);
-            },
-            zoomIn: true,
-            zoomOut: true,
-            oneToOne: true,
-            reset: true,
-        },
-        viewed() {
-            // default zoom on load, image width
-            let cwidth = div.offsetWidth;
-            let iwidth = pageViewer.imageData.naturalWidth;
-            let zoom = cwidth / iwidth;
-            pageViewer.zoomTo(zoom);
-            pageViewer.moveTo(0, 0);
-        },
-    });
     // viewer override of resize
     Viewer.prototype.resize = function() {
         var _this3 = this;
@@ -78,6 +48,15 @@ if (div) {
         }
     };
 
+    /*
+    var onViewed = function onViewed() {
+        var imageData = _this2.imageData;
+        var render = Array.isArray(options.title) ? options.title[1] : options.title;
+        // EDIT 2022-04, keep html in titles
+        title.innerHTML = isFunction(render) ? render.call(_this2, image, imageData) : "".concat(alt, " (").concat(imageData.naturalWidth, " \xD7 ").concat(imageData.naturalHeight, ")");
+    };
+    */
+
     Viewer.prototype.wheel = function(event) {
         var _this4 = this;
         if (!this.viewed) {
@@ -106,6 +85,41 @@ if (div) {
         }
         this.move(0, -delta);
     };
+
+    var pageViewer = new Viewer(div, {
+        title: function(image) {
+            return image.alt;
+        },
+        title: false,
+        transition: false,
+        inline: true,
+        navbar: 0,
+        zIndex: 4,
+        // minWidth: '100%', 
+        toolbar: {
+            width: function() {
+                let cwidth = div.offsetWidth;
+                let iwidth = pageViewer.imageData.naturalWidth;
+                let zoom = cwidth / iwidth;
+                pageViewer.zoomTo(zoom);
+                pageViewer.moveTo(0, pageViewer.imageData.y);
+            },
+            zoomIn: true,
+            zoomOut: true,
+            oneToOne: true,
+            reset: true,
+        },
+        viewed() {
+            // default zoom on load, image width
+            let cwidth = div.offsetWidth;
+            let iwidth = pageViewer.imageData.naturalWidth;
+            let zoom = cwidth / iwidth;
+            pageViewer.zoomTo(zoom);
+            pageViewer.moveTo(0, 0);
+            console.log(this);
+        },
+    });
+
 }
 (function() {
     let first = true;
@@ -160,7 +174,11 @@ if (div) {
                 this.classList.add("selected");
                 pageViewer.spanLast = this;
                 image.src = url;
-                if (dat.title) image.alt = text + ' source : ' + dat.title.replace('%%', pno);
+                let title = '';
+                if (dat.title) title = text + ' source : ' + dat.title.replace('%%', pno);
+                image.alt = title;
+                const header = document.getElementById('image_header');
+                if (header) header.innerHTML = title;
                 pageViewer.update();
                 pageViewer.resize();
             }

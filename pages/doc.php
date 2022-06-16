@@ -157,16 +157,19 @@ echo '
         </a>
 ';
     }
+
+    $urn = '<div class="urn"><a class="urn" href="">urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']) . "</a></div>\n";
+
     echo preg_replace(
         array(
             '@<span class="scope">.*?</span>@',
             '@<span class="editors">@',
-            '@</h1>@',
+            '@<h1@',
         ),
         array(
             Verbatim::scope($doc),
             ', '.Verbatim::num($doc).'$0',
-            '<div class="urn"><a class="urn" href="">urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']) . '</a></div>' . '$0',
+            $urn . '$0',
         ), 
         $editio['bibl']
     );
@@ -218,8 +221,11 @@ echo '
 </div>';
     echo '
     <div id="pagimage">
-        <div id="viewcont">
-            <img id="image"/>
+        <header id="image_header">Titre image</header>
+        <div>
+            <div id="viewcont">
+                <img id="image"/>
+            </div>
         </div>
     </div>';
     

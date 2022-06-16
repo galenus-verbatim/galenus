@@ -24,3 +24,31 @@ section.opus {
     padding: 1rem;
     text-indent: 0;
 }
+
+header.doc {
+    position: sticky;
+    top: -8rem;
+}
+
+header.doc div.urn {
+    margin: 1rem 0 0.5rem 0;
+}
+
+div.viewer-footer {
+    position: static;
+}
+
+div.viewer-toolbar {
+    position: absolute;
+    left: 1rem;
+    text-align: left;
+    top: 0.5rem;
+}
+
+.viewer-fullscreen {
+    z-index: 100;
+}
+
+body.viewer-open #tabs {
+    z-index: 0;
+}
