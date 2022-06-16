@@ -27,7 +27,12 @@ section.opus {
 
 header.doc {
     position: sticky;
-    top: -8rem;
+    top: 60px;
+}
+
+header.opus .urn {
+    margin-top: 1rem;
+    text-align: right;
 }
 
 header.doc div.urn {
@@ -52,3 +57,5 @@ div.viewer-toolbar {
 body.viewer-open #tabs {
     z-index: 0;
 }
+
+.viewer-title {}

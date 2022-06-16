@@ -117,7 +117,6 @@ if (div) {
             let zoom = cwidth / iwidth;
             pageViewer.zoomTo(zoom);
             pageViewer.moveTo(0, 0);
-            console.log(this);
         },
     });
 

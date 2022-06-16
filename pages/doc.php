@@ -144,45 +144,52 @@ function main() {
 echo '
 <div class="doc">
     <main>
-    <header class="doc">
+    <header class="opus">
 ';
+    preg_match('@<h1[^>]*>.*?</h1>@im', $editio['bibl'], $matches);
+    $h1 =  $matches[0];
+    echo preg_replace('@<h1[^>]*>.*?</h1>@im', '', $editio['bibl']);
+    $urn = '<div class="urn"><a class="urn" href="">urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']) . "</a></div>\n";
+    echo $urn;
+
+
+    echo '
+    </header>
+    <header class="doc">';
     $qstring = '';
     if ($q) $qstring = '?q=' . $q;
 
     $key = 'ante';
     if (isset($doc[$key]) && $doc[$key]) {
         echo '
-        <a class="prevnext" href="' . $doc[$key] . $qstring . '">
+        <a class="prevnext ante prev" href="' . $doc[$key] . $qstring . '">
             <div>⟨</div>
         </a>
 ';
     }
 
-    $urn = '<div class="urn"><a class="urn" href="">urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']) . "</a></div>\n";
-
+    // populate a $h1
     echo preg_replace(
         array(
             '@<span class="scope">.*?</span>@',
             '@<span class="editors">@',
-            '@<h1@',
         ),
         array(
             Verbatim::scope($doc),
             ', '.Verbatim::num($doc).'$0',
-            $urn . '$0',
         ), 
-        $editio['bibl']
+        $h1
     );
 
     $key = 'post';
     if (isset($doc[$key]) && $doc[$key]) {
         echo '
-        <a class="prevnext" href="' . $doc[$key] . $qstring . '">
+        <a class="prevnext post next" href="' . $doc[$key] . $qstring . '">
             <div>⟩</div>
         </a>';
     }
 
-    echo '
+    echo'
     </header>
     <div class="text">';
 
