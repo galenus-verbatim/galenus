@@ -88,6 +88,7 @@ if (div) {
 
     var pageViewer = new Viewer(div, {
         title: function(image) {
+            // title sould not be html
             return image.alt;
         },
         title: false,
