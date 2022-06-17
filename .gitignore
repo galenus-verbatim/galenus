@@ -1,5 +1,5 @@
 *.log
-autodel.php
+_*.php
 *.db
 .~*
 odt/*.docx

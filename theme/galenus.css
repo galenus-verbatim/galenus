@@ -1,3 +1,28 @@
+:root {
+    --bg: #fff;
+    --text: #333;
+    --bghi: #e09143;
+    --texthi: #fff;
+    --bglo: rgb(236, 214, 190);
+    --bgloa: rgba(236, 214, 190, 0.85);
+    --textlo: #666;
+    --textinv: #000;
+    --link: #e09143;
+    --link2: rgba(224, 145, 67, 0.5);
+    --link3: #9c652e;
+    --bg2: rgb(102, 102, 102);
+    --bg2a: rgba(102, 102, 102, 0.8);
+    /*
+    --bg2: rgba(71, 50, 29, 0.8);
+    --bg2a: rgba(71, 50, 29, 0.8);
+    */
+    --text2: rgb(236, 214, 190);
+    --text2hi: #fff;
+    --text2inv: #fff;
+    --bg3: #f0f0f0;
+    --text3: #666;
+}
+
 .ed1page,
 .ed2page {
     padding-left: 0.5ex;
@@ -59,3 +84,13 @@ body.viewer-open #tabs {
 }
 
 .viewer-title {}
+
+div.banner .moto,
+div.banner .titles {
+    background-color: var(--bgloa);
+    box-shadow: 0px 0px 0.2vw var(--bglo);
+}
+
+div.banner {
+    color: var(--bg2);
+}
