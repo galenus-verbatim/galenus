@@ -11,5 +11,4 @@ Verbatim::connect(Galenus::db_file());
 Galenus::zotero();
 // generate sitemap.xml ??
 // require_once(dirname(__DIR__) . "/sitemap.php");
-echo "Generate odt pages\n";
 Galenus::pages(); // true = force

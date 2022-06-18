@@ -15,7 +15,7 @@ declare(strict_types=1);
 
 require_once(dirname(__DIR__) . '/verbatim/Verbatim.php');
 
-use Oeuvres\Kit\{File,Xml};
+use Oeuvres\Kit\{File, Xml};
 use Oeuvres\Odette\{OdtChain};
 use Psr\Log\{LoggerInterface, NullLogger};
 
@@ -65,7 +65,7 @@ class Galenus
             $html_file = $dst_dir . $name . '.html';
             // freshness ?
             if ($force);
-            else if (!file_exists($html_file)); 
+            else if (!file_exists($html_file));
             else  if (filemtime($html_file) > filemtime($odt_file)) continue;
 
             $odt = new OdtChain($odt_file);
@@ -75,7 +75,7 @@ class Galenus
             $tei_dom = Xml::load($tei_file);
             unlink($tei_file);
 
-            $xsl_file =$teinte_dir . '/tei_html_article.xsl';
+            $xsl_file = $teinte_dir . '/tei_html_article.xsl';
             Xml::transformToUri(
                 $xsl_file,
                 $tei_dom,
@@ -91,16 +91,19 @@ class Galenus
     static function zotero($rdf_file = __DIR__ . "/galenus-verbatim.rdf")
     {
         if (!file_exists($rdf_file)) {
-            self::$logger->error($rdf_file . " not found for a Zotero RDF export."); 
+            self::$logger->error($rdf_file . " not found for a Zotero RDF export.");
             return;
         }
         // test freshness
         // this file knows last generation
         $editiones_file = __DIR__ . "/html/editiones.html";
-        if (!file_exists($editiones_file)); // refresh
-        else if(filemtime($editiones_file) < filemtime($rdf_file));  // refresh
-        else if(filemtime($editiones_file) < filemtime(Verbatim::db_file()));  // refresh
-        else {
+        if (!file_exists($editiones_file)) {
+            self::$logger->info('New build, file not found ' . $editiones_file);
+        } else if (filemtime($editiones_file) < filemtime($rdf_file)) {
+            self::$logger->info('Rebuild, new zotero rdf export');
+        } else if (filemtime($editiones_file) < filemtime(Verbatim::db_file())) {
+            self::$logger->info('Rebuild, new verbapie database');
+        } else {
             return; // OK
         }
         self::$logger->info('Generate resources from Zotero rdf export ' . $rdf_file);
@@ -110,24 +113,22 @@ class Galenus
         $xml = preg_replace(
             array(
                 '@<rdf:value>&lt;p&gt;(\d\w+:.*)&lt;/p&gt;</rdf:value>@',
-            ), 
+            ),
             array(
                 '<rdf:value>$1</rdf:value>'
-            ), 
+            ),
             $xml
         );
         file_put_contents($rdf_file, $xml); // record the wased rdf
 
         $dom = Xml::loadXml($xml);
-        
-        
+
+
         /* editiones */
         $editiones = Xml::transformToXml(
             __DIR__ . "/build/galenzot_editiones.xsl",
             $dom
         );
-        File::mkdir(dirname($editiones_file));
-        file_put_contents($editiones_file, $editiones);
 
 
         Verbatim::$pdo->beginTransaction();
@@ -163,6 +164,7 @@ class Galenus
 
         // load opus records
 
+        self::$logger->info('Load database with Zotero records');
         Verbatim::$pdo->exec("DELETE FROM opus;");
         Verbatim::$pdo->beginTransaction();
         $re = '@<section class="opus" id="([^"]+)">.*?</section>@s';
@@ -175,5 +177,11 @@ class Galenus
             $insOpus->execute(array($clavis[$i], $bibl[$i]));
         }
         Verbatim::$pdo->commit();
+        self::$logger->info('Database, optimize');
+        Verbatim::$pdo->exec("PRAGMA auto_vacuum = FULL");
+        // finish with that, will be the timestamp
+        File::mkdir(dirname($editiones_file));
+        file_put_contents($editiones_file, $editiones);
+        self::$logger->info('End');
     }
 }
