@@ -211,7 +211,6 @@ if (div) {
     // on load last value
     window.addEventListener("load", function(e) {
         const value = localStorage.getItem(id);
-        console.log("Stored ? " + value);
         if (value) {
             select.value = value;
             show(value);
