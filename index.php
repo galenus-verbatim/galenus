@@ -6,7 +6,7 @@ declare(strict_types=1);
 /** Require master class  */
 require_once(__DIR__ . '/Galenus.php');
 
-use Oeuvres\Kit\{Route, I18n};
+use Oeuvres\Kit\{Route, I18n, Web};
 
 // connect to a database prepared with verbapie
 // https://github.com/galenus-verbatim/verbapie
