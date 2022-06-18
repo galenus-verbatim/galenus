@@ -13,7 +13,7 @@ use Oeuvres\Kit\{Route, I18n};
 Verbatim::connect(Galenus::db_file());
 
 // Get a language to route correctly, store it for other pages
-$lang = 'fr';
+$lang = Web::par('lang', 'fr', '/en|fr/', 'lang');
 Route::lang($lang);
 // Register verbatim messages for the app
 I18n::load(Route::app_dir() . $lang . '.tsv');
