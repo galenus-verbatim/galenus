@@ -19,6 +19,7 @@ $lang = Route::lang();
     <head>
         <meta charset="utf-8"/>
         <title><?= Route::title('Galenus Verbatim') ?></title>
+        <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
         <link  href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="<?= Route::res_href('../verbatim/verbatim.css') ?>"/>
         <link rel="stylesheet" href="<?= Route::res_href('theme/galenus.css') ?>"/>
