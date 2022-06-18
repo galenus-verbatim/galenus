@@ -28,7 +28,7 @@ $lang = Route::lang();
     <header id="header">
         <div class="banner">
             <div class="titles">
-                <a href="<?= Route::home_href() ?>">
+                <a href="<?= Route::home_href() ?>.">
                     <div class="title">Galenus verbatim</div>
                     <div class="titlesub">Γαληνὸς κατὰ λέξιν</div>
                 </a>
