@@ -85,6 +85,11 @@ body.viewer-open #tabs {
 
 .viewer-title {}
 
+div.banner a {
+    color: inherit;
+    text-decoration: none;
+}
+
 div.banner .moto,
 div.banner .titles {
     background-color: var(--bgloa);
@@ -93,4 +98,10 @@ div.banner .titles {
 
 div.banner {
     color: var(--bg2);
+}
+
+section.editio h1,
+section.opus h1,
+section.verbatim h1 {
+    text-align: left;
 }

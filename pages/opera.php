@@ -6,19 +6,24 @@
  */
 require_once(dirname(__DIR__) . "/Galenus.php");
 
-use Oeuvres\Kit\{I18n, Select};
+use Oeuvres\Kit\{I18n, Route, Select};
 
 function title() {
     return I18n::_('title');
 }
 
 function main() {
+    $lang = Route::lang('fr');
+    $html_dir = dirname(__DIR__) . '/html/';
     ?>
-    <div id="opera">
-        <div id="biblio">
+    <div id="opera" class="opera">
+        <div id="biblio" class="biblio">
             <main>
-<?php readfile(__DIR__ . '/opera_fr.html') ?>
-<?php readfile(__DIR__ . '/opera_bib.html') ?>
+<?php
+$pres_file = $html_dir . '/opera_' . $lang .'.html';
+if (file_exists($pres_file)) readfile($pres_file); 
+?>
+<?php readfile($html_dir . '/opera_bib.html') ?>
             </main>
         </div>
         <aside id="navs">
@@ -34,7 +39,7 @@ $select->add('TitEnCGT', I18n::_('zotero.TitEnCGT'));
 $select->add('AbbrEnCGT', I18n::_('zotero.AbbrEnCGT'));
 echo $select;
             ?>
-<?php readfile(__DIR__ . '/opera_navs.html') ?>
+<?php readfile($html_dir . '/opera_navs.html') ?>
             
         </aside>
 

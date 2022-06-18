@@ -12,6 +12,7 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
     $body_class = 'tlg';
 }
 $cts = Web::par('kuhn', '');
+$lang = Route::lang();
 
 ?><!doctype html>
 <html>
@@ -27,10 +28,12 @@ $cts = Web::par('kuhn', '');
     <header id="header">
         <div class="banner">
             <div class="titles">
-                <div class="title">Galenus verbatim</div>
-                <div class="titlesub">Γαληνὸς κατὰ λέξιν</div>
+                <a href="<?= Route::home_href() ?>">
+                    <div class="title">Galenus verbatim</div>
+                    <div class="titlesub">Γαληνὸς κατὰ λέξιν</div>
+                </a>
             </div>
-            <div class="moto"><?= I18n::_('galenus.moto') ?></div>
+            <div class="moto"><?= I18n::_('template.moto') ?></div>
             <img class="banner" src="<?= Route::res_href('theme/galenus-verbatim.jpg') ?>" />
         </div>
     </header>
@@ -44,7 +47,7 @@ $cts = Web::par('kuhn', '');
                     value="<?= htmlspecialchars($cts) ?>"
                 />
             </form>
-            <?= Route::tab('', I18n::_('opera')) ?>
+            <?= Route::tab('', I18n::_('template.opera')) ?>
             <?php 
             if ($page == 'tlg') {
                 // if doc visible, add a buttoon search in doc search in doc
@@ -55,7 +58,7 @@ $cts = Web::par('kuhn', '');
             }
             
             ?>
-            <?= Route::tab('de', I18n::_('de')) ?>
+            <?= Route::tab(I18n::_('template.de_href'), I18n::_('template.de')) ?>
         </nav>
         <div class="container">
             <?php Route::main(); ?>

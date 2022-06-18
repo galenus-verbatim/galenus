@@ -15,7 +15,7 @@ declare(strict_types=1);
 
 require_once(dirname(__DIR__) . '/verbatim/Verbatim.php');
 
-use Oeuvres\Kit\{Xml};
+use Oeuvres\Kit\{File,Xml};
 use Oeuvres\Odette\{OdtChain};
 use Psr\Log\{LoggerInterface, NullLogger};
 
@@ -57,7 +57,7 @@ class Galenus
     static public function pages($force = false)
     {
         $odt_dir = __DIR__ . '/odt/';
-        $dst_dir = __DIR__ . '/pages/';
+        $dst_dir = __DIR__ . '/html/';
         $reflector = new \ReflectionClass('Oeuvres\Teinte\Teinte');
         $teinte_dir = dirname($reflector->getFileName());
         foreach (glob($odt_dir . '*.odt') as $odt_file) {
@@ -90,6 +90,20 @@ class Galenus
      */
     static function zotero($rdf_file = __DIR__ . "/galenus-verbatim.rdf")
     {
+        if (!file_exists($rdf_file)) {
+            self::$logger->error($rdf_file . " not found for a Zotero RDF export."); 
+            return;
+        }
+        // test freshness
+        // this file knows last generation
+        $editiones_file = __DIR__ . "/html/editiones.html";
+        if (!file_exists($editiones_file)); // refresh
+        else if(filemtime($editiones_file) < filemtime($rdf_file));  // refresh
+        else if(filemtime($editiones_file) < filemtime(Verbatim::db_file()));  // refresh
+        else {
+            return; // OK
+        }
+        self::$logger->info('Generate resources from Zotero rdf export ' . $rdf_file);
         Xml::setLogger(self::$logger);
         // wash a bit rdf before
         $xml = file_get_contents($rdf_file);
@@ -112,7 +126,8 @@ class Galenus
             __DIR__ . "/build/galenzot_editiones.xsl",
             $dom
         );
-        file_put_contents(__DIR__ . "/pages/editiones.html", $editiones);
+        File::mkdir(dirname($editiones_file));
+        file_put_contents($editiones_file, $editiones);
 
 
         Verbatim::$pdo->beginTransaction();
@@ -138,13 +153,13 @@ class Galenus
             __DIR__ . "/build/galenzot_opera_navs.xsl",
             $dom
         );
-        file_put_contents(__DIR__ . "/pages/opera_navs.html", $html);
+        file_put_contents(__DIR__ . "/html/opera_navs.html", $html);
 
         $html = Xml::transformToXml(
             __DIR__ . "/build/galenzot_opera_bib.xsl",
             $dom
         );
-        file_put_contents(__DIR__ . "/pages/opera_bib.html", $html);
+        file_put_contents(__DIR__ . "/html/opera_bib.html", $html);
 
         // load opus records
 

@@ -3,9 +3,7 @@ _*.php
 *.db
 .~*
 odt/*.docx
-pages/*.html
-!pages/opera*
-pages/*.xml
+html/
 
 # Mac ignore 
 .DS_Store
