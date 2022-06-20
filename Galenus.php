@@ -101,7 +101,7 @@ class Galenus
             self::$logger->info('New build, file not found ' . $editiones_file);
         } else if (filemtime($editiones_file) < filemtime($rdf_file)) {
             self::$logger->info('Rebuild, new zotero rdf export');
-        } else if (filemtime($editiones_file) < filemtime(Verbatim::db_file())) {
+        } else if (filemtime($editiones_file) + 10 < filemtime(Verbatim::db_file())) {
             self::$logger->info('Rebuild, new verbapie database');
         } else {
             return; // OK
