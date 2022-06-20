@@ -5,6 +5,7 @@
     --texthi: #fff;
     --bglo: rgb(236, 214, 190);
     --bgloa: rgba(236, 214, 190, 0.85);
+    --bgmark: var(--bgloa);
     --textlo: #666;
     --textinv: #000;
     --link: #e09143;

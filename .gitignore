@@ -2,6 +2,7 @@
 _*.php
 *.db
 .~*
+~$*
 odt/*.docx
 html/
 
