@@ -23005,6 +23005,11 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_7863"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7864"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7865"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7866"/>
+        <link:link rdf:resource="#item_7872"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg089</rdf:value>
@@ -23017,6 +23022,33 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dc:title>In Hippocratis Epidemiarum I</dc:title>
         <z:shortTitle>In Hipp. Epid. I comm.</z:shortTitle>
     </bib:Book>
+    <bib:Memo rdf:about="#item_7863">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;1TitGrcCMG: Εἰς τὰς ἐπιδημίας (α’) Ἱπποκράτους ὑπομνήματα&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7864">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;2TitFrBM: Commentaire aux Épidémies I d’Hippocrate&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7865">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;3TitEnCGT: Commentary on Hippocrates’ ‘Epidemics I’&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7866">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;4AbbrEnCGT: Hipp. Epid. I&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_7872">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://cmg.bbaw.de/epubl/online/Bibl/Galen-Bibliographie_096.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-09-09 13:45:39</dcterms:dateSubmitted>
+        <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg090">
         <z:itemType>book</z:itemType>
         <bib:authors>
@@ -23026,6 +23058,11 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_7867"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7868"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7869"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7870"/>
+        <link:link rdf:resource="#item_7873"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg090</rdf:value>
@@ -23038,6 +23075,34 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dc:title>In Hippocratis Epidemiarum III</dc:title>
         <z:shortTitle>In Hipp. Epid. III comm.</z:shortTitle>
     </bib:Book>
+    <bib:Memo rdf:about="#item_7867">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;1TitGrcCMG: Εἰς τὰς ἐπιδημίας (γ’) Ἱπποκράτους ὑπομνήματα&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7868">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;2TitFrBM: Commentaire aux Épidémies III d’Hippocrate&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7869">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;3TitEnCGT: Commentary on Hippocrates’ ‘Epidemics III’&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7870">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;4AbbrEnCGT: Hipp. Epid. III&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_7873">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://cmg.bbaw.de/epubl/online/Bibl/Galen-Bibliographie_096.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-09-09 13:46:12</dcterms:dateSubmitted>
+        <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg091">
         <z:itemType>book</z:itemType>
         <bib:authors>
@@ -23047,6 +23112,11 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_7874"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7875"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7876"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7877"/>
+        <link:link rdf:resource="#item_7878"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg091</rdf:value>
@@ -23059,6 +23129,33 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dc:title>In Hippocratis Epidemiarum VI</dc:title>
         <z:shortTitle>In Hipp. Epid. VI comm.</z:shortTitle>
     </bib:Book>
+    <bib:Memo rdf:about="#item_7874">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;1TitGrcCMG: Εἰς τὰς ἐπιδημίας (στ’) Ἱπποκράτους ὑπομνήματα&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7875">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;2TitFrBM: Commentaire aux Épidémies VI d’Hippocrate&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7876">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;3TitEnCGT: Commentary on Hippocrates’ ‘Epidemics VI’&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7877">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;4AbbrEnCGT: Hipp. Epid. VI&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_7878">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://cmg.bbaw.de/epubl/online/Bibl/Galen-Bibliographie_096.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-09-09 13:51:38</dcterms:dateSubmitted>
+        <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg089.1st1K-grc1">
         <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
@@ -23280,17 +23377,220 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_7879"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7880"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7881"/>
+        <dcterms:isReferencedBy rdf:resource="#item_7882"/>
+        <link:link rdf:resource="#item_7883"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg092</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:date>ca 200</dc:date>
         <dc:subject>
            <dcterms:LCC><rdf:value>101</rdf:value></dcterms:LCC>
         </dc:subject>
         <z:numberOfVolumes>17b-18a</z:numberOfVolumes>
         <dc:title>In Hippocratis Aphorismos</dc:title>
+        <z:shortTitle>In Hipp. Aphor. comm.</z:shortTitle>
     </bib:Book>
+    <bib:Memo rdf:about="#item_7879">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;1TitGrcCMG: Εἰς τοὺς ἀφορισμοὺς Ἱπποκράτους ὑπομνήματα&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7880">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;2TitFrBM: Commentaire aux Aphorismes d’Hippocrate&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7881">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;3TitEnCGT: Commentary on Hippocrates’ ‘Aphorisms’&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_7882">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;4AbbrEnCGT: Hipp. Aph.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_7883">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://cmg.bbaw.de/epubl/online/Bibl/Galen-Bibliographie_101.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-09-09 14:03:33</dcterms:dateSubmitted>
+        <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <bib:Book rdf:about="urn:isbn:978-86-86563-91-0">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Belgrade, RS</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Université de Belgrade, Faculté de philosophie</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Marjanović-Dušanić</foaf:surname>
+                        <foaf:givenName>Smilja</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Flusin</foaf:surname>
+                        <foaf:givenName>Bernard</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dcterms:isReferencedBy rdf:resource="#item_7823"/>
+        <link:link rdf:resource="#item_7826"/>
+        <link:link rdf:resource="#item_7825"/>
+        <link:link rdf:resource="#item_7824"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Littérature byzantine</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Philologie grecque byzantine</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:identifier>ISBN 978-86-86563-91-0</dc:identifier>
+        <dc:date>cop. 2011</dc:date>
+        <z:libraryCatalog>Library Catalog - www.sudoc.abes.fr</z:libraryCatalog>
+        <z:language>français</z:language>
+        <dc:title>Remanier, métaphraser: fonctions et techniques de la réécriture dans le monde byzantin</dc:title>
+        <z:shortTitle>Remanier, métaphraser</z:shortTitle>
+        <z:numPages>283</z:numPages>
+    </bib:Book>
+    <bib:Memo rdf:about="#item_7823">
+        <rdf:value>&lt;div&gt;&lt;span&gt;Actes d'une rencontre organisée en septembre 2010 à l'Université de Belgrade&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_7826">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.sudoc.abes.fr/cbs/DB=2.1/SRCH?IKT=12&amp;TRM=154915289</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-06-25 13:10:54</dcterms:dateSubmitted>
+        <dc:title>Library Catalog Entry Snapshot</dc:title>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_7825">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.sudoc.fr/154915289</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-06-25 13:10:45</dcterms:dateSubmitted>
+        <dc:title>Link to Library Catalog Entry</dc:title>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_7824">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.worldcat.org/search?q=no%3A800864335</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-06-25 13:10:44</dcterms:dateSubmitted>
+        <dc:title>Worldcat Link</dc:title>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Book rdf:about="#item_7827">
+        <z:itemType>book</z:itemType>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>France</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Delouis</foaf:surname>
+                        <foaf:givenName>Olivier</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_7830"/>
+        <link:link rdf:resource="#item_7829"/>
+        <link:link rdf:resource="#item_7828"/>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Histoire religieuse -- Empire byzantin</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Monastère du Stoudios (Constantinople)</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
+        <dc:date>2007</dc:date>
+        <dc:description>ISSN: 0294-1767
+Type: Reproduction de
+University: Université Paris 1 Panthéon-Sorbonne</dc:description>
+        <z:libraryCatalog>Library Catalog - www.sudoc.abes.fr</z:libraryCatalog>
+        <z:language>français</z:language>
+        <dc:title>Saint-Jean-Baptiste de Stoudios à Constantinople: la contribution d'un monastère à l'histoire de l'Empire byzantin (v. 454-1204)</dc:title>
+        <z:shortTitle>Saint-Jean-Baptiste de Stoudios à Constantinople</z:shortTitle>
+    </bib:Book>
+    <z:Attachment rdf:about="#item_7830">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.sudoc.abes.fr/cbs/DB=2.1/SRCH?IKT=12&amp;TRM=122583531</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-06-25 13:13:05</dcterms:dateSubmitted>
+        <dc:title>Library Catalog Entry Snapshot</dc:title>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_7829">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.sudoc.fr/122583531</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-06-25 13:13:00</dcterms:dateSubmitted>
+        <dc:title>Link to Library Catalog Entry</dc:title>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_7828">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.worldcat.org/search?q=no%3A493428253</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-06-25 13:13:00</dcterms:dateSubmitted>
+        <dc:title>Worldcat Link</dc:title>
+        <z:linkMode>3</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
     <z:Collection rdf:about="#collection_24">
         <dc:title>Editiones criticae</dc:title>
         <dcterms:hasPart rdf:resource="urn:isbn:978-0-691-08286-8"/>
