@@ -25082,7 +25082,6 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dc:title>Fitcher Bibliographie</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-   <bib:Memo rdf:about="#item_7945"><z:itemType>note</z:itemType></bib:Memo>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg104">
         <z:itemType>book</z:itemType>
         <bib:authors>
