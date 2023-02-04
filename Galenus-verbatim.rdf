@@ -2196,6 +2196,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_7085"/>
         <dcterms:isReferencedBy rdf:resource="#item_7086"/>
         <link:link rdf:resource="#item_7087"/>
+        <link:link rdf:resource="#item_8081"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg045</rdf:value>
@@ -2230,6 +2231,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8081">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=2&amp;l=d&amp;p=2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg047.1st1K-grc1">
@@ -2807,6 +2818,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_7111"/>
         <dcterms:isReferencedBy rdf:resource="#item_7112"/>
         <link:link rdf:resource="#item_7106"/>
+        <link:link rdf:resource="#item_8101"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg049</rdf:value>
@@ -2843,6 +2855,16 @@
         <dc:title>Fichtner Bibliographie</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
+    <z:Attachment rdf:about="#item_8101">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=59&amp;l=a&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg052">
         <z:itemType>book</z:itemType>
         <bib:authors>
@@ -2857,6 +2879,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_7114"/>
         <dcterms:isReferencedBy rdf:resource="#item_7115"/>
         <link:link rdf:resource="#item_7118"/>
+        <link:link rdf:resource="#item_8091"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg052</rdf:value>
@@ -2891,6 +2914,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8091">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=63&amp;l=d&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg053.1st1K-grc1">
@@ -4806,6 +4839,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6705"/>
         <dcterms:isReferencedBy rdf:resource="#item_6706"/>
         <link:link rdf:resource="#item_6708"/>
+        <link:link rdf:resource="#item_8088"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg006</rdf:value>
@@ -4840,6 +4874,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8088">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=19&amp;l=d&amp;p=2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg060.1st1K-grc1">
@@ -5191,6 +5235,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6949"/>
         <dcterms:isReferencedBy rdf:resource="#item_6950"/>
         <link:link rdf:resource="#item_6951"/>
+        <link:link rdf:resource="#item_8086"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg064</rdf:value>
@@ -5225,6 +5270,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8086">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=74&amp;l=d&amp;p=2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg064.1st1K-grc1">
@@ -5318,6 +5373,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6958"/>
         <dcterms:isReferencedBy rdf:resource="#item_6954"/>
         <link:link rdf:resource="#item_6959"/>
+        <link:link rdf:resource="#item_8082"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg065</rdf:value>
@@ -5352,6 +5408,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8082">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=75&amp;l=d&amp;p=2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg065.1st1K-grc1">
@@ -5776,6 +5842,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6980"/>
         <dcterms:isReferencedBy rdf:resource="#item_6977"/>
         <link:link rdf:resource="#item_6981"/>
+        <link:link rdf:resource="#item_8103"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg067</rdf:value>
@@ -5811,6 +5878,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8103">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=76&amp;l=a&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg068">
@@ -5954,6 +6031,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6987"/>
         <dcterms:isReferencedBy rdf:resource="#item_6992"/>
         <link:link rdf:resource="#item_6988"/>
+        <link:link rdf:resource="#item_8084"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg070</rdf:value>
@@ -5988,6 +6066,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8084">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=79&amp;l=d&amp;p=2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg070.1st1K-grc1">
@@ -6704,6 +6792,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_7031"/>
         <dcterms:isReferencedBy rdf:resource="#item_7027"/>
         <link:link rdf:resource="#item_7034"/>
+        <link:link rdf:resource="#item_8089"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg076</rdf:value>
@@ -6743,6 +6832,16 @@
         <dc:title>Fichtner Bibliographie</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
+    <z:Attachment rdf:about="#item_8089">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=86&amp;l=d&amp;p=2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg077">
         <z:itemType>book</z:itemType>
         <bib:authors>
@@ -6757,6 +6856,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_7032"/>
         <dcterms:isReferencedBy rdf:resource="#item_7037"/>
         <link:link rdf:resource="#item_7038"/>
+        <link:link rdf:resource="#item_8090"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg077</rdf:value>
@@ -6791,6 +6891,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8090">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=87&amp;l=d&amp;p=2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg078.1st1K-grc1">
@@ -6884,6 +6994,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6826"/>
         <dcterms:isReferencedBy rdf:resource="#item_7041"/>
         <link:link rdf:resource="#item_6827"/>
+        <link:link rdf:resource="#item_8092"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg082</rdf:value>
@@ -6918,6 +7029,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8092">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=92&amp;l=d&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg077.1st1K-grc1">
@@ -8028,6 +8149,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6549"/>
         <dcterms:isReferencedBy rdf:resource="#item_6552"/>
         <link:link rdf:resource="#item_6550"/>
+        <link:link rdf:resource="#item_8097"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg007</rdf:value>
@@ -8062,6 +8184,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8097">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=10&amp;l=a&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg007.1st1K-grc1">
@@ -8276,6 +8408,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6567"/>
         <dcterms:isReferencedBy rdf:resource="#item_6563"/>
         <link:link rdf:resource="#item_6568"/>
+        <link:link rdf:resource="#item_8095"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg011</rdf:value>
@@ -8310,6 +8443,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8095">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=21&amp;l=d&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg011.1st1K-grc1">
@@ -9754,6 +9897,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_7159"/>
         <dcterms:isReferencedBy rdf:resource="#item_7155"/>
         <link:link rdf:resource="#item_7160"/>
+        <link:link rdf:resource="#item_8098"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg023</rdf:value>
@@ -9788,6 +9932,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8098">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=33&amp;l=a&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg024">
@@ -10008,6 +10162,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_7176"/>
         <dcterms:isReferencedBy rdf:resource="#item_7177"/>
         <link:link rdf:resource="#item_7178"/>
+        <link:link rdf:resource="#item_8093"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg025</rdf:value>
@@ -10041,6 +10196,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8093">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=34&amp;l=d&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg027.1st1K-grc1">
@@ -10261,6 +10426,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_7185"/>
         <dcterms:isReferencedBy rdf:resource="#item_7196"/>
         <link:link rdf:resource="#item_7191"/>
+        <link:link rdf:resource="#item_8094"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg030</rdf:value>
@@ -10295,6 +10461,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8094">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=43&amp;l=d&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg030.1st1K-grc1">
@@ -11365,6 +11541,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6876"/>
         <dcterms:isReferencedBy rdf:resource="#item_6875"/>
         <link:link rdf:resource="#item_6877"/>
+        <link:link rdf:resource="#item_8102"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg094</rdf:value>
@@ -11399,6 +11576,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8102">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=107&amp;l=a&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg095">
@@ -11560,6 +11747,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6887"/>
         <dcterms:isReferencedBy rdf:resource="#item_6889"/>
         <link:link rdf:resource="#item_6888"/>
+        <link:link rdf:resource="#item_8100"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg093</rdf:value>
@@ -11594,6 +11782,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8100">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=106&amp;l=a&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg094.1st1K-grc1">
@@ -12022,6 +12220,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6910"/>
         <dcterms:isReferencedBy rdf:resource="#item_6911"/>
         <link:link rdf:resource="#item_6908"/>
+        <link:link rdf:resource="#item_8080"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg102</rdf:value>
@@ -12056,6 +12255,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8080">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=115&amp;l=d&amp;p=2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg114">
@@ -13788,6 +13997,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6806"/>
         <dcterms:isReferencedBy rdf:resource="#item_6807"/>
         <link:link rdf:resource="#item_6808"/>
+        <link:link rdf:resource="#item_8096"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg037</rdf:value>
@@ -13822,6 +14032,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8096">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=47&amp;l=d&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg081.1st1K-grc1">
@@ -13914,6 +14134,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_6820"/>
         <dcterms:isReferencedBy rdf:resource="#item_6816"/>
         <link:link rdf:resource="#item_6821"/>
+        <link:link rdf:resource="#item_8087"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg103</rdf:value>
@@ -13948,6 +14169,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8087">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=4&amp;l=d&amp;p=2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg081">
@@ -14458,6 +14689,7 @@
         </bib:authors>
         <dcterms:isReferencedBy rdf:resource="#item_6933"/>
         <link:link rdf:resource="#item_6935"/>
+        <link:link rdf:resource="#item_8085"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg029</rdf:value>
@@ -14482,6 +14714,16 @@
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8085">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=39&amp;l=d&amp;p=2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg086">
@@ -14827,104 +15069,34 @@
         <z:language>English</z:language>
         <dc:title>Galen on antecedent causes</dc:title>
     </bib:Book>
-    <bib:Book rdf:about="urn:isbn:978-3-05-000745-8">
-        <z:itemType>book</z:itemType>
+    <bib:BookSection rdf:about="urn:isbn:978-2-251-00483-9">
+        <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
-            <bib:Series>
-                <dc:title>Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID: 518709-6</dc:title>
-                <dc:identifier>1</dc:identifier>
-            </bib:Series>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                       <dc:title>Collection des Universités de France</dc:title>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <dc:identifier>ISBN 978-2-251-00483-9</dc:identifier>
+                <dc:title>Galien: Tome II: Exhortation à l’étude de la me ́decine. Art médical.</dc:title>
+            </bib:Book>
         </dcterms:isPartOf>
         <dc:publisher>
             <foaf:Organization>
                 <vcard:adr>
                     <vcard:Address>
-                       <vcard:locality>Berlin</vcard:locality>
+                       <vcard:locality>Paris</vcard:locality>
                     </vcard:Address>
                 </vcard:adr>
-                <foaf:name>Akad.-Verl.</foaf:name>
+                <foaf:name>Les Belles Lettres</foaf:name>
             </foaf:Organization>
         </dc:publisher>
-        <bib:editors>
-            <rdf:Seq>
-                <rdf:li>
-                    <foaf:Person>
-                        <foaf:surname>Barigazzi</foaf:surname>
-                        <foaf:givenName>Adelmo</foaf:givenName>
-                    </foaf:Person>
-                </rdf:li>
-            </rdf:Seq>
-        </bib:editors>
-        <dcterms:isReferencedBy rdf:resource="#item_7282"/>
-        <link:link rdf:resource="#item_7285"/>
-        <link:link rdf:resource="#item_7284"/>
-        <link:link rdf:resource="#item_7283"/>
-        <dc:subject>CMG</dc:subject>
-        <dc:subject>Galenus 129-199. De optima doctrina</dc:subject>
-        <dc:subject>_métadonnées à vérifier</dc:subject>
-        <dc:identifier>ISBN 978-3-05-000745-8</dc:identifier>
-        <dc:date>1991</dc:date>
-        <dc:subject>
-           <dcterms:LCC><rdf:value>002</rdf:value></dcterms:LCC>
-        </dc:subject>
-        <dc:description>Pages: 172
-Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID: 518709-6</dc:description>
-        <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
-        <dc:title>Sull'ottima maniera d'insegnare</dc:title>
-        <z:numPages>172</z:numPages>
-    </bib:Book>
-    <bib:Memo rdf:about="#item_7282">
-        <rdf:value>&lt;div&gt;Text griech. u. ital.&lt;/div&gt;&lt;div&gt;Die Vorlage enth. insgesamt ... Werke&lt;/div&gt;</rdf:value>
-    </bib:Memo>
-    <z:Attachment rdf:about="#item_7285">
-        <z:itemType>attachment</z:itemType>
-        <dc:identifier>
-            <dcterms:URI>
-                <rdf:value>https://cmg.bbaw.de/epubl/online/cmg_05_01_01.php?p=89</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
-        <dcterms:dateSubmitted>2022-05-05 08:00:34</dcterms:dateSubmitted>
-        <dc:title>cmg_05_01_01.php</dc:title>
-        <z:linkMode>3</z:linkMode>
-    </z:Attachment>
-    <z:Attachment rdf:about="#item_7284">
-        <z:itemType>attachment</z:itemType>
-        <dc:identifier>
-            <dcterms:URI>
-                <rdf:value>https://vzlbs.gbv.de/DB=38/XMLPRS=N/PPN?PPN=272518433</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
-        <dcterms:dateSubmitted>2022-05-05 08:00:31</dcterms:dateSubmitted>
-        <dc:title>Library Catalog Entry Snapshot</dc:title>
-        <z:linkMode>1</z:linkMode>
-        <link:type>text/html</link:type>
-    </z:Attachment>
-    <z:Attachment rdf:about="#item_7283">
-        <z:itemType>attachment</z:itemType>
-        <dc:identifier>
-            <dcterms:URI>
-                <rdf:value>https://vzlbs.gbv.de/DB=38/XMLPRS=N/PPN?PPN=272518433</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
-        <dcterms:dateSubmitted>2022-05-05 08:00:26</dcterms:dateSubmitted>
-        <dc:title>Link to Library Catalog Entry</dc:title>
-        <z:linkMode>3</z:linkMode>
-        <link:type>text/html</link:type>
-    </z:Attachment>
-    <bib:BookSection rdf:about="urn:isbn:978-2-251-00483-9">
-        <z:itemType>bookSection</z:itemType>
-        <dcterms:isPartOf>
-            <bib:Book>
-                <dc:identifier>ISBN 978-2-251-00483-9</dc:identifier>
-                <dc:title>Tome II</dc:title>
-            </bib:Book>
-        </dcterms:isPartOf>
         <bib:authors>
             <rdf:Seq>
                 <rdf:li>
                     <foaf:Person>
-                        <foaf:surname>Galien</foaf:surname>
-                        <foaf:givenName>Claude</foaf:givenName>
+                       <foaf:surname>Galien/Galenus</foaf:surname>
                     </foaf:Person>
                 </rdf:li>
             </rdf:Seq>
@@ -14934,39 +15106,54 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                 <rdf:li>
                     <foaf:Person>
                         <foaf:surname>Boudon-Millot</foaf:surname>
-                        <foaf:givenName>V??ronique</foaf:givenName>
+                        <foaf:givenName>Véronique</foaf:givenName>
                     </foaf:Person>
                 </rdf:li>
             </rdf:Seq>
         </bib:editors>
-        <dc:subject>_métadonnées à vérifier</dc:subject>
+        <dc:subject>_métadonnées vérifiées</dc:subject>
+        <bib:pages>1-146</bib:pages>
         <dc:date>2000</dc:date>
         <dc:subject>
            <dcterms:LCC><rdf:value>001</rdf:value></dcterms:LCC>
         </dc:subject>
         <dc:description>OCLC: 490559313</dc:description>
-        <z:libraryCatalog>Open WorldCat</z:libraryCatalog>
-        <z:language>French</z:language>
-        <dc:title>Oeuvres]. Tome II, Tome II,</dc:title>
+        <z:language>grc;fr</z:language>
+        <dc:title>Oeuvres] Tome II, Exhortation à l'étude de la médecine</dc:title>
     </bib:BookSection>
-    <bib:Book rdf:about="#item_7291">
-        <z:itemType>book</z:itemType>
+    <bib:BookSection rdf:about="urn:isbn:978-3-05-000745-8">
+        <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
-            <bib:Series>
-                <dc:title>Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID: 518709-6</dc:title>
-                <dc:identifier>1</dc:identifier>
-            </bib:Series>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                        <dc:title>Corpus medicorum Graecorum</dc:title>
+                        <dc:identifier>V 1,1</dc:identifier>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <dc:identifier>ISBN 978-3-05-000745-8</dc:identifier>
+                <dc:title>Galeni De optimo docendi genere, Exhortatio ad medicinam (Protrepticus),  edidit et in linguam Italicam vertit</dc:title>
+            </bib:Book>
         </dcterms:isPartOf>
         <dc:publisher>
             <foaf:Organization>
                 <vcard:adr>
                     <vcard:Address>
-                       <vcard:locality>Berlin</vcard:locality>
+                       <vcard:locality>Berolini</vcard:locality>
                     </vcard:Address>
                 </vcard:adr>
-                <foaf:name>Akad.-Verl.</foaf:name>
+                <foaf:name>in aedibus Academiae Scientiarum</foaf:name>
             </foaf:Organization>
         </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>Galeno/Galenus</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
         <bib:editors>
             <rdf:Seq>
                 <rdf:li>
@@ -14979,17 +15166,20 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         </bib:editors>
         <dcterms:isReferencedBy rdf:resource="#item_7292"/>
         <link:link rdf:resource="#item_7295"/>
-        <dc:identifier>ISBN 978-3-05-000745-8</dc:identifier>
+        <dc:subject>_métadonnées vérifiées</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://cmg.bbaw.de/epubl/online/cmg_05_01_01.php?p=111</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>111-151</bib:pages>
         <dc:date>1991</dc:date>
         <dc:subject>
            <dcterms:LCC><rdf:value>001</rdf:value></dcterms:LCC>
         </dc:subject>
-        <dc:description>Pages: 172
-Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID: 518709-6</dc:description>
-        <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
-        <dc:title>Sull'ottima maniera d'insegnare</dc:title>
-        <z:numPages>172</z:numPages>
-    </bib:Book>
+        <z:language>grc;ita</z:language>
+        <dc:title>Esortazione alla medicina/Exhortatio ad medicinam (Protrepticus)</dc:title>
+    </bib:BookSection>
     <bib:Memo rdf:about="#item_7292">
         <rdf:value>&lt;div&gt;Text griech. u. ital.&lt;/div&gt;&lt;div&gt;Die Vorlage enth. insgesamt ... Werke&lt;/div&gt;</rdf:value>
     </bib:Memo>
@@ -15235,59 +15425,6 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <z:linkMode>3</z:linkMode>
         <link:type>text/html</link:type>
     </z:Attachment>
-    <bib:Book rdf:about="#item_7308">
-        <z:itemType>book</z:itemType>
-        <dc:publisher>
-            <foaf:Organization>
-                <vcard:adr>
-                    <vcard:Address>
-                       <vcard:locality>Paris</vcard:locality>
-                    </vcard:Address>
-                </vcard:adr>
-                <foaf:name>Belles lettres</foaf:name>
-            </foaf:Organization>
-        </dc:publisher>
-        <bib:authors>
-            <rdf:Seq>
-                <rdf:li>
-                   <foaf:Person><foaf:surname>Galen</foaf:surname></foaf:Person>
-                </rdf:li>
-                <rdf:li>
-                   <foaf:Person><foaf:surname>Galen</foaf:surname></foaf:Person>
-                </rdf:li>
-                <rdf:li>
-                   <foaf:Person><foaf:surname>Galen</foaf:surname></foaf:Person>
-                </rdf:li>
-                <rdf:li>
-                   <foaf:Person><foaf:surname>Galen</foaf:surname></foaf:Person>
-                </rdf:li>
-                <rdf:li>
-                   <foaf:Person><foaf:surname>Galen</foaf:surname></foaf:Person>
-                </rdf:li>
-            </rdf:Seq>
-        </bib:authors>
-        <bib:editors>
-            <rdf:Seq>
-                <rdf:li>
-                    <foaf:Person>
-                        <foaf:surname>Boudon-Millot</foaf:surname>
-                        <foaf:givenName>V??ronique</foaf:givenName>
-                    </foaf:Person>
-                </rdf:li>
-            </rdf:Seq>
-        </bib:editors>
-        <dc:subject>_métadonnées à vérifier</dc:subject>
-        <dc:identifier>ISBN 978-2-251-00483-9</dc:identifier>
-        <dc:date>2000</dc:date>
-        <dc:subject>
-           <dcterms:LCC><rdf:value>007</rdf:value></dcterms:LCC>
-        </dc:subject>
-        <dc:description>OCLC: 874445591</dc:description>
-        <z:libraryCatalog>Open WorldCat</z:libraryCatalog>
-        <z:language>Text in Greek, with facing French translation (opposite pages bear duplicate numbering) ; introduction and commentary in French</z:language>
-        <dc:title>Galien. Art médical Tome II, Tome II,</dc:title>
-        <z:shortTitle>Galien. Art m?</z:shortTitle>
-    </bib:Book>
     <bib:Book rdf:about="urn:isbn:978-2-251-00556-0">
         <z:itemType>book</z:itemType>
         <dc:publisher>
@@ -16487,21 +16624,30 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         <z:itemType>book</z:itemType>
         <dcterms:isPartOf>
             <bib:Series>
-                <dc:title>Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID: 518709-6</dc:title>
-                <dc:identifier>3</dc:identifier>
+                <dc:title>Corpus medicorum Graecorum</dc:title>
+                <dc:identifier>V 1,3</dc:identifier>
             </bib:Series>
         </dcterms:isPartOf>
         <dc:publisher>
             <foaf:Organization>
                 <vcard:adr>
                     <vcard:Address>
-                       <vcard:locality>Berlin</vcard:locality>
+                       <vcard:locality>Berolini</vcard:locality>
                     </vcard:Address>
                 </vcard:adr>
-                <foaf:name>Akademie-Verlag</foaf:name>
+                <foaf:name>in aedibus Academiae Scientiarum</foaf:name>
             </foaf:Organization>
         </dc:publisher>
         <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>Galeno/Galenus</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
             <rdf:Seq>
                 <rdf:li>
                     <foaf:Person>
@@ -16510,30 +16656,23 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
                     </foaf:Person>
                 </rdf:li>
             </rdf:Seq>
-        </bib:authors>
+        </bib:editors>
         <dcterms:isReferencedBy rdf:resource="#item_7371"/>
         <link:link rdf:resource="#item_7374"/>
         <link:link rdf:resource="#item_7373"/>
         <link:link rdf:resource="#item_7372"/>
-        <dc:subject>Medicine, Greek and Roman</dc:subject>
-        <dc:subject>*History of Medicine, Ancient</dc:subject>
-        <dc:subject>AV Corpus Medicorum Graecorum</dc:subject>
-        <dc:subject>*Galen. De constitutione artis medicae</dc:subject>
-        <dc:subject>*Galenus *129-199*. De constitutione artis medicae</dc:subject>
-        <dc:subject>*Medizinische Ausbildung</dc:subject>
-        <dc:subject>History of Medicine, Ancient - Greece</dc:subject>
-        <dc:subject>History of Medicine, Ancient - Rome</dc:subject>
-        <dc:subject>_métadonnées à vérifier</dc:subject>
+        <dc:subject>_métadonnées vérifiées</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://cmg.bbaw.de/epubl/online/cmg_05_01_03.php?p=54</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
         <dc:identifier>ISBN 978-3-05-003149-1</dc:identifier>
         <dc:date>1997</dc:date>
         <dc:subject>
            <dcterms:LCC><rdf:value>006</rdf:value></dcterms:LCC>
         </dc:subject>
-        <dc:description>Pages: 158
-Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID: 518709-6</dc:description>
-        <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
-        <dc:title>A Patrofilo sulla costituzione della medicina</dc:title>
-        <z:numPages>158</z:numPages>
+        <dc:title>A Patrofilo sulla costituzione della medicina/De constitutione artis medicae ad Patrophilum</dc:title>
     </bib:Book>
     <bib:Memo rdf:about="#item_7371">
         <rdf:value>&lt;div&gt;Parallelsacht.: Galeni De constitutione artis medicae ad Patrophilum&lt;/div&gt;&lt;div&gt;Text altgriech. und ital., Einl. ital. - Teilw. in griech. Schr.&lt;/div&gt;</rdf:value>
@@ -18568,12 +18707,17 @@ Series Title: Corpus medicorum Graecorum : Suppl. Orientale</dc:description>
         <dc:title>wa_galen_scripta_min_3.php</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="#item_7475">
-        <z:itemType>book</z:itemType>
+    <bib:BookSection rdf:about="https://cmg.bbaw.de/epubl/online/wa_galen_scripta_min_3.php?custom=1&amp;pn=11">
+        <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
-            <bib:Series>
-                <dc:title>Bibliotheca scriptorum Graecorum et Romanorum Teubneriana</dc:title>
-            </bib:Series>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                        <dc:title>Bibliotheca scriptorum Graecorum et Romanorum Teubneriana</dc:title>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <dc:title>Περὶ αἱρέσεων τοῖς εἰσαγομένοις. Θρασύβουλος.Περὶ δυνάμεων φυσικῶν.</dc:title>
+            </bib:Book>
         </dcterms:isPartOf>
         <dc:publisher>
             <foaf:Organization>
@@ -18582,10 +18726,17 @@ Series Title: Corpus medicorum Graecorum : Suppl. Orientale</dc:description>
                        <vcard:locality>Lipsiae</vcard:locality>
                     </vcard:Address>
                 </vcard:adr>
-                <foaf:name>Teubneri</foaf:name>
+                <foaf:name>in aedibus B.G. Teubneri</foaf:name>
             </foaf:Organization>
         </dc:publisher>
         <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
             <rdf:Seq>
                 <rdf:li>
                     <foaf:Person>
@@ -18606,22 +18757,25 @@ Series Title: Corpus medicorum Graecorum : Suppl. Orientale</dc:description>
                     </foaf:Person>
                 </rdf:li>
             </rdf:Seq>
-        </bib:authors>
+        </bib:editors>
         <dcterms:isReferencedBy rdf:resource="#item_7476"/>
         <link:link rdf:resource="#item_7478"/>
         <link:link rdf:resource="#item_7477"/>
         <link:link rdf:resource="#item_7479"/>
-        <dc:subject>_métadonnées à vérifier</dc:subject>
+        <dc:subject>_métadonnées vérifiées</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://cmg.bbaw.de/epubl/online/wa_galen_scripta_min_3.php?custom=1&amp;pn=11</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>1-32</bib:pages>
         <dc:date>1893</dc:date>
         <dc:subject>
            <dcterms:LCC><rdf:value>004</rdf:value></dcterms:LCC>
         </dc:subject>
-        <dc:description>Series Title: Bibliotheca scriptorum Graecorum et Romanorum Teubneriana</dc:description>
-        <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
-        <dc:title>Peri aireseōn tois eisagomenois: thrasybulos ; peri physikōn dynameōn</dc:title>
-        <z:shortTitle>Peri aireseōn tois eisagomenois</z:shortTitle>
-        <z:numPages>ix+257</z:numPages>
-    </bib:Book>
+        <z:language>grc</z:language>
+        <dc:title>Scripta minora III] Περὶ αἱρέσεων τοῖς εἰσαγομένοις</dc:title>
+    </bib:BookSection>
     <bib:Memo rdf:about="#item_7476">
         <rdf:value>&lt;div&gt;Massenentsäuert ; Hamburg &amp;lt;18/309&amp;gt;; Entsäuert 2013&lt;/div&gt;</rdf:value>
     </bib:Memo>
@@ -20453,8 +20607,19 @@ OCLC: 994828635</dc:description>
         <dc:title>wa_galen_scripta_min_2.php</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="#item_7584">
-        <z:itemType>book</z:itemType>
+    <bib:BookSection rdf:about="#item_7584">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                       <dc:title>Collection des Universités de France</dc:title>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <dc:identifier>ISBN 978-2-251-00536-2</dc:identifier>
+                <dc:title>Galien: Tome I: Introduction générale. Sur l’ordre des ses propres livres. Sur ses propres livres. Que l’excellent médecin est aussi philosophe.</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
         <dc:publisher>
             <foaf:Organization>
                 <vcard:adr>
@@ -20462,39 +20627,44 @@ OCLC: 994828635</dc:description>
                        <vcard:locality>Paris</vcard:locality>
                     </vcard:Address>
                 </vcard:adr>
-                <foaf:name>Belles lettres</foaf:name>
+                <foaf:name>Les Belles Lettres</foaf:name>
             </foaf:Organization>
         </dc:publisher>
         <bib:authors>
             <rdf:Seq>
                 <rdf:li>
-                   <foaf:Person><foaf:surname>Galen</foaf:surname></foaf:Person>
+                    <foaf:Person>
+                       <foaf:surname>Galien/Galenus</foaf:surname>
+                    </foaf:Person>
                 </rdf:li>
                 <rdf:li>
                     <foaf:Person>
                         <foaf:surname>Boudon-Millot</foaf:surname>
-                        <foaf:givenName>V??ronique</foaf:givenName>
+                        <foaf:givenName>Véronique</foaf:givenName>
                     </foaf:Person>
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
-        <dc:subject>_métadonnées à vérifier</dc:subject>
-        <dc:identifier>ISBN 978-2-251-00536-2</dc:identifier>
+        <dc:subject>_métadonnées vérifiées</dc:subject>
+        <bib:pages>235–314</bib:pages>
         <dc:date>2007</dc:date>
         <dc:subject>
            <dcterms:LCC><rdf:value>003</rdf:value></dcterms:LCC>
         </dc:subject>
-        <dc:description>OCLC: 1027542838</dc:description>
-        <z:libraryCatalog>Open WorldCat</z:libraryCatalog>
-        <z:language>French</z:language>
-        <dc:title>Galien. Tome I, Tome I,</dc:title>
-    </bib:Book>
-    <bib:Book rdf:about="#item_7585">
-        <z:itemType>book</z:itemType>
+        <z:language>grc;fr</z:language>
+        <dc:title>Oeuvres] Tome I, Que l’excellent médecin est aussi philosophe</dc:title>
+    </bib:BookSection>
+    <bib:BookSection rdf:about="https://cmg.bbaw.de/epubl/online/wa_galen_scripta_min_2.php?custom=1&amp;pn=95&amp;AnzFrames=1">
+        <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
-            <bib:Series>
-                <dc:title>Bibliotheca scriptorum Graecorum et Romanorum Teubneriana</dc:title>
-            </bib:Series>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                        <dc:title>Bibliotheca scriptorum Graecorum et Romanorum Teubneriana</dc:title>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <dc:title>Scripta minora II. Ὅτι ὁ ἄριστος ἰατρὸς καὶ φιλόσοφος. Περὶ ἠθῶν. Ὅτι ταῖς τοῦ σώματος κράσεσιν αἱ τῆς ψυχῆς δυνάμεις ἕπονται. Περὶ τῆς τάξεως τῶν ἰδίων βιβλίων πρὸς Εὐγενιανόν. Περὶ τῶν ἰδίων βιβλίων</dc:title>
+            </bib:Book>
         </dcterms:isPartOf>
         <dc:publisher>
             <foaf:Organization>
@@ -20503,10 +20673,17 @@ OCLC: 994828635</dc:description>
                        <vcard:locality>Lipsiae</vcard:locality>
                     </vcard:Address>
                 </vcard:adr>
-                <foaf:name>Teubneri</foaf:name>
+                <foaf:name>in aedibus B.G. Teubneri</foaf:name>
             </foaf:Organization>
         </dc:publisher>
         <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
             <rdf:Seq>
                 <rdf:li>
                     <foaf:Person>
@@ -20527,22 +20704,26 @@ OCLC: 994828635</dc:description>
                     </foaf:Person>
                 </rdf:li>
             </rdf:Seq>
-        </bib:authors>
+        </bib:editors>
         <dcterms:isReferencedBy rdf:resource="#item_7586"/>
         <link:link rdf:resource="#item_7588"/>
         <link:link rdf:resource="#item_7587"/>
         <link:link rdf:resource="#item_7589"/>
-        <dc:subject>_métadonnées à vérifier</dc:subject>
+        <dc:subject>_métadonnées vérifiées</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://cmg.bbaw.de/epubl/online/wa_galen_scripta_min_2.php?custom=1&amp;pn=95&amp;AnzFrames=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>1-8</bib:pages>
         <dc:date>1891</dc:date>
         <dc:subject>
            <dcterms:LCC><rdf:value>003</rdf:value></dcterms:LCC>
         </dc:subject>
-        <dc:description>Series Title: Bibliotheca scriptorum Graecorum et Romanorum Teubneriana</dc:description>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
-        <dc:title>Hoti ho aristos iatros kai philosophos: peri ethōn ; hoti tais tu sōmatos krasesin ; peri tēs taxeōs tōn idiōn bibliōn pros eugenianon ; peri tōn idiōn bibliōn</dc:title>
-        <z:shortTitle>Hoti ho aristos iatros kai philosophos</z:shortTitle>
-        <z:numPages>xciii+124</z:numPages>
-    </bib:Book>
+        <z:language>grc</z:language>
+        <dc:title>Scripta minora] Ὅτι ὁ ἄριστος ἰατρὸς καὶ φιλόσοφος</dc:title>
+    </bib:BookSection>
     <bib:Memo rdf:about="#item_7586">
         <rdf:value>&lt;div&gt;Teilw. in griech. Schr.&lt;/div&gt;&lt;div&gt;ST&lt;/div&gt;</rdf:value>
     </bib:Memo>
@@ -23679,7 +23860,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <z:itemType>book</z:itemType>
         <dcterms:isPartOf>
             <bib:Series>
-                <dc:title>Corpus medicorum graecorum Supplementum orientale</dc:title>
+                <dc:title>Corpus medicorum Graecorum Supplementum orientale</dc:title>
                 <dc:identifier>I</dc:identifier>
             </bib:Series>
         </dcterms:isPartOf>
@@ -23729,7 +23910,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <z:itemType>book</z:itemType>
         <dcterms:isPartOf>
             <bib:Series>
-                <dc:title>Corpus medicorum graecorum Supplementum</dc:title>
+                <dc:title>Corpus medicorum Graecorum Supplementum</dc:title>
                 <dc:identifier>II</dc:identifier>
             </bib:Series>
         </dcterms:isPartOf>
@@ -23783,7 +23964,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <z:itemType>book</z:itemType>
         <dcterms:isPartOf>
             <bib:Series>
-                <dc:title>Corpus medicorum graecorum Supplementum orientale</dc:title>
+                <dc:title>Corpus medicorum Graecorum Supplementum orientale</dc:title>
                 <dc:identifier>IV</dc:identifier>
             </bib:Series>
         </dcterms:isPartOf>
@@ -23802,6 +23983,10 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 <rdf:li>
                    <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
                 </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
                 <rdf:li>
                     <foaf:Person>
                         <foaf:surname>Iskandar</foaf:surname>
@@ -23809,7 +23994,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                     </foaf:Person>
                 </rdf:li>
             </rdf:Seq>
-        </bib:authors>
+        </bib:editors>
         <dc:subject>_métadonnées vérifiées</dc:subject>
         <dc:identifier>
             <dcterms:URI>
@@ -25855,6 +26040,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:isReferencedBy rdf:resource="#item_8044"/>
         <dcterms:isReferencedBy rdf:resource="#item_8045"/>
         <link:link rdf:resource="#item_8046"/>
+        <link:link rdf:resource="#item_8083"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg037</rdf:value>
@@ -25894,6 +26080,16 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dc:title>Fichtner Bibliographie</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
+    <z:Attachment rdf:about="#item_8083">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=122&amp;l=d&amp;p=2</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0530.tlg002">
         <z:itemType>book</z:itemType>
         <bib:authors>
@@ -25910,6 +26106,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:isReferencedBy rdf:resource="#item_8050"/>
         <dcterms:isReferencedBy rdf:resource="#item_8049"/>
         <link:link rdf:resource="#item_8048"/>
+        <link:link rdf:resource="#item_8099"/>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0530.tlg002</rdf:value>
@@ -25947,6 +26144,16 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         </dc:identifier>
         <dcterms:dateSubmitted>2023-01-25 12:23:47</dcterms:dateSubmitted>
         <dc:title>Fichtner Bibliographie</dc:title>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_8099">
+        <z:itemType>attachment</z:itemType>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://www.galenolatino.com/opere.php?id=121&amp;l=a&amp;p=1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0530.tlg042">
@@ -26115,12 +26322,114 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dc:title>Fichtner Bibliographie</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <z:Collection rdf:about="#collection_37">
-        <dc:title>Bibliographie</dc:title>
-        <dcterms:hasPart rdf:resource="urn:isbn:978-2-222-04042-2%20978-2-271-05195-0%20978-2-271-05748-8%20978-2-271-06386-1%20978-2-271-07335-8%20978-2-271-07399-0%20978-2-271-08989-2%20978-2-271-09024-9"/>
-        <dcterms:hasPart rdf:resource="urn:isbn:978-2-251-38135-0"/>
-        <dcterms:hasPart rdf:resource="urn:isbn:978-2-08-020523-0"/>
-    </z:Collection>
+    <bib:BookSection rdf:about="https://cmg.bbaw.de/epubl/online/cmg_05_01_01.php?p=89">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                        <dc:title>Corpus medicorum Graecorum</dc:title>
+                        <dc:identifier>V 1,1</dc:identifier>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <dc:identifier>ISBN 978-3-05-000745-8</dc:identifier>
+                <dc:title>Galeni De optimo docendi genere, Exhortatio ad medicinam (Protrepticus),  edidit et in linguam Italicam vertit</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Berolini</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>in aedibus Academiae Scientiarum</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>Galeno/Galenus</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Barigazzi</foaf:surname>
+                        <foaf:givenName>Adelmo</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:subject>métadonnées vérifiées</dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://cmg.bbaw.de/epubl/online/cmg_05_01_01.php?p=89</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:date>1991</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>002</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <z:language>grc;ita</z:language>
+        <dc:title>Sull'ottima maniera d'insegnare/De optimo docendi genere</dc:title>
+    </bib:BookSection>
+    <bib:BookSection rdf:about="#item_8075">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                       <dc:title>Collection des Universités de France</dc:title>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <dc:identifier>ISBN 978-2-251-00483-9</dc:identifier>
+                <dc:title>Galien: Tome II: Exhortation à l’étude de la me ́decine. Art médical.</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Paris</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Les Belles Lettres</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>Galien/Galenus</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Boudon-Millot</foaf:surname>
+                        <foaf:givenName>Véronique</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:subject>_métadonnées vérifiées</dc:subject>
+        <bib:pages>1-146</bib:pages>
+        <dc:date>2000</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>007</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:description>OCLC: 490559313</dc:description>
+        <z:language>grc;fr</z:language>
+        <dc:title>Oeuvres]. Tome II, Art médical</dc:title>
+    </bib:BookSection>
     <z:Collection rdf:about="#collection_24">
         <dc:title>Editiones criticae</dc:title>
         <dcterms:hasPart rdf:resource="urn:isbn:978-0-691-08286-8"/>
@@ -26128,14 +26437,12 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:hasPart rdf:resource="#item_7274"/>
         <dcterms:hasPart rdf:resource="#item_7275"/>
         <dcterms:hasPart rdf:resource="urn:isbn:978-0-521-62250-9"/>
-        <dcterms:hasPart rdf:resource="urn:isbn:978-3-05-000745-8"/>
         <dcterms:hasPart rdf:resource="urn:isbn:978-2-251-00483-9"/>
-        <dcterms:hasPart rdf:resource="#item_7291"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-3-05-000745-8"/>
         <dcterms:hasPart rdf:resource="#item_7296"/>
         <dcterms:hasPart rdf:resource="#item_7297"/>
         <dcterms:hasPart rdf:resource="#item_7298"/>
         <dcterms:hasPart rdf:resource="#item_7303"/>
-        <dcterms:hasPart rdf:resource="#item_7308"/>
         <dcterms:hasPart rdf:resource="urn:isbn:978-2-251-00556-0"/>
         <dcterms:hasPart rdf:resource="urn:isbn:978-88-17-05498-0"/>
         <dcterms:hasPart rdf:resource="https://www.persee.fr/doc/reg_0035-2039_2005_num_118_1_4610"/>
@@ -26188,7 +26495,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:hasPart rdf:resource="#item_7464"/>
         <dcterms:hasPart rdf:resource="urn:isbn:978-2-251-00628-4"/>
         <dcterms:hasPart rdf:resource="#item_7470"/>
-        <dcterms:hasPart rdf:resource="#item_7475"/>
+        <dcterms:hasPart rdf:resource="https://cmg.bbaw.de/epubl/online/wa_galen_scripta_min_3.php?custom=1&amp;pn=11"/>
         <dcterms:hasPart rdf:resource="#item_7480"/>
         <dcterms:hasPart rdf:resource="#item_7485"/>
         <dcterms:hasPart rdf:resource="urn:isbn:978-3-05-000315-3"/>
@@ -26217,7 +26524,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:hasPart rdf:resource="urn:isbn:978-2-251-00536-2"/>
         <dcterms:hasPart rdf:resource="#item_7579"/>
         <dcterms:hasPart rdf:resource="#item_7584"/>
-        <dcterms:hasPart rdf:resource="#item_7585"/>
+        <dcterms:hasPart rdf:resource="https://cmg.bbaw.de/epubl/online/wa_galen_scripta_min_2.php?custom=1&amp;pn=95&amp;AnzFrames=1"/>
         <dcterms:hasPart rdf:resource="#item_7590"/>
         <dcterms:hasPart rdf:resource="#item_7591"/>
         <dcterms:hasPart rdf:resource="#item_7596"/>
@@ -26263,6 +26570,8 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:hasPart rdf:resource="https://cmg.bbaw.de/epubl/online/suppl_or_01.php"/>
         <dcterms:hasPart rdf:resource="https://cmg.bbaw.de/epubl/online/suppl_02.php"/>
         <dcterms:hasPart rdf:resource="https://cmg.bbaw.de/epubl/online/suppl_or_04.php"/>
+        <dcterms:hasPart rdf:resource="https://cmg.bbaw.de/epubl/online/cmg_05_01_01.php?p=89"/>
+        <dcterms:hasPart rdf:resource="#item_8075"/>
     </z:Collection>
     <z:Collection rdf:about="#collection_28">
         <dc:title>Editiones verbatim</dc:title>
@@ -26550,6 +26859,12 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg042"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg041"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg0009"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_37">
+        <dc:title>Libri ad Galenum pertinentes</dc:title>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-2-222-04042-2%20978-2-271-05195-0%20978-2-271-05748-8%20978-2-271-06386-1%20978-2-271-07335-8%20978-2-271-07399-0%20978-2-271-08989-2%20978-2-271-09024-9"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-2-251-38135-0"/>
+        <dcterms:hasPart rdf:resource="urn:isbn:978-2-08-020523-0"/>
     </z:Collection>
     <z:Collection rdf:about="#collection_34">
         <dc:title>Oribasii excerpta</dc:title>
