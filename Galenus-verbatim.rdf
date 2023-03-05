@@ -9985,7 +9985,7 @@
         <z:shortTitle>De usu part.</z:shortTitle>
     </bib:Book>
     <bib:Memo rdf:about="#item_6610">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;1TitGrcCMG: Περὶ χρείας τῶν ἐν ἀνθρώπου σώματι μορίων&lt;/p&gt;
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;1TitGrcCMG: Περὶ χρείας τῶν ἐν ἀνθρώπου σώματι μορίων Περὶ χρείας τῶν ἐν ἀνθρώπου σὼματι μορὶων&lt;/p&gt;
 &lt;/div&gt;</rdf:value>
     </bib:Memo>
     <bib:Memo rdf:about="#item_6615">
