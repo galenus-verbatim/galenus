@@ -24302,7 +24302,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg092.1st1K-grc1</rdf:value>
             </dcterms:URI>
         </dc:identifier>
-        <bib:pages>345-887 196-245</bib:pages>
+        <bib:pages>345-887 1-195</bib:pages>
         <dc:date>1827</dc:date>
         <dc:subject>
            <dcterms:LCC><rdf:value>101</rdf:value></dcterms:LCC>
@@ -24352,7 +24352,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
 &lt;/div&gt;</rdf:value>
     </bib:Memo>
     <bib:Memo rdf:about="#item_7882">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;4AbbrEnCGT: Hipp. Aph.&lt;/p&gt;
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;4AbbrEnCGT: Hipp. Aph. comm.&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;
 &lt;/div&gt;</rdf:value>
     </bib:Memo>
@@ -25962,7 +25962,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg105">
+    <bib:Book rdf:about="0https://galenus-verbatim.huma-num.fr/tlg0057.tlg105">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -25980,7 +25980,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dc:subject>_gen.</dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg105</rdf:value>
+                <rdf:value>0https://galenus-verbatim.huma-num.fr/tlg0057.tlg105</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:date>ca 200</dc:date>
@@ -28347,7 +28347,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg092"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg0115"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg104"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg105"/>
+        <dcterms:hasPart rdf:resource="0https://galenus-verbatim.huma-num.fr/tlg0057.tlg105"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg106"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg111"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg022"/>
