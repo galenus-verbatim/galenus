@@ -296,11 +296,11 @@
         "chartier": "6"
     },
     "tlg0057.tlg030.1st1K-grc1": {
-        "bale": "1",
+        "bale": "3",
         "chartier": "3"
     },
     "tlg0057.tlg031.1st1K-grc1": {
-        "bale": "1",
+        "bale": "3",
         "chartier": "5"
     },
     "tlg0057.tlg032.1st1K-grc1": {
@@ -324,7 +324,7 @@
         "chartier": "6"
     },
     "tlg0057.tlg039.1st1K-grc1": {
-        "bale": "3",
+        "bale": "2",
         "chartier": "6"
     },
     "tlg0057.tlg041.1st1K-grc1": {
@@ -345,7 +345,7 @@
     },
     "tlg0057.tlg045.1st1K-grc1": {
         "bale": "3",
-        "chartier": "7"
+        "chartier": "6"
     },
     "tlg0057.tlg046.1st1K-grc1": {
         "bale": "3",
@@ -380,7 +380,7 @@
         "chartier": "7"
     },
     "tlg0057.tlg055.1st1K-grc1": {
-        "bale": "3",
+        "bale": "1",
         "chartier": "7"
     },
     "tlg0057.tlg056.1st1K-grc1": {
@@ -431,7 +431,7 @@
         "chartier": "10"
     },
     "tlg0057.tlg068.1st1K-grc1": {
-        "bale": "2",
+        "bale": "4",
         "chartier": "10"
     },
     "tlg0057.tlg069.1st1K-grc1": {
@@ -475,12 +475,12 @@
         "chartier": "13"
     },
     "tlg0057.tlg082.1st1K-grc1": {
-        "bale": "2",
-        "chartier": "4"
+        "bale": "4",
+        "chartier": "2"
     },
     "tlg0057.tlg083.1st1K-grc1": {
         "bale": "3",
-        "chartier": "13"
+        "chartier": "8"
     },
     "tlg0057.tlg084.1st1K-grc1": {
         "bale": "1",
@@ -496,7 +496,7 @@
     },
     "tlg0057.tlg087.1st1K-grc1": {
         "bale": "5",
-        "chartier": "11"
+        "chartier": "9"
     },
     "tlg0057.tlg089.1st1K-grc1": {
         "bale": "5",
@@ -540,7 +540,7 @@
     },
     "tlg0057.tlg101.1st1K-grc1": {
         "bale": "5",
-        "chartier": "5"
+        "chartier": "12"
     },
     "tlg0057.tlg114.1st1K-grc1": {
         "bale": "1",
@@ -551,11 +551,11 @@
         "chartier": "2"
     },
     "tlg0057.tlg079.1st1K-grc1": {
-        "bale": "3",
+        "bale": "2",
         "chartier": "13"
     },
     "tlg0530.tlg032.1st1K-grc1": {
-        "bale": "3",
+        "bale": "2",
         "chartier": "12"
     },
     "tlg0530.tlg029.1st1K-grc1": {
