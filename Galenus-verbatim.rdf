@@ -12357,7 +12357,6 @@
         <dcterms:isReferencedBy rdf:resource="#item_7810"/>
         <link:link rdf:resource="#item_6878"/>
         <link:link rdf:resource="#item_8131"/>
-        <link:link rdf:resource="#item_7744"/>
         <dc:subject>_Hipp.</dc:subject>
         <dc:identifier>
             <dcterms:URI>
@@ -12408,17 +12407,6 @@
             </dcterms:URI>
         </dc:identifier>
         <dc:title>Galeno Latino</dc:title>
-        <z:linkMode>3</z:linkMode>
-    </z:Attachment>
-    <z:Attachment rdf:about="#item_7744">
-        <z:itemType>attachment</z:itemType>
-        <dc:identifier>
-            <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg096.1st1K-grc1</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
-        <dcterms:dateSubmitted>2022-05-19 12:43:14</dcterms:dateSubmitted>
-        <dc:title>tlg0057.tlg096.1st1K-grc1</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg088.1st1K-grc1">
@@ -26282,7 +26270,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dc:title>Galeno Latino</dc:title>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="#item_7993">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0530.tlg045">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -26302,7 +26290,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dc:subject>_nosol.</dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0530.tlg006</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0530.tlg045</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:subject>
@@ -28352,7 +28340,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg111"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg022"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg031"/>
-        <dcterms:hasPart rdf:resource="#item_7993"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg045"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg026"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg035"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/tlg0530.tlg034"/>
