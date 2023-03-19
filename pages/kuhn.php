@@ -6,7 +6,8 @@
  */
 require_once(dirname(__DIR__) . "/Galenus.php");
 
-use Oeuvres\Kit\{I18n,Web};
+use Oeuvres\Kit\{Http, I18n};
+use GalenusVerbatim\Verbatim\{Verbatim};
 
 function roman2int($str){
     $sum=0;
@@ -24,7 +25,7 @@ function roman2int($str){
     return $sum;
 }
 
-$kuhn = trim(Web::par('kuhn'));
+$kuhn = trim(Http::par('kuhn'));
 if (!$kuhn) return;
 // XVIII A, 18 a
 $kuhn = preg_replace("@^(18|XVIII|17|XVII) +([aAbB])@", "$1$2", $kuhn);
@@ -96,11 +97,11 @@ else { // data error
 
 if ($linea) {
     $clavis .= '?kuhn=' . $volumen . '.' . $pagina . '.' . $linea;
-    $clavis .= '#p' . $pagina . "." . $linea;
+    $clavis .= '#p' . $volumen . '.' . $pagina . "." . $linea;
 }
 else if ($pagina) {
     $clavis .= '?kuhn=' . $volumen . '.' . $pagina;
-    $clavis .= '#p' . $pagina;
+    $clavis .= '#p' . $volumen . '.' . $pagina;
 }
 echo $clavis;
 header("Location: $clavis");

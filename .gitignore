@@ -1,10 +1,13 @@
 *.log
 _*.php
+!_config.php
 *.db
 .~*
 ~$*
 odt/*.docx
 html/
+
+config.php
 
 # Mac ignore 
 .DS_Store

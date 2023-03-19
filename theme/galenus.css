@@ -106,3 +106,57 @@ section.opus h1,
 section.verbatim h1 {
     text-align: left;
 }
+
+span.lb.rule {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+span.lb.rule[]::before {
+    padding: 0;
+    margin: 0;
+}
+span.lb.rule::after {
+    padding: 0;
+    margin: 0;
+    width: calc(100% - 2.1rem);
+    content: "———————————";
+    color: var(--link);
+    font-size: inherit;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+
+/** Epidoc <list type="table"> */
+
+tr {
+    position: relative;
+}
+td span.pb,
+th span.pb  {
+    position: absolute;
+    right: -5rem;
+    width: 100%;
+}
+
+table.list th,
+table.list td {
+    padding-right: 1rem;
+    text-align: left;
+}
+
+table.list td.lb {
+    height: 1.2rem;
+    text-indent: 0;
+    padding: 0;
+    font-weight: normal;
+    width: 2rem;
+    color: var(--textlo);
+}
+td.lb::before {
+    padding-left: 1ex;
+    margin-right: 2px;
+    font-size: 0.7rem;
+    content: attr(data-line);
+}

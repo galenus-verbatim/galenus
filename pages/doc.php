@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * Part of verbatim https://github.com/galenus-verbatim/verbatim
  * Copyright (c) 2021 Nathalie Rousseau
@@ -6,7 +6,9 @@
  */
 require_once(dirname(__DIR__) . "/Galenus.php");
 
-use Oeuvres\Kit\{I18n,Web};
+use Oeuvres\Kit\{Http, I18n};
+use GalenusVerbatim\Verbatim\{Verbatim};
+
 
 class Data {
     /** requested cts */
@@ -17,7 +19,7 @@ class Data {
     public static $editio;
     /** init param */
     public static function init() {
-        $cts = Web::par('cts');
+        $cts = Http::par('cts');
         self::$cts = $cts;
         if (strpos($cts, '_') === false) { // cover
             $sql = "SELECT * FROM doc WHERE clavis LIKE ? LIMIT 1";
@@ -46,20 +48,23 @@ function title() {
     if (!$doc || !$editio) return null;
     $title = '';
     $title .= $editio['auctor'];
-    /* galeno centric, extract field from zotero record */
-    preg_match('@<em class="title">(.*?)</em>@', $editio['bibl'], $matches);
-    if (count($matches) >= 2) {
-        $title .= '. ' .$matches[1];
-    } else {
-        $title .= '. ' .$editio['title'];
-    }
     $num = Verbatim::num($doc);
     if ($num) $title .= ', ' . $num;
+
+    $bibl = $editio['bibl'];
+    if ($bibl === null) $bibl = "";
     /* galeno centric, extract field from zotero record */
-    preg_match('@<span class="editors">(.*?)</span>@', $editio['bibl'], $matches);
+    preg_match('@<em class="title">(.*?)</em>@', $bibl, $matches);
+    if (count($matches) >= 2) {
+        $title .= '. ' .$matches[1];
+    } else if (isset($editio['title']) && $editio['title']) {
+        $title .= '. ' .$editio['title'];
+    }
+    /* galeno centric, extract field from zotero record */
+    preg_match('@<span class="editors">(.*?)</span>@', $bibl, $matches);
     if (count($matches) >= 2) {
         $title .= $matches[1];
-    } else {
+    } else if (isset($editio['editor']) && $editio['editor']) {
         $title .= ', ed. ' . $editio['editor'];
     }
     $title .= Verbatim::scope($doc);
@@ -78,12 +83,12 @@ function main() {
         echo I18n::_('doc.notfound', Data::$cts);
         return;
     }
-    $q = Web::par('q');
+    $q = Http::par('q');
     $clavis = $doc['clavis'];
 
     $forms = array();
     if ($q) {
-        $field = Web::par('f', 'lem', '/lem|orth/');
+        $field = Http::par('f', 'lem', '/lem|orth/');
         $forms = Verbatim::forms($q, $field);
     }
     $formids = array_keys($forms);
@@ -146,9 +151,16 @@ echo '
     <main>
     <header class="opus">
 ';
-    preg_match('@<h1[^>]*>.*?</h1>@im', $editio['bibl'], $matches);
-    $h1 =  $matches[0];
-    echo preg_replace('@<h1[^>]*>.*?</h1>@im', '', $editio['bibl']);
+    $bibl = $editio['bibl'];
+    if ($bibl === null) $bibl = "";
+    preg_match('@<h1[^>]*>.*?</h1>@im', $bibl, $matches);
+    $h1 = "";
+    if (isset($matches[0])) {
+        $h1 =  $matches[0];
+    }
+    else if (isset($editio['title']) && $editio['title']) {
+        $h1 =  "<h1>" . $editio['title'] . "</h1>";
+    }
     $urn = '<div class="urn"><a class="urn" href="">urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']) . "</a></div>\n";
     echo $urn;
 

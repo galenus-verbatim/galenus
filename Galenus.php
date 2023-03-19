@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 /**
  * Part of galenus-verbatim https://github.com/galenus-verbatim/galenus
@@ -13,7 +13,9 @@
 
 declare(strict_types=1);
 
-require_once(dirname(__DIR__) . '/verbatim/Verbatim.php');
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// require_once(dirname(__DIR__) . '/verbatim/Verbatim.php');
 
 use Oeuvres\Kit\{File, Xml};
 use Oeuvres\Odette\{OdtChain};
@@ -22,10 +24,12 @@ use Psr\Log\{LoggerInterface, NullLogger};
 Galenus::init();
 class Galenus
 {
+    /** configuration parameters, especially the  */
+    static public $config;
     /** Logger */
     private static $logger;
     /** The sqlite file, hard coded */
-    private static $db_file = __DIR__ . '/galenus.db';
+    private static $db_file = __DIR__ . '/test.db';
     /**
      * Set logger
      */

@@ -136,32 +136,36 @@ if (div) {
 
             var span = document.createElement("span");
             span.className = "pageview";
-            let p = els[i].dataset.n;
 
+            let page = els[i].dataset.n;
+            if (!page) page = els[i].dataset.page;
+            // get the p int
+            let p = parseInt(page.split('.').pop());
 
-            if (!p) p = els[i].dataset.page;
             let url;
-            // has been seen, but no more used
-            // const pos = p.indexOf(".");
             let pno;
             let text = '[';
             if (els[i].classList.contains('page1') || els[i].classList.contains('pbde')) {
                 text += '…';
             }
-            let pdiff = dat['pdiff'];
+            // build an url from a page number
+            let pdiff = parseInt(dat['pdiff']);
             if (dat['pholes']) {
                 for (const prop in dat['pholes']) {
                     if (p >= prop) {
-                        pdiff = dat['pholes'][prop];
+                        pdiff = parseInt(dat['pholes'][prop]);
                     } else {
                         break;
                     }
                 }
             }
-
-            text += dat['vol'] + '.' + p + ' ' + dat['abbr'];
+            // if page number contains a dot, there’s already the volume name
+            if (page.indexOf(".") < 0) {
+                text += dat['vol'] + '.';
+            }
+            text += page + ' ' + dat['abbr'];
             // pad page number for biusante 
-            pno = pad(parseInt(p) + parseInt(pdiff), 4);
+            pno = pad(p + pdiff, 4);
             url = dat['url'].replace('%%', pno);
             text += ']';
             span.innerText = text;

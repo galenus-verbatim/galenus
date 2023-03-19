@@ -1,0 +1,33 @@
+{
+    "name": "galenus-verbatim/verbatim",
+    "description": "Publish greek texts lemmatized and packed in Sqlite with Verbapie https://github.com/galenus-verbatim/verbapie",
+    "authors": [
+        {
+            "name": "Nathalie Rousseau",
+            "role": "Director and founder"
+        },
+        {
+            "name": "Frédéric Glorieux",
+            "email": "frederic.glorieux@fictif.org",
+            "role": "Developer"
+        },
+        {
+            "name": "Cahal Taaffe",
+            "role": "Developer"
+        }
+    ],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.2",
+        "oeuvres/kit": "dev-main",
+        "ext-pdo_sqlite": "*",
+        "ext-intl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "GalenusVerbatim\\Verbatim\\": "src"
+        }
+    },
+    "minimum-stability": "dev"
+}
