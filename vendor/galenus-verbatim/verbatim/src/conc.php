@@ -12,7 +12,7 @@ use GalenusVerbatim\Verbatim\{Verbatim};
 
 
 // suppose clean URL, mabe better should be done
-function main()
+$main = function()
 {
     $q = Http::par('q');
     // sanitize for display
@@ -103,5 +103,5 @@ function main()
     }
     echo "</div>\n";
 
-}
+};
 ?>

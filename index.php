@@ -12,7 +12,8 @@ use GalenusVerbatim\Verbatim\{Verbatim};
 
 // connect to a database prepared with verbapie
 // https://github.com/galenus-verbatim/verbapie
-Verbatim::connect(Galenus::db_file());
+$config = require(__DIR__ . "/config.php");
+Verbatim::connect($config['db']);
 
 // Get a language to route correctly, store it for other pages
 $lang = Http::par('lang', 'fr', '/en|fr/', 'lang');
@@ -22,9 +23,10 @@ Route::setAtt("lang", $lang);
 I18n::load(Verbatim::dir() . $lang . '.tsv');
 // Register galenus specific messages
 I18n::load(__DIR__ . '/' . $lang . '.tsv');
-
 // register the template in which include content
 Route::template(__DIR__ . '/template.php');
+// check zotero rdf, generate if needed
+Verbatim::zotero();
 
 // try a redirection to a Kühn reference
 Route::get('/([\dIVX].*)', __DIR__ . '/pages/kuhn.php', array('kuhn' => '$1'), null);
@@ -49,7 +51,9 @@ Route::get('/', __DIR__ . '/pages/opera.php');
 // try if a local html page is available
 Route::get('/(.*)', __DIR__ . '/html/$1.html');
 // try if a local tool page is available
-Route::get('/(.*)', __DIR__ . '/pages/$1.pages');
+Route::get('/(.*)', __DIR__ . '/pages/$1.php');
+// try if a docx available
+Route::get('/(.*)', __DIR__ . '/pages/docx.php');
 // try if a tool page is available on Verbatim
 Route::get('/(.*)',  Verbatim::dir() . '$1.php');
 

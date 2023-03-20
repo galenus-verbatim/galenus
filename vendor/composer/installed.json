@@ -118,12 +118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/galenus-verbatim/verbatim.git",
-                "reference": "456b4f68271d21fb7d9cb3a5810f0ca7cf6c5ef5"
+                "reference": "46feed25062aab79a8017d9e61fb9158f23735e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/galenus-verbatim/verbatim/zipball/456b4f68271d21fb7d9cb3a5810f0ca7cf6c5ef5",
-                "reference": "456b4f68271d21fb7d9cb3a5810f0ca7cf6c5ef5",
+                "url": "https://api.github.com/repos/galenus-verbatim/verbatim/zipball/46feed25062aab79a8017d9e61fb9158f23735e3",
+                "reference": "46feed25062aab79a8017d9e61fb9158f23735e3",
                 "shasum": ""
             },
             "require": {
@@ -132,7 +132,7 @@
                 "oeuvres/kit": "dev-main",
                 "php": ">=7.2"
             },
-            "time": "2023-03-19T21:52:42+00:00",
+            "time": "2023-03-20T15:21:14+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",
@@ -174,12 +174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oeuvres/kit.git",
-                "reference": "ec7a24034f29da6ea953e464123235d6a5a56afa"
+                "reference": "d4cc320ae850811f6f20644366ec9e299c4db3b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oeuvres/kit/zipball/ec7a24034f29da6ea953e464123235d6a5a56afa",
-                "reference": "ec7a24034f29da6ea953e464123235d6a5a56afa",
+                "url": "https://api.github.com/repos/oeuvres/kit/zipball/d4cc320ae850811f6f20644366ec9e299c4db3b1",
+                "reference": "d4cc320ae850811f6f20644366ec9e299c4db3b1",
                 "shasum": ""
             },
             "require": {
@@ -189,7 +189,7 @@
                 "php": ">=7.2",
                 "psr/log": "1.1.4"
             },
-            "time": "2023-03-19T22:03:17+00:00",
+            "time": "2023-03-20T15:34:28+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",

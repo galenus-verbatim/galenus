@@ -11,7 +11,7 @@ require_once(__DIR__ . "/Verbatim.php");
 use Oeuvres\Kit\{I18n};
 use GalenusVerbatim\Verbatim\{Verbatim};
 
-function main() {
+$main = function() {
     $href = 'conc?f=lem&amp;q=%s';
     echo '
 <article class="text">

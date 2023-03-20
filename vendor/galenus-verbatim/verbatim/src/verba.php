@@ -11,7 +11,7 @@ require_once(__DIR__ . "/Verbatim.php");
 use Oeuvres\Kit\{I18n, Select, Http};
 use GalenusVerbatim\Verbatim\{Verbatim};
 
-function main() {
+$main = function() {
     $select = new Select("percol");
     $select
         ->add("", "")

@@ -17,19 +17,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 // require_once(dirname(__DIR__) . '/verbatim/Verbatim.php');
 
-use Oeuvres\Kit\{File, Xml};
+use Oeuvres\Kit\{File, Xt};
 use Oeuvres\Odette\{OdtChain};
 use Psr\Log\{LoggerInterface, NullLogger};
 
 Galenus::init();
 class Galenus
 {
-    /** configuration parameters, especially the  */
+    /** configuration parameters */
     static public $config;
     /** Logger */
     private static $logger;
-    /** The sqlite file, hard coded */
-    private static $db_file = __DIR__ . '/test.db';
     /**
      * Set logger
      */
@@ -45,14 +43,10 @@ class Galenus
     static public function init()
     {
         self::$logger = new NullLogger();
-    }
-
-    /**
-     * Path of sqlite file
-     */
-    static public function db_file()
-    {
-        return self::$db_file;
+        $confg_file = __DIR__ . '/config.php';
+        if (file_exists($config_file)) {
+            self::$config = include($config_file);
+        }
     }
 
     /**
@@ -92,8 +86,7 @@ class Galenus
     /**
      * 
      */
-    static function zotero($rdf_file = __DIR__ . "/galenus-verbatim.rdf")
-    {
+    static function zotero($rdf_file = __DIR__ . "/Galenus-verbatim.rdf") {
         if (!file_exists($rdf_file)) {
             self::$logger->error($rdf_file . " not found for a Zotero RDF export.");
             return;
@@ -111,7 +104,7 @@ class Galenus
             return; // OK
         }
         self::$logger->info('Generate resources from Zotero rdf export ' . $rdf_file);
-        Xml::setLogger(self::$logger);
+        Xt::setLogger(self::$logger);
         // wash a bit rdf before
         $xml = file_get_contents($rdf_file);
         $xml = preg_replace(
@@ -125,11 +118,11 @@ class Galenus
         );
         file_put_contents($rdf_file, $xml); // record the wased rdf
 
-        $dom = Xml::loadXml($xml);
+        $dom = Xt::loadXml($xml);
 
 
         /* editiones */
-        $editiones = Xml::transformToXml(
+        $editiones = Xt::transformToXml(
             __DIR__ . "/build/galenzot_editiones.xsl",
             $dom
         );
@@ -154,13 +147,13 @@ class Galenus
         Verbatim::$pdo->commit();
 
         /* opera */
-        $html = Xml::transformToXml(
+        $html = Xt::transformToXml(
             __DIR__ . "/build/galenzot_opera_navs.xsl",
             $dom
         );
         file_put_contents(__DIR__ . "/html/opera_navs.html", $html);
 
-        $html = Xml::transformToXml(
+        $html = Xt::transformToXml(
             __DIR__ . "/build/galenzot_opera_bib.xsl",
             $dom
         );
@@ -183,9 +176,21 @@ class Galenus
         Verbatim::$pdo->commit();
         self::$logger->info('Database, optimize');
         Verbatim::$pdo->exec("PRAGMA auto_vacuum = FULL");
+        // generate sitemap.xml
+        self::sitemap();
         // finish with that, will be the timestamp
         File::mkdir(dirname($editiones_file));
         file_put_contents($editiones_file, $editiones);
+
         self::$logger->info('End');
+    }
+
+    static function sitemap($sitemap_file = __DIR__ . '/sitemap.xml')
+    {
+        $stream = fopen($sitemap_file, "w");
+        fwrite($tream, '<?xml version="1.0" encoding="UTF-8"?>' . "\n");
+        fwrite($tream, '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n");
+        Verbatim::$pdo->prepare("SELECT clavis FROM opus;");
+        fwrite($tream, '</urlset>' . "\n");
     }
 }

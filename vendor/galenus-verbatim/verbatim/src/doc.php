@@ -41,7 +41,7 @@ Data::init();
 /**
  * Called by template to give a contextual <title>
  */
-function title() {
+$title = function() {
     $doc = Data::$doc;
     $editio = Data::$editio;
     if (!$doc || !$editio) return null;
@@ -56,12 +56,12 @@ function title() {
     $title .= ' — ' . Verbatim::name();
     $title = strip_tags($title);
     return $title;
-}
+};
 
 /**
  * Called by template to give main content
  */
-function main() {
+$main = function() {
     $cts = Data::$cts;
     $doc = Data::$doc;
     $editio = Data::$editio;
@@ -106,6 +106,7 @@ function main() {
     </div>
 </div>
 <?php // close function
-}
+};
+
 ?>
 
