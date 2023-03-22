@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '4a30a56dbca45fd7200c4d48b93631180c4c0e03',
+        'reference' => '7c36aa1da049ba9d16bffae1762ee38a8bd6f38a',
         'name' => 'galenus-verbatim/teinte_galenus',
         'dev' => true,
     ),
@@ -36,7 +36,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '4a30a56dbca45fd7200c4d48b93631180c4c0e03',
+            'reference' => '7c36aa1da049ba9d16bffae1762ee38a8bd6f38a',
             'dev_requirement' => false,
         ),
         'galenus-verbatim/verbatim' => array(
@@ -47,7 +47,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => '46feed25062aab79a8017d9e61fb9158f23735e3',
+            'reference' => '35255ab6cbb7023710c7c6c3f0b4365961c2853d',
             'dev_requirement' => false,
         ),
         'oeuvres/kit' => array(

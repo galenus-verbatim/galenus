@@ -22,6 +22,7 @@
   <xsl:strip-space elements="*"/>
   <xsl:variable name="opera_ids" select="/*/z:Collection[contains(dc:title, 'opera')]/dcterms:hasPart/@rdf:resource"/>
   <xsl:variable name="verbatim_ids" select="/*/z:Collection[contains(dc:title, 'verbatim')]/dcterms:hasPart/@rdf:resource"/>
+  <xsl:variable name="critica_ids" select="/*/z:Collection[contains(dc:title, 'critica')]/dcterms:hasPart/@rdf:resource"/>
   
 
   
@@ -96,7 +97,23 @@
     </a>
     
   </xsl:template>
-  
+
+  <xsl:template name="gallat_link">
+    <xsl:for-each select="link:link">
+      <xsl:for-each select="key('about', @rdf:resource)">
+        <xsl:if test="contains(dc:title, 'Latino')">
+          <a target="_blank" rel="noopener" class="gallat external">
+            <xsl:attribute name="href">
+              <xsl:value-of select="normalize-space(dc:identifier/dcterms:URI/rdf:value)"/>
+            </xsl:attribute>
+            <xsl:text>[GalLat]</xsl:text>
+          </a>
+        </xsl:if>
+      </xsl:for-each>
+    </xsl:for-each>
+  </xsl:template>
+
+
   <!-- Should be an opus and not an edition -->
   <xsl:template match="bib:*" mode="opus">
     <xsl:variable name="fichtner_no" select="normalize-space(dc:subject/dcterms:LCC/rdf:value)"/>
@@ -128,6 +145,8 @@
         
         <xsl:text> </xsl:text>
         <xsl:call-template name="fichtner_link"/>
+        <xsl:text> </xsl:text>
+        <xsl:call-template name="gallat_link"/>
       </h1>
       <xsl:variable name="tituli">
         <xsl:call-template name="opus_tituli"/>
@@ -149,25 +168,53 @@
             "/>
           <xsl:otherwise>
             <div class="note">
+              <!-- Why @eacute ?
               <xsl:value-of select="." disable-output-escaping="yes"/>
+              -->
+              <xsl:value-of select="."/>
             </div>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:for-each>
       <!-- editions -->
-      <xsl:for-each select="/*/bib:*[@rdf:about = $verbatim_ids][dc:subject/dcterms:LCC/rdf:value = $fichtner_no]">
-        <xsl:sort select="dc:identifier/dcterms:URI/rdf:value"/>
-        <div class="edition">
-          <xsl:text>— </xsl:text>
-          <xsl:apply-templates select="." mode="short"/>
+      <xsl:variable name="verbatim">
+        <xsl:for-each select="/*/bib:*[@rdf:about = $verbatim_ids][dc:subject/dcterms:LCC/rdf:value = $fichtner_no]">
+          <!-- <xsl:sort select="dc:identifier/dcterms:URI/rdf:value"/> -->
+          <xsl:sort select="dc:date"/>
+          <li class="editio">
+            <xsl:apply-templates select="." mode="short"/>
+          </li>
+        </xsl:for-each>
+      </xsl:variable>
+      <xsl:if test="$verbatim != ''">
+        <ul class="editio verbatim">
+          <xsl:copy-of select="$verbatim"/>
+        </ul>
+      </xsl:if>
+      <xsl:variable name="critica">
+        <xsl:for-each select="/*/bib:*[@rdf:about = $critica_ids][dc:subject/dcterms:LCC/rdf:value = $fichtner_no]">
+          <!-- <xsl:sort select="dc:identifier/dcterms:URI/rdf:value"/> -->
+          <xsl:sort select="dc:date"/>
+          <li class="editio">
+            <xsl:apply-templates select="." mode="short"/>
+          </li>
+        </xsl:for-each>
+      </xsl:variable>
+      <xsl:if test="$critica != ''">
+        <div class="editio critica">
+          <header>editio critica:</header>
+          <ul class="editio critica">
+            <xsl:copy-of select="$critica"/>
+          </ul>
         </div>
-      </xsl:for-each>
+      </xsl:if>
+      
     </section>
   </xsl:template>
   
   <!-- List alternative titles of an opus -->
   <xsl:template name="opus_tituli">
-    <div ass="urn">
+    <div class="urn">
       <xsl:text>urn:cts:greekLit:</xsl:text>
       <xsl:value-of select="substring-after(dc:identifier/dcterms:URI/rdf:value, 'tlg')"/>
     </div>
@@ -176,10 +223,12 @@
     <xsl:for-each select="$notes">
       <xsl:sort select="normalize-space(.)"/>
       <xsl:variable name="title" select="normalize-space(.)"/>
+      <xsl:variable name="value" select="normalize-space(substring-after($title, ':'))"/>
       <xsl:if test="
-        starts-with($title, '1TitGrcCMG:') 
+        $value != '' and
+        (starts-with($title, '1TitGrcCMG:') 
         or starts-with($title, '2TitFrBM:')
-        or starts-with($title, '3TitEnCGT:')
+        or starts-with($title, '3TitEnCGT:'))
         ">
         <!--
           or starts-with($title, '4AbbrEnCGT:')
@@ -195,22 +244,25 @@
           </xsl:attribute>
           <xsl:choose>
             <xsl:when test="starts-with($title, '1TitGrcCMG:')">
-              <xsl:value-of select="normalize-space(substring-after($title, ':'))"/>
+              <xsl:value-of select="$value"/>
             </xsl:when>
             <xsl:otherwise>
               <em class="title">
-                <xsl:value-of select="normalize-space(substring-after($title, ':'))"/>
+                <xsl:value-of select="$value"/>
               </em>
             </xsl:otherwise>
           </xsl:choose>
           <!-- Ugly hack to get english short title -->
           <xsl:if test="starts-with($title, '3TitEnCGT:')">
             <xsl:for-each select="$notes[starts-with(normalize-space(.), '4AbbrEnCGT:')]">
-              <xsl:text> (</xsl:text>
-              <em class="title short">
-                <xsl:value-of select="normalize-space(substring-after(normalize-space(.), ':'))"/>
-              </em>
-              <xsl:text>)</xsl:text>
+              <xsl:variable name="value2" select="normalize-space(substring-after(normalize-space(.), ':'))"/>
+              <xsl:if test="$value2 != ''">
+                <xsl:text> (</xsl:text>
+                <em class="title short">
+                  <xsl:value-of select="$value2"/>
+                </em>
+                <xsl:text>)</xsl:text>
+              </xsl:if>
             </xsl:for-each>
           </xsl:if>
         </div>
@@ -242,10 +294,23 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
     <xsl:for-each select="dc:title">
       <xsl:choose>
         <xsl:when test="$url != ''">
-          <a class="title opus">
-            <xsl:attribute name="href">
-              <xsl:value-of select="substring-after($url, 'galenus-verbatim.huma-num.fr/')"/>
-            </xsl:attribute>
+          <a class="title">
+            <xsl:choose>
+              <xsl:when test="contains($url, 'galenus-verbatim.huma-num.fr/')">
+                <xsl:attribute name="class">title verbatim</xsl:attribute>
+                <xsl:attribute name="href">
+                  <xsl:value-of select="substring-after($url, 'galenus-verbatim.huma-num.fr/')"/>
+                </xsl:attribute>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:attribute name="class">title external</xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="rel">noopener</xsl:attribute>
+                <xsl:attribute name="href">
+                  <xsl:value-of select="$url"/>
+                </xsl:attribute>
+              </xsl:otherwise>
+            </xsl:choose>
             <xsl:apply-templates/>
           </a>
         </xsl:when>
@@ -284,10 +349,12 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
     </xsl:for-each>
     <xsl:text>.</xsl:text>
     <xsl:text> </xsl:text>
-    <span class="urn">
-      <xsl:text>urn:cts:greekLit:</xsl:text>
-      <xsl:value-of select="substring-after($url, 'galenus-verbatim.huma-num.fr/')"/>
-    </span>
+    <xsl:if test="contains($url, 'galenus-verbatim.huma-num.fr/')">
+      <span class="urn">
+        <xsl:text>urn:cts:greekLit:</xsl:text>
+        <xsl:value-of select="substring-after($url, 'galenus-verbatim.huma-num.fr/')"/>
+      </span>
+    </xsl:if>
   </xsl:template>
   
   <xsl:template name="editors">

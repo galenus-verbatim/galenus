@@ -26,7 +26,7 @@ I18n::load(__DIR__ . '/' . $lang . '.tsv');
 // register the template in which include content
 Route::template(__DIR__ . '/template.php');
 // check zotero rdf, generate if needed
-Verbatim::zotero();
+Galenus::zotero();
 
 // try a redirection to a Kühn reference
 Route::get('/([\dIVX].*)', __DIR__ . '/pages/kuhn.php', array('kuhn' => '$1'), null);
@@ -48,12 +48,12 @@ Route::get('/(tlg.*)', __DIR__ . '/pages/doc.php', array('cts' => '$1'));
 // welcome page
 Route::get('/', __DIR__ . '/pages/opera.php');
 
+// Docx is a filter without output, transform docx in html if requested
+Route::get('/(.*)', __DIR__ . '/pages/docx.php');
 // try if a local html page is available
 Route::get('/(.*)', __DIR__ . '/html/$1.html');
 // try if a local tool page is available
 Route::get('/(.*)', __DIR__ . '/pages/$1.php');
-// try if a docx available
-Route::get('/(.*)', __DIR__ . '/pages/docx.php');
 // try if a tool page is available on Verbatim
 Route::get('/(.*)',  Verbatim::dir() . '$1.php');
 

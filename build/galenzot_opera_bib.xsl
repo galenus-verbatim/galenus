@@ -28,6 +28,8 @@
   <xsl:template match="/">
     <div>
       <xsl:for-each select="/*/bib:Book[@rdf:about = $opera_ids]">
+        <!-- Galenus first -->
+        <xsl:sort select=".//foaf:surname"/>
         <xsl:sort select="dc:subject/dcterms:LCC/rdf:value"/>
         <xsl:apply-templates select="." mode="opus"/>
       </xsl:for-each>

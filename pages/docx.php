@@ -1,11 +1,40 @@
-<?php
-$title = function() { 
-    return "title"; 
-};
+<?php declare(strict_types=1);
 
-$main = function() {
-    echo "Echo test";
-    return "<h1>Test Main</h1>";
-};
+require_once(dirname(__DIR__) . "/Galenus.php");
 
-return null;
+use Psr\Log\LogLevel;
+use Oeuvres\Kit\{Http, Log, LoggerWeb, Route, Xt};
+use Oeuvres\Teinte\Format\{Docx};
+use Oeuvres\Xsl\{Xpack};
+/**
+ * This filter will always return false, to let the Route continue
+ * Requested html page will be updated if needed.
+ */
+
+
+// testing if there is a docx, test date
+Log::setLogger(new LoggerWeb(LogLevel::DEBUG));
+$docx_file = dirname(__DIR__) . "/docx" . Route::url_request() . ".docx";
+if (!file_exists($docx_file)) return false;
+
+$html_file = dirname(__DIR__) . "/html" . Route::url_request() . ".html";
+$force = Http::par('force', null);
+
+// go out ?
+if (
+    !$force
+    && file_exists($html_file)
+    && filemtime($html_file) > filemtime($docx_file)
+) return false;
+
+
+$docx = new Docx();
+$docx->load($docx_file);
+$docx->tei();
+$xsl_file = Xpack::dir() . 'tei_html_article.xsl';
+Xt::transformToUri(
+    $xsl_file,
+    $docx->dom(),
+    $html_file
+);
+return false;

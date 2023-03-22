@@ -17,69 +17,24 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 // require_once(dirname(__DIR__) . '/verbatim/Verbatim.php');
 
-use Oeuvres\Kit\{File, Xt};
-use Oeuvres\Odette\{OdtChain};
-use Psr\Log\{LoggerInterface, NullLogger};
+use Oeuvres\Kit\{Filesys, Log, Xt};
+use GalenusVerbatim\Verbatim\{Verbatim};
+
 
 Galenus::init();
 class Galenus
 {
     /** configuration parameters */
     static public $config;
-    /** Logger */
-    private static $logger;
-    /**
-     * Set logger
-     */
-    public static function setLogger(LoggerInterface $logger)
-    {
-        // default logger
-        self::$logger = $logger;
-    }
 
     /**
      * Init static things
      */
     static public function init()
     {
-        self::$logger = new NullLogger();
-        $confg_file = __DIR__ . '/config.php';
+        $config_file = __DIR__ . '/config.php';
         if (file_exists($config_file)) {
             self::$config = include($config_file);
-        }
-    }
-
-    /**
-     * Update from odt
-     */
-    static public function pages($force = false)
-    {
-        $odt_dir = __DIR__ . '/odt/';
-        $dst_dir = __DIR__ . '/html/';
-        $reflector = new \ReflectionClass('Oeuvres\Teinte\Teinte');
-        $teinte_dir = dirname($reflector->getFileName());
-        foreach (glob($odt_dir . '*.odt') as $odt_file) {
-            $name = pathinfo($odt_file, PATHINFO_FILENAME);
-            $html_file = $dst_dir . $name . '.html';
-            // freshness ?
-            if ($force);
-            else if (!file_exists($html_file));
-            else  if (filemtime($html_file) > filemtime($odt_file)) continue;
-
-            $odt = new OdtChain($odt_file);
-            // dst path is needed for images, but optimizatoin should be possible with dom
-            $tei_file =  $dst_dir . $name . '.xml';
-            $odt->save($tei_file);
-            $tei_dom = Xml::load($tei_file);
-            unlink($tei_file);
-
-            $xsl_file = $teinte_dir . '/tei_html_article.xsl';
-            Xml::transformToUri(
-                $xsl_file,
-                $tei_dom,
-                $html_file
-            );
-            self::$logger->info($odt_file . ' ->- ' . $html_file);
         }
     }
 
@@ -88,39 +43,45 @@ class Galenus
      */
     static function zotero($rdf_file = __DIR__ . "/Galenus-verbatim.rdf") {
         if (!file_exists($rdf_file)) {
-            self::$logger->error($rdf_file . " not found for a Zotero RDF export.");
+            Log::error($rdf_file . " not found for a Zotero RDF export.");
             return;
         }
         // test freshness
         // this file knows last generation
         $editiones_file = __DIR__ . "/html/editiones.html";
         if (!file_exists($editiones_file)) {
-            self::$logger->info('New build, file not found ' . $editiones_file);
+            Log::info('New build, file not found ' . $editiones_file);
         } else if (filemtime($editiones_file) < filemtime($rdf_file)) {
-            self::$logger->info('Rebuild, new zotero rdf export');
+            Log::info('Rebuild, new zotero rdf export');
         } else if (filemtime($editiones_file) + 10 < filemtime(Verbatim::db_file())) {
-            self::$logger->info('Rebuild, new verbapie database');
+            Log::info('Rebuild, new verbapie database');
         } else {
             return; // OK
         }
-        self::$logger->info('Generate resources from Zotero rdf export ' . $rdf_file);
-        Xt::setLogger(self::$logger);
+        Log::info('Generate resources from Zotero rdf export ' . $rdf_file);
         // wash a bit rdf before
         $xml = file_get_contents($rdf_file);
-        $xml = preg_replace(
+        // Entities in notes
+        $xml = preg_replace_callback(
             array(
-                '@<rdf:value>&lt;p&gt;(\d\w+:.*)&lt;/p&gt;</rdf:value>@',
+                '@(<bib:Memo[^>]*>\s*<rdf:value>)([^<]*?)(</rdf:value>\s*</bib:Memo>)@',
             ),
-            array(
-                '<rdf:value>$1</rdf:value>'
-            ),
+            function ($matches) {
+                // pb with double decoding
+                $html = str_replace( 
+                    ['&amp;lt;', '&amp;gt;', '&amp;gt;'], 
+                    ['‹', '›', '＆'], 
+                    $matches[2]
+                );
+                $html = html_entity_decode($html, ENT_QUOTES | ENT_SUBSTITUTE | ENT_XHTML);
+                $html = html_entity_decode($html);
+                return $matches[1] . $html . $matches[3];
+            },
             $xml
         );
-        file_put_contents($rdf_file, $xml); // record the wased rdf
+        file_put_contents($rdf_file .".xml", $xml); // record the washed rdf
 
         $dom = Xt::loadXml($xml);
-
-
         /* editiones */
         $editiones = Xt::transformToXml(
             __DIR__ . "/build/galenzot_editiones.xsl",
@@ -161,7 +122,7 @@ class Galenus
 
         // load opus records
 
-        self::$logger->info('Load database with Zotero records');
+        Log::info('Load database with Zotero records');
         Verbatim::$pdo->exec("DELETE FROM opus;");
         Verbatim::$pdo->beginTransaction();
         $re = '@<section class="opus" id="([^"]+)">.*?</section>@s';
@@ -171,26 +132,36 @@ class Galenus
         $sql = "INSERT INTO opus (clavis, bibl) VALUES (?, ?);";
         $insOpus = Verbatim::$pdo->prepare($sql);
         for ($i = 0, $max = count($bibl); $i < $max; $i++) {
+
             $insOpus->execute(array($clavis[$i], $bibl[$i]));
         }
         Verbatim::$pdo->commit();
-        self::$logger->info('Database, optimize');
+        Log::info('Database, optimize');
         Verbatim::$pdo->exec("PRAGMA auto_vacuum = FULL");
         // generate sitemap.xml
         self::sitemap();
         // finish with that, will be the timestamp
-        File::mkdir(dirname($editiones_file));
+        Filesys::mkdir(dirname($editiones_file));
         file_put_contents($editiones_file, $editiones);
 
-        self::$logger->info('End');
+        Log::info('End');
     }
 
     static function sitemap($sitemap_file = __DIR__ . '/sitemap.xml')
     {
         $stream = fopen($sitemap_file, "w");
-        fwrite($tream, '<?xml version="1.0" encoding="UTF-8"?>' . "\n");
-        fwrite($tream, '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n");
-        Verbatim::$pdo->prepare("SELECT clavis FROM opus;");
-        fwrite($tream, '</urlset>' . "\n");
+        $url_format = self::$config['url.doc'];
+        fwrite($stream, '<?xml version="1.0" encoding="UTF-8"?>' . "\n");
+        fwrite($stream, '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n");
+        $stmt = Verbatim::$pdo->prepare("SELECT clavis FROM doc;");
+        $stmt->execute();
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            fwrite($stream, 
+                '  <url><loc>'
+                . sprintf($url_format, $row['clavis'])
+                . '</loc></url>' . "\n"
+            );
+        }
+        fwrite($stream, '</urlset>' . "\n");
     }
 }

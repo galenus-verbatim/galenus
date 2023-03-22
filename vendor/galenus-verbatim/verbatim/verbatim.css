@@ -870,34 +870,6 @@ div.reader div.next a:hover {
 }
 
 
-/** biblio */
-
-header.editio {
-    padding: 0.5rem 0;
-}
-
-header.editio .opus_tituli {
-    margin-left: 2em;
-}
-
-.edition a {
-    display: block;
-    text-decoration: none;
-    padding: 0.1rem 1rem;
-    color: inherit;
-    font-weight: normal;
-}
-
-div.edition a:hover {
-    background-color: var(--bghi);
-    color: var(--texthi);
-}
-
-div.edition a:hover * {
-    color: inherit;
-}
-
-
 /** Concordance */
 
 div.conc {
@@ -1099,93 +1071,6 @@ a.noteback {
     font-size: 85%;
 }
 
-
-/** biblio */
-
-.biblio p {
-    text-indent: 0;
-    text-align: justify;
-}
-
-#biblio {
-    background-color: var(--bg);
-}
-
-#biblio>* {
-    margin: 0;
-    padding: 1rem 2rem 1rem 2rem;
-}
-
-section.editio,
-section.opus,
-section.verbatim {
-    margin: 0;
-}
-
-section.opus:target {
-    background-color: var(--bg3);
-}
-
-section.editio h1,
-section.opus h1,
-section.verbatim h1 {
-    margin: 0;
-    color: var(--bg2);
-}
-
-section.verbatim h1 {
-    text-align: center;
-    padding: 0.5rem 0 0 0;
-}
-
-h1 div.urn {
-    display: block;
-    font-size: 1rem;
-    font-weight: normal;
-    color: inherit;
-    text-align: left;
-}
-
-section.editio h4,
-section.opus h4,
-section.verbatim h4 {
-    margin: 0;
-}
-
-a.title {
-    font-style: italic;
-}
-
-section.opus p {
-    margin: 0;
-    text-indent: 0;
-}
-
-section.opus>.note {
-    margin: 0.5rem 0 0 0;
-}
-
-section.opus .edition {
-    margin: 0.5rem 0 0 2rem;
-}
-
-section.opus div.titlesh section.opus div.title {
-    font-style: italic;
-}
-
-.AbbrEnCGT::before {
-    content: '(CGT) ';
-}
-
-.surname {
-    /* font-variant: small-caps; */
-}
-
-.editors .surname {
-    color: var(--text);
-    font-weight: bold;
-}
-
 a.external {
     color: var(--link3);
     text-indent: 0;
@@ -1202,47 +1087,6 @@ a.external:hover::after {
     padding-right: 1.2ex;
     background-image: url('data:image/svg+xml;utf-8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="%239c652e" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
 }
-
-h1 a.fichtner {
-    font-size: 80%;
-}
-
-a.opus {
-    display: inline;
-    padding: 0;
-    color: var(--link);
-}
-
-#opera {
-    position: relative;
-    display: flex;
-    padding: 0;
-    margin-top: 3vw;
-}
-
-#opera #navs {
-    order: -1;
-    flex-shrink: 0;
-    width: 25vw;
-    position: sticky;
-    top: 80px;
-    height: calc(100vh - 80px);
-    bottom: 0;
-    overflow-y: scroll;
-    background-color: var(--bg3);
-    color: var(--bg2);
-    padding: 0 0 10vh 0;
-}
-
-#navs select {
-    font-family: inherit;
-    font-size: inherit;
-    top: 0;
-    width: 100%;
-    position: sticky;
-    margin-bottom: 2rem;
-}
-
 
 /* viewer override */
 

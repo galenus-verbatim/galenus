@@ -30,6 +30,8 @@
     <article id="editiones" class="text">
       <!-- loop on all editions to produce a bibliographic record for page -->
       <xsl:for-each select="/*/bib:*[@rdf:about = $verbatim_ids]">
+        <!-- Galenus first -->
+        <xsl:sort select=".//foaf:surname"/>
         <xsl:sort select="dc:subject/dcterms:LCC/rdf:value" data-type="number"/>
         <xsl:apply-templates select="." mode="verbatim"/>
       </xsl:for-each>
