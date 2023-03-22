@@ -14,7 +14,7 @@ function title() {
 
 function main() {
     $lang = Route::getAtt("lang");
-    $html_dir = dirname(__DIR__) . '/html/';
+    $html_dir = dirname(__DIR__) . '/html_cache/';
     ?>
     <div id="opera" class="opera">
         <div id="biblio" class="biblio">

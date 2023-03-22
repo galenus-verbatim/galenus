@@ -15996,8 +15996,8 @@
         <link:link rdf:resource="#item_12437"/>
         <link:link rdf:resource="#item_12438"/>
         <link:link rdf:resource="#item_12436"/>
-        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:subject>Hochschulschrift</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Galeni libellus de captionibus quae per dictionem fiunt ad fidem unius qui superest codicis editus. Diss. phil.</dc:title>
         <dc:date>1903</dc:date>
         <z:language>grc</z:language>
@@ -18945,13 +18945,13 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12622"/>
         <link:link rdf:resource="#item_12623"/>
         <link:link rdf:resource="#item_12624"/>
-        <dc:subject>_métadonnées à vérifier</dc:subject>
-        <dc:subject>*Galenus *129-199*. Adversus Lycum</dc:subject>
         <dc:subject>*Medicine, Greek and Roman</dc:subject>
-        <dc:subject>*Muscles</dc:subject>
         <dc:subject>Greek World</dc:subject>
-        <dc:subject>Medicine</dc:subject>
         <dc:subject>Roman World</dc:subject>
+        <dc:subject>*Galenus *129-199*. Adversus Lycum</dc:subject>
+        <dc:subject>*Muscles</dc:subject>
+        <dc:subject>Medicine</dc:subject>
+        <dc:subject>_métadonnées à vérifier</dc:subject>
         <dc:title>Adversus Lycum</dc:title>
         <dc:date>1951</dc:date>
         <z:language>grc</z:language>

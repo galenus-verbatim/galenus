@@ -4,8 +4,7 @@ _*.php
 *.db
 .~*
 ~$*
-odt/*.docx
-html/
+html_cache/
 
 config.php
 

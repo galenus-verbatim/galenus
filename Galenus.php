@@ -48,7 +48,7 @@ class Galenus
         }
         // test freshness
         // this file knows last generation
-        $editiones_file = __DIR__ . "/html/editiones.html";
+        $editiones_file = __DIR__ . "/html_cache/editiones.html";
         if (!file_exists($editiones_file)) {
             Log::info('New build, file not found ' . $editiones_file);
         } else if (filemtime($editiones_file) < filemtime($rdf_file)) {
@@ -112,13 +112,13 @@ class Galenus
             __DIR__ . "/build/galenzot_opera_navs.xsl",
             $dom
         );
-        file_put_contents(__DIR__ . "/html/opera_navs.html", $html);
+        file_put_contents(__DIR__ . "/html_cache/opera_navs.html", $html);
 
         $html = Xt::transformToXml(
             __DIR__ . "/build/galenzot_opera_bib.xsl",
             $dom
         );
-        file_put_contents(__DIR__ . "/html/opera_bib.html", $html);
+        file_put_contents(__DIR__ . "/html_cache/opera_bib.html", $html);
 
         // load opus records
 

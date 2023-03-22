@@ -1,6 +1,7 @@
 <?php
 /** Installation parameters */
  return [
-    "corpus.db" => "corpus.db",
+    "db" => "corpus.db",
+    "base.url" => "https://galenus-verbatim.huma-num.fr/%s",
  ];
  

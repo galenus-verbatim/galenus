@@ -1,8 +1,7 @@
-<?php
+<?php declare(strict_types=1);
 
 /** Galenus Router */
 
-declare(strict_types=1);
 /** Require master class  */
 require_once(__DIR__ . '/Galenus.php');
 
@@ -12,7 +11,14 @@ use GalenusVerbatim\Verbatim\{Verbatim};
 
 // connect to a database prepared with verbapie
 // https://github.com/galenus-verbatim/verbapie
-$config = require(__DIR__ . "/config.php");
+$config_file = __DIR__ . "/config.php";
+if (!file_exists($config_file)) {
+    echo "<h1>[Install] no_config. \$cp _config.php config.php</h1>";
+    return;
+}
+$config = require($config_file);
+
+
 Verbatim::connect($config['db']);
 
 // Get a language to route correctly, store it for other pages
@@ -51,15 +57,15 @@ Route::get('/', __DIR__ . '/pages/opera.php');
 // Docx is a filter without output, transform docx in html if requested
 Route::get('/(.*)', __DIR__ . '/pages/docx.php');
 // try if a local html page is available
-Route::get('/(.*)', __DIR__ . '/html/$1.html');
+Route::get('/(.*)', __DIR__ . '/html_cache/$1.html');
 // try if a local tool page is available
 Route::get('/(.*)', __DIR__ . '/pages/$1.php');
 // try if a tool page is available on Verbatim
 Route::get('/(.*)',  Verbatim::dir() . '$1.php');
 
 // Catch all
-Route::route('/404', __DIR__ . '/html/404_' . $lang . '.html');
-Route::route('/404', __DIR__ . '/html/404.html');
+Route::route('/404', __DIR__ . '/html_cache/404_' . $lang . '.html');
+Route::route('/404', __DIR__ . '/html_cache/404.html');
 // Default catch all in Verbatim
 Route::route('/404', Verbatim::dir() . '/pages/404.html');
 // No Route has worked

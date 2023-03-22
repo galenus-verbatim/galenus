@@ -17,7 +17,7 @@ Log::setLogger(new LoggerWeb(LogLevel::DEBUG));
 $docx_file = dirname(__DIR__) . "/docx" . Route::url_request() . ".docx";
 if (!file_exists($docx_file)) return false;
 
-$html_file = dirname(__DIR__) . "/html" . Route::url_request() . ".html";
+$html_file = dirname(__DIR__) . "/html_cache" . Route::url_request() . ".html";
 $force = Http::par('force', null);
 
 // go out ?
