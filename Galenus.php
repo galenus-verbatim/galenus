@@ -79,7 +79,8 @@ class Galenus
             },
             $xml
         );
-        file_put_contents($rdf_file .".xml", $xml); // record the washed rdf
+        // for debug, verify xml
+        // file_put_contents($rdf_file .".xml", $xml); 
 
         $dom = Xt::loadXml($xml);
         /* editiones */
@@ -112,6 +113,7 @@ class Galenus
             __DIR__ . "/build/galenzot_opera_navs.xsl",
             $dom
         );
+        Filesys::mkdir(__DIR__ . "/html_cache/");
         file_put_contents(__DIR__ . "/html_cache/opera_navs.html", $html);
 
         $html = Xt::transformToXml(
