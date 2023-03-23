@@ -25492,7 +25492,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         </dc:identifier>
         <bib:pages>62-157</bib:pages>
     </bib:BookSection>
-    <bib:BookSection rdf:about="#item_12755">
+    <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg105.1st1K-grc1">
         <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
             <bib:Book>
@@ -25540,7 +25540,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg100.1st1K-grc1</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg105.1st1K-grc1</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <bib:pages>49-61</bib:pages>
@@ -28197,7 +28197,7 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg037.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg002.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg106.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="#item_12755"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg105.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg104.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg115.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg037.1st1K-grc1"/>
