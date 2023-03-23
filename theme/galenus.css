@@ -176,6 +176,10 @@ header.editio {
     padding: 0.5rem 0;
 }
 
+header.doc section {
+    padding: 1rem;
+}
+
 header.editio .opus_tituli {
     margin-left: 2em;
 }

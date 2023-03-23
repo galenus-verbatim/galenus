@@ -69,7 +69,9 @@
       </div>
       <!-- book info -->
       <h1 class="editio">
+        <!--
         <xsl:call-template name="authors"/>
+        -->
         <!-- auto exact link -->
         <a class="title" href="{$url}">
           <xsl:apply-templates select="dc:title"/>
@@ -103,6 +105,7 @@
   <xsl:template match="bib:Book[not(bib:editors)]" mode="cartouche">
     <xsl:variable name="fichtner_no" select="normalize-space(dc:subject/dcterms:LCC/rdf:value)"/>
     <h4 class="opus_titlemain">
+      <xsl:call-template name="authors"/>
       <em class="title">
         <xsl:apply-templates select="dc:title"/>
       </em>

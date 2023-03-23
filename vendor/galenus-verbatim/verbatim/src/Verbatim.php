@@ -369,8 +369,16 @@ class Verbatim
         }
         */
         // a bug, but could be found
-       if (isset($doc['pagad']) && $doc['pagad']) {
-            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '-' . $doc['pagad'] . '</span>';
+        $pagad = null;
+        if (isset($doc['pagad']) && $doc['pagad']) {
+            $pagad = $doc['pagad'];
+            $pagde = $doc['pagde'];
+            if ($pagde == $pagad) {
+                $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '</span>';
+            }
+            else {
+                $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '-' . $doc['pagad'] . '</span>';
+            }
         }
         else if (isset($doc['pagde']) && $doc['pagde']) {
             $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '</span>';

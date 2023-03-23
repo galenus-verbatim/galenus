@@ -73,8 +73,78 @@ function title() {
     $title = strip_tags($title);
     return $title;
 }
+/**
+ * Build a prev/next link for a document
+ */
+function prevnext($direction)
+{
+    $q = Http::par('q');
+    $qstring = '';
+    if ($q) $qstring = '?q=' . $q;
+    $col = ($direction == 'prev')?'ante':'post';
+    $ic = ($direction == 'prev')?'⟨':'⟩';
+    if (isset(Data::$doc[$col]) && Data::$doc[$col]) {
+        $class= 'prevnext ' . $direction . ' ' . $col;
+        return '<a class="' . $class . '" href="' . Data::$doc[$col] . $qstring . '"><div>' . $ic . '</div></a>';
+    }
+    // empty link, spacer needed
+    else return '<a class="prevnext"><div> </div></a>';
+}
 
-function main() {
+
+/**
+ * Build a bibl cartouche for each doc
+ */
+function bibl()
+{
+    $html = [];
+    $html[] = '<header class="doc">';
+    $html[] = prevnext('prev');
+
+    $bibl = Data::$editio['bibl'];
+    if ($bibl === null) $bibl = "";
+    $bibl = preg_replace(
+        array(
+            '@<span class="scope">.*?</span>@',
+            '@<span class="editors">@',
+        ),
+        array(
+            Verbatim::scope(Data::$doc),
+            ', '.Verbatim::num(Data::$doc).'$0',
+        ), 
+        $bibl
+    );
+
+    $html[] = $bibl;
+
+    $html[] = prevnext('next');
+
+    /*
+    preg_match('@<h1[^>]*>.*?</h1>@im', $bibl, $matches);
+    $h1 = "";
+    if (isset($matches[0])) {
+        $h1 =  $matches[0];
+    }
+    else if (isset($editio['title']) && $editio['title']) {
+        $h1 =  "<h1>" . $editio['title'] . "</h1>";
+    }
+    $urn = '<div class="urn"><a class="urn" href="">urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']) . "</a></div>\n";
+    echo $urn;
+
+
+    echo '
+    </header>
+    <header class="doc">';
+
+    // la référence bibliographique
+    echo 
+
+    */
+    $html[] = '</header>';
+    return implode("\n", $html);
+}
+
+$main = function() {
     $cts = Data::$cts;
     $doc = Data::$doc;
     $editio = Data::$editio;
@@ -148,62 +218,9 @@ function main() {
 
 echo '
 <div class="doc">
-    <main>
-    <header class="opus">
-';
-    $bibl = $editio['bibl'];
-    if ($bibl === null) $bibl = "";
-    preg_match('@<h1[^>]*>.*?</h1>@im', $bibl, $matches);
-    $h1 = "";
-    if (isset($matches[0])) {
-        $h1 =  $matches[0];
-    }
-    else if (isset($editio['title']) && $editio['title']) {
-        $h1 =  "<h1>" . $editio['title'] . "</h1>";
-    }
-    $urn = '<div class="urn"><a class="urn" href="">urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']) . "</a></div>\n";
-    echo $urn;
-
-
-    echo '
-    </header>
-    <header class="doc">';
-    $qstring = '';
-    if ($q) $qstring = '?q=' . $q;
-
-    $key = 'ante';
-    if (isset($doc[$key]) && $doc[$key]) {
-        echo '
-        <a class="prevnext ante prev" href="' . $doc[$key] . $qstring . '">
-            <div>⟨</div>
-        </a>
-';
-    }
-
-    // populate a $h1
-    echo preg_replace(
-        array(
-            '@<span class="scope">.*?</span>@',
-            '@<span class="editors">@',
-        ),
-        array(
-            Verbatim::scope($doc),
-            ', '.Verbatim::num($doc).'$0',
-        ), 
-        $h1
-    );
-
-    $key = 'post';
-    if (isset($doc[$key]) && $doc[$key]) {
-        echo '
-        <a class="prevnext post next" href="' . $doc[$key] . $qstring . '">
-            <div>⟩</div>
-        </a>';
-    }
-
-    echo'
-    </header>
-    <div class="text">';
+    <main>';
+    echo bibl();
+    echo '<div class="text">';
 
     $html = $doc['html'];
     // if a word to find, get lem_id or orth_id
@@ -229,11 +246,8 @@ echo '
     echo '
     </div>
     <footer class="doc">';
-    foreach (array('ante' => '⟨', 'post' => '⟩') as $key => $char) {
-        if (!isset($doc[$key]) || !$doc[$key]) continue;
-        echo '<a class="prevnext ' . $key .'" href="' . $doc[$key] . $qstring . '">' . $char .'</a>';
-    }
-    
+    echo prevnext('prev');
+    echo prevnext('next');
     echo '
     </footer>
     </main>
@@ -251,7 +265,7 @@ echo '
     // add some javascript info for page resolution
     js_images($doc);
     echo "\n</div>";
-}
+};
 
 function js_images(&$doc)
 {
