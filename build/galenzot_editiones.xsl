@@ -53,7 +53,7 @@
         </xsl:choose>
       </xsl:for-each>
     </xsl:variable>
-    <section class="verbatim" id="{$id}">
+    <section class="cartouche" id="{$id}">
       <div class="opus_tituli">
         <xsl:apply-templates select="/*/bib:*[@rdf:about = $opera_ids][dc:subject/dcterms:LCC/rdf:value = $fichtner_no]" mode="cartouche"/>
         <xsl:variable name="self" select="."/>
