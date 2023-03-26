@@ -20,10 +20,18 @@ function main() {
         <div id="biblio" class="biblio">
             <main>
 <?php
-$pres_file = $html_dir . '/opera_' . $lang .'.html';
-if (file_exists($pres_file)) readfile($pres_file); 
+$name = 'opera_' . $lang;
+$pres_file = $html_dir . $name .'.html';
+if (!file_exists($pres_file)) {
+    // try to generate it
+    $docx_file =  dirname(__DIR__) . '/docx/' . $name . '.docx';
+    include __DIR__ . '/docx.php';
+}
+if (file_exists($pres_file)) {
+    readfile($pres_file);
+}
 ?>
-<?php readfile($html_dir . '/opera_bib.html') ?>
+<?php readfile($html_dir . '/opera_bib.html'); // table is required ?>
             </main>
         </div>
         <aside id="navs">

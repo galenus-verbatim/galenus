@@ -24,24 +24,6 @@
     --text3: #666;
 }
 
-.ed1page,
-.ed2page {
-    padding-left: 0.5ex;
-    background-color: var(--link2);
-}
-
-.ed1page.page1,
-.ed2page.page1 {
-    /* no index for first page */
-    padding-left: 0;
-    background-color: transparent;
-}
-
-.ed1page:hover,
-.ed2page:hover {
-    background-color: var(--bg2);
-}
-
 section.opus {
     padding: 1rem;
 }
@@ -328,7 +310,51 @@ a.opus {
     margin-bottom: 2rem;
 }
 
+/* page click */
+.ed1page.view,
+.ed2page.view,
+.pb.view {
+    cursor: pointer;
+    padding: 0 1em;
+    text-indent: 0;
+    font-size: 85%;
+    clear: both;
+    float: right;
+    display: block;
+    z-index: 10;
+}
+
+/* ensure page number visible */
+:target::before {
+    content: "";
+    display: block;
+    height: 15rem;
+    margin: -15rem 0 0 0;
+    visibility: hidden;
+}
+
+.pbmark {
+    padding: 0;
+    border-left: 3px solid var(--bghi);
+}
+
+.ed1page.selected,
+.ed2page.selected,
+.ed1page:hover,
+.ed2page:hover,
+.pb.selected,
+.pb.view:hover {
+    background-color: var(--bg2);
+    color: var(--text2hi);
+}
+
+span.pb[data-page]::before {
+    display: none;
+}
+
+
 /* Teinte  */
 aside.toc {
     display: none;
 }
+

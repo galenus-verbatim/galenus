@@ -122,30 +122,35 @@ if (div) {
 
 }
 (function() {
-    let first = true;
-    // const ed1 set, use data 
+    // loop on al image <span> to set events
     if (typeof imgkuhn !== 'undefined') wear(".pb", imgkuhn);
     if (typeof imgbale !== 'undefined') wear(".ed1page", imgbale);
     if (typeof imgchartier !== 'undefined') wear(".ed2page", imgchartier);
-
+    // set the id of an image to load
+    var id = false;
+    if (window.location.hash) {
+        id = window.location.hash.substring(1);
+    }
     // https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:0038/full/max/0/default.jpg
     function wear(css, dat) {
         if (!dat) return;
         let els = document.querySelectorAll(css);
         for (let i = 0; i < els.length; ++i) {
-
-            var span = document.createElement("span");
-            span.className = "pageview";
-
-            let page = els[i].dataset.n;
-            if (!page) page = els[i].dataset.page;
+            const span = els[i];
+            if (!span.classList.contains('pb')) {
+                const before = document.createElement("mark");
+                before.className = "pbmark";
+                span.parentNode.insertBefore(before, span);
+            }
+            let page = span.dataset.n;
+            if (!page) page = span.dataset.page;
             // get the p int
             let p = parseInt(page.split('.').pop());
 
             let url;
             let pno;
             let text = '[';
-            if (els[i].classList.contains('page1') || els[i].classList.contains('pbde')) {
+            if (span.classList.contains('page1') || span.classList.contains('pbde')) {
                 text += '…';
             }
             // build an url from a page number
@@ -169,10 +174,7 @@ if (div) {
             url = dat['url'].replace('%%', pno);
             text += ']';
             span.innerText = text;
-            // els[i].parentNode.insertBefore(span, els[i].nextSibling);
-            els[i].appendChild(span);
-
-
+            span.classList.add("view");
             span.onclick = function() {
                 if (pageViewer.spanLast) pageViewer.spanLast.classList.remove("selected");
                 this.classList.add("selected");
@@ -186,13 +188,16 @@ if (div) {
                 pageViewer.update();
                 pageViewer.resize();
             }
-            if (first) {
-                span.click();
-                first = false;
+            if (!id) {
+                id = span.id;
             }
         }
     }
-
+    const span = window.document.getElementById(id);
+    if (span) {
+        span.scrollIntoView({ block: "center" });
+        span.click();
+    }
     function pad(num, width) {
         var s = "000000000" + num;
         return s.substring(s.length - width);
@@ -220,7 +225,6 @@ if (div) {
             show(value);
         }
     })
-
     select.addEventListener("change", function(e) {
         const value = select.value;
         show(value);
@@ -246,4 +250,16 @@ if (div) {
         }
         return el;
     }
+}());
+(function() {
+    /*
+    // fire a page id
+    window.addEventListener("hashchange", function(e) {
+        const id = window.location.hash.substring(1);
+        const span = document.getElementById(id);
+        if (!span) return;
+        console.log(span);
+        span.click();
+    })
+    */
 }());

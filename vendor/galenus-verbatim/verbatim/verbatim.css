@@ -544,28 +544,7 @@ nav a {
     user-select: none;
 }
 
-.pageview {
-    cursor: pointer;
-    padding: 0 1em;
-    text-indent: 0;
-    font-size: 85%;
-    clear: both;
-    float: right;
-    display: block;
-    z-index: 10;
-}
-
-.pageview.selected,
-.pageview:hover {
-    background-color: var(--bg2);
-    color: var(--text2hi);
-}
-
-span.pb[data-page]::before {
-    display: block;
-    content: ' ';
-}
-
+span.pb[data-page]::before,
 span.lb::before {
     white-space: pre;
     content: '\A';

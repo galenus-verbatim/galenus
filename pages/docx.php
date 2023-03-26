@@ -14,10 +14,15 @@ use Oeuvres\Xsl\{Xpack};
 
 // testing if there is a docx, test date
 Log::setLogger(new LoggerWeb(LogLevel::DEBUG));
-$docx_file = dirname(__DIR__) . "/docx" . Route::url_request() . ".docx";
-if (!file_exists($docx_file)) return false;
-
-$html_file = dirname(__DIR__) . "/html_cache" . Route::url_request() . ".html";
+// a caller 
+if (!isset($docx_file)) {
+    $docx_file = dirname(__DIR__) . "/docx" . Route::url_request() . ".docx";
+}
+if (!file_exists($docx_file)) {
+    return false;
+}
+$name = pathinfo($docx_file, PATHINFO_FILENAME);
+$html_file = dirname(__DIR__) . "/html_cache/" . $name . ".html";
 $force = Http::par('force', null);
 
 // go out ?
