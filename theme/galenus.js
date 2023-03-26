@@ -128,9 +128,22 @@ if (div) {
     if (typeof imgchartier !== 'undefined') wear(".ed2page", imgchartier);
     // set the id of an image to load
     var id = false;
-    if (window.location.hash) {
+    do {
+        if (!window.location.hash) {
+            break;
+        }
         id = window.location.hash.substring(1);
-    }
+        let found = id.match(/^p\d+[a-b]\.\d+/);
+        if (found) {
+            id = found[0];
+            break;
+        }
+        found = id.match(/^l\d+[a-b]\.\d+/);
+        if (found) {
+            id = 'p' + found[0].substring(1);
+            break;
+        }
+    } while (false)
     // https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:0038/full/max/0/default.jpg
     function wear(css, dat) {
         if (!dat) return;

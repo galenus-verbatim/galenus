@@ -97,7 +97,7 @@ else { // data error
 
 if ($linea) {
     $clavis .= '?kuhn=' . $volumen . '.' . $pagina . '.' . $linea;
-    $clavis .= '#p' . $volumen . '.' . $pagina . "." . $linea;
+    $clavis .= '#l' . $volumen . '.' . $pagina . "." . $linea;
 }
 else if ($pagina) {
     $clavis .= '?kuhn=' . $volumen . '.' . $pagina;
