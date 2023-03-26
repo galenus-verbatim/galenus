@@ -358,3 +358,20 @@ aside.toc {
     display: none;
 }
 
+/* logos */
+#logos {
+    position: relative;
+}
+
+#logos > a {
+    position: relative;
+} 
+
+#logos > a > img {
+    height: 50px;
+}
+nav.tabs .tab.zotero {
+    justify-content: end;
+    width: 17rem;
+    flex-grow: 0;
+}

@@ -16,9 +16,11 @@ use Oeuvres\Xsl\{Xpack};
 Log::setLogger(new LoggerWeb(LogLevel::DEBUG));
 // a caller 
 if (!isset($docx_file)) {
-    $docx_file = dirname(__DIR__) . "/docx" . Route::url_request() . ".docx";
+    $page = Http::par('page', trim(Route::url_request(), '/\\'));
+    $docx_file = dirname(__DIR__) . "/docx/" . $page . ".docx";
 }
 if (!file_exists($docx_file)) {
+    echo $docx_file;
     return false;
 }
 $name = pathinfo($docx_file, PATHINFO_FILENAME);

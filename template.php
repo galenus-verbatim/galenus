@@ -42,6 +42,7 @@ $lang = Route::getAtt("lang");
         <nav id="tabs" class="tabs">
             <form action="" onsubmit="this.action = encodeURIComponent(this.cts.value.replaceAll(':', '_'));">
                 <label for="cts"><?= I18n::_('cts.label') ?></label>
+                <br/>
                 <input  id="cts" name="cts"
                     title="<?= I18n::_('cts.title') ?>" 
                     placeholder="<?= I18n::_('cts.placeholder') ?>" 
@@ -60,6 +61,11 @@ $lang = Route::getAtt("lang");
             
             ?>
             <?= Route::tab(I18n::_('template.de_href'), I18n::_('template.de')) ?>
+            <span class="tab fill"> </span>
+            <a class="tab zotero" target="_blank" rel="noopener" href="https://www.zotero.org/groups/4571007/galenus-verbatim/library">
+            Ad bibliothecam
+                <img src="<?= Route::home_href() ?>theme/logo_zotero.png"/>
+            </a>
         </nav>
         <div class="container">
             <?php Route::main(); ?>
@@ -73,9 +79,9 @@ $lang = Route::getAtt("lang");
 
             <a href="https://lettres.sorbonne-universite.fr/faculte-des-lettres/ufr/lettres/grec/" title="Faculté des Lettres de Sorbonne Université"><img alt="Faculté des Lettres de Sorbonne Université" src="<?= Route::home_href() ?>theme/logo_sorbonne-lettres.png"/></a>
 
-
-
             <a href="https://humanites-biomedicales.sorbonne-universite.fr/" title="Initiative humanités biomédicales de l’Alliance Sorbonne Université"><img alt="Initiative humanités biomédicales de l’Alliance Sorbonne Université" src="<?= Route::home_href() ?>theme/logo_humabiomed.png"/></a>
+
+            <a href="https://documentation.huma-num.fr/hebergement-web/" title="Site hébergé par Huma-Num"><img alt="Site hébergé par Huma-Num" src="<?= Route::home_href() ?>theme/logo_hn.png"/></a>
 
             <a href="#" onmouseover="this.href='ma'+'i'+'lto:'+'etymologika' + '\u0040gm' + 'ail.com';"><img style="opacity: 0.7;" src="<?= Route::home_href() ?>theme/enveloppe.png"/></a>
         </nav>

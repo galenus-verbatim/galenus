@@ -412,12 +412,22 @@ input[type=radio]:checked {
     background-color: var(--link);
 }
 
-nav.tabs a.tab {
-    display: block;
+nav.tabs .tab {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Align horizontal */
+    align-items: center;
     text-decoration: none;
-    padding: 0.2rem 0.5rem 0.7rem 0.5rem;
     text-align: center;
-    width: 100%;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+.tab.fill {
+    flex-grow: 2;
+}
+
+.tab img {
+    height: calc(100% + 0.5rem);
 }
 
 nav.tabs form.selected,

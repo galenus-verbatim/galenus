@@ -58,12 +58,18 @@ Route::get('/', __DIR__ . '/pages/opera.php');
 Route::get('/(.*)', __DIR__ . '/pages/docx.php');
 // try if a local html page is available
 Route::get('/(.*)', __DIR__ . '/html_cache/$1.html');
+// try default language
+Route::get('/(.*)', __DIR__ . '/html_cache/$1_' . $lang . '.html');
 // try if a local tool page is available
 Route::get('/(.*)', __DIR__ . '/pages/$1.php');
 // try if a tool page is available on Verbatim
 Route::get('/(.*)',  Verbatim::dir() . '$1.php');
 
-// Catch all
+// 404
+
+// ensure 404 page
+Route::get('/404', __DIR__ . '/pages/docx.php', array('page' => '404_en'));
+Route::get('/404', __DIR__ . '/pages/docx.php', array('page' => '404_fr'));
 Route::route('/404', __DIR__ . '/html_cache/404_' . $lang . '.html');
 Route::route('/404', __DIR__ . '/html_cache/404.html');
 // Default catch all in Verbatim
