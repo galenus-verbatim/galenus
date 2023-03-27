@@ -277,6 +277,22 @@ s#</(bg|color|font|mark)_[^>]+>#</hi>#g
       </xsl:attribute>
     </pb>
   </xsl:template>
+  <xsl:template match="tei:ref[not(@target)]">
+    <xsl:variable name="target" select="preceding-sibling::*[1][self::tei:field[@name = 'HYPERLINK']]"/>
+    <xsl:copy>
+      <xsl:copy-of select="@*"/>
+      <xsl:if test="$target != ''">
+        <xsl:attribute name="target">
+          <xsl:value-of select="$target"/>
+        </xsl:attribute>
+      </xsl:if>
+      <xsl:apply-templates/>
+    </xsl:copy>
+  </xsl:template>
+  
+  <xsl:template match="tei:field[@name = 'HYPERLINK']">
+    <!-- Safe ? -->
+  </xsl:template>
   <!-- 
     Blocks, try to put inline rendering informations at block level ?
   
