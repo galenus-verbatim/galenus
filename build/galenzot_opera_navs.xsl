@@ -136,24 +136,25 @@
         <xsl:sort select="normalize-space(rdf:value)"/>
         <xsl:variable name="about" select="@rdf:about"/>
         <xsl:variable name="opus" select="/*/bib:*[dcterms:isReferencedBy/@rdf:resource=$about]"/>
-        <a>
-          <xsl:attribute name="href">
-            <xsl:text>#</xsl:text>
-            <xsl:apply-templates select="$opus" mode="id"/>
-          </xsl:attribute>
-          <xsl:attribute name="title">
-            <xsl:value-of select="normalize-space($opus/dc:title)"/>
-          </xsl:attribute>
-          <em>
-            <xsl:value-of select="normalize-space(substring-after(., ':'))"/>
-          </em>
-          <xsl:text> </xsl:text>
-          <small>
-            <xsl:text>[</xsl:text>
-            <xsl:value-of select="$opus/dc:subject/dcterms:LCC/rdf:value"/>
-            <xsl:text>]</xsl:text>
-          </small>
-        </a>
+        <xsl:variable name="value" select="normalize-space(substring-after(., ':'))"/>
+          <a>
+            <xsl:attribute name="href">
+              <xsl:text>#</xsl:text>
+              <xsl:apply-templates select="$opus" mode="id"/>
+            </xsl:attribute>
+            <xsl:attribute name="title">
+              <xsl:value-of select="$value"/>
+            </xsl:attribute>
+            <em>
+              <xsl:value-of select="$value"/>
+              <xsl:text> </xsl:text>
+            </em>
+            <small>
+              <xsl:text>[</xsl:text>
+              <xsl:value-of select="$opus/dc:subject/dcterms:LCC/rdf:value"/>
+              <xsl:text>]</xsl:text>
+            </small>
+          </a>
       </xsl:for-each>
     </nav>
   </xsl:template>
@@ -164,18 +165,19 @@
         <xsl:sort select="translate(normalize-space(rdf:value), $idfrom, $idto)"/>
         <xsl:variable name="about" select="@rdf:about"/>
         <xsl:variable name="opus" select="/*/bib:*[dcterms:isReferencedBy/@rdf:resource=$about]"/>
+        <xsl:variable name="value" select="normalize-space(substring-after(., ':'))"/>
         <a>
           <xsl:attribute name="href">
             <xsl:text>#</xsl:text>
             <xsl:apply-templates select="$opus" mode="id"/>
           </xsl:attribute>
           <xsl:attribute name="title">
-            <xsl:value-of select="normalize-space($opus/dc:title)"/>
+            <xsl:value-of select="$value"/>
           </xsl:attribute>
           <em>
-            <xsl:value-of select="normalize-space(substring-after(., ':'))"/>
+            <xsl:value-of select="$value"/>
+            <xsl:text> </xsl:text>
           </em>
-          <xsl:text> </xsl:text>
           <small>
             <xsl:text>[</xsl:text>
             <xsl:value-of select="$opus/dc:subject/dcterms:LCC/rdf:value"/>
@@ -202,8 +204,8 @@
           </xsl:attribute>
           <em>
             <xsl:value-of select="normalize-space(substring-after(., ':'))"/>
+            <xsl:text> </xsl:text>
           </em>
-          <xsl:text> </xsl:text>
           <small>
             <xsl:text>[</xsl:text>
             <xsl:value-of select="$opus/dc:subject/dcterms:LCC/rdf:value"/>
@@ -230,8 +232,8 @@
           </xsl:attribute>
           <em>
             <xsl:value-of select="normalize-space(substring-after(., ':'))"/>
+            <xsl:text> </xsl:text>
           </em>
-          <xsl:text> </xsl:text>
           <small>
             <xsl:text>[</xsl:text>
             <xsl:value-of select="$opus/dc:subject/dcterms:LCC/rdf:value"/>
