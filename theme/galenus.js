@@ -130,6 +130,8 @@ if (div) {
     var id = false;
     do {
         if (!window.location.hash) {
+            let el = document.querySelector(".pb");
+            if (el) id = el.id;
             break;
         }
         id = window.location.hash.substring(1);
@@ -200,9 +202,6 @@ if (div) {
                 if (header) header.innerHTML = title;
                 pageViewer.update();
                 pageViewer.resize();
-            }
-            if (!id) {
-                id = span.id;
             }
         }
     }
