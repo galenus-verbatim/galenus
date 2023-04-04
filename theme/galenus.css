@@ -369,6 +369,5 @@ aside.toc {
 }
 nav.tabs .tab.zotero {
     justify-content: end;
-    width: 17rem;
     flex-grow: 0;
 }
