@@ -151,7 +151,7 @@ button:hover,
 }
 
 input#cts {
-    width: 22em;
+    /* width: 100%; */
 }
 
 
@@ -394,7 +394,7 @@ nav.tabs {
     background-color: var(--bg2);
     color: var(--text2);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0.5em 1em 0 1em;
 }
 
@@ -419,7 +419,7 @@ nav.tabs .tab {
     align-items: center;
     text-decoration: none;
     text-align: center;
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .tab.fill {
@@ -427,7 +427,7 @@ nav.tabs .tab {
 }
 
 .tab img {
-    height: calc(100% + 0.5rem);
+    height: 40px;
 }
 
 nav.tabs form.selected,

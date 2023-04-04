@@ -36,6 +36,7 @@ section.opus {
 header.doc {
     position: sticky;
     top: 60px;
+    z-index: 10;
 }
 
 header.opus .urn {
@@ -113,17 +114,6 @@ span.lb.rule::after {
 }
 
 /** Epidoc <list type="table"> */
-
-tr {
-    position: relative;
-}
-
-td span.pb,
-th span.pb {
-    position: absolute;
-    right: -5rem;
-    width: 100%;
-}
 
 table.list th,
 table.list td {
@@ -321,8 +311,15 @@ a.opus {
     clear: both;
     float: right;
     display: block;
-    z-index: 10;
+    font-weight: normal;
 }
+
+td .pb.view,
+th .pb.view {
+    position: absolute;
+    right: 0;
+}
+
 
 /* ensure page number visible */
 :target::before {
@@ -372,6 +369,5 @@ aside.toc {
 }
 nav.tabs .tab.zotero {
     justify-content: end;
-    width: 17rem;
     flex-grow: 0;
 }

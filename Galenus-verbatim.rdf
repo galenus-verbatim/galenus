@@ -2043,8 +2043,8 @@
         <dcterms:isReferencedBy rdf:resource="#item_12847"/>
         <link:link rdf:resource="#item_11296"/>
         <dc:subject>_contenu à revoir</dc:subject>
-        <dc:subject>_physiol.</dc:subject>
         <dc:subject>_pas de lien GalLat</dc:subject>
+        <dc:subject>_physiol.</dc:subject>
         <dc:title>Ad Gaurum quomodo animetur fetus</dc:title>
         <z:shortTitle>Ad Gaurum quomodo animetur fetus</z:shortTitle>
         <dc:subject>
@@ -26204,8 +26204,8 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:isReferencedBy rdf:resource="#item_13038"/>
         <dcterms:isReferencedBy rdf:resource="#item_13037"/>
         <link:link rdf:resource="#item_13036"/>
-        <dc:subject>_pharm.</dc:subject>
         <dc:subject>_pas de lien GalLat</dc:subject>
+        <dc:subject>_pharm.</dc:subject>
         <dc:title>De ponderibus et mensuris</dc:title>
         <z:shortTitle>De pond. et mens.</z:shortTitle>
         <dc:subject>
@@ -26385,8 +26385,8 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:isReferencedBy rdf:resource="#item_13016"/>
         <link:link rdf:resource="#item_13017"/>
         <link:link rdf:resource="#item_12881"/>
-        <dc:subject>_nosol.</dc:subject>
         <dc:subject>_Hipp.</dc:subject>
+        <dc:subject>_nosol.</dc:subject>
         <dc:title>De urinis ex Hippocrate, Galeno aliisque quibusdam</dc:title>
         <z:shortTitle>De urin. ex Hipp. Gal. al.</z:shortTitle>
         <dc:subject>
@@ -26709,8 +26709,8 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:isReferencedBy rdf:resource="#item_12968"/>
         <dcterms:isReferencedBy rdf:resource="#item_12967"/>
         <link:link rdf:resource="#item_12966"/>
-        <dc:subject>_physiol.</dc:subject>
         <dc:subject>_pas de lien GalLat</dc:subject>
+        <dc:subject>_physiol.</dc:subject>
         <dc:title>De humoribus</dc:title>
         <z:shortTitle>De hum.</z:shortTitle>
         <dc:subject>
@@ -27034,9 +27034,9 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:isReferencedBy rdf:resource="#item_12984"/>
         <link:link rdf:resource="#item_12985"/>
         <link:link rdf:resource="#item_12960"/>
+        <dc:subject>_anat.</dc:subject>
         <dc:subject>_contenu à revoir</dc:subject>
         <dc:subject>_physiol.</dc:subject>
-        <dc:subject>_anat.</dc:subject>
         <dc:title>An animal sit quod est in utero</dc:title>
         <z:shortTitle>An animal sit quod est in utero</z:shortTitle>
         <dc:subject>
@@ -27290,8 +27290,8 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:isReferencedBy rdf:resource="#item_12838"/>
         <link:link rdf:resource="#item_12852"/>
         <link:link rdf:resource="#item_12856"/>
-        <dc:subject>_nosol.</dc:subject>
         <dc:subject>_Hipp.</dc:subject>
+        <dc:subject>_nosol.</dc:subject>
         <dc:title>*Quomodo morbum simulantes sint deprehendendi*</dc:title>
         <dc:date>ca 200</dc:date>
         <z:shortTitle>Quomodo morbum simul. sint deprehend.</z:shortTitle>
@@ -28369,5 +28369,28 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
     <z:Collection rdf:about="#collection_23">
         <dc:title>Orphani</dc:title>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg095"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_25">
+        <dc:title>Textes à relire</dc:title>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg0115"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg104"/>
+        <dcterms:hasPart rdf:resource="0https://galenus-verbatim.huma-num.fr/tlg0057.tlg105"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg106"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg002"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg037"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg042"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg041"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg111"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg0009"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/tlg0530.tlg023"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/tlg0530.tlg036"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/tlg0530.tlg024"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/tlg0530.tlg033"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/tlg0530.tlg034"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg035"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg026"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg045"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg031"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg022"/>
     </z:Collection>
 </rdf:RDF>

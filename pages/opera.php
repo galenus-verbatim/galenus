@@ -22,11 +22,9 @@ function main() {
 <?php
 $name = 'opera_' . $lang;
 $pres_file = $html_dir . $name .'.html';
-if (!file_exists($pres_file)) {
-    // try to generate it
-    $docx_file =  dirname(__DIR__) . '/docx/' . $name . '.docx';
-    include __DIR__ . '/docx.php';
-}
+// ensure freshness
+$docx_file =  dirname(__DIR__) . '/docx/' . $name . '.docx';
+include __DIR__ . '/docx.php';
 if (file_exists($pres_file)) {
     readfile($pres_file);
 }

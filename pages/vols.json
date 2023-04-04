@@ -161,7 +161,7 @@
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "8": {
-            "pdiff": 4,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
@@ -186,7 +186,7 @@
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x12&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "13": {
-            "pdiff": 6,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x13:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x13&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -345,7 +345,7 @@
     },
     "tlg0057.tlg045.1st1K-grc1": {
         "bale": "3",
-        "chartier": "6"
+        "chartier": "8"
     },
     "tlg0057.tlg046.1st1K-grc1": {
         "bale": "3",
@@ -356,6 +356,10 @@
         "chartier": "7"
     },
     "tlg0057.tlg048.1st1K-grc1": {
+        "bale": "3",
+        "chartier": "7"
+    },
+    "tlg0057.tlg049.1st1K-grc1": {
         "bale": "3",
         "chartier": "7"
     },
@@ -494,9 +498,14 @@
         "bale": "5",
         "chartier": "6"
     },
+	
     "tlg0057.tlg087.1st1K-grc1": {
         "bale": "5",
         "chartier": "9"
+    },
+    "tlg0057.tlg088.1st1K-grc1": {
+        "bale": "5",
+        "chartier": "8"
     },
     "tlg0057.tlg089.1st1K-grc1": {
         "bale": "5",

@@ -487,8 +487,12 @@ Seen
   <!-- fields -->
   <xsl:template match="w:fldChar"/>
   <xsl:template match="w:instrText">
+    <xsl:variable name="text" select="normalize-space(.)"/>
     <field>
-      <xsl:apply-templates/>
+      <xsl:attribute name="name">
+        <xsl:value-of select="substring-before(concat($text, ' '), ' ')"/>
+      </xsl:attribute>
+      <xsl:value-of select="substring-before(substring-after($text, '&quot;'), '&quot;')"/>
     </field>
   </xsl:template>
 </xsl:transform>

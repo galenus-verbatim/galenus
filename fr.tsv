@@ -4,9 +4,9 @@ cts.label	Accès rapide
 cts.title	urn:cts ou référérence Kühn brève (ex : 18b.26.4)
 cts.placeholder	 e.g. XVIII B, 559; 18a.553.3 ; urn:cts:greekLit:tlg0057.tlg001.1st1K-grc1…
 template.de_href	de_fr
-template.de	À propos /<br/>Crédits
+template.de	À propos /<br/>Crédits
 template.moto	Naviguer dans le texte de Galien de Pergame, éd. Kühn (1821–1833) &amp; al.
-template.opera	Accueil /<br/>Table des traités
+template.opera	Accueil /<br/>Table des traités
 template.verba	Table<br/>fréquentielle
 zotero.TitLa	Titre latin
 zotero.fichtner	N° Fichtner
