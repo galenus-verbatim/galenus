@@ -347,6 +347,7 @@ th .pb.view {
 
 span.pb[data-page]::before {
     display: none;
+    user-select: none;
 }
 
 
@@ -370,4 +371,14 @@ aside.toc {
 nav.tabs .tab.zotero {
     justify-content: end;
     flex-grow: 0;
+}
+
+#footer,
+#tabs,
+#header {
+    user-select: none;
+}
+/* input not selectable */
+#tabs input {
+    -moz-user-select: -moz-none;
 }

@@ -41,7 +41,9 @@ $main = function()
     if ($field == 'orth') $mess = 'conc.orth';
     if (count($forms) > 1 ) $mess .= 's';
     echo "<header>\n";
-    echo '<div class="occs">' . I18n::_('conc.search', $count, "<span title=" . json_encode($q) .">$q</span>");
+    $href = '?f=' . $field .'&amp;q=' . $qprint;
+    echo '<h1 class="occs">' . I18n::_('conc.search', $count, 
+    '<a href="'.$href.'">' . $q . '</a>');
     $first = true;
     echo ' (';
     // unify words
@@ -59,7 +61,7 @@ $main = function()
         echo '<span title=' . json_encode($w) . '>' . $w . '</span>';
     }
     echo ')';
-    echo '</div>' . "\n";
+    echo '</h1>' . "\n";
     echo "</header>\n";
 
     // order by needed, natural order is by the form search
