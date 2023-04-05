@@ -232,11 +232,13 @@ echo '
         $qTok->execute($formids);
         $start = 0;
         while ($tok = $qTok->fetch(PDO::FETCH_ASSOC)) {
-            echo mb_substr($html, $start, $tok['charde'] - $start);
+            $charde = intval($tok['charde']);
+            $charad = intval($tok['charad']);
+            echo mb_substr($html, $start, $charde - $start);
             echo "<mark>";
-            echo mb_substr($html, $tok['charde'], $tok['charad'] - $tok['charde']);
+            echo mb_substr($html, $charde, $charad - $charde);
             echo "</mark>";
-            $start = $tok['charad'];
+            $start = $charad;
         }
         echo mb_substr($html, $start, mb_strlen($html) - $start);
     }

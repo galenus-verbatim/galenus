@@ -55,6 +55,10 @@ $lang = Route::getAtt("lang");
                 // if doc visible, add a buttoon search in doc search in doc
                 Verbatim::qform(true);
             }
+            // if in concordantia, keep it
+            else if ($page == 'concordantia') {
+                Verbatim::qform(false,  'concordantia');
+            }
             else {
                 Verbatim::qform();
             }

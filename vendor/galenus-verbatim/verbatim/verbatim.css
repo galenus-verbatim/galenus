@@ -498,6 +498,7 @@ form.qform input.q {
     padding-right: 0.5em;
 }
 
+b.mark,
 mark {
     background-color: var(--bgmark);
     color: var(--text);

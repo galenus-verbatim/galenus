@@ -171,7 +171,8 @@ class Verbatim
             $out .= "</mark>";
             $start = $ad;
         }
-        // $out .= mb_substr($html, $start, mb_strlen($html) - $start);
+        // do not forget end of doc !
+        $out .= mb_substr($html, $start, mb_strlen($html) - $start);
         return $out;
     }
 
