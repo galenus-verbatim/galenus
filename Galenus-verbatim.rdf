@@ -26687,8 +26687,8 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:isReferencedBy rdf:resource="#item_8032"/>
         <dcterms:isReferencedBy rdf:resource="#item_8033"/>
         <link:link rdf:resource="#item_8034"/>
-        <dc:subject>_therap</dc:subject>
         <dc:subject>*pas de lien GalLat</dc:subject>
+        <dc:subject>_therap</dc:subject>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.-humanum.fr/tlg0530.tlg036</rdf:value>
@@ -26879,9 +26879,9 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <dcterms:isReferencedBy rdf:resource="#item_8049"/>
         <link:link rdf:resource="#item_8048"/>
         <link:link rdf:resource="#item_8099"/>
+        <dc:subject>*contenu à revoir</dc:subject>
         <dc:subject>_anat</dc:subject>
         <dc:subject>_physiol</dc:subject>
-        <dc:subject>*contenu à revoir</dc:subject>
         <dc:identifier>
             <dcterms:URI>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0530.tlg002</rdf:value>
