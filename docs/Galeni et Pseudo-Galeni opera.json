@@ -1,0 +1,2564 @@
+[
+	{
+		"id": "http://zotero.org/groups/4571007/items/H4YJIDAF",
+		"type": "book",
+		"call-number": "050",
+		"number-of-volumes": "8",
+		"title": "De morborum temporibus",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg047",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/X2S26WAZ",
+		"type": "book",
+		"call-number": "091",
+		"number-of-volumes": "34",
+		"title": "In Hippocratis De natura hominis commentaria lib. III",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg086",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/96TERIEB",
+		"type": "book",
+		"call-number": "030",
+		"number-of-volumes": "7",
+		"title": "De animi cuiuslibet peccatorum dignotione et curatione",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg029",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/9ERL778E",
+		"type": "book",
+		"call-number": "202",
+		"number-of-volumes": "5",
+		"title": "De consuetudinibus",
+		"title-short": "De consuet.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg103",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/4HGRGM9U",
+		"type": "book",
+		"call-number": "402",
+		"number-of-volumes": "19",
+		"title": "Institutio logica",
+		"title-short": "Inst. log.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg081",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/ZVBGDAXV",
+		"type": "book",
+		"call-number": "038",
+		"number-of-volumes": "147",
+		"title": "De alimentorum facultatibus",
+		"title-short": "De alim. fac.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg037",
+		"volume": "3",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/DCY8L8ZM",
+		"type": "book",
+		"call-number": "138",
+		"number-of-volumes": "18",
+		"title": "Ad Gaurum quomodo animetur fetus",
+		"title-short": "Ad Gaurum quomodo animetur fetus",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg006",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/AE6WPCWT",
+		"type": "book",
+		"call-number": "235",
+		"title": "De experientia medica",
+		"title-short": "De exper. med.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg107",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/E6SL7MZW",
+		"type": "book",
+		"call-number": "041",
+		"number-of-volumes": "8",
+		"title": "De dignotione ex insomniis",
+		"title-short": "De dign. ex insomniis",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg040",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/LXGI3NW4",
+		"type": "book",
+		"call-number": "107",
+		"number-of-volumes": "114",
+		"title": "De fasciis",
+		"title-short": "De fasc.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg005",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/U8RDDT4C",
+		"type": "book",
+		"call-number": "349",
+		"title": "De victu attenuante",
+		"title-short": "De victu att.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg019",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/IVFG46H5",
+		"type": "book",
+		"call-number": "034",
+		"title": "Thrasybulus sive utrum medicinae sit an gymnasticae hygiene",
+		"title-short": "Thrasyb.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg033",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/PZSMFKQG",
+		"type": "book",
+		"call-number": "086",
+		"number-of-volumes": "362",
+		"title": "De remediis parabilibus",
+		"title-short": "De rem. parab.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg029",
+		"volume": "3",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/2PI9GSS3",
+		"type": "book",
+		"call-number": "085",
+		"title": "De theriaca ad Pamphilianum",
+		"title-short": "De ther. ad Pamph.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg032",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/RARIRBKP",
+		"type": "book",
+		"call-number": "084",
+		"number-of-volumes": "18",
+		"title": "De theriaca ad Pisonem",
+		"title-short": "De ther. ad Pis.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg079",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/S3Q2HZTQ",
+		"type": "book",
+		"call-number": "005",
+		"number-of-volumes": "51",
+		"title": "De optima secta ad Thrasybulum",
+		"title-short": "De opt. secta ad Thrasyb.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg043",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/9Y4TFSEV",
+		"type": "book",
+		"call-number": "089",
+		"number-of-volumes": "20",
+		"title": "Introductio sive medicus",
+		"title-short": "Medicus. Introd.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg012",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/DGNR7S9R",
+		"type": "book",
+		"call-number": "111",
+		"number-of-volumes": "94",
+		"title": "In Hippocratis De officina medici commentaria",
+		"title-short": "In Hipp. De off. med. comm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg101",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/KKPPPJBC",
+		"type": "book",
+		"call-number": "020",
+		"number-of-volumes": "1",
+		"title": "De causis respirationis",
+		"title-short": "De causis respir.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg114",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/6S4G62JI",
+		"type": "book",
+		"call-number": "112",
+		"number-of-volumes": "37",
+		"title": "De musculorum dissectione ad tirones",
+		"title-short": "De musc. dissect.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg102",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/ZFI5A9R8",
+		"type": "book",
+		"call-number": "110",
+		"number-of-volumes": "192",
+		"title": "In Hippocratis De fracturis commentaria",
+		"title-short": "In Hipp. De fract. comm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg100",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/4YI8AZD7",
+		"type": "book",
+		"call-number": "109",
+		"number-of-volumes": "158",
+		"title": "In Hippocratis Prognosticum commentaria",
+		"title-short": "In Hipp. Progn. comm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg099",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/QQC8PY86",
+		"type": "book",
+		"call-number": "103",
+		"number-of-volumes": "7",
+		"title": "Adversus Lycum",
+		"title-short": "Adv. Lycum",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg093",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/LCLKCNZ5",
+		"type": "book",
+		"call-number": "105",
+		"number-of-volumes": "308",
+		"title": "In Hippocratis De articulis commentaria",
+		"title-short": "In Hipp. De artic. comm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg095",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/WE2UFPV5",
+		"type": "book",
+		"call-number": "104",
+		"number-of-volumes": "8",
+		"title": "Adversus ea quae Iuliano in Hippocratis aphorismos enuntiata sunt",
+		"title-short": "Adv. Iul.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg094",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/G6RXDSTP",
+		"type": "book",
+		"call-number": "095",
+		"number-of-volumes": "173",
+		"title": "In Hippocratis Prorrheticum I commentaria",
+		"title-short": "In Hipp. Prorrh. I comm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg088",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/RZBLZECY",
+		"type": "book",
+		"call-number": "093",
+		"number-of-volumes": "264",
+		"title": "In Hippocratis De victu acutorum commentaria",
+		"title-short": "In Hipp. De victu acut. comm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg087",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/ESVI8MXW",
+		"type": "book",
+		"call-number": "088",
+		"number-of-volumes": "14",
+		"title": "De praecognitione ad Epigenem",
+		"title-short": "De praecogn.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg083",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/PR3YUIPF",
+		"type": "book",
+		"call-number": "090",
+		"number-of-volumes": "66",
+		"title": "In Hippocratis De natura hominis commentaria libr. I-II",
+		"title-short": "In Hipp. De nat. hom. comm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg085",
+		"volume": "2",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/PLPZT2UK",
+		"type": "book",
+		"call-number": "027",
+		"collection-number": "1",
+		"title": "De substantia facultatum naturalium fragmentum (= De propriis placitis fragmentum)",
+		"title-short": "De propr. plac. fragm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg084",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/6BEJI4GR",
+		"type": "book",
+		"call-number": "083",
+		"number-of-volumes": "33",
+		"title": "De antidotis",
+		"title-short": "De antid.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg078",
+		"volume": "2",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/HK2Q2JE5",
+		"type": "book",
+		"call-number": "087",
+		"number-of-volumes": "4",
+		"title": "De captionibus penes dictionem",
+		"title-short": "De capt. penes dict.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg082",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/9PGW2QRZ",
+		"type": "book",
+		"call-number": "082",
+		"number-of-volumes": "113",
+		"title": "De compositione medicamentorum per genera",
+		"title-short": "De comp. med. per gen.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg077",
+		"volume": "7",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/8AEAU4ZH",
+		"type": "book",
+		"call-number": "080",
+		"number-of-volumes": "68",
+		"title": "De compositione medicamentorum secundum locos",
+		"title-short": "De comp. med. sec. loc.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg076",
+		"volume": "10",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/H6NR77JB",
+		"type": "book",
+		"call-number": "078",
+		"number-of-volumes": "181",
+		"title": "De simplicium medicamentorum facultatibus",
+		"title-short": "De simpl. med. fac.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg075",
+		"volume": "11",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/CMVS8TG9",
+		"type": "book",
+		"call-number": "075",
+		"number-of-volumes": "5",
+		"title": "De purgantium medicamentorum facultate",
+		"title-short": "De purg. med. fac.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg072",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/78ADSTIW",
+		"type": "book",
+		"call-number": "077",
+		"number-of-volumes": "6",
+		"title": "Puero epileptico consilium",
+		"title-short": "Puero epil. consil.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg074",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/3T5SS226",
+		"type": "book",
+		"call-number": "074",
+		"number-of-volumes": "4",
+		"title": "De hirudinibus, revulsione, cucurbitula, incisione, et scarificatione",
+		"title-short": "De hirudinibus",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg071",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/MV228UZQ",
+		"type": "book",
+		"call-number": "073",
+		"number-of-volumes": "23",
+		"title": "De curandi ratione per venae sectionem",
+		"title-short": "De cur. rat. per venae sect.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg070",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/URDLF2SM",
+		"type": "book",
+		"call-number": "071",
+		"number-of-volumes": "9",
+		"title": "De venae sectione adversus Erasistratum",
+		"title-short": "De venae sect. adv. Erasistr.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg068",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/8KNRTRF8",
+		"type": "book",
+		"call-number": "070",
+		"number-of-volumes": "29",
+		"title": "Ad Glauconem de medendi methodo",
+		"title-short": "Ad Glauc. de med. meth.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg067",
+		"volume": "2",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/BNTTUZN6",
+		"type": "book",
+		"call-number": "072",
+		"number-of-volumes": "9",
+		"title": "De venae sectione adversus Erasistrateos Romae degentes",
+		"title-short": "De venae sect. adv. Erasistrateos Romae deg.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg069",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/QL378G57",
+		"type": "book",
+		"call-number": "069",
+		"number-of-volumes": "173",
+		"title": "Methodus medendi",
+		"title-short": "Meth. med.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg066",
+		"volume": "14",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/UQBU5ABZ",
+		"type": "book",
+		"call-number": "068",
+		"number-of-volumes": "39",
+		"title": "De diebus decretoriis",
+		"title-short": "De diebus decr.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg065",
+		"volume": "3",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/D3JJKYAR",
+		"type": "book",
+		"call-number": "067",
+		"number-of-volumes": "44",
+		"title": "De crisibus",
+		"title-short": "De cris.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg064",
+		"volume": "3",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/EI78UBTB",
+		"type": "book",
+		"call-number": "066",
+		"number-of-volumes": "28",
+		"title": "Synopsis librorum suorum sedecim de pulsibus",
+		"title-short": "Synopsis libr. suor. de puls.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg063",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/BUWSHGJW",
+		"type": "book",
+		"call-number": "064",
+		"number-of-volumes": "71",
+		"title": "De causis pulsuum",
+		"title-short": "De causis puls.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg061",
+		"volume": "4",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/DL62CMX4",
+		"type": "book",
+		"call-number": "006",
+		"number-of-volumes": "21",
+		"title": "De constitutione artis medicae ad Patrophilum",
+		"title-short": "De constit. artis med.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg006",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/8UG5WTTM",
+		"type": "book",
+		"call-number": "004",
+		"number-of-volumes": "9",
+		"title": "De sectis ad eos, qui introducuntur",
+		"title-short": "De sectis ad eos qui introd.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg004",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/L8ZP3H9B",
+		"type": "book",
+		"call-number": "003",
+		"number-of-volumes": "4",
+		"title": "Quod optimus medicus sit quoque philosophus",
+		"title-short": "Quod opt. med. sit etiam philos.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg003",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/5NIWIGV9",
+		"type": "book",
+		"call-number": "002",
+		"number-of-volumes": "5",
+		"title": "De optimo docendi genere",
+		"title-short": "De opt. doc. gen.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg002",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/FCE2J9E9",
+		"type": "book",
+		"call-number": "001",
+		"number-of-volumes": "14",
+		"title": "Exhortatio ad medicinam – Protrepticus",
+		"title-short": "Protr.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg001",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/G54PTRHM",
+		"type": "book",
+		"call-number": "063",
+		"number-of-volumes": "20",
+		"title": "De dignoscendis pulsibus",
+		"title-short": "De dign. puls.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg060",
+		"volume": "4",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/EATDSZ8N",
+		"type": "book",
+		"call-number": "065",
+		"number-of-volumes": "42",
+		"title": "De praesagitione ex pulsibus",
+		"title-short": "De praesag. ex puls.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg062",
+		"volume": "4",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/WBGK3KGG",
+		"type": "book",
+		"call-number": "061",
+		"number-of-volumes": "12",
+		"title": "De pulsibus ad tirones",
+		"title-short": "De puls. ad tir.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg058",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/NXSNQXYT",
+		"type": "book",
+		"call-number": "059",
+		"number-of-volumes": "51",
+		"title": "De difficultate respirationis",
+		"title-short": "De difficult. respir.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg056",
+		"volume": "3",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/KQ94PFBP",
+		"type": "book",
+		"call-number": "058",
+		"number-of-volumes": "9",
+		"title": "De inaequali intemperie",
+		"title-short": "De inaequ. intemp.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg055",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/K6ML5KV2",
+		"type": "book",
+		"call-number": "062",
+		"number-of-volumes": "64",
+		"title": "De pulsuum differentiis",
+		"title-short": "De puls. diff.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg059",
+		"volume": "4",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/AZBB48VT",
+		"type": "book",
+		"call-number": "060",
+		"number-of-volumes": "58",
+		"title": "De locis affectis",
+		"title-short": "De locis affectis",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg057",
+		"volume": "60",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/KF2RP5LC",
+		"type": "book",
+		"call-number": "056",
+		"number-of-volumes": "9",
+		"title": "De marcore",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg053",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/WURLVNB6",
+		"type": "book",
+		"call-number": "054",
+		"number-of-volumes": "8",
+		"title": "De tremore, palpitatione, convulsione et rigore",
+		"title-short": "De trem., palp., convuls. et rig.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg051",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/R4EZCZ4T",
+		"type": "book",
+		"call-number": "053",
+		"number-of-volumes": "11",
+		"title": "De plenitudine",
+		"title-short": "De plen.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg050",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/VQL8SKIT",
+		"type": "book",
+		"call-number": "057",
+		"number-of-volumes": "17",
+		"title": "De tumoribus praeter naturam",
+		"title-short": "De tum. praeter nat.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg054",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/RMUNUQRF",
+		"type": "book",
+		"call-number": "055",
+		"number-of-volumes": "4",
+		"title": "De comate secundum Hippocratem",
+		"title-short": "De comate sec. Hipp.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg052",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/XHENY7N3",
+		"type": "book",
+		"call-number": "052",
+		"number-of-volumes": "7",
+		"title": "Adversus eos, qui de typis scripserunt",
+		"title-short": "Adv. eos qui de typis scrips.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg049",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/UNE6I5I6",
+		"type": "book",
+		"call-number": "051",
+		"number-of-volumes": "5",
+		"title": "De typis",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg048",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/6W8M26WY",
+		"type": "book",
+		"call-number": "049",
+		"number-of-volumes": "9",
+		"title": "De morborum temporibus",
+		"title-short": "De morb. temp.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg046",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/NHRT4XIY",
+		"type": "book",
+		"call-number": "048",
+		"number-of-volumes": "32",
+		"title": "De differentiis febrium",
+		"title-short": "De diff. febr.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg045",
+		"volume": "2",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/78DLE364",
+		"type": "book",
+		"call-number": "040",
+		"number-of-volumes": "6",
+		"title": "De ptisana",
+		"title-short": "De ptis.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg039",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/9JUPD4NS",
+		"type": "book",
+		"call-number": "045",
+		"number-of-volumes": "27",
+		"title": "De symptomatum causis",
+		"title-short": "De sympt. causis",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg044",
+		"volume": "3",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/EVAT5QN8",
+		"type": "book",
+		"call-number": "044",
+		"number-of-volumes": "6",
+		"title": "De symptomatum differentiis",
+		"title-short": "De sympt. diff.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg043",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/J4PXVIL9",
+		"type": "book",
+		"call-number": "043",
+		"number-of-volumes": "11",
+		"title": "De morborum causis",
+		"title-short": "De morb. causis",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg042",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/8Y77YRN4",
+		"type": "book",
+		"call-number": "042",
+		"number-of-volumes": "13",
+		"title": "De differentiis morborum",
+		"title-short": "De diff. morb.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg041",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/3KX95W37",
+		"type": "book",
+		"call-number": "039",
+		"number-of-volumes": "14",
+		"title": "De bonis malisque sucis",
+		"title-short": "De bonis malisque sucis",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg038",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/C29MSCPG",
+		"type": "book",
+		"call-number": "037",
+		"number-of-volumes": "78",
+		"title": "De sanitate tuenda",
+		"title-short": "De san. tuenda",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg036",
+		"volume": "6",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/WCAKKRN2",
+		"type": "book",
+		"call-number": "035",
+		"number-of-volumes": "5",
+		"title": "De parvae pilae exercitio",
+		"title-short": "De parvae pilae exercit.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg034",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/IWRGS2T9",
+		"type": "book",
+		"call-number": "029",
+		"number-of-volumes": "10",
+		"title": "De animi cuiuslibet affectuum et peccatorum dignotione et curatione",
+		"title-short": "De animi cuiusl. affect. et pecc. dign. et cur.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg028",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/4IQUXWYC",
+		"type": "book",
+		"call-number": "033",
+		"number-of-volumes": "70",
+		"title": "De placitis Hippocratis et Platonis",
+		"title-short": "De plac. Hipp. et Plat.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg032",
+		"volume": "9",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/3FAQNCY7",
+		"type": "book",
+		"call-number": "032",
+		"number-of-volumes": "8",
+		"title": "De usu pulsuum",
+		"title-short": "De usu puls.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg031",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/JXY8M4WM",
+		"type": "book",
+		"call-number": "031",
+		"number-of-volumes": "9",
+		"title": "De atra bile",
+		"title-short": "De atra bile",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg030",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/KSL258KX",
+		"type": "book",
+		"call-number": "028",
+		"number-of-volumes": "11",
+		"title": "Quod animi mores corporis temperamenta sequantur",
+		"title-short": "Quod animi mores corp. temp. sequ.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg027",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/GIU7YH7X",
+		"type": "book",
+		"call-number": "026",
+		"number-of-volumes": "1",
+		"title": "De bono habitu",
+		"title-short": "De bono hab.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg025",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/8HAIR8KV",
+		"type": "book",
+		"call-number": "025",
+		"number-of-volumes": "4",
+		"title": "De optima corporis nostri constitutione",
+		"title-short": "De opt. corp. nostri constit.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg024",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/I5S6HV9X",
+		"type": "book",
+		"call-number": "024",
+		"number-of-volumes": "8",
+		"title": "An in arteriis natura sanguis contineatur",
+		"title-short": "An in art. nat. sanguis contin.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg023",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/RJ34362U",
+		"type": "book",
+		"call-number": "023",
+		"number-of-volumes": "6",
+		"title": "De foetuum formatione",
+		"title-short": "De foet. form.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg022",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/P5LS5UKK",
+		"type": "book",
+		"call-number": "022",
+		"number-of-volumes": "23",
+		"title": "De semine",
+		"title-short": "De sem.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg021",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/BEDTGWZB",
+		"type": "book",
+		"call-number": "021",
+		"number-of-volumes": "5",
+		"title": "De usu respirationis",
+		"title-short": "De respir. usu",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg020",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/63RD9GQA",
+		"type": "book",
+		"call-number": "017",
+		"number-of-volumes": "274",
+		"title": "De usu partium",
+		"title-short": "De usu part.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg017",
+		"volume": "17",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/Y5STCIC2",
+		"type": "book",
+		"call-number": "019",
+		"number-of-volumes": "19",
+		"title": "De motu musculorum",
+		"title-short": "De motu musc.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg018",
+		"volume": "2",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/ZA3NK3L5",
+		"type": "book",
+		"call-number": "016",
+		"number-of-volumes": "10",
+		"title": "De uteri dissectione",
+		"title-short": "De uteri dissect.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg016",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/EYATUKRU",
+		"type": "book",
+		"call-number": "014",
+		"number-of-volumes": "17",
+		"title": "De nervorum dissectione",
+		"title-short": "De nerv. dissect.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg014",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/FNYHR73D",
+		"type": "book",
+		"call-number": "013",
+		"number-of-volumes": "10",
+		"title": "De venarum arteriarumque dissectione",
+		"title-short": "De ven. arter. dissect.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg013",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/7DRN7MZX",
+		"type": "book",
+		"call-number": "015",
+		"number-of-volumes": "6",
+		"title": "De instrumento odoratus",
+		"title-short": "De instr. odor.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg015",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/8CE5R86Z",
+		"type": "book",
+		"call-number": "012",
+		"number-of-volumes": "26",
+		"title": "De ossibus ad tirones",
+		"title-short": "De oss. ad tir.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg012",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/I3PZS4J7",
+		"type": "book",
+		"call-number": "011",
+		"number-of-volumes": "101",
+		"title": "De anatomicis administrationibus",
+		"title-short": "De anat. administr.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg011",
+		"volume": "9",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/5VYM2NSD",
+		"type": "book",
+		"call-number": "010",
+		"number-of-volumes": "41",
+		"title": "De facultatibus naturalibus",
+		"title-short": "De fac. nat.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg010",
+		"volume": "3",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/LY7IAQVY",
+		"type": "book",
+		"call-number": "007",
+		"number-of-volumes": "38",
+		"title": "Ars medica",
+		"title-short": "Ars med.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg007",
+		"volume": "1",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/LHYNYHBI",
+		"type": "book",
+		"call-number": "009",
+		"number-of-volumes": "21",
+		"title": "De temperamentis",
+		"title-short": "De temp.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg009",
+		"volume": "3",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/TPUGPDKB",
+		"type": "book",
+		"call-number": "008",
+		"number-of-volumes": "14",
+		"title": "De elementis ex Hippocratis sententia",
+		"title-short": "De elem. ex Hipp. sent.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg008",
+		"volume": "2",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/KPQYWMM9",
+		"type": "book",
+		"call-number": "096c",
+		"title": "In Hippocratis Epidemiarum VI",
+		"title-short": "In Hipp. Epid. VI comm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg091",
+		"author": [
+			{
+				"family": "Galenus",
+				"given": ""
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/YK3EKHCS",
+		"type": "book",
+		"call-number": "096b",
+		"title": "In Hippocratis Epidemiarum III",
+		"title-short": "In Hipp. Epid. III comm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg090",
+		"author": [
+			{
+				"family": "Galenus",
+				"given": ""
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/T3VB23RG",
+		"type": "book",
+		"call-number": "096a",
+		"title": "In Hippocratis Epidemiarum I",
+		"title-short": "In Hipp. Epid. I comm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg089",
+		"author": [
+			{
+				"family": "Galenus",
+				"given": ""
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/4ZPNK7Z6",
+		"type": "book",
+		"call-number": "101",
+		"number-of-volumes": "17b-18a",
+		"title": "In Hippocratis Aphorismos",
+		"title-short": "In Hipp. Aphor. comm.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg092",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/IY3W4W9P",
+		"type": "book",
+		"call-number": "134",
+		"number-of-volumes": "15",
+		"title": "De ponderibus et mensuris",
+		"title-short": "De pond. et mens.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg022",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/PHY7AIT9",
+		"type": "book",
+		"call-number": "133",
+		"number-of-volumes": "18",
+		"title": "De succedaneis",
+		"title-short": "De succed.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg031",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/3GV8KEWQ",
+		"type": "book",
+		"call-number": "130",
+		"title": "De pulsibus ad Antonium disciplinae studiosum et philosophum",
+		"title-short": "De puls. ad Anton.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg026",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/L4ITKZUK",
+		"type": "book",
+		"call-number": "129",
+		"number-of-volumes": "9",
+		"title": "De urinis ex Hippocrate, Galeno aliisque quibusdam",
+		"title-short": "De urin. ex Hipp. Gal. al.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg035",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/FBENLKJR",
+		"type": "book",
+		"call-number": "128",
+		"title": "De urinis compendium",
+		"title-short": "De urin. comp.",
+		"URL": "https://galenus-verbatim.-humanum.fr/tlg0530.tlg034",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/J6FV7J4I",
+		"type": "book",
+		"call-number": "127",
+		"number-of-volumes": "48",
+		"title": "De urinis",
+		"title-short": "De urin.",
+		"URL": "https://galenus-verbatim.-humanum.fr/tlg0530.tlg033",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/8Z9HTHXR",
+		"type": "book",
+		"call-number": "126",
+		"number-of-volumes": "24",
+		"title": "Prognostica de decubitu ex mathematica scientia",
+		"title-short": "Progn. de decub.",
+		"URL": "https://galenus-verbatim.-humanum.fr/tlg0530.tlg024",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/JTCIJUTT",
+		"type": "book",
+		"call-number": "124",
+		"number-of-volumes": "4",
+		"title": "Praesagitio omnino vera expertaque",
+		"title-short": "Praesag. omn. ver. exp.",
+		"URL": "https://galenus-verbatim.-humanum.fr/tlg0530.tlg023",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/NC88C3KS",
+		"type": "book",
+		"call-number": "122",
+		"number-of-volumes": "18",
+		"title": "De humoribus",
+		"title-short": "De hum.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg0009",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/URGN3VP3",
+		"type": "book",
+		"call-number": "121",
+		"number-of-volumes": "9",
+		"title": "Quod qualitates incorporeae sint",
+		"title-short": "Quod qual. incorp. sint",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg111",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/8JW2S9GH",
+		"type": "book",
+		"call-number": "120",
+		"number-of-volumes": "487",
+		"title": "Definitiones medicae",
+		"title-short": "Def. med.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg041",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/V73B8YLC",
+		"type": "book",
+		"call-number": "119",
+		"number-of-volumes": "29",
+		"title": "De historia philosopha",
+		"title-short": "Hist. philos.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg042",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/KF5ICKJ2",
+		"type": "book",
+		"call-number": "118",
+		"title": "De diaeta Hippocratis in morbis acutis",
+		"title-short": "De diaeta in morbis acutis sec. Hipp.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg037",
+		"volume": "11",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/M2BJQKZY",
+		"type": "book",
+		"call-number": "117",
+		"number-of-volumes": "5",
+		"title": "An animal sit quod est in utero",
+		"title-short": "An animal sit quod est in utero",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg002",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/YGPNZPNU",
+		"type": "book",
+		"call-number": "116",
+		"title": "Vocum Hippocratis Glossarium",
+		"title-short": "Voc. Hipp. gloss.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg106",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/X5H4SDRQ",
+		"type": "book",
+		"call-number": "125",
+		"number-of-volumes": "18",
+		"title": "De venae sectione",
+		"title-short": "De venae sect.",
+		"URL": "https://galenus-verbatim.-humanum.fr/tlg0530.tlg036",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/X8SLPBK6",
+		"type": "book",
+		"call-number": "114",
+		"number-of-volumes": "1",
+		"title": "De libris propriis",
+		"title-short": "De libris propr.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg104",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/3ACBB7W3",
+		"type": "book",
+		"call-number": "113",
+		"number-of-volumes": "1",
+		"title": "*Quomodo morbum simulantes sint deprehendendi*",
+		"title-short": "Quomodo morbum simul. sint deprehend.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0057.tlg0115",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/GU4DNR2K",
+		"type": "book",
+		"call-number": "131",
+		"number-of-volumes": "18",
+		"title": "De affectuum renibus insidentium dignotione et curatione",
+		"title-short": "De ren. affect.",
+		"URL": "https://galenus-verbatim.huma-num.fr/tlg0530.tlg045",
+		"author": [
+			{
+				"literal": "Pseudo-Galenus"
+			}
+		]
+	},
+	{
+		"id": "http://zotero.org/groups/4571007/items/TR7HX64E",
+		"type": "book",
+		"call-number": "115",
+		"title": "De ordine librorum suorum ad Eugenianum",
+		"title-short": "De ord. libror. suor.",
+		"URL": "0https://galenus-verbatim.huma-num.fr/tlg0057.tlg105",
+		"author": [
+			{
+				"literal": "Galenus"
+			}
+		],
+		"issued": {
+			"date-parts": [
+				[
+					"200"
+				]
+			],
+			"season": "ca"
+		}
+	}
+]

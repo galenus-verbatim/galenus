@@ -67,7 +67,7 @@ Route::get('/(.*)',  Verbatim::dir() . '$1.php');
 
 // 404
 
-// ensure 404 page
+// cache 404 page
 Route::get('/404', __DIR__ . '/pages/docx.php', array('page' => '404_en'));
 Route::get('/404', __DIR__ . '/pages/docx.php', array('page' => '404_fr'));
 Route::route('/404', __DIR__ . '/html_cache/404_' . $lang . '.html');

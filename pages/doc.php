@@ -240,11 +240,23 @@ echo '
             echo "</mark>";
             $start = $charad;
         }
-        echo mb_substr($html, $start, mb_strlen($html) - $start);
+        $html = mb_substr($html, $start, mb_strlen($html) - $start);
     }
-    else {
-        echo $html;
-    }
+    // transform line breaks in links 
+    // <span class="lb" data-page="1.1" data-line="1" id="l1.1.1">
+    $html = preg_replace(
+        [
+            '@<span class="lb" data-page="([^"]*)" data-line="([^"]*)" id="([^"]*)">@', // rewrite line breaks
+            '@(<(div|p)[^>]*>\s*)<br class="lb"/>@', // first line <br/>
+        ],
+        [
+            '<br class="lb"/><a id="$3" href="#$3" class="lb">[$2]</a> ',
+            '$1'
+        ],
+        $html
+    );
+
+    echo $html;
     echo '
     </div>
     <footer class="doc">';

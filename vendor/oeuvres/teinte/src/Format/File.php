@@ -96,6 +96,7 @@ class File
             // Filesys logging
             return false;
         }
+        // if file does not exists do something ?
         $this->file = $file;
         $this->filename = pathinfo($file, PATHINFO_FILENAME);
         $this->filemtime = filemtime($file);

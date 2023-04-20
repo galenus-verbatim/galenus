@@ -113,6 +113,23 @@ span.lb.rule::after {
     position: relative;
 }
 
+a.lb {
+    box-sizing: border-box;
+    text-indent: 0;
+    font-size: 0.7rem;
+    font-weight: normal;
+    display: inline-block;
+    width: 2rem;
+    padding-left: 1ex;
+    color: var(--textlo);
+}
+
+a.lb:hover {
+    text-decoration: none;
+    background-color: var(--bg2);
+    color: var(--text2hi);
+}
+
 /** Epidoc <list type="table"> */
 
 table.list th,

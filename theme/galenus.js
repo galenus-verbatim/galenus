@@ -263,15 +263,36 @@ if (div) {
         return el;
     }
 }());
+/** Make line numbers selectable */
 (function() {
-    /*
-    // fire a page id
-    window.addEventListener("hashchange", function(e) {
-        const id = window.location.hash.substring(1);
-        const span = document.getElementById(id);
-        if (!span) return;
-        console.log(span);
-        span.click();
-    })
-    */
+    
+    const main = document.querySelector('main');
+    main.addEventListener('copy', (event) => {
+        const range = window.getSelection().getRangeAt(0);
+        rangeContents = range.cloneContents();
+        pageLink = `Read more at: ${document.location.href}`;
+        helper = document.createElement("div");
+        helper.appendChild(rangeContents);
+        // get the previous line break id
+        const node = range.startContainer; // text node, start of selection
+        var a = "";
+        var ref = "";
+        // TODO check if it is a page break
+        var prev = node;
+        do {
+            prev = prev.previousSibling;
+            if (!prev) break;
+            if (prev.nodeType != 1) continue;
+            if (!prev.classList.contains('lb')) continue;
+            var url = prev.href;
+            ref = '[' + prev.id.substring(1) + ' K]';
+            a = '<a href="' + url + '">' + ref + '</a>';
+            break;
+        } while(true);
+
+        event.clipboardData.setData("text/plain", `${ref} ${helper.innerText}`);
+        event.clipboardData.setData("text/html", `${a} ${helper.innerHTML}`);
+        event.preventDefault();
+    });
+
 }());

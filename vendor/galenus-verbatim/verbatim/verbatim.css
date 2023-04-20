@@ -506,7 +506,7 @@ mark {
 }
 
 p {
-    text-indent: 2rem;
+    text-indent: 0;
     margin: 0;
 }
 
@@ -561,6 +561,7 @@ span.lb::before {
     content: '\A';
 }
 
+/* OBSOLETE
 span.lb[data-line]::after,
 span.lb.rule[data-line]::before {
     box-sizing: border-box;
@@ -574,18 +575,17 @@ span.lb.rule[data-line]::before {
     color: var(--textlo);
 }
 
-div.l>span.lb:first-child::before {
-    content: '';
-}
 
 
-/*
 span.pb[data-line]::before {
     display: block;
     content: ' ';
 }
 */
 
+div.l>br.lb:first-child {
+    display: none;
+}
 
 
 span.lb[data-line]:target::after {
