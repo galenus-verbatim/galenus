@@ -268,13 +268,17 @@ if (div) {
     
     const main = document.querySelector('main');
     main.addEventListener('copy', (event) => {
-        const range = window.getSelection().getRangeAt(0);
-        rangeContents = range.cloneContents();
-        pageLink = `Read more at: ${document.location.href}`;
         helper = document.createElement("div");
-        helper.appendChild(rangeContents);
+        const selection = window.getSelection();
+        rangeCount = selection.rangeCount;
+        // selection is broken by pages breaks
+        for (let i=0; i < rangeCount; i++) {
+            helper.appendChild(
+                selection.getRangeAt(i).cloneContents()
+            );
+        }
         // get the previous line break id
-        const node = range.startContainer; // text node, start of selection
+        const node = selection.getRangeAt(0).startContainer; // text node, start of selection
         var a = "";
         var ref = "";
         // TODO check if it is a page break
