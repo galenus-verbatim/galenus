@@ -215,8 +215,8 @@
   <!-- List alternative titles of an opus -->
   <xsl:template name="opus_tituli">
     <div class="urn">
-      <xsl:text>urn:cts:greekLit:</xsl:text>
-      <xsl:value-of select="substring-after(dc:identifier/dcterms:URI/rdf:value, 'tlg')"/>
+      <xsl:text>urn:</xsl:text>
+      <xsl:value-of select="substring-after(dc:identifier/dcterms:URI/rdf:value, 'urn:')"/>
     </div>
     <xsl:variable name="short" select="z:shortTitle"/>
     <xsl:variable name="notes" select="key('about', dcterms:isReferencedBy/@rdf:resource)"/>
