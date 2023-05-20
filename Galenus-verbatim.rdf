@@ -1203,8 +1203,7 @@
         <z:numberOfVolumes>8</z:numberOfVolumes>
     </bib:Book>
     <bib:Memo rdf:about="#item_33426">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;Note: le texte imprimé par Kühn sous le titre De totius morbi temporibus constitue en réalité le livre II du traité De morborum temporibus.&lt;/p&gt;
-&lt;/div&gt;</rdf:value>
+        <rdf:value>&lt;p&gt;Note: le texte imprimé par Kühn sous le titre De totius morbi temporibus constitue en réalité le livre II du traité De morborum temporibus.&lt;/p&gt;</rdf:value>
     </bib:Memo>
     <z:Attachment rdf:about="#item_33427">
         <z:itemType>attachment</z:itemType>
@@ -4195,8 +4194,7 @@ English Short Title: Hipp. Prog.</dc:description>
     <dc:description></dc:description>
 </bib:BookSection>
     <bib:Memo rdf:about="#item_33560">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;&lt;span style=&quot;color: #000000&quot;&gt;Note: Le texte imprimé par Kühn sous le titre De Humero iis Modis Prolapso quos Hippocrates non Vidit (n° 106) constitue en réalité une partie du livre I du traité In Hippocratis De articulis commentaria (n° 105); il est ici présenté à la suite du texte du livre I, à la place qu'il occupe dans l'édition de Kühn.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;</rdf:value>
+        <rdf:value>&lt;p&gt;Note: Le texte imprimé par Kühn sous le titre De Humero iis Modis Prolapso quos Hippocrates non Vidit (n° 106) constitue en réalité une partie du livre I du traité In Hippocratis De articulis commentaria (n° 105); il est ici présenté à la suite du texte du livre I, à la place qu'il occupe dans l'édition de Kühn.&lt;/p&gt;</rdf:value>
     </bib:Memo>
     <z:Attachment rdf:about="#item_33561">
         <z:itemType>attachment</z:itemType>
@@ -5778,8 +5776,7 @@ English Short Title: SMT</dc:description>
         <z:numberOfVolumes>181</z:numberOfVolumes>
     </bib:Book>
     <bib:Memo rdf:about="#item_33635">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;Note: il convient de corriger le titre adopté par le CMG et d'en exclure les mots κράσεως καὶ (temperamentis et), qui ne sont pas anciens. éd. Kühn: livres I à VI dans le vol. 11 (p. 379-892), livres VII à XI dans le vol. 12 (p. 1-377)&lt;/p&gt;
-&lt;/div&gt;</rdf:value>
+        <rdf:value>&lt;p&gt;Note: il convient de corriger le titre adopté par le CMG et d'en exclure les mots κράσεως καὶ (temperamentis et), qui ne sont pas anciens. éd. Kühn: livres I à VI dans le vol. 11 (p. 379-892), livres VII à XI dans le vol. 12 (p. 1-377)&lt;/p&gt;</rdf:value>
     </bib:Memo>
     <z:Attachment rdf:about="#item_33636">
         <z:itemType>attachment</z:itemType>
@@ -10628,8 +10625,7 @@ English Short Title: Ptis.</dc:description>
         <z:numberOfVolumes>6</z:numberOfVolumes>
     </bib:Book>
     <bib:Memo rdf:about="#item_33856">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;Note: selon la Galenus und [Galenus]-Gesamtübersicht du CMG, la paternité de ce traité est discutée&lt;/p&gt;
-&lt;/div&gt;</rdf:value>
+        <rdf:value>&lt;p&gt;Note: selon la Galenus und [Galenus]-Gesamtübersicht du CMG, la paternité de ce traité est discutée&lt;/p&gt;</rdf:value>
     </bib:Memo>
     <z:Attachment rdf:about="#item_33857">
         <z:itemType>attachment</z:itemType>
@@ -15952,8 +15948,7 @@ OCLC: 926705081</dc:description>
         </dc:identifier>
     </bib:Thesis>
     <bib:Memo rdf:about="#item_34090">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;méta fausse à compléter n° fitchtner : 075&lt;/p&gt;
-&lt;/div&gt;</rdf:value>
+        <rdf:value>&lt;p&gt;méta fausse à compléter n° fitchtner : 075&lt;/p&gt;</rdf:value>
     </bib:Memo>
     <z:Attachment rdf:about="#item_34091">
         <z:itemType>attachment</z:itemType>
@@ -26830,8 +26825,7 @@ English Short Title: Hipp. Aph. comm.</dc:description>
         <z:numberOfVolumes>487</z:numberOfVolumes>
     </bib:Book>
     <bib:Memo rdf:about="#item_34493">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;Def. Med.&lt;/p&gt;
-&lt;/div&gt;</rdf:value>
+        <rdf:value>&lt;p&gt;Def. Med.&lt;/p&gt;</rdf:value>
     </bib:Memo>
     <z:Attachment rdf:about="#item_34494">
         <z:itemType>attachment</z:itemType>
@@ -27164,8 +27158,7 @@ English Short Title: Hipp. Aph. comm.</dc:description>
         <z:numberOfVolumes>1</z:numberOfVolumes>
     </bib:Book>
     <bib:Memo rdf:about="#item_34514">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;Note: extraits du Commentaire aux Épidémies II d’Hippocrate, non conservé en grec par ailleurs&lt;/p&gt;
-&lt;/div&gt;</rdf:value>
+        <rdf:value>&lt;p&gt;Note: extraits du Commentaire aux Épidémies II d’Hippocrate, non conservé en grec par ailleurs&lt;/p&gt;</rdf:value>
     </bib:Memo>
     <z:Attachment rdf:about="#item_34515">
         <z:itemType>attachment</z:itemType>
@@ -30823,8 +30816,7 @@ English Short Title: Hipp. Aph. comm.</dc:description>
         <bib:pages>343-356</bib:pages>
     </bib:BookSection>
     <bib:Memo rdf:about="#item_34601">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;Note: extraits d’Oribase non repris dans le corpus de Galenus verbatim: voir Oribasii excerpta, **Quos quibus catharticis medicamentis et quando purgare oporteat&lt;/p&gt;
-&lt;/div&gt;</rdf:value>
+        <rdf:value>&lt;p&gt;Note: extraits d’Oribase non repris dans le corpus de Galenus verbatim: voir Oribasii excerpta, **Quos quibus catharticis medicamentis et quando purgare oporteat&lt;/p&gt;</rdf:value>
     </bib:Memo>
     <z:Attachment rdf:about="#item_34602">
         <z:itemType>attachment</z:itemType>
@@ -33483,8 +33475,7 @@ English Short Title: Hipp. Aph. comm.</dc:description>
         <bib:pages>911-914</bib:pages>
     </bib:BookSection>
     <bib:Memo rdf:about="#item_34678">
-        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;Note: extraits d’Oribase non repris dans le corpus de Galenus verbatim: voir Oribasii excerpta, **De venereis&lt;/p&gt;
-&lt;/div&gt;</rdf:value>
+        <rdf:value>&lt;p&gt;Note: extraits d’Oribase non repris dans le corpus de Galenus verbatim: voir Oribasii excerpta, **De venereis&lt;/p&gt;</rdf:value>
     </bib:Memo>
     <z:Attachment rdf:about="#item_34679">
         <z:itemType>attachment</z:itemType>
