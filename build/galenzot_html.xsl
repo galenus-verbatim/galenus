@@ -20,10 +20,11 @@
   
   <xsl:key name="about" match="*[@rdf:about]" use="@rdf:about"/>
   <xsl:strip-space elements="*"/>
+  <!--
   <xsl:variable name="opera_ids" select="/*/z:Collection[contains(dc:title, 'opera')]/dcterms:hasPart/@rdf:resource"/>
   <xsl:variable name="verbatim_ids" select="/*/z:Collection[contains(dc:title, 'verbatim')]/dcterms:hasPart/@rdf:resource"/>
   <xsl:variable name="critica_ids" select="/*/z:Collection[contains(dc:title, 'critica')]/dcterms:hasPart/@rdf:resource"/>
-  
+  -->
 
   
   
@@ -252,7 +253,7 @@
               </em>
             </xsl:otherwise>
           </xsl:choose>
-          <!-- Ugly hack to get english short title -->
+          <!-- Ugly hack to get english short title now -->
           <xsl:if test="starts-with($title, '3TitEnCGT:')">
             <xsl:for-each select="$notes[starts-with(normalize-space(.), '4AbbrEnCGT:')]">
               <xsl:variable name="value2" select="normalize-space(substring-after(normalize-space(.), ':'))"/>
@@ -269,6 +270,7 @@
       </xsl:if>
     </xsl:for-each>
   </xsl:template>
+  
   
   <xsl:template name="authors">
     <span class="authors">
