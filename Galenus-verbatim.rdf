@@ -26591,7 +26591,7 @@ Translators: _:n25117</dc:description>
         <dc:description>Translators: _:n35860
 Translators: _:n25188</dc:description>
     </bib:BookSection>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg022">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg022">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -26614,14 +26614,14 @@ Translators: _:n25188</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg022</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg022</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ μέτρων καὶ σταθμῶν διδασκαλία
 French Title:
 English Title: Weights and Measures
 English Short Title: Pond. Mens.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg022</dc:description>
         <z:numberOfVolumes>15</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35812">
@@ -26635,7 +26635,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-01-24 15:16:12</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg031">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg031">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -26658,14 +26658,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg031</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg031</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ ἀντεμβαλλομένων
 French Title:
 English Title: Pharmacological Substitutions
 English Short Title: Suc.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg031</dc:description>
         <z:numberOfVolumes>18</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35814">
@@ -26690,7 +26690,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:26</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg026">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg026">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -26713,14 +26713,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg026</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg026</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ σφυγμῶν πρὸς Ἀντώνιον φιλομαθῆ καὶ φιλόσοφον
 French Title:
 English Title: The Pulse, to Antonius
 English Short Title: Puls. Ant.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg026</dc:description>
     </bib:Book>
     <z:Attachment rdf:about="#item_35817">
         <z:itemType>attachment</z:itemType>
@@ -26733,7 +26733,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-01-25 09:07:24</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg035">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg035">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -26757,14 +26757,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg035</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg035</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ οὔρων ἐκ τῶν Ἱπποκράτους καὶ Γαληνοῦ καὶ ἄλλων τινῶν
 French Title:
 English Title: Urines According to Hippocrates, Galen
 English Short Title: Ur. Comp. Gal.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg035</dc:description>
         <z:numberOfVolumes>9</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35819">
@@ -26789,7 +26789,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:27</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.-humanum.fr/tlg0530.tlg034">
+    <bib:Book rdf:about="https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg034">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -26812,14 +26812,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.-humanum.fr/tlg0530.tlg034</rdf:value>
+                <rdf:value>https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg034</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ οὔρων ἐν συντόμῳ
 French Title:
 English Title: Summary of Urines
 English Short Title: Ur. Comp.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg034</dc:description>
     </bib:Book>
     <z:Attachment rdf:about="#item_35822">
         <z:itemType>attachment</z:itemType>
@@ -26832,7 +26832,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-01-25 09:17:04</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.-humanum.fr/tlg0530.tlg033">
+    <bib:Book rdf:about="https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg033">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -26855,14 +26855,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.-humanum.fr/tlg0530.tlg033</rdf:value>
+                <rdf:value>https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg033</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ οὔρων
 French Title:
 English Title: Urines
 English Short Title: Ur.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg033</dc:description>
         <z:numberOfVolumes>48</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35824">
@@ -26887,7 +26887,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:27</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.-humanum.fr/tlg0530.tlg024">
+    <bib:Book rdf:about="https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg024">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -26910,14 +26910,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.-humanum.fr/tlg0530.tlg024</rdf:value>
+                <rdf:value>https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg024</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ κατακλίσεως προγνωστικὰ ἐκ τῆς μαθηματικῆς ἐπιστήμης
 French Title:
 English Title: Prognosis Based on the Hour when a Patient goes to Bed based on the Science of Astrology
 English Short Title: Prog. Dec.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg024</dc:description>
         <z:numberOfVolumes>24</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35827">
@@ -26942,7 +26942,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:27</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.-humanum.fr/tlg0530.tlg023">
+    <bib:Book rdf:about="https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg023">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -26965,7 +26965,7 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.-humanum.fr/tlg0530.tlg023</rdf:value>
+                <rdf:value>https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg023</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Πρόγνωσις πεπειραμένη καὶ παναληθής
@@ -26997,7 +26997,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:27</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg0009">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg0009">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27020,14 +27020,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg0009</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg0009</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ χυμῶν
 French Title:
 English Title: Humours
 English Short Title: Hum.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg0009</dc:description>
         <z:numberOfVolumes>18</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35833">
@@ -27041,7 +27041,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-01-25 13:03:59</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg111">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg111">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27063,14 +27063,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg111</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg111</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Ὅτι αἱ ποιότητες ἀσώματοι
 French Title: Qualités incorporelles
 English Title: Qualities are Non-Bodily
 English Short Title: Qual. Incorp.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0057.tlg111</dc:description>
         <z:numberOfVolumes>9</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35835">
@@ -27095,7 +27095,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:27</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg041">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg041">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27119,14 +27119,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg041</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg041</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Ὅροι ἰατρικοί
 French Title:
 English Title: Medical Definitions
 English Short Title: Def. Med.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg041</dc:description>
         <z:numberOfVolumes>487</z:numberOfVolumes>
     </bib:Book>
     <bib:Memo rdf:about="#item_35838">
@@ -27154,7 +27154,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:27</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg042">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg042">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27177,14 +27177,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg042</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg042</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ φιλοσόφου ἱστορίας
 French Title:
 English Title: History of Philosophy
 English Short Title: Hist. Phil.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg042</dc:description>
         <z:numberOfVolumes>29</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35842">
@@ -27209,7 +27209,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:27</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg037">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg037">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27232,14 +27232,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg037</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg037</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ τῆς κατὰ τὸν Ἱπποκράτην διαίτης ἐπὶ τῶν ὀξέων νοσημάτων
 French Title: Régime dans les maladies aiguës d’Hippocrate 
 English Title: Regimen in Acute Diseases According to Hippocrates
 English Short Title: Hipp. Vict. Morb. Ac.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg037</dc:description>
         <prism:volume>11</prism:volume>
     </bib:Book>
     <z:Attachment rdf:about="#item_35845">
@@ -27264,7 +27264,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:27</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg002">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg002">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27289,14 +27289,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg002</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg002</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Εἰ ζῷον τὸ κατὰ γαστρός
 French Title:
 English Title: Whether What Is in the Womb is an Animal
 English Short Title: An. Ut.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg002</dc:description>
         <z:numberOfVolumes>5</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35848">
@@ -27321,7 +27321,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:27</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg106">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg106">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27342,14 +27342,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg106</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg106</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Τῶν παρ’ Ἱπποκράτει γλωττῶν ἐξήγησις
 French Title: Glossaire hippocratique 
 English Title: Glossary of Hippocratic Terms
 English Short Title: Gloss.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0057.tlg106</dc:description>
     </bib:Book>
     <z:Attachment rdf:about="#item_35851">
         <z:itemType>attachment</z:itemType>
@@ -27373,7 +27373,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:27</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.-humanum.fr/tlg0530.tlg036">
+    <bib:Book rdf:about="https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg036">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27396,14 +27396,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.-humanum.fr/tlg0530.tlg036</rdf:value>
+                <rdf:value>https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg036</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ φλεβοτομίας
 French Title:
 English Title: Bloodletting
 English Short Title: Ven. Sect.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg036</dc:description>
         <z:numberOfVolumes>18</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35854">
@@ -27417,7 +27417,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-01-25 09:26:23</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg104">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg104">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27439,14 +27439,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg104</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg104</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ τῶν ἰδίων βιβλίων
 French Title: Propres livres
 English Title: My Own Books
 English Short Title: Lib. Prop.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0057.tlg104</dc:description>
         <z:numberOfVolumes>1</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35856">
@@ -27471,7 +27471,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:28</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatuim.hma-num.fr/tlg0057.tlg0115">
+    <bib:Book rdf:about="https://galenus-verbatuim.hma-num.fr/#urn:cts:greekLit:tlg0057.tlg0115">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27495,9 +27495,10 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatuim.hma-num.fr/tlg0057.tlg0115</rdf:value>
+                <rdf:value>https://galenus-verbatuim.hma-num.fr/#urn:cts:greekLit:tlg0057.tlg0115</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>CTS URN: urn:cts:greekLit:tlg0057.tlg0115</dc:description>
         <z:numberOfVolumes>1</z:numberOfVolumes>
     </bib:Book>
     <bib:Memo rdf:about="#item_35859">
@@ -27525,7 +27526,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:28</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg045">
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg045">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27548,14 +27549,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg045</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg045</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ τῆς τῶν ἐν νεφροῖς παθῶν διαγνώσεως καὶ θεραπείας
 French Title:
 English Title: Affections of the Kidneys
 English Short Title: Ren. Aff.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0530.tlg045</dc:description>
         <z:numberOfVolumes>18</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35863">
@@ -27580,7 +27581,7 @@ CTS URN:</dc:description>
         <dcterms:dateSubmitted>2023-05-19 15:19:28</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="0https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg105">
+    <bib:Book rdf:about="0https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg105">
         <z:itemType>book</z:itemType>
         <bib:authors>
             <rdf:Seq>
@@ -27602,14 +27603,14 @@ CTS URN:</dc:description>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>0https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg105</rdf:value>
+                <rdf:value>0https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg105</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <dc:description>Original Title: Περὶ τῆς τάξεως τῶν ἰδίων βιβλίων πρὸς Εὐγενιανόν
 French Title: Ordre de ses propres livres
 English Title: The Order of My Own Books
 English Short Title: Ord. Lib. Prop.
-CTS URN:</dc:description>
+CTS URN: urn:cts:greekLit:tlg0057.tlg105</dc:description>
     </bib:Book>
     <z:Attachment rdf:about="#item_35866">
         <z:itemType>attachment</z:itemType>
@@ -37184,26 +37185,26 @@ Translators: _:n7527</dc:description>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg090"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg089"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg092"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg104"/>
-        <dcterms:hasPart rdf:resource="0https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg105"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg106"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg002"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg037"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg042"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg041"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg111"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg0009"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/tlg0530.tlg023"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/tlg0530.tlg036"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/tlg0530.tlg024"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/tlg0530.tlg033"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/tlg0530.tlg034"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg035"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg026"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg045"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg031"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg022"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatuim.hma-num.fr/tlg0057.tlg0115"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg104"/>
+        <dcterms:hasPart rdf:resource="0https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg105"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg106"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg002"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg037"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg042"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg041"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg111"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg0009"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg023"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg036"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg024"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg033"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.-humanum.fr/#urn:cts:greekLit:tlg0530.tlg034"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg035"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg026"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg045"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg031"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0530.tlg022"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatuim.hma-num.fr/#urn:cts:greekLit:tlg0057.tlg0115"/>
     </z:Collection>
     <z:Collection rdf:about="#collection_97">
         <dc:title>Legendum</dc:title>

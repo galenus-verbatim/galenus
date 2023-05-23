@@ -166,7 +166,7 @@
         </em>
         <xsl:variable name="title" select="normalize-space(dc:title)"/>
         <xsl:for-each select="z:shortTitle">
-          <xsl:if test="normalize-space(.) = $title">
+          <xsl:if test="normalize-space(.) != $title">
             <xsl:text> </xsl:text>
             <span class="shortTitle">
               <xsl:text>(</xsl:text>

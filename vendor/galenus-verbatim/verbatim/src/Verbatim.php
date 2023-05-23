@@ -171,8 +171,7 @@ class Verbatim
             $out .= "</mark>";
             $start = $ad;
         }
-        // do not forget end of doc !
-        $out .= mb_substr($html, $start, mb_strlen($html) - $start);
+        // $out .= mb_substr($html, $start, mb_strlen($html) - $start);
         return $out;
     }
 
@@ -370,16 +369,8 @@ class Verbatim
         }
         */
         // a bug, but could be found
-        $pagad = null;
-        if (isset($doc['pagad']) && $doc['pagad']) {
-            $pagad = $doc['pagad'];
-            $pagde = $doc['pagde'];
-            if ($pagde == $pagad) {
-                $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '</span>';
-            }
-            else {
-                $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '-' . $doc['pagad'] . '</span>';
-            }
+       if (isset($doc['pagad']) && $doc['pagad']) {
+            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '-' . $doc['pagad'] . '</span>';
         }
         else if (isset($doc['pagde']) && $doc['pagde']) {
             $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '</span>';
