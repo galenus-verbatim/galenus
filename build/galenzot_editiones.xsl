@@ -29,10 +29,10 @@
   <xsl:template match="/">
     <article id="editiones" class="text">
       <!-- loop on all editions to produce a bibliographic record for page -->
-      <xsl:for-each select="/*/bib:*[@rdf:about = $verbatim_ids]">
+      <xsl:for-each select="/*/bib:*[dc:subject = '_verbatim']">
         <!-- Galenus first -->
         <xsl:sort select=".//foaf:surname"/>
-        <xsl:sort select="dc:subject/dcterms:LCC/rdf:value" data-type="number"/>
+        <xsl:sort select="dc:subject/dcterms:LCC/rdf:value"/>
         <xsl:apply-templates select="." mode="verbatim"/>
       </xsl:for-each>
     </article>
@@ -53,12 +53,15 @@
         </xsl:choose>
       </xsl:for-each>
     </xsl:variable>
-    <section class="cartouche" id="{$id}">
+    <section id="{$id}">
+      <xsl:call-template name="class">
+        <xsl:with-param name="class">editio</xsl:with-param>
+      </xsl:call-template>
       <div class="opus_tituli">
-        <xsl:apply-templates select="/*/bib:*[@rdf:about = $opera_ids][dc:subject/dcterms:LCC/rdf:value = $fichtner_no]" mode="cartouche"/>
+        <xsl:apply-templates select="key('opus', $fichtner_no)" mode="cartouche"/>
         <xsl:variable name="self" select="."/>
         <!-- other editions online -->
-        <xsl:for-each select="/*/bib:*[@rdf:about = $verbatim_ids][dc:subject/dcterms:LCC/rdf:value = $fichtner_no]">
+        <xsl:for-each select="key('verbatim', $fichtner_no)">
           <xsl:if test="count(.|$self) = 2">
             <div class="editionalt">
               <xsl:text>altera editio: </xsl:text>

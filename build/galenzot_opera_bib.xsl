@@ -17,19 +17,12 @@
   <xsl:output method="xml" indent="yes" encoding="UTF-8" omit-xml-declaration="yes"/>
   <xsl:include href="galenzot_html.xsl"/>
 
-  <!-- 
-    
-    <z:Collection rdf:about="opera">
-        <dc:title>Galeni et Pseudo-Galeni opera</dc:title>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg012"/>
-   -->
-
-
   <xsl:template match="/">
     <div>
-      <xsl:for-each select="/*/bib:Book[@rdf:about = $opera_ids]">
-        <!-- Galenus first -->
+      <xsl:for-each select="/*/bib:*[dc:subject = '_opus']">
+        <!-- sort 1. Galenus -->
         <xsl:sort select=".//foaf:surname"/>
+        <!-- sort 2. Fichtner no -->
         <xsl:sort select="dc:subject/dcterms:LCC/rdf:value"/>
         <xsl:apply-templates select="." mode="opus"/>
       </xsl:for-each>

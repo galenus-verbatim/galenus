@@ -29,20 +29,30 @@ if (file_exists($pres_file)) {
     readfile($pres_file);
 }
 ?>
-<?php readfile($html_dir . '/opera_bib.html'); // table is required ?>
+<?php 
+// for dev on windows, rewrite url with ':'
+if (Galenus::$config['win']) {
+    $html = file_get_contents($html_dir . '/opera_bib.html');
+    $html = preg_replace('@./urn:@', './urn/', $html);
+    echo $html;
+}
+else {
+    readfile($html_dir . '/opera_bib.html'); // table is required 
+}
+?>
             </main>
         </div>
         <aside id="navs">
             <?php 
 $select = new Select('selnav', 'selnav', 'selnav');
-$select->add('TitLa', I18n::_('zotero.TitLa'));
+$select->add('titLat', I18n::_('zotero.titLat'));
 $select->add('fichtner', I18n::_('zotero.fichtner'));
 $select->add('kuhn', I18n::_('zotero.kuhn'));
-$select->add('AbbrLa', I18n::_('zotero.AbbrLa'));
-$select->add('TitGrcCMG', I18n::_('zotero.TitGrcCMG'));
-$select->add('TitFrBM', I18n::_('zotero.TitFrBM'));
-$select->add('TitEnCGT', I18n::_('zotero.TitEnCGT'));
-$select->add('AbbrEnCGT', I18n::_('zotero.AbbrEnCGT'));
+$select->add('titLatAbbr', I18n::_('zotero.titLatAbbr'));
+$select->add('titGrc', I18n::_('zotero.titGrc'));
+$select->add('titFra', I18n::_('zotero.titFra'));
+$select->add('titEng', I18n::_('zotero.titEng'));
+$select->add('titEngAbbr', I18n::_('zotero.titEngAbbr'));
 echo $select;
             ?>
 <?php readfile($html_dir . '/opera_navs.html') ?>

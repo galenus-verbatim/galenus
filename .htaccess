@@ -5,9 +5,9 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-    # RewriteBase /
-    RewriteRule ^index\.php$ - [L]
+    # RewriteBase /galenus/
+    RewriteRule ^index\.php$ - [QSA,L,B]
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule (.*) index.php [QSA,L]
+    RewriteRule (.*) index.php [QSA,L,B]
 </IfModule>

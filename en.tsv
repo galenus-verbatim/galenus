@@ -10,11 +10,11 @@ template.de	About /<br/>Credits
 template.moto	Browse Galen, ed. Kühn (1821–1833) &amp; al.
 template.opera	Welcome /<br/>Table of works
 template.verba	Frequent<br/>words
-zotero.TitLa	Latin title
+zotero.titLat	Latin title
 zotero.fichtner	Fichtner number
 zotero.kuhn	Kühn edition
-zotero.AbbrLa	CMG abbreviation
-zotero.TitGrcCMG	Greek title
-zotero.TitFrBM	French title
-zotero.TitEnCGT	English title
-zotero.AbbrEnCGT	CGT abbreviation
+zotero.titLatAbbr	CMG abbreviation
+zotero.titGrc	Greek title
+zotero.titFra	French title
+zotero.titEng	English title
+zotero.titEngAbbr	CGT abbreviation

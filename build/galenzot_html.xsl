@@ -19,15 +19,21 @@
   
   
   <xsl:key name="about" match="*[@rdf:about]" use="@rdf:about"/>
+  <xsl:key name="opus"
+    match="/*/bib:*[dc:subject = '_opus']"
+    use="normalize-space(dc:subject/dcterms:LCC/rdf:value)"
+  />
+  <xsl:key name="verbatim" 
+    match="/*/bib:*[dc:subject = '_verbatim']"
+    use="normalize-space(dc:subject/dcterms:LCC/rdf:value)"
+  />
+  <xsl:key name="edcrit" 
+    match="/*/bib:*[dc:subject = '_edcrit']"
+    use="normalize-space(dc:subject/dcterms:LCC/rdf:value)"
+  />
+  
   <xsl:strip-space elements="*"/>
-  <!--
-  <xsl:variable name="opera_ids" select="/*/z:Collection[contains(dc:title, 'opera')]/dcterms:hasPart/@rdf:resource"/>
-  <xsl:variable name="verbatim_ids" select="/*/z:Collection[contains(dc:title, 'verbatim')]/dcterms:hasPart/@rdf:resource"/>
-  <xsl:variable name="critica_ids" select="/*/z:Collection[contains(dc:title, 'critica')]/dcterms:hasPart/@rdf:resource"/>
-  -->
 
-  
-  
 
   <xsl:template match="bib:BookSection" mode="kuhn">
     <xsl:variable name="fichtner_no" select="normalize-space(dc:subject/dcterms:LCC/rdf:value)"/>
@@ -67,12 +73,13 @@
   
   <xsl:template match="*" mode="id" name="id">
     <xsl:choose>
-      <xsl:when test="dc:identifier[contains(., 'https://galenus-verbatim.huma-num.fr/')]">
-        <!-- urn:cts:greekLit: -->
+      <!--
+      <xsl:when test="dc:identifier[contains(., 'https://galenus-verbatim.huma-num.fr/#')]">
         <xsl:value-of select="substring-after(normalize-space(dc:identifier), 'https://galenus-verbatim.huma-num.fr/')"/>
       </xsl:when>
+      -->
       <xsl:when test="dc:identifier[contains(., 'urn:cts:greekLit:')]">
-        <!-- urn:cts:greekLit: -->
+        <xsl:text>urn:cts:greekLit:</xsl:text>
         <xsl:value-of select="substring-after(normalize-space(dc:identifier), 'urn:cts:greekLit:')"/>
       </xsl:when>
       <xsl:when test="@rdf:about">
@@ -114,6 +121,30 @@
     </xsl:for-each>
   </xsl:template>
 
+  <xsl:template name="class">
+    <xsl:param name="class"/>
+    <xsl:variable name="classes">
+      <xsl:value-of select="$class"/>
+      <xsl:for-each select="dc:subject">
+        <xsl:variable name="value" select="normalize-space(.)"/>
+        <xsl:choose>
+          <xsl:when test="dcterms:LCC">
+            <xsl:text> fichtner</xsl:text>
+            <xsl:value-of select="$value"/>
+          </xsl:when>
+          <xsl:when test="starts-with($value, '_')">
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="substring-after($value, '_')"/>
+          </xsl:when>
+        </xsl:choose>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:if test="normalize-space($classes) != ''">
+      <xsl:attribute name="class">
+        <xsl:value-of select="normalize-space($classes)"/>
+      </xsl:attribute>
+    </xsl:if>
+  </xsl:template>
 
   <!-- Should be an opus and not an edition -->
   <xsl:template match="bib:*" mode="opus">
@@ -127,21 +158,24 @@
       <xsl:attribute name="id">
         <xsl:call-template name="id"/>
       </xsl:attribute>
+      <xsl:call-template name="class"/>
       <h1>
         <xsl:call-template name="authors"/>
         <em class="title">
           <xsl:apply-templates select="dc:title"/>
         </em>
-        <xsl:text> </xsl:text>
-
+        <xsl:variable name="title" select="normalize-space(dc:title)"/>
         <xsl:for-each select="z:shortTitle">
-          <span class="shortTitle">
-            <xsl:text>(</xsl:text>
-            <em class="title">
-              <xsl:apply-templates/>
-            </em>
-            <xsl:text>)</xsl:text>
-          </span>
+          <xsl:if test="normalize-space(.) = $title">
+            <xsl:text> </xsl:text>
+            <span class="shortTitle">
+              <xsl:text>(</xsl:text>
+              <em class="title">
+                <xsl:apply-templates/>
+              </em>
+              <xsl:text>)</xsl:text>
+            </span>
+          </xsl:if>
         </xsl:for-each>
         
         <xsl:text> </xsl:text>
@@ -159,27 +193,16 @@
       </xsl:if>
       <!-- Notes -->
       <xsl:for-each select="key('about', dcterms:isReferencedBy/@rdf:resource)">
-        <xsl:variable name="title" select="normalize-space(.)"/>
-        <xsl:choose>
-          <xsl:when test="
-               starts-with($title, '1TitGrcCMG:') 
-            or starts-with($title, '2TitFrBM:')
-            or starts-with($title, '3TitEnCGT:')
-            or starts-with($title, '4AbbrEnCGT:')
-            "/>
-          <xsl:otherwise>
-            <div class="note">
-              <!-- Why @eacute ?
-              <xsl:value-of select="." disable-output-escaping="yes"/>
-              -->
-              <xsl:value-of select="."/>
-            </div>
-          </xsl:otherwise>
-        </xsl:choose>
+        <div class="note">
+          <!-- Why @eacute ?
+          <xsl:value-of select="." disable-output-escaping="yes"/>
+          -->
+          <xsl:value-of select="." disable-output-escaping="yes"/>
+        </div>
       </xsl:for-each>
       <!-- editions -->
       <xsl:variable name="verbatim">
-        <xsl:for-each select="/*/bib:*[@rdf:about = $verbatim_ids][dc:subject/dcterms:LCC/rdf:value = $fichtner_no]">
+        <xsl:for-each select="key('verbatim', $fichtner_no)">
           <!-- <xsl:sort select="dc:identifier/dcterms:URI/rdf:value"/> -->
           <xsl:sort select="dc:date"/>
           <li class="editio">
@@ -193,7 +216,7 @@
         </ul>
       </xsl:if>
       <xsl:variable name="critica">
-        <xsl:for-each select="/*/bib:*[@rdf:about = $critica_ids][dc:subject/dcterms:LCC/rdf:value = $fichtner_no]">
+        <xsl:for-each select="key('edcrit', $fichtner_no)">
           <!-- <xsl:sort select="dc:identifier/dcterms:URI/rdf:value"/> -->
           <xsl:sort select="dc:date"/>
           <li class="editio">
@@ -213,6 +236,24 @@
     </section>
   </xsl:template>
   
+  <!-- Alt titles in extra field -->
+  <xsl:template match="z:original-title | z:french-title | z:english-title">
+    <xsl:if test="normalize-space(.) != ''">
+      <div class="titletr {name()}">
+        <em class="title">
+          <xsl:value-of select="." disable-output-escaping="yes"/>
+        </em>
+        <xsl:if test="self::z:english-title and ../z:english-short-title">
+          <xsl:text> (</xsl:text>
+          <em class="title short">
+            <xsl:value-of select="../z:english-short-title"/>
+          </em>
+          <xsl:text>)</xsl:text>
+        </xsl:if>
+      </div>
+    </xsl:if>
+  </xsl:template>
+  
   <!-- List alternative titles of an opus -->
   <xsl:template name="opus_tituli">
     <div class="urn">
@@ -221,54 +262,9 @@
     </div>
     <xsl:variable name="short" select="z:shortTitle"/>
     <xsl:variable name="notes" select="key('about', dcterms:isReferencedBy/@rdf:resource)"/>
-    <xsl:for-each select="$notes">
-      <xsl:sort select="normalize-space(.)"/>
-      <xsl:variable name="title" select="normalize-space(.)"/>
-      <xsl:variable name="value" select="normalize-space(substring-after($title, ':'))"/>
-      <xsl:if test="
-        $value != '' and
-        (starts-with($title, '1TitGrcCMG:') 
-        or starts-with($title, '2TitFrBM:')
-        or starts-with($title, '3TitEnCGT:'))
-        ">
-        <!--
-          or starts-with($title, '4AbbrEnCGT:')
-          <xsl:choose>
-            <xsl:when test="position() != 1"> ; </xsl:when>
-            <xsl:when test="$short != ''"> ; </xsl:when>
-          </xsl:choose>
-          -->
-        <div>
-          <xsl:attribute name="class">
-            <xsl:text>titletr </xsl:text>
-            <xsl:value-of select="translate(normalize-space(substring-before(., ':')), '0123456789', '')"/>
-          </xsl:attribute>
-          <xsl:choose>
-            <xsl:when test="starts-with($title, '1TitGrcCMG:')">
-              <xsl:value-of select="$value"/>
-            </xsl:when>
-            <xsl:otherwise>
-              <em class="title">
-                <xsl:value-of select="$value"/>
-              </em>
-            </xsl:otherwise>
-          </xsl:choose>
-          <!-- Ugly hack to get english short title now -->
-          <xsl:if test="starts-with($title, '3TitEnCGT:')">
-            <xsl:for-each select="$notes[starts-with(normalize-space(.), '4AbbrEnCGT:')]">
-              <xsl:variable name="value2" select="normalize-space(substring-after(normalize-space(.), ':'))"/>
-              <xsl:if test="$value2 != ''">
-                <xsl:text> (</xsl:text>
-                <em class="title short">
-                  <xsl:value-of select="$value2"/>
-                </em>
-                <xsl:text>)</xsl:text>
-              </xsl:if>
-            </xsl:for-each>
-          </xsl:if>
-        </div>
-      </xsl:if>
-    </xsl:for-each>
+    <xsl:apply-templates select="dc:description/z:original-title"/>
+    <xsl:apply-templates select="dc:description/z:french-title"/>
+    <xsl:apply-templates select="dc:description/z:english-title"/>
   </xsl:template>
   
   
@@ -301,6 +297,7 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
               <xsl:when test="contains($url, 'galenus-verbatim.huma-num.fr/')">
                 <xsl:attribute name="class">title verbatim</xsl:attribute>
                 <xsl:attribute name="href">
+                  <xsl:text>./</xsl:text>
                   <xsl:value-of select="substring-after($url, 'galenus-verbatim.huma-num.fr/')"/>
                 </xsl:attribute>
               </xsl:when>
@@ -351,10 +348,10 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
     </xsl:for-each>
     <xsl:text>.</xsl:text>
     <xsl:text> </xsl:text>
-    <xsl:if test="contains($url, 'galenus-verbatim.huma-num.fr/')">
+    <xsl:if test="contains($url, 'urn:cts:greekLit:')">
       <span class="urn">
         <xsl:text>urn:cts:greekLit:</xsl:text>
-        <xsl:value-of select="substring-after($url, 'galenus-verbatim.huma-num.fr/')"/>
+        <xsl:value-of select="substring-after($url, 'urn:cts:greekLit:')"/>
       </span>
     </xsl:if>
   </xsl:template>
@@ -424,23 +421,7 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
   </xsl:template>
 
   <xsl:template match="bib:Memo/rdf:value">
-    <xsl:choose>
-      <xsl:when test="starts-with(., '1TitGrcCMG:')">
-        <xsl:value-of select="normalize-space(substring-after(., '1TitGrcCMG:'))" disable-output-escaping="yes"/>
-      </xsl:when>
-      <xsl:when test="starts-with(., '2TitFrBM:')">
-        <xsl:value-of select="normalize-space(substring-after(., '2TitFrBM:'))" disable-output-escaping="yes"/>
-      </xsl:when>
-      <xsl:when test="starts-with(., '3TitEnCGT:')">
-        <xsl:value-of select="normalize-space(substring-after(., '3TitEnCGT:'))" disable-output-escaping="yes"/>
-      </xsl:when>
-      <xsl:when test="starts-with(., '4AbbrEnCGT:')">
-        <xsl:value-of select="normalize-space(substring-after(., '4AbbrEnCGT:'))" disable-output-escaping="yes"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="." disable-output-escaping="yes"/>
-      </xsl:otherwise>
-    </xsl:choose>
+    <xsl:value-of select="." disable-output-escaping="yes"/>
   </xsl:template>
   
   <xsl:template match="*">

@@ -52,21 +52,22 @@ $linea = intval($linea);
 $pagina = intval($pagina);
 // just volume
 if ($volumen && $pagina) {
-    $sql = "SELECT clavis, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? AND pagde <= ? AND pagad >= ?  ORDER BY rowid";
-    $qClav = Verbatim::$pdo->prepare($sql);
-    $qClav->execute(array($volumen, $pagina, $pagina));
+    $sql = "SELECT cts, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? AND pagde <= ? AND pagad >= ?  ORDER BY rowid";
+    $qCts = Verbatim::$pdo->prepare($sql);
+    $qCts->execute(array($volumen, $pagina, $pagina));
 }
 else {
-    $sql = "SELECT clavis, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? ORDER BY rowid;";
-    $qClav = Verbatim::$pdo->prepare($sql);
-    $qClav->execute(array($volumen));
+    $sql = "SELECT cts, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? ORDER BY rowid;";
+    $qCts = Verbatim::$pdo->prepare($sql);
+    $qCts->execute(array($volumen));
 }
 
-$clavis;
-$res = $qClav->fetchAll(PDO::FETCH_ASSOC);
+$cts;
+$res = $qCts->fetchAll(PDO::FETCH_ASSOC);
 
 if (count($res) < 1) {
     // bad attemp to find a Kuhn ref
+    // message localized
     echo '
     <article class="text">
     Impossible de trouver la référence Kühn suivante : “' . $kuhn . '”
@@ -76,33 +77,39 @@ if (count($res) < 1) {
     return;
 }
 else if (count($res) == 1 || !$linea || !$pagina) {
-    $clavis = $res[0]['clavis'];
+    $cts = $res[0]['cts'];
 }
 // discrim on line
 else if (count($res) == 2) {
 
     if ($res[1]['pagde'] == $pagina && $linea >= $res[1]['linde']) {
-        $clavis = $res[1]['clavis'];
+        $cts = $res[1]['cts'];
     }
     else if ($res[0]['pagad'] == $pagina && $linea <= $res[0]['linad']) {
-        $clavis = $res[0]['clavis'];
+        $cts = $res[0]['cts'];
     }
     else { // data error
-        $clavis = $res[0]['clavis'];
+        $cts = $res[0]['cts'];
     }
 }
 else { // data error
-    $clavis = $res[0]['clavis'];
+    $cts = $res[0]['cts'];
 }
 
 if ($linea) {
-    $clavis .= '?kuhn=' . $volumen . '.' . $pagina . '.' . $linea;
-    $clavis .= '#l' . $volumen . '.' . $pagina . "." . $linea;
+    $cts .= '?kuhn=' . $volumen . '.' . $pagina . '.' . $linea;
+    $cts .= '#l' . $volumen . '.' . $pagina . "." . $linea;
 }
 else if ($pagina) {
-    $clavis .= '?kuhn=' . $volumen . '.' . $pagina;
-    $clavis .= '#p' . $volumen . '.' . $pagina;
+    $cts .= '?kuhn=' . $volumen . '.' . $pagina;
+    $cts .= '#p' . $volumen . '.' . $pagina;
 }
-echo $clavis;
-header("Location: $clavis");
+if (Galenus::$config['win']) {
+    $cts = preg_replace('@urn:@', Route::home_href() . 'urn/', $cts);
+}
+else {
+    $cts = './' . $cts;
+}
+echo $cts;
+header("Location: $cts");
 exit();

@@ -1192,6 +1192,7 @@
         <dc:subject>_opus</dc:subject>
         <dc:title>De morborum temporibus</dc:title>
         <dc:date>ca 200</dc:date>
+        <z:shortTitle>De morb. temp.</z:shortTitle>
         <dc:subject>
            <dcterms:LCC><rdf:value>050</rdf:value></dcterms:LCC>
         </dc:subject>
@@ -1200,7 +1201,11 @@
                 <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg047</rdf:value>
             </dcterms:URI>
         </dc:identifier>
-        <dc:description>CTS URN: urn:cts:greekLit:tlg0057.tlg047</dc:description>
+        <dc:description>Original Title: Περὶ τῶν ἐν ταῖς νόσοις καιρῶν
+French Title: Périodes des maladies
+English Title: The Opportune Moments in Diseases
+English Short Title: Morb. Temp.
+CTS URN: urn:cts:greekLit:tlg0057.tlg047</dc:description>
         <z:numberOfVolumes>8</z:numberOfVolumes>
     </bib:Book>
     <bib:Memo rdf:about="#item_34779">
@@ -1244,6 +1249,7 @@
         <dc:subject>_opus</dc:subject>
         <dc:title>In Hippocratis De natura hominis commentaria lib. III</dc:title>
         <dc:date>ca 200</dc:date>
+        <z:shortTitle>In Hipp. De nat. hom. comm.</z:shortTitle>
         <dc:subject>
            <dcterms:LCC><rdf:value>091</rdf:value></dcterms:LCC>
         </dc:subject>
@@ -1252,7 +1258,11 @@
                 <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg086</rdf:value>
             </dcterms:URI>
         </dc:identifier>
-        <dc:description>CTS URN: urn:cts:greekLit:tlg0057.tlg086</dc:description>
+        <dc:description>Original Title: Εἰς τὸ περὶ φύσιος ἀνθρώπου βιβλίον Ἱπποκράτους ὑπόμνημα
+French Title: Commentaire à la Nature de l’homme d’Hippocrate
+English Title: Commentary on Hippocrates’ ‘Nature of Man’
+English Short Title: HNH
+CTS URN: urn:cts:greekLit:tlg0057.tlg086</dc:description>
         <prism:volume>1</prism:volume>
         <z:numberOfVolumes>34</z:numberOfVolumes>
     </bib:Book>
@@ -1297,6 +1307,7 @@
         <dc:subject>_phil</dc:subject>
         <dc:title>De animi cuiuslibet peccatorum dignotione et curatione</dc:title>
         <dc:date>ca 200</dc:date>
+        <z:shortTitle>De animi cuiusl. affect. et pecc. dign. et cur.</z:shortTitle>
         <dc:subject>
            <dcterms:LCC><rdf:value>030</rdf:value></dcterms:LCC>
         </dc:subject>
@@ -1305,7 +1316,11 @@
                 <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg029</rdf:value>
             </dcterms:URI>
         </dc:identifier>
-        <dc:description>CTS URN: urn:cts:greekLit:tlg0057.tlg029</dc:description>
+        <dc:description>Original Title: Περὶ διαγνώσεως καὶ θεραπείας τῶν ἐν τῇ ἑκάστου ψυχῇ ἰδίων παθῶν καὶ ἁμαρτημάτων
+French Title: Diagnostic et traitement des passions et des erreurs de l’âme
+English Title: The Diagnosis and Treatment of the Affections and Errors Peculiar to Each Person’s Soul
+English Short Title: Aff. Pecc. Dig.
+CTS URN: urn:cts:greekLit:tlg0057.tlg029</dc:description>
         <prism:volume>1</prism:volume>
         <z:numberOfVolumes>7</z:numberOfVolumes>
     </bib:Book>
@@ -5304,7 +5319,7 @@ CTS URN: urn:cts:greekLit:tlg0057.tlg083</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/#urn:cts:greekLit:tlg0057.tlg085</rdf:value>
             </dcterms:URI>
         </dc:identifier>
-        <dc:description>Original Title: Εἱς τὸ περὶ φύσιος ἀνθρώπου βιβλίον Ἱπποκράτους ὑπόμνημα
+        <dc:description>Original Title: Εἰς τὸ περὶ φύσιος ἀνθρώπου βιβλίον Ἱπποκράτους ὑπόμνημα
 French Title: Commentaire à la Nature de l’homme d’Hippocrate
 English Title: Commentary on Hippocrates’ ‘Nature of Man’
 English Short Title: HNH
@@ -9075,6 +9090,7 @@ CTS URN: urn:cts:greekLit:tlg0057.tlg059</dc:description>
         <dc:subject>_opus</dc:subject>
         <dc:title>De locis affectis</dc:title>
         <dc:date>ca 200</dc:date>
+        <z:shortTitle>De locis affectis</z:shortTitle>
         <dc:subject>
            <dcterms:LCC><rdf:value>060</rdf:value></dcterms:LCC>
         </dc:subject>
@@ -9209,6 +9225,7 @@ CTS URN: urn:cts:greekLit:tlg0057.tlg057</dc:description>
         <dc:subject>_opus</dc:subject>
         <dc:title>De marcore</dc:title>
         <dc:date>ca 200</dc:date>
+        <z:shortTitle>De marcore</z:shortTitle>
         <dc:subject>
            <dcterms:LCC><rdf:value>056</rdf:value></dcterms:LCC>
         </dc:subject>
@@ -10093,6 +10110,7 @@ CTS URN: urn:cts:greekLit:tlg0057.tlg049</dc:description>
         <dc:subject>_opus</dc:subject>
         <dc:title>De typis</dc:title>
         <dc:date>ca 200</dc:date>
+        <z:shortTitle>De typis</z:shortTitle>
         <dc:subject>
            <dcterms:LCC><rdf:value>051</rdf:value></dcterms:LCC>
         </dc:subject>
@@ -11333,6 +11351,7 @@ CTS URN: urn:cts:greekLit:tlg0057.tlg041</dc:description>
         <dc:subject>_pharm</dc:subject>
         <dc:title>De bonis malisque sucis</dc:title>
         <dc:date>ca 200</dc:date>
+        <z:shortTitle>De bonis malisque sucis</z:shortTitle>
         <dc:subject>
            <dcterms:LCC><rdf:value>039</rdf:value></dcterms:LCC>
         </dc:subject>
@@ -12296,6 +12315,7 @@ CTS URN: urn:cts:greekLit:tlg0057.tlg031</dc:description>
         <dc:subject>_physiol</dc:subject>
         <dc:title>De atra bile</dc:title>
         <dc:date>ca 200</dc:date>
+        <z:shortTitle>De atra bile</z:shortTitle>
         <dc:subject>
            <dcterms:LCC><rdf:value>031</rdf:value></dcterms:LCC>
         </dc:subject>
@@ -26597,6 +26617,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg022</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ μέτρων καὶ σταθμῶν διδασκαλία
+French Title:
+English Title: Weights and Measures
+English Short Title: Pond. Mens.
+CTS URN:</dc:description>
         <z:numberOfVolumes>15</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35812">
@@ -26636,6 +26661,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg031</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ ἀντεμβαλλομένων
+French Title:
+English Title: Pharmacological Substitutions
+English Short Title: Suc.
+CTS URN:</dc:description>
         <z:numberOfVolumes>18</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35814">
@@ -26686,6 +26716,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg026</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ σφυγμῶν πρὸς Ἀντώνιον φιλομαθῆ καὶ φιλόσοφον
+French Title:
+English Title: The Pulse, to Antonius
+English Short Title: Puls. Ant.
+CTS URN:</dc:description>
     </bib:Book>
     <z:Attachment rdf:about="#item_35817">
         <z:itemType>attachment</z:itemType>
@@ -26725,6 +26760,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg035</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ οὔρων ἐκ τῶν Ἱπποκράτους καὶ Γαληνοῦ καὶ ἄλλων τινῶν
+French Title:
+English Title: Urines According to Hippocrates, Galen
+English Short Title: Ur. Comp. Gal.
+CTS URN:</dc:description>
         <z:numberOfVolumes>9</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35819">
@@ -26775,6 +26815,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.-humanum.fr/tlg0530.tlg034</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ οὔρων ἐν συντόμῳ
+French Title:
+English Title: Summary of Urines
+English Short Title: Ur. Comp.
+CTS URN:</dc:description>
     </bib:Book>
     <z:Attachment rdf:about="#item_35822">
         <z:itemType>attachment</z:itemType>
@@ -26813,6 +26858,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.-humanum.fr/tlg0530.tlg033</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ οὔρων
+French Title:
+English Title: Urines
+English Short Title: Ur.
+CTS URN:</dc:description>
         <z:numberOfVolumes>48</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35824">
@@ -26863,6 +26913,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.-humanum.fr/tlg0530.tlg024</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ κατακλίσεως προγνωστικὰ ἐκ τῆς μαθηματικῆς ἐπιστήμης
+French Title:
+English Title: Prognosis Based on the Hour when a Patient goes to Bed based on the Science of Astrology
+English Short Title: Prog. Dec.
+CTS URN:</dc:description>
         <z:numberOfVolumes>24</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35827">
@@ -26913,6 +26968,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.-humanum.fr/tlg0530.tlg023</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Πρόγνωσις πεπειραμένη καὶ παναληθής
+French Title:
+English Title: True and Expert Prognosis
+English Short Title: Praes. Ver. Exp.
+CTS URN:</dc:description>
         <z:numberOfVolumes>4</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35830">
@@ -26963,6 +27023,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg0009</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ χυμῶν
+French Title:
+English Title: Humours
+English Short Title: Hum.
+CTS URN:</dc:description>
         <z:numberOfVolumes>18</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35833">
@@ -27001,6 +27066,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg111</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Ὅτι αἱ ποιότητες ἀσώματοι
+French Title: Qualités incorporelles
+English Title: Qualities are Non-Bodily
+English Short Title: Qual. Incorp.
+CTS URN:</dc:description>
         <z:numberOfVolumes>9</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35835">
@@ -27052,6 +27122,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg041</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Ὅροι ἰατρικοί
+French Title:
+English Title: Medical Definitions
+English Short Title: Def. Med.
+CTS URN:</dc:description>
         <z:numberOfVolumes>487</z:numberOfVolumes>
     </bib:Book>
     <bib:Memo rdf:about="#item_35838">
@@ -27105,6 +27180,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg042</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ φιλοσόφου ἱστορίας
+French Title:
+English Title: History of Philosophy
+English Short Title: Hist. Phil.
+CTS URN:</dc:description>
         <z:numberOfVolumes>29</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35842">
@@ -27155,6 +27235,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg037</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ τῆς κατὰ τὸν Ἱπποκράτην διαίτης ἐπὶ τῶν ὀξέων νοσημάτων
+French Title: Régime dans les maladies aiguës d’Hippocrate 
+English Title: Regimen in Acute Diseases According to Hippocrates
+English Short Title: Hipp. Vict. Morb. Ac.
+CTS URN:</dc:description>
         <prism:volume>11</prism:volume>
     </bib:Book>
     <z:Attachment rdf:about="#item_35845">
@@ -27198,6 +27283,7 @@ Translators: _:n25188</dc:description>
         <dc:subject>_physiol</dc:subject>
         <dc:subject>*contenu à revoir</dc:subject>
         <dc:title>An animal sit quod est in utero</dc:title>
+        <z:shortTitle>An animal sit quod est in utero</z:shortTitle>
         <dc:subject>
            <dcterms:LCC><rdf:value>117</rdf:value></dcterms:LCC>
         </dc:subject>
@@ -27206,6 +27292,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg002</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Εἰ ζῷον τὸ κατὰ γαστρός
+French Title:
+English Title: Whether What Is in the Womb is an Animal
+English Short Title: An. Ut.
+CTS URN:</dc:description>
         <z:numberOfVolumes>5</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35848">
@@ -27254,6 +27345,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg106</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Τῶν παρ’ Ἱπποκράτει γλωττῶν ἐξήγησις
+French Title: Glossaire hippocratique 
+English Title: Glossary of Hippocratic Terms
+English Short Title: Gloss.
+CTS URN:</dc:description>
     </bib:Book>
     <z:Attachment rdf:about="#item_35851">
         <z:itemType>attachment</z:itemType>
@@ -27303,6 +27399,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.-humanum.fr/tlg0530.tlg036</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ φλεβοτομίας
+French Title:
+English Title: Bloodletting
+English Short Title: Ven. Sect.
+CTS URN:</dc:description>
         <z:numberOfVolumes>18</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35854">
@@ -27341,6 +27442,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg104</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ τῶν ἰδίων βιβλίων
+French Title: Propres livres
+English Title: My Own Books
+English Short Title: Lib. Prop.
+CTS URN:</dc:description>
         <z:numberOfVolumes>1</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35856">
@@ -27445,6 +27551,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0530.tlg045</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ τῆς τῶν ἐν νεφροῖς παθῶν διαγνώσεως καὶ θεραπείας
+French Title:
+English Title: Affections of the Kidneys
+English Short Title: Ren. Aff.
+CTS URN:</dc:description>
         <z:numberOfVolumes>18</z:numberOfVolumes>
     </bib:Book>
     <z:Attachment rdf:about="#item_35863">
@@ -27494,6 +27605,11 @@ Translators: _:n25188</dc:description>
                 <rdf:value>0https://galenus-verbatim.huma-num.fr/urn:cts:greekLit:tlg0057.tlg105</rdf:value>
             </dcterms:URI>
         </dc:identifier>
+        <dc:description>Original Title: Περὶ τῆς τάξεως τῶν ἰδίων βιβλίων πρὸς Εὐγενιανόν
+French Title: Ordre de ses propres livres
+English Title: The Order of My Own Books
+English Short Title: Ord. Lib. Prop.
+CTS URN:</dc:description>
     </bib:Book>
     <z:Attachment rdf:about="#item_35866">
         <z:itemType>attachment</z:itemType>

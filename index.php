@@ -39,17 +39,23 @@ Route::get('/([\dIVX].*)', __DIR__ . '/pages/kuhn.php', array('kuhn' => '$1'), n
 // urn:cts redirection, see spec 
 // https://www.digitalathenaeus.org/tools/KaibelText/cts_urn_retriever.php
 // urn:cts:greekLit:tlg0008.tlg001.perseus-grc2:3.7
-// some server may 403 on ':' in url, support '_'
+// Windows apache will send 403 with ':' in url
+// No other way, mediawiki has search a lot for that
+// https://www.mediawiki.org/wiki/Manual:Short_URL/Apache#Plan
+
 Route::get(
-    'urn[:_].*',
-    Verbatim::dir() . 'pages/cts.php',
-    array('URN' => '$0'),
-    null
+    '/(urn[:/][^/]*)',
+    __DIR__ . '/pages/doc.php',
+    array(
+        'cts' => '$1',
+    )
 );
-// a tlg opus
+
+/*
+// TODO cts opus ?
 Route::get('/(tlg\d+\.tlg\d+)', Verbatim::dir() . 'pages/opus.php', array('cts' => '$1'));
-// a tlg content, array to pass params extracted from url path, local page
-Route::get('/(tlg.*)', __DIR__ . '/pages/doc.php', array('cts' => '$1'));
+*/
+
 
 // welcome page
 Route::get('/', __DIR__ . '/pages/opera.php');

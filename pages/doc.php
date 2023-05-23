@@ -6,7 +6,7 @@
  */
 require_once(dirname(__DIR__) . "/Galenus.php");
 
-use Oeuvres\Kit\{Http, I18n};
+use Oeuvres\Kit\{Http, I18n, Route};
 use GalenusVerbatim\Verbatim\{Verbatim};
 
 
@@ -20,23 +20,18 @@ class Data {
     /** init param */
     public static function init() {
         $cts = Http::par('cts');
+        // hack for Apache on windows with ':'
+        $cts = str_replace('urn/', 'urn:', $cts);
         self::$cts = $cts;
-        if (strpos($cts, '_') === false) { // cover
-            $sql = "SELECT * FROM doc WHERE clavis LIKE ? LIMIT 1";
-            $qDoc = Verbatim::$pdo->prepare($sql);
-            $qDoc->execute(array($cts . '%'));
-        }
-        else { // should be a document
-            $sql = "SELECT * FROM doc WHERE clavis LIKE ? LIMIT 1";
-            $qDoc = Verbatim::$pdo->prepare($sql);
-            $qDoc->execute(array($cts. '%'));
-        }
+        $sql = "SELECT * FROM doc WHERE cts LIKE ? LIMIT 1";
+        $qDoc = Verbatim::$pdo->prepare($sql);
+        $qDoc->execute(array($cts . '%'));
         self::$doc = $qDoc->fetch(PDO::FETCH_ASSOC);
-        
-        $edclavis = strtok($cts, '_');
-        $sql = "SELECT * FROM editio WHERE clavis = ? LIMIT 1";
+        // the '_' as a separator  is historic
+        $cts_editio = preg_replace('@(urn:cts:[^:]+:[^:_]+).*@', '$1', $cts);
+        $sql = "SELECT * FROM editio WHERE cts = ? LIMIT 1";
         $qed = Verbatim::$pdo->prepare($sql);
-        $qed->execute(array($edclavis));
+        $qed->execute(array($cts_editio));
         self::$editio = $qed->fetch(PDO::FETCH_ASSOC);
     }
 }
@@ -68,7 +63,7 @@ function title() {
         $title .= ', ed. ' . $editio['editor'];
     }
     $title .= Verbatim::scope($doc);
-    $title .= '. urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']);
+    $title .= '. ' . $doc['cts'];
     $title .= ' — Galenus verbatim';
     $title = strip_tags($title);
     return $title;
@@ -85,7 +80,13 @@ function prevnext($direction)
     $ic = ($direction == 'prev')?'⟨':'⟩';
     if (isset(Data::$doc[$col]) && Data::$doc[$col]) {
         $class= 'prevnext ' . $direction . ' ' . $col;
-        return '<a class="' . $class . '" href="' . Data::$doc[$col] . $qstring . '"><div>' . $ic . '</div></a>';
+        $a = "";
+        $a .= '<a class="' . $class . '"';
+        $url = Data::$doc[$col];
+        if (Galenus::$config['win']) $url = str_replace('urn:', 'urn/', $url);
+        $a .= ' href="'. Route::home_href() . $url . $qstring . '">';
+        $a .= '<div>' . $ic . '</div></a>';
+        return $a;
     }
     // empty link, spacer needed
     else return '<a class="prevnext"><div> </div></a>';
@@ -154,7 +155,7 @@ $main = function() {
         return;
     }
     $q = Http::par('q');
-    $clavis = $doc['clavis'];
+    $cts = $doc['cts'];
 
     $forms = array();
     if ($q) {
@@ -173,36 +174,41 @@ $main = function() {
     else if (!count($formids)) {
         $html = $editio['nav'];
         $html = preg_replace(
-            '@ href="' . $cts . '"@',
+            '@ href="./' . $cts . '"@',
             '$1 class="selected"',
             $html
         );
+        // win hack
+        if (Galenus::$config['win']) {
+            $html = str_replace('./urn:', Route::home_href() . 'urn/', $html);
+        }
+
         echo $html;
     }
     // calculate occurrences by chapter
     else {
         $in  = str_repeat('?,', count($formids) - 1) . '?';
-        $sql = "SELECT COUNT(*) FROM tok, doc WHERE $field IN ($in) AND doc = doc.id AND clavis = ?";
+        $sql = "SELECT COUNT(*) FROM tok, doc WHERE $field IN ($in) AND doc = doc.id AND cts = ?";
         $qTok =  Verbatim::$pdo->prepare($sql);
         $params = $formids;
         $i = count($params);
         // occurrences by chapter ?
         $html = preg_replace_callback(
             array(
-                '@<a href="([^"]+)">([^<]+)</a>@',
+                '@<a href="(./)?([^"]+)">([^<]+)</a>@',
             ),
-            function ($matches) use ($clavis, $q, $qTok, $params, $i){
+            function ($matches) use ($cts, $q, $qTok, $params, $i){
                 $params[$i] = $matches[1];
                 $qTok->execute($params);
                 list($count) = $qTok->fetch();
                 $ret = '';
                 $ret .= '<a';
-                if ($matches[1] == $clavis) {
+                if ($matches[2] == $cts) {
                     $ret .= ' class="selected"';
                 }
-                $ret .= ' href="' . $matches[1] . '?q=' . $q . '"';
+                $ret .= ' href="' . $matches[1] . $matches[2] . '?q=' . $q . '"';
                 $ret .= '>';
-                $ret .= $matches[2];
+                $ret .= $matches[3];
                 if ($count) {
                     $ret .= ' <small>(' . $count . ' occ.)</small>';
                 }
@@ -298,9 +304,17 @@ function js_images(&$doc)
     $vars['kuhn'] = $vols['kuhn'][$doc['volumen']];
     $vars['kuhn']['vol'] = $doc['volumen'];
     $vars['kuhn']['abbr'] = 'K';
+    $cts = $doc['cts'];
+    // _ as a separator in urn is historic
+    $cts_editio = preg_replace('@(urn:cts:[^:]+:[^:_]+).*@', '$1', $cts);
+    if (!isset($vols[$cts_editio])) {
+        echo "<h1>" . $cts_editio . "</h1>";
+        print_r($vols);
+        // log something somewhere ?
+        return;
+    }
 
-    list($book) = explode('_', $doc['clavis']);
-    $info = $vols[$book];
+    $info = $vols[$cts_editio];
     $chartier = null;
     $bale = null;
     if ($info) {

@@ -221,7 +221,8 @@ if (div) {
     if (!select) return;
 
     function show(value) {
-        if (!select.last) select.last = document.getElementById('TitLa');
+        console.log(value);
+        if (!select.last) select.last = document.getElementById('titLat');
         const show = document.getElementById(value);
         if (!show) return;
         localStorage.setItem(id, value);

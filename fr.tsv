@@ -8,11 +8,11 @@ template.de	À propos /<br/>Crédits
 template.moto	Naviguer dans le texte de Galien de Pergame, éd. Kühn (1821–1833) &amp; al.
 template.opera	Accueil /<br/>Table des traités
 template.verba	Table<br/>fréquentielle
-zotero.TitLa	Titre latin
+zotero.titLat	Titre latin
 zotero.fichtner	N° Fichtner
 zotero.kuhn	Édition Kühn
-zotero.AbbrLa	Abréviation CMG
-zotero.TitGrcCMG	Titre grec
-zotero.TitFrBM	Titre français
-zotero.TitEnCGT	Titre anglais
-zotero.AbbrEnCGT	Abréviation CGT
+zotero.titLatAbbr	Abréviation CMG
+zotero.titGrc	Titre grec
+zotero.titFra	Titre français
+zotero.titEng	Titre anglais
+zotero.titEngAbbr	Abréviation CGT

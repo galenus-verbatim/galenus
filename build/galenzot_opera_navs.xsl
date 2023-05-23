@@ -27,21 +27,21 @@
 
   <xsl:template match="/">
     <div>
-      <xsl:call-template name="nav_TitLa"/>
-      <xsl:call-template name="nav_fichtner"/>
-      <xsl:call-template name="nav_kuhn"/>
-      <xsl:call-template name="nav_AbbrLa"/>
-      <xsl:call-template name="nav_TitGrcCMG"/>
-      <xsl:call-template name="nav_TitFrBM"/>
-      <xsl:call-template name="nav_TitEnCGT"/>
-      <xsl:call-template name="nav_AbbrEnCGT"/>
+      <xsl:call-template name="titLat"/>
+      <xsl:call-template name="fichtner"/>
+      <xsl:call-template name="kuhn"/>
+      <xsl:call-template name="titLatAbbr"/>
+      <xsl:call-template name="titGrc"/>
+      <xsl:call-template name="titFra"/>
+      <xsl:call-template name="titEng"/>
+      <xsl:call-template name="titEngAbbr"/>
     </div>
   </xsl:template>
   
   
-  <xsl:template name="nav_fichtner">
+  <xsl:template name="fichtner">
     <nav id="fichtner" style="display:none" class="bibl">
-      <xsl:for-each select="/*/bib:*[@rdf:about = $opera_ids]">
+      <xsl:for-each select="/*/bib:*[dc:subject = '_opus']">
         <xsl:sort select="dc:subject/dcterms:LCC/rdf:value"/>
         <a>
           <xsl:attribute name="href">
@@ -65,7 +65,7 @@
     </nav>
   </xsl:template>
   
-  <xsl:template name="nav_kuhn">
+  <xsl:template name="kuhn">
     <nav id="kuhn" style="display:none" class="bibl">
       <xsl:apply-templates select="/*/bib:*[bib:editors[contains(., 'Kühn')]]" mode="kuhn">
         <!-- 18a, 18b grrrr. -->
@@ -75,9 +75,10 @@
     </nav>
   </xsl:template>
   
-  <xsl:template name="nav_TitLa">
-    <nav id="TitLa" class="bibl">
-      <xsl:for-each select="/*/bib:*[@rdf:about = $opera_ids]">
+  
+  <xsl:template name="titLat">
+    <nav id="titLat" class="bibl">
+      <xsl:for-each select="/*/bib:*[dc:subject = '_opus']">
         <xsl:sort select="normalize-space(dc:title)"/>
         <a>
           <xsl:attribute name="href">
@@ -102,9 +103,9 @@
     
   </xsl:template>
   
-  <xsl:template name="nav_AbbrLa">
-    <nav id="AbbrLa" style="display:none" class="bibl">
-      <xsl:for-each select="/*/bib:*[@rdf:about = $opera_ids]">
+  <xsl:template name="titLatAbbr">
+    <nav id="titLatAbbr" style="display:none" class="bibl">
+      <xsl:for-each select="/*/bib:*[dc:subject = '_opus']">
         <xsl:sort select="normalize-space(z:shortTitle)"/>
         <xsl:if test="normalize-space(z:shortTitle) != ''">
           <a>
@@ -130,116 +131,119 @@
     </nav>
   </xsl:template>
   
-  <xsl:template name="nav_TitGrcCMG">
-    <nav id="TitGrcCMG" style="display:none" class="bibl">
-      <xsl:for-each select="/*/bib:Memo[starts-with(normalize-space(rdf:value), '1TitGrcCMG')]">
-        <xsl:sort select="normalize-space(rdf:value)"/>
-        <xsl:variable name="about" select="@rdf:about"/>
-        <xsl:variable name="opus" select="/*/bib:*[dcterms:isReferencedBy/@rdf:resource=$about]"/>
-        <xsl:variable name="value" select="normalize-space(substring-after(., ':'))"/>
+  
+  <xsl:template name="titGrc">
+    <nav id="titGrc" style="display:none" class="bibl">
+      <xsl:for-each select="/*/bib:*[dc:subject = '_opus']">
+        <xsl:sort select="normalize-space(dc:description/z:original-title)"/>
+        <xsl:variable name="value" select="normalize-space(dc:description/z:original-title)"/>
+        <xsl:if test="$value != ''">
           <a>
             <xsl:attribute name="href">
               <xsl:text>#</xsl:text>
-              <xsl:apply-templates select="$opus" mode="id"/>
+              <xsl:apply-templates select="." mode="id"/>
             </xsl:attribute>
             <xsl:attribute name="title">
               <xsl:value-of select="$value"/>
             </xsl:attribute>
             <em>
               <xsl:value-of select="$value"/>
-              <xsl:text> </xsl:text>
             </em>
+            <xsl:text> </xsl:text>
             <small>
               <xsl:text>[</xsl:text>
-              <xsl:value-of select="$opus/dc:subject/dcterms:LCC/rdf:value"/>
+              <xsl:value-of select="dc:subject/dcterms:LCC/rdf:value"/>
               <xsl:text>]</xsl:text>
             </small>
           </a>
+        </xsl:if>
       </xsl:for-each>
     </nav>
   </xsl:template>
   
-  <xsl:template name="nav_TitFrBM">
-    <nav id="TitFrBM" style="display:none" class="bibl">
-      <xsl:for-each select="/*/bib:Memo[starts-with(normalize-space(rdf:value), '2TitFrBM')]">
-        <xsl:sort select="translate(normalize-space(rdf:value), $idfrom, $idto)"/>
-        <xsl:variable name="about" select="@rdf:about"/>
-        <xsl:variable name="opus" select="/*/bib:*[dcterms:isReferencedBy/@rdf:resource=$about]"/>
-        <xsl:variable name="value" select="normalize-space(substring-after(., ':'))"/>
-        <a>
-          <xsl:attribute name="href">
-            <xsl:text>#</xsl:text>
-            <xsl:apply-templates select="$opus" mode="id"/>
-          </xsl:attribute>
-          <xsl:attribute name="title">
-            <xsl:value-of select="$value"/>
-          </xsl:attribute>
-          <em>
-            <xsl:value-of select="$value"/>
+  <xsl:template name="titFra">
+    <nav id="titFra" style="display:none" class="bibl">
+      <xsl:for-each select="/*/bib:*[dc:subject = '_opus']">
+        <xsl:sort select="normalize-space(dc:description/z:french-title)"/>
+        <xsl:variable name="value" select="normalize-space(dc:description/z:french-title)"/>
+        <xsl:if test="$value != ''">
+          <a>
+            <xsl:attribute name="href">
+              <xsl:text>#</xsl:text>
+              <xsl:apply-templates select="." mode="id"/>
+            </xsl:attribute>
+            <xsl:attribute name="title">
+              <xsl:value-of select="$value"/>
+            </xsl:attribute>
+            <em>
+              <xsl:value-of select="$value"/>
+            </em>
             <xsl:text> </xsl:text>
-          </em>
-          <small>
-            <xsl:text>[</xsl:text>
-            <xsl:value-of select="$opus/dc:subject/dcterms:LCC/rdf:value"/>
-            <xsl:text>]</xsl:text>
-          </small>
-        </a>
+            <small>
+              <xsl:text>[</xsl:text>
+              <xsl:value-of select="dc:subject/dcterms:LCC/rdf:value"/>
+              <xsl:text>]</xsl:text>
+            </small>
+          </a>
+        </xsl:if>
       </xsl:for-each>
     </nav>
   </xsl:template>
   
-  <xsl:template name="nav_TitEnCGT">
-    <nav id="TitEnCGT" style="display:none" class="bibl">
-      <xsl:for-each select="/*/bib:Memo[starts-with(normalize-space(rdf:value), '3TitEnCGT')]">
-        <xsl:sort select="normalize-space(rdf:value)"/>
-        <xsl:variable name="about" select="@rdf:about"/>
-        <xsl:variable name="opus" select="/*/bib:*[dcterms:isReferencedBy/@rdf:resource=$about]"/>
-        <a>
-          <xsl:attribute name="href">
-            <xsl:text>#</xsl:text>
-            <xsl:apply-templates select="$opus" mode="id"/>
-          </xsl:attribute>
-          <xsl:attribute name="title">
-            <xsl:value-of select="normalize-space($opus/dc:title)"/>
-          </xsl:attribute>
-          <em>
-            <xsl:value-of select="normalize-space(substring-after(., ':'))"/>
+  <xsl:template name="titEng">
+    <nav id="titEng" style="display:none" class="bibl">
+      <xsl:for-each select="/*/bib:*[dc:subject = '_opus']">
+        <xsl:sort select="normalize-space(dc:description/z:english-title)"/>
+        <xsl:variable name="value" select="normalize-space(dc:description/z:english-title)"/>
+        <xsl:if test="$value != ''">
+          <a>
+            <xsl:attribute name="href">
+              <xsl:text>#</xsl:text>
+              <xsl:apply-templates select="." mode="id"/>
+            </xsl:attribute>
+            <xsl:attribute name="title">
+              <xsl:value-of select="$value"/>
+            </xsl:attribute>
+            <em>
+              <xsl:value-of select="$value"/>
+            </em>
             <xsl:text> </xsl:text>
-          </em>
-          <small>
-            <xsl:text>[</xsl:text>
-            <xsl:value-of select="$opus/dc:subject/dcterms:LCC/rdf:value"/>
-            <xsl:text>]</xsl:text>
-          </small>
-        </a>
+            <small>
+              <xsl:text>[</xsl:text>
+              <xsl:value-of select="dc:subject/dcterms:LCC/rdf:value"/>
+              <xsl:text>]</xsl:text>
+            </small>
+          </a>
+        </xsl:if>
       </xsl:for-each>
     </nav>
   </xsl:template>
   
-  <xsl:template name="nav_AbbrEnCGT">
-    <nav id="AbbrEnCGT" style="display:none" class="bibl">
-      <xsl:for-each select="/*/bib:Memo[starts-with(normalize-space(rdf:value), '4AbbrEnCGT')]">
-        <xsl:sort select="normalize-space(rdf:value)"/>
-        <xsl:variable name="about" select="@rdf:about"/>
-        <xsl:variable name="opus" select="/*/bib:*[dcterms:isReferencedBy/@rdf:resource=$about]"/>
-        <a>
-          <xsl:attribute name="href">
-            <xsl:text>#</xsl:text>
-            <xsl:apply-templates select="$opus" mode="id"/>
-          </xsl:attribute>
-          <xsl:attribute name="title">
-            <xsl:value-of select="normalize-space($opus/dc:title)"/>
-          </xsl:attribute>
-          <em>
-            <xsl:value-of select="normalize-space(substring-after(., ':'))"/>
+  <xsl:template name="titEngAbbr">
+    <nav id="titEngAbbr" style="display:none" class="bibl">
+      <xsl:for-each select="/*/bib:*[dc:subject = '_opus']">
+        <xsl:sort select="normalize-space(dc:description/z:english-short-title)"/>
+        <xsl:variable name="value" select="normalize-space(dc:description/z:english-short-title)"/>
+        <xsl:if test="$value != ''">
+          <a>
+            <xsl:attribute name="href">
+              <xsl:text>#</xsl:text>
+              <xsl:apply-templates select="." mode="id"/>
+            </xsl:attribute>
+            <xsl:attribute name="title">
+              <xsl:value-of select="$value"/>
+            </xsl:attribute>
+            <em>
+              <xsl:value-of select="$value"/>
+            </em>
             <xsl:text> </xsl:text>
-          </em>
-          <small>
-            <xsl:text>[</xsl:text>
-            <xsl:value-of select="$opus/dc:subject/dcterms:LCC/rdf:value"/>
-            <xsl:text>]</xsl:text>
-          </small>
-        </a>
+            <small>
+              <xsl:text>[</xsl:text>
+              <xsl:value-of select="dc:subject/dcterms:LCC/rdf:value"/>
+              <xsl:text>]</xsl:text>
+            </small>
+          </a>
+        </xsl:if>
       </xsl:for-each>
     </nav>
   </xsl:template>
