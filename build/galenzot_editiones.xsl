@@ -43,7 +43,8 @@
       <xsl:call-template name="id"/>
     </xsl:variable>
     <xsl:variable name="fichtner_no" select="normalize-space(dc:subject/dcterms:LCC/rdf:value)"/>
-    <xsl:variable name="url">
+    <xsl:variable name="url" select="dc:identifier/dcterms:URI/rdf:value"/>
+    <!-- Legacy
       <xsl:for-each select="key('about', link:link/@rdf:resource)/dc:identifier">
         <xsl:variable name="str" select="normalize-space(.)"/>
         <xsl:choose>
@@ -52,7 +53,7 @@
           </xsl:when>
         </xsl:choose>
       </xsl:for-each>
-    </xsl:variable>
+    -->
     <section id="{$id}">
       <xsl:call-template name="class">
         <xsl:with-param name="class">editio</xsl:with-param>
@@ -99,6 +100,7 @@
           <xsl:value-of select="$scope"/>
         </span>
         <xsl:text>.</xsl:text>
+        <xsl:call-template name="urn-editio"/>
       </h1>
       
     </section>

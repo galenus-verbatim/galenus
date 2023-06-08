@@ -107,6 +107,7 @@ class Galenus
         } else {
             return; // OK
         }
+
         Log::info('Generate resources from Zotero rdf export ' . $rdf_file);
         // normalize xml of html oddiities
         $xml = self::zotero_xmlnorm($rdf_file);
@@ -120,7 +121,7 @@ class Galenus
         );
 
         Verbatim::$pdo->beginTransaction();
-        $re = '@<section class="verbatim" id="([^"]+)">.*?</section>@s';
+        $re = '@<section id="([^"]+)"[^>]*>.*?</section>@s';
         preg_match_all($re, $editiones, $matches);
 
         $cts = $matches[1];

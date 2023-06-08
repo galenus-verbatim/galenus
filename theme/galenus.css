@@ -268,6 +268,10 @@ section.opus div.titlesh section.opus div.title {
     font-style: italic;
 }
 
+span.urn {
+    white-space: nowrap;
+}
+
 .AbbrEnCGT::before {
     content: '(CGT) ';
 }

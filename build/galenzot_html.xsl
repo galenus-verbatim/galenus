@@ -183,6 +183,13 @@
         <xsl:text> </xsl:text>
         <xsl:call-template name="gallat_link"/>
       </h1>
+      <xsl:variable name="urn" select="substring-after(dc:identifier/dcterms:URI/rdf:value, 'urn:cts:')"/>
+      <xsl:if test="$urn != ''">
+        <div class="urn">
+          <xsl:text>urn:cts:</xsl:text>
+          <xsl:value-of select="$urn"/>
+        </div>
+      </xsl:if>
       <xsl:variable name="tituli">
         <xsl:call-template name="opus_tituli"/>
       </xsl:variable>
@@ -239,7 +246,7 @@
   <!-- Alt titles in extra field -->
   <xsl:template match="z:original-title | z:french-title | z:english-title">
     <xsl:if test="normalize-space(.) != ''">
-      <div class="titletr {name()}">
+      <div class="titletr {local-name()}">
         <em class="title">
           <xsl:value-of select="." disable-output-escaping="yes"/>
         </em>
@@ -256,13 +263,6 @@
   
   <!-- List alternative titles of an opus -->
   <xsl:template name="opus_tituli">
-    <xsl:variable name="urn" select="substring-after(dc:identifier/dcterms:URI/rdf:value, 'urn:cts:')"/>
-    <xsl:if test="$urn != ''">
-      <div class="urn">
-        <xsl:text>urn:cts:</xsl:text>
-        <xsl:value-of select="$urn"/>
-      </div>
-    </xsl:if>
     <xsl:variable name="short" select="z:shortTitle"/>
     <xsl:variable name="notes" select="key('about', dcterms:isReferencedBy/@rdf:resource)"/>
     <xsl:apply-templates select="dc:description/z:original-title"/>
@@ -350,9 +350,13 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
       <xsl:apply-templates select="."/>
     </xsl:for-each>
     <xsl:text>.</xsl:text>
-    <xsl:text> </xsl:text>
-    <xsl:variable name="urn" select="substring-after($url, 'urn:cts:greekLit:')"/>
+    <xsl:call-template name="urn-editio"/>
+  </xsl:template>
+
+  <xsl:template name="urn-editio">
+    <xsl:variable name="urn" select="substring-after(dc:identifier/dcterms:URI/rdf:value, 'urn:cts:greekLit:')"/>
     <xsl:if test="$urn != ''">
+      <xsl:text> </xsl:text>
       <span class="urn">
         <xsl:text>urn:cts:greekLit:</xsl:text>
         <xsl:choose>
@@ -373,7 +377,7 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
           </xsl:otherwise>
         </xsl:choose>
       </span>
-    </xsl:if>
+    </xsl:if>    
   </xsl:template>
   
   <xsl:template name="editors">
