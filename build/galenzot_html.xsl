@@ -154,11 +154,13 @@
       1. loop on each <link:link> element
       2. test url by prefix
     -->
-    <section class="opus">
+    <section>
       <xsl:attribute name="id">
         <xsl:call-template name="id"/>
       </xsl:attribute>
-      <xsl:call-template name="class"/>
+      <xsl:call-template name="class">
+        <xsl:with-param name="class">opus</xsl:with-param>
+      </xsl:call-template>
       <h1>
         <xsl:call-template name="authors"/>
         <em class="title">
@@ -291,7 +293,14 @@
 Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:greekLit:tlg0057.tlg001.1st1K-grc2.
   -->
   <xsl:template match="bib:*" mode="short">
-    <xsl:variable name="url" select="dc:identifier/dcterms:URI/rdf:value"/>
+    <xsl:variable name="url">
+      <xsl:choose>
+        <xsl:when test="dc:subject = '_legendum'"/>
+        <xsl:otherwise>
+          <xsl:value-of select="dc:identifier/dcterms:URI/rdf:value"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
     <xsl:for-each select="dc:title">
       <xsl:choose>
         <xsl:when test="$url != ''">
