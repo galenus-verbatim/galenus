@@ -119,7 +119,6 @@ class Galenus
             $dom
         );
 
-
         Verbatim::$pdo->beginTransaction();
         $re = '@<section class="verbatim" id="([^"]+)">.*?</section>@s';
         preg_match_all($re, $editiones, $matches);

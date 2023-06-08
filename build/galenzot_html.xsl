@@ -256,10 +256,13 @@
   
   <!-- List alternative titles of an opus -->
   <xsl:template name="opus_tituli">
-    <div class="urn">
-      <xsl:text>urn:</xsl:text>
-      <xsl:value-of select="substring-after(dc:identifier/dcterms:URI/rdf:value, 'urn:')"/>
-    </div>
+    <xsl:variable name="urn" select="substring-after(dc:identifier/dcterms:URI/rdf:value, 'urn:cts:')"/>
+    <xsl:if test="$urn != ''">
+      <div class="urn">
+        <xsl:text>urn:cts:</xsl:text>
+        <xsl:value-of select="$urn"/>
+      </div>
+    </xsl:if>
     <xsl:variable name="short" select="z:shortTitle"/>
     <xsl:variable name="notes" select="key('about', dcterms:isReferencedBy/@rdf:resource)"/>
     <xsl:apply-templates select="dc:description/z:original-title"/>
@@ -348,10 +351,27 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
     </xsl:for-each>
     <xsl:text>.</xsl:text>
     <xsl:text> </xsl:text>
-    <xsl:if test="contains($url, 'urn:cts:greekLit:')">
+    <xsl:variable name="urn" select="substring-after($url, 'urn:cts:greekLit:')"/>
+    <xsl:if test="$urn != ''">
       <span class="urn">
         <xsl:text>urn:cts:greekLit:</xsl:text>
-        <xsl:value-of select="substring-after($url, 'urn:cts:greekLit:')"/>
+        <xsl:choose>
+          <xsl:when test="contains($urn, '.1st1K')">
+            <xsl:value-of select="substring-before($urn, '.1st1K')"/>
+            <xsl:text>.</xsl:text>
+            <b class="publisher">1st1K</b>
+            <xsl:value-of select="substring-after($urn, '.1st1K')"/>
+          </xsl:when>
+          <xsl:when test="contains($urn, '.verbatim')">
+            <xsl:value-of select="substring-before($urn, '.verbatim')"/>
+            <xsl:text>.</xsl:text>
+            <b class="publisher">verbatim</b>
+            <xsl:value-of select="substring-after($urn, '.verbatim')"/>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="$urn"/>
+          </xsl:otherwise>
+        </xsl:choose>
       </span>
     </xsl:if>
   </xsl:template>
