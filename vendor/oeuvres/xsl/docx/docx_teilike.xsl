@@ -613,11 +613,17 @@ Seen
   <xsl:template match="w:fldChar"/>
   <xsl:template match="w:instrText">
     <xsl:variable name="text" select="normalize-space(.)"/>
-    <field>
-      <xsl:attribute name="name">
-        <xsl:value-of select="substring-before(concat($text, ' '), ' ')"/>
-      </xsl:attribute>
-      <xsl:value-of select="substring-before(substring-after($text, '&quot;'), '&quot;')"/>
-    </field>
+    <xsl:choose>
+      <!-- Is it bad ? -->
+      <xsl:when test="$text = ''"/>
+      <xsl:otherwise>
+        <field>
+          <xsl:attribute name="name">
+            <xsl:value-of select="substring-before(concat($text, ' '), ' ')"/>
+          </xsl:attribute>
+          <xsl:value-of select="substring-before(substring-after($text, '&quot;'), '&quot;')"/>
+        </field>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 </xsl:transform>

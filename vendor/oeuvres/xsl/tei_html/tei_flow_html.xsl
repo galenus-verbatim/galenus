@@ -1537,8 +1537,13 @@ Tables
       <!-- bad link pb, seen in notes -->
       <xsl:when test="normalize-space($html) = ''"/>
       <xsl:otherwise>
+        <xsl:variable name="class">
+          <xsl:if test="starts-with(@target, 'http')">external</xsl:if>
+        </xsl:variable>
         <a>
-          <xsl:call-template name="atts"/>
+          <xsl:call-template name="atts">
+            <xsl:with-param name="class" select="$class"/>
+          </xsl:call-template>
           <xsl:copy-of select="$html"/>
         </a>
       </xsl:otherwise>
