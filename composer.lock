@@ -117,12 +117,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/galenus-verbatim/verbatim.git",
-                "reference": "9c8a5a30e625ab05d5628c53b80816e668a7981b"
+                "reference": "3d8089811324af6f5e5465fb2dbe065816df98fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/galenus-verbatim/verbatim/zipball/9c8a5a30e625ab05d5628c53b80816e668a7981b",
-                "reference": "9c8a5a30e625ab05d5628c53b80816e668a7981b",
+                "url": "https://api.github.com/repos/galenus-verbatim/verbatim/zipball/3d8089811324af6f5e5465fb2dbe065816df98fa",
+                "reference": "3d8089811324af6f5e5465fb2dbe065816df98fa",
                 "shasum": ""
             },
             "require": {
@@ -162,7 +162,7 @@
                 "issues": "https://github.com/galenus-verbatim/verbatim/issues",
                 "source": "https://github.com/galenus-verbatim/verbatim/tree/main"
             },
-            "time": "2023-05-23T23:14:32+00:00"
+            "time": "2023-06-08T16:28:55+00:00"
         },
         {
             "name": "oeuvres/kit",
@@ -226,12 +226,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oeuvres/teinte_php.git",
-                "reference": "7a6f477fec08c01f6412d8225ae5eddced3d7345"
+                "reference": "b478bcf7e5671d14461aec77b5d7f847c1be978c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oeuvres/teinte_php/zipball/7a6f477fec08c01f6412d8225ae5eddced3d7345",
-                "reference": "7a6f477fec08c01f6412d8225ae5eddced3d7345",
+                "url": "https://api.github.com/repos/oeuvres/teinte_php/zipball/b478bcf7e5671d14461aec77b5d7f847c1be978c",
+                "reference": "b478bcf7e5671d14461aec77b5d7f847c1be978c",
                 "shasum": ""
             },
             "require": {
@@ -266,7 +266,7 @@
                 "issues": "https://github.com/oeuvres/teinte_php/issues",
                 "source": "https://github.com/oeuvres/teinte_php/tree/main"
             },
-            "time": "2023-04-14T12:29:15+00:00"
+            "time": "2023-06-07T20:15:15+00:00"
         },
         {
             "name": "oeuvres/xsl",
@@ -274,12 +274,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oeuvres/teinte_xsl.git",
-                "reference": "285868b8a6720c837798561bb21c3ab0a3320dbd"
+                "reference": "70ff9e3f2269bd07e3635749adf4d49f2bacc167"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oeuvres/teinte_xsl/zipball/285868b8a6720c837798561bb21c3ab0a3320dbd",
-                "reference": "285868b8a6720c837798561bb21c3ab0a3320dbd",
+                "url": "https://api.github.com/repos/oeuvres/teinte_xsl/zipball/70ff9e3f2269bd07e3635749adf4d49f2bacc167",
+                "reference": "70ff9e3f2269bd07e3635749adf4d49f2bacc167",
                 "shasum": ""
             },
             "default-branch": true,
@@ -304,7 +304,7 @@
                 "issues": "https://github.com/oeuvres/teinte_xsl/issues",
                 "source": "https://github.com/oeuvres/teinte_xsl/tree/main"
             },
-            "time": "2023-05-05T12:05:02+00:00"
+            "time": "2023-06-08T14:28:18+00:00"
         },
         {
             "name": "psr/log",

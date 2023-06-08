@@ -146,6 +146,27 @@ if (div) {
             break;
         }
     } while (false)
+
+
+    /** Click on prev next image */
+    function imagoViso(pdiff)
+    {
+        if (pageViewer.spanLast) pageViewer.spanLast.classList.remove("selected");
+        image.pno = pad(parseInt(image.pno) + pdiff, 4);
+        image.src = image.dat['url'].replace('%%', image.pno);
+        pageViewer.update();
+        pageViewer.resize();
+    }
+
+    let but = document.getElementById('imago_ante');
+    but.onclick = function() {
+        imagoViso(-1);
+    }
+    but = document.getElementById('imago_post');
+    but.onclick = function() {
+        imagoViso(+1);
+    }
+
     // https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:0038/full/max/0/default.jpg
     function wear(css, dat) {
         if (!dat) return;
@@ -194,17 +215,20 @@ if (div) {
                 if (pageViewer.spanLast) pageViewer.spanLast.classList.remove("selected");
                 this.classList.add("selected");
                 pageViewer.spanLast = this;
+                image.pno = pno;
+                image.dat = dat;
                 image.src = url;
                 let title = '';
                 if (dat.title) title = text + ' source : ' + dat.title.replace('%%', pno);
                 image.alt = title;
-                const header = document.getElementById('image_header');
+                const header = document.getElementById('imago_titulus');
                 if (header) header.innerHTML = title;
                 pageViewer.update();
                 pageViewer.resize();
             }
         }
     }
+
     const span = window.document.getElementById(id);
     if (span) {
         span.scrollIntoView({ block: "center" });

@@ -188,18 +188,22 @@ input[type=radio] {
     body {
         font-size: 14px;
     }
+    /*
     .container {
         max-width: 900px;
     }
+    */
 }
 
 @media (min-width: 1200px) {
     body {
         font-size: 16px;
     }
+    /*
     .container {
         max-width: 1100px;
     }
+    */
 }
 
 @media (min-width: 1500px) {
@@ -413,11 +417,15 @@ input[type=radio]:checked {
 }
 
 nav.tabs a.tab {
-    display: block;
+    display: flex;
     text-decoration: none;
     padding: 0.2rem 0.5rem 0.7rem 0.5rem;
     text-align: center;
     width: 100%;
+}
+
+a.tab > span {
+    text-align: center;
 }
 
 nav.tabs form.selected,
@@ -793,9 +801,32 @@ div.reader {
 }
 
 #pagimage header {
+    display: flex;
     background-color: var(--bg3);
+    text-align: center;
+}
+
+#pagimage header > div {
     padding: 0.5rem 1rem;
-    text-align: right;
+}
+
+#pagimage header > .ante,
+#pagimage header > .post {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--link);
+    cursor: pointer;
+}
+
+#pagimage header > .ante:hover,
+#pagimage header > .post:hover {
+    background-color: var(--bg);
 }
 
 #viewcont>img {

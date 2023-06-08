@@ -66,7 +66,8 @@ $lang = Route::getAtt("lang");
             ?>
             <?= Route::tab(I18n::_('template.de_href'), I18n::_('template.de')) ?>
             <a class="tab zotero" target="_blank" rel="noopener" href="https://www.zotero.org/groups/4571007/galenus-verbatim/library">
-                <span>Ad bibliothecam</span>
+                <span>Ad
+                    <br/>bibliothecam</span>
                 <img height="40px" src="<?= Route::home_href() ?>theme/logo_zotero.png"/>
             </a>
         </nav>

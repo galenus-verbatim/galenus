@@ -274,7 +274,11 @@ echo '
 </div>';
     echo '
     <div id="pagimage">
-        <header id="image_header">Titre image</header>
+        <header id="imago_nav">
+            <span id="imago_ante" class="ante" href="#" class="entree"><div>⟨</div></span>
+            <div id="imago_titulus">Titre image</div>
+            <span id="imago_post" class="post" href="#" class="entree"><div>⟩</div></span>
+        </header>
         <div>
             <div id="viewcont">
                 <img id="image"/>

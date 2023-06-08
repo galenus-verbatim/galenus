@@ -1184,7 +1184,7 @@ Could be correct for a text only version in <xsl:value-of select=""/>
     <xsl:text> </xsl:text>
   </xsl:template>
   <xsl:template match="text()" mode="title">
-    <xsl:variable name="text" select="translate(., ' ', '')"/>
+    <xsl:variable name="text" select="translate(., '', '')"/>
     <xsl:if test="translate(substring($text, 1,1), concat(' ', $lf, $cr, $tab), '') = ''">
       <xsl:text> </xsl:text>
     </xsl:if>
