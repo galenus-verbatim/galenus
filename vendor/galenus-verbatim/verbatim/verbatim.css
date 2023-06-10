@@ -599,8 +599,8 @@ nav.toc,
 div.toc {
     background-color: var(--bg3);
     color: var(--bg2);
-    padding: 1em 0 10vh 1em;
-    font-size: 85%;
+    padding: 1em 0 10vh 0;
+    font-size: x-small;
 }
 
 nav>a,
@@ -779,7 +779,7 @@ div.reader {
     top: 60px;
     height: calc(100vh - 60px);
     overflow: auto;
-    min-width: 20ex;
+    min-width: 10rem;
 }
 
 .reader .doc {
