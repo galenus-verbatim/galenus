@@ -1,12 +1,8 @@
+# tmp files
 *.log
-_*.php
-!_config.php
-*.db
 .~*
 ~$*
-html_cache/
-
-config.php
+~*.tmp
 
 # Mac ignore 
 .DS_Store
@@ -35,5 +31,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# app specific
+html_cache/
+!_config.php
+_*.php
+*.db
+config.php
 sitemap.xml
 Galenus-verbatim.rdf.xml

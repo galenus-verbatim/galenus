@@ -21,6 +21,7 @@ $lang = Route::getAtt("lang");
         <title><?= Route::title('Galenus Verbatim') ?></title>
         <link rel="icon" href="data:;base64,iVBORw0KGgo="/>
         <link  href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="<?= Route::home_href() ?>theme/teinte.tree.css" />
         <link rel="stylesheet" href="<?= Route::home_href() ?>vendor/galenus-verbatim/verbatim/verbatim.css"/>
         <link rel="stylesheet" href="<?= Route::home_href() ?>theme/galenus.css"/>
     </head>
@@ -91,7 +92,8 @@ $lang = Route::getAtt("lang");
         </nav>
     </footer>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="<?= Route::home_href() ?>theme/teinte.tree.js">//</script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.js"></script>
         <script src="<?= Route::home_href() ?>theme/galenus.js"></script>
     </body>
 </html>
