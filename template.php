@@ -50,7 +50,7 @@ $lang = Route::getAtt("lang");
                     value="<?= htmlspecialchars($cts) ?>"
                 />
             </form>
-            <?= Route::tab('', I18n::_('template.opera')) ?>
+            <?= Route::tab('', '[2306] ' . I18n::_('template.opera')) ?>
             <?php 
             if ($page == 'tlg') {
                 // if doc visible, add a buttoon search in doc search in doc
