@@ -159,12 +159,16 @@ if (div) {
     }
 
     let but = document.getElementById('imago_ante');
-    but.onclick = function() {
-        imagoViso(-1);
+    if (but) {
+        but.onclick = function() {
+            imagoViso(-1);
+        }
     }
     but = document.getElementById('imago_post');
-    but.onclick = function() {
-        imagoViso(+1);
+    if (but) {
+            but.onclick = function() {
+            imagoViso(+1);
+        }
     }
 
     // https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:0038/full/max/0/default.jpg
@@ -292,6 +296,7 @@ if (div) {
 (function() {
     
     const main = document.querySelector('main');
+    if (!main) return;
     main.addEventListener('copy', (event) => {
         helper = document.createElement("div");
         const selection = window.getSelection();
