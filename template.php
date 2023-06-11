@@ -67,7 +67,7 @@ $lang = Route::getAtt("lang");
             
             ?>
             <?= Route::tab(I18n::_('template.de_href'), I18n::_('template.de')) ?>
-            <?= Route::tab('ostium_fr', 'Actualités') ?>
+            <?= Route::tab('novitates_fr', 'Actualités') ?>
 
             <a class="tab zotero" target="_blank" rel="noopener" href="https://www.zotero.org/groups/4571007/galenus-verbatim/library">
                 <span>Ad
