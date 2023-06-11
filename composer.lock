@@ -274,12 +274,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oeuvres/teinte_xsl.git",
-                "reference": "9c5e8808d23a29a80498b8412f04aa198e025cb6"
+                "reference": "9c48aaf8244073c6a3b6901d2cd3b0b48510c6c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oeuvres/teinte_xsl/zipball/9c5e8808d23a29a80498b8412f04aa198e025cb6",
-                "reference": "9c5e8808d23a29a80498b8412f04aa198e025cb6",
+                "url": "https://api.github.com/repos/oeuvres/teinte_xsl/zipball/9c48aaf8244073c6a3b6901d2cd3b0b48510c6c4",
+                "reference": "9c48aaf8244073c6a3b6901d2cd3b0b48510c6c4",
                 "shasum": ""
             },
             "default-branch": true,
@@ -304,7 +304,7 @@
                 "issues": "https://github.com/oeuvres/teinte_xsl/issues",
                 "source": "https://github.com/oeuvres/teinte_xsl/tree/main"
             },
-            "time": "2023-06-08T17:30:29+00:00"
+            "time": "2023-06-11T14:33:58+00:00"
         },
         {
             "name": "psr/log",

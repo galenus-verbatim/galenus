@@ -370,7 +370,9 @@ Seen
         <xsl:when test="$val1 != ''">
           <xsl:value-of select="$val1"/>
         </xsl:when>
-        <xsl:otherwise>true</xsl:otherwise>
+        <xsl:when test="w:rPr/w:b">true</xsl:when>
+        <xsl:when test="$val2 = '0' or $val2 ='false' or $val2 = 'off'"/>
+        <xsl:otherwise/>
       </xsl:choose>
     </xsl:variable>
     
@@ -427,6 +429,7 @@ Seen
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
+
     <xsl:variable name="xml4">
       <xsl:choose>
         <xsl:when test="$u = ''">
@@ -439,6 +442,21 @@ Seen
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
+
+    <xsl:variable name="xml5">
+      <xsl:choose>
+        <xsl:when test="$b = ''">
+          <xsl:copy-of select="$xml4"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <b>
+            <xsl:copy-of select="$xml4"/>
+          </b>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    
+
     <xsl:variable name="el">
       <xsl:choose>
         <!-- Calibre 0 Text -->
@@ -446,22 +464,22 @@ Seen
       </xsl:choose>
       <xsl:value-of select="$class"/>
     </xsl:variable>
-    <xsl:variable name="xml5">
+    <xsl:variable name="xml10">
       <xsl:choose>
         <xsl:when test="$class = ''">
-          <xsl:copy-of select="$xml4"/>
+          <xsl:copy-of select="$xml5"/>
         </xsl:when>
         <!-- redundant -->
         <xsl:when test="ancestor::w:hyperlink">
-          <xsl:copy-of select="$xml4"/>
+          <xsl:copy-of select="$xml5"/>
         </xsl:when>
         <xsl:when test="$teinte_c/@element != ''">
           <xsl:element name="{$teinte_c/@element}">
-            <xsl:copy-of select="$xml4"/>
+            <xsl:copy-of select="$xml5"/>
           </xsl:element>
         </xsl:when>
         <xsl:when test="key('teinte_0', $class)">
-          <xsl:copy-of select="$xml4"/>
+          <xsl:copy-of select="$xml5"/>
         </xsl:when>
         <!-- auto style Calibre -->
         <xsl:when test="substring($el, 1, 1) = '_' and $w:style/w:rPr">
@@ -469,31 +487,18 @@ Seen
           <xsl:choose>
             <xsl:when test="$val = '' or $val = '0' or $val ='false' or $val = 'off'">
               <seg rend="{$class}">
-                <xsl:copy-of select="$xml4"/>
+                <xsl:copy-of select="$xml5"/>
               </seg>
             </xsl:when>
             <xsl:otherwise>
               <i>
-                <xsl:copy-of select="$xml4"/>
+                <xsl:copy-of select="$xml5"/>
               </i>
             </xsl:otherwise>
           </xsl:choose>
         </xsl:when>
         <xsl:when test="$class != ''">
           <xsl:element name="{$el}">
-            <xsl:copy-of select="$xml4"/>
-          </xsl:element>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:copy-of select="$xml4"/>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <!-- Background level -->
-    <xsl:variable name="xml6">
-      <xsl:choose>
-        <xsl:when test="$hi != ''">
-          <xsl:element name="bg_{$hi}">
             <xsl:copy-of select="$xml5"/>
           </xsl:element>
         </xsl:when>
@@ -502,7 +507,20 @@ Seen
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:copy-of select="$xml6"/>
+    <!-- Background level -->
+    <xsl:variable name="xml11">
+      <xsl:choose>
+        <xsl:when test="$hi != ''">
+          <xsl:element name="bg_{$hi}">
+            <xsl:copy-of select="$xml10"/>
+          </xsl:element>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:copy-of select="$xml10"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:copy-of select="$xml11"/>
   </xsl:template>
   <xsl:template match="w:sectPr"/>
   <!-- spaces -->

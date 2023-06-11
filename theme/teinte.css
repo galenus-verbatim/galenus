@@ -23,8 +23,9 @@ body {
 html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    background: #FFFFFF;
 }
+
+
 
 audio,
 canvas,
@@ -105,7 +106,6 @@ div.biblverse span.lb::after,
     -ms-user-select: none;
     user-select: none;
 }
-
 
 /* html5 default, in alphabetic order */
 

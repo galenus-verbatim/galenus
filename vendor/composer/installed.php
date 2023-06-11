@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '368276064b825a797e62e24cb7d478e220bffba9',
+        'reference' => '6c499a521c435d20e845837682274057d478782b',
         'name' => 'galenus-verbatim/teinte_galenus',
         'dev' => true,
     ),
@@ -36,7 +36,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '368276064b825a797e62e24cb7d478e220bffba9',
+            'reference' => '6c499a521c435d20e845837682274057d478782b',
             'dev_requirement' => false,
         ),
         'galenus-verbatim/verbatim' => array(
@@ -80,7 +80,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => '9c5e8808d23a29a80498b8412f04aa198e025cb6',
+            'reference' => '9c48aaf8244073c6a3b6901d2cd3b0b48510c6c4',
             'dev_requirement' => false,
         ),
         'psr/log' => array(
