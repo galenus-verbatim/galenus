@@ -1122,3 +1122,7 @@ a.external:hover::after {
     background-position: -200px 0;
     content: "Image height";
 }
+
+label.head {
+    font-weight: bold;
+}
