@@ -1382,9 +1382,6 @@ Tables
       <xsl:call-template name="tei:isInline"/>
     </xsl:variable>
     <xsl:choose>
-      <xsl:when test="$inline = ''">
-        <br class="space {@unit}{@quantity}"/>
-      </xsl:when>
       <xsl:when test="text() != ''">
         <samp>
           <xsl:call-template name="atts"/>
@@ -1399,6 +1396,9 @@ Tables
           <xsl:call-template name="atts"/>
           <xsl:value-of select="substring($nbsp, 1, @quantity)"/>
         </samp>
+      </xsl:when>
+      <xsl:when test="$inline = ''">
+        <br class="space {@unit}{@quantity}"/>
       </xsl:when>
       <xsl:otherwise>
         <samp class="space" style="width:2em;">    </samp>
