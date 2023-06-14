@@ -126,9 +126,9 @@ class Galenus
 
         $cts = $matches[1];
         $bibl = $matches[0];
-        $sql = "UPDATE editio SET bibl = ? WHERE cts = ?;";
+        $sql = "UPDATE edition SET bibl = ? WHERE cts = ?;";
         $ins = Verbatim::$pdo->prepare($sql);
-        $sel = Verbatim::$pdo->prepare("SELECT COUNT(*) FROM editio WHERE cts = ?;");
+        $sel = Verbatim::$pdo->prepare("SELECT COUNT(*) FROM edition WHERE cts = ?;");
 
         for ($i = 0, $max = count($bibl); $i < $max; $i++) {
             $sel->execute(array($cts[$i]));

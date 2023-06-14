@@ -6,7 +6,7 @@
  */
 require_once(dirname(__DIR__) . "/Galenus.php");
 
-use Oeuvres\Kit\{Http, I18n};
+use Oeuvres\Kit\{Http, I18n, Route};
 use GalenusVerbatim\Verbatim\{Verbatim};
 
 function roman2int($str){
@@ -30,36 +30,36 @@ if (!$kuhn) return;
 // XVIII A, 18 a
 $kuhn = preg_replace("@^(18|XVIII|17|XVII) +([aAbB])@", "$1$2", $kuhn);
 
-list($volumen, $pagina, $linea) = array_merge(preg_split("@[\., ]+@", $kuhn), array(null, null, null));
+list($volume, $page, $line) = array_merge(preg_split("@[\., ]+@", $kuhn), array(null, null, null));
 // volume
-$volab = strtolower(substr($volumen, -1));
+$volab = strtolower(substr($volume, -1));
 if ($volab == 'a' || $volab == 'b') {
-    $volumen = substr($volumen, 0, -1);
+    $volume = substr($volume, 0, -1);
 }
 else {
     $volab = '';
 }
 
-if (!is_numeric($volumen)) {
-    $volumen = roman2int($volumen);    
+if (!is_numeric($volume)) {
+    $volume = roman2int($volume);    
 }
-if (!$volumen || $volumen < 1 || $volumen > 20) {
+if (!$volume || $volume < 1 || $volume > 20) {
     return;
 } 
-$volumen = $volumen . $volab;
-// securit linea
-$linea = intval($linea);
-$pagina = intval($pagina);
+$volume = $volume . $volab;
+// securit line
+$line = intval($line);
+$page = intval($page);
 // just volume
-if ($volumen && $pagina) {
-    $sql = "SELECT cts, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? AND pagde <= ? AND pagad >= ?  ORDER BY rowid";
+if ($volume && $page) {
+    $sql = "SELECT cts, page_start, line_start, page_end, line_end FROM doc WHERE editors = 'Kühn, Karl Gottlob' AND volume = ? AND page_start <= ? AND page_end >= ?  ORDER BY rowid";
     $qCts = Verbatim::$pdo->prepare($sql);
-    $qCts->execute(array($volumen, $pagina, $pagina));
+    $qCts->execute(array($volume, $page, $page));
 }
 else {
-    $sql = "SELECT cts, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? ORDER BY rowid;";
+    $sql = "SELECT cts, page_start, line_start, page_end, line_end FROM doc WHERE editors = 'Kühn, Karl Gottlob' AND volume = ? ORDER BY rowid;";
     $qCts = Verbatim::$pdo->prepare($sql);
-    $qCts->execute(array($volumen));
+    $qCts->execute(array($volume));
 }
 
 $cts;
@@ -76,16 +76,16 @@ if (count($res) < 1) {
     http_response_code(404);
     return;
 }
-else if (count($res) == 1 || !$linea || !$pagina) {
+else if (count($res) == 1 || !$line || !$page) {
     $cts = $res[0]['cts'];
 }
 // discrim on line
 else if (count($res) == 2) {
 
-    if ($res[1]['pagde'] == $pagina && $linea >= $res[1]['linde']) {
+    if ($res[1]['page_start'] == $page && $line >= $res[1]['line_start']) {
         $cts = $res[1]['cts'];
     }
-    else if ($res[0]['pagad'] == $pagina && $linea <= $res[0]['linad']) {
+    else if ($res[0]['page_end'] == $page && $line <= $res[0]['line_end']) {
         $cts = $res[0]['cts'];
     }
     else { // data error
@@ -96,13 +96,13 @@ else { // data error
     $cts = $res[0]['cts'];
 }
 
-if ($linea) {
-    $cts .= '?kuhn=' . $volumen . '.' . $pagina . '.' . $linea;
-    $cts .= '#l' . $volumen . '.' . $pagina . "." . $linea;
+if ($line) {
+    $cts .= '?kuhn=' . $volume . '.' . $page . '.' . $line;
+    $cts .= '#l' . $volume . '.' . $page . "." . $line;
 }
-else if ($pagina) {
-    $cts .= '?kuhn=' . $volumen . '.' . $pagina;
-    $cts .= '#p' . $volumen . '.' . $pagina;
+else if ($page) {
+    $cts .= '?kuhn=' . $volume . '.' . $page;
+    $cts .= '#p' . $volume . '.' . $page;
 }
 if (Galenus::$config['win']) {
     $cts = preg_replace('@urn:@', Route::home_href() . 'urn/', $cts);

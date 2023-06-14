@@ -21,12 +21,15 @@ class Verbatim
     private static $name;
     /** File path of the base */
     private static $db_file;
+    /** Pb with win for url  */
+    private static $win;
 
     /**
      * Init static fields
      */
     static public function init()
     {
+        self::$win = (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN');
         mb_internal_encoding("UTF-8");
         self::$lat_grc = include(__DIR__ . '/lat_grc.php');
         // test needed extension
@@ -36,6 +39,25 @@ class Verbatim
                 throw new Exception($mess);
             }
         }
+    }
+
+    /**
+     * Is win ?
+     */
+    static public function win()
+    {
+        return self::$win;
+    }
+
+    /**
+     * Rewrite some links for win
+     */
+    static public function cts_href($cts)
+    {
+        $cts = ltrim($cts, ' ./');
+        $href = "./" . $cts;
+        if (self::$win) $href = Route::home_href() . str_replace('./urn:', './urn/', $href);
+        return $href;
     }
 
     /**
@@ -68,12 +90,12 @@ class Verbatim
         fwrite($write, '<?xml version="1.0" encoding="UTF-8"?>');
         fwrite($write, '
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">');
-        $sql = "SELECT clavis FROM doc ORDER BY id;";
+        $sql = "SELECT cts FROM doc ORDER BY id;";
         $q = self::$pdo->prepare($sql);
         $q->execute(array());
         while($row = $q->fetch(PDO::FETCH_ASSOC)) {
             fwrite($write, '
-    <url><loc>' . $url_base . $row['clavis'] . '</loc></url>');
+    <url><loc>' . $url_base . $row['cts'] . '</loc></url>');
         }
         fwrite($write, '
 </urlset>
@@ -240,25 +262,25 @@ class Verbatim
     /**
      * Display nav with possible freqs by chapter
      */
-    public static function nav(&$editio, &$doc, &$formids)
+    public static function nav(&$edition, &$doc, &$formids)
     {
         // http param a bit hard coded here
         $q = Http::par('q');
         $f = Http::par('f', 'lem', '/lem|orth/');
-        $clavis = $doc['clavis'];
-        if (!isset($editio['nav']) || ! $editio['nav']) return '';
+        $cts = $doc['cts'];
+        if (!isset($edition['nav']) || ! $edition['nav']) return '';
         // no word searched
         if (!count($formids)) {
-            $html = $editio['nav'];
+            $html = $edition['nav'];
             $html = preg_replace(
-                '@ href="' . $clavis . '"@',
+                '@ href="' . $cts . '"@',
                 '$1 class="selected"',
                 $html
             );
             return $html;
         }
         $in  = str_repeat('?,', count($formids) - 1) . '?';
-        $sql = "SELECT COUNT(*) FROM tok, doc WHERE $f IN ($in) AND doc = doc.id AND clavis = ?";
+        $sql = "SELECT COUNT(*) FROM tok, doc WHERE $f IN ($in) AND doc = doc.id AND cts = ?";
         $qTok =  Verbatim::$pdo->prepare($sql);
         $params = $formids;
         $i = count($params);
@@ -267,13 +289,13 @@ class Verbatim
             array(
                 '@<a href="([^"]+)">([^<]+)</a>@',
             ),
-            function ($matches) use ($clavis, $q, $qTok, $params, $i){
+            function ($matches) use ($cts, $q, $qTok, $params, $i){
                 $params[$i] = $matches[1];
                 $qTok->execute($params);
                 list($count) = $qTok->fetch();
                 $ret = '';
                 $ret .= '<a';
-                if ($matches[1] == $clavis) {
+                if ($matches[1] == $cts) {
                     $ret .= ' class="selected"';
                 }
                 $ret .= ' href="' . $matches[1] . '?q=' . $q . '"';
@@ -285,7 +307,7 @@ class Verbatim
                 $ret .= '</a>';
                 return $ret;
             },
-            $editio['nav']
+            $edition['nav']
         );
         return $html;
     }
@@ -320,21 +342,21 @@ class Verbatim
     /**
      * Build a kind of biblio record, not perfect
      */
-    static public function editio(&$editio)
+    static public function edition(&$edition)
     {
         $line = '';
-        $line .= '<span class="auctor">' . $editio['auctor'] . '</span>';
-        $line .= ', <em class="titulus">' . $editio['titulus'] . '</em>';
+        $line .= '<span class="authors">' . $edition['authors'] . '</span>';
+        $line .= ', <em class="title">' . $edition['title'] . '</em>';
         $line .= ' (';
-        $line .= 'ed. <span class="editor">' . $editio['editor'] . '</span>';
-        if (isset($editio['volumen']) && $editio['volumen']) {
-            $line .= ', <span class="volumen">vol. ' . $editio['volumen'] . '</volumen>';
+        $line .= 'ed. <span class="editors">' . $edition['editors'] . '</span>';
+        if (isset($edition['volume']) && $edition['volume']) {
+            $line .= ', <span class="volume">vol. ' . $edition['volume'] . '</span>';
         }
-        if (isset($editio['pagad']) && $editio['pagad']) {
-            $line .= ', <span class="pagina">p. ' . $editio['pagde'] . '-' . $editio['pagad'] . '</span>';
+        if (isset($editio['page_end']) && $edition['page_end']) {
+            $line .= ', <span class="page">p. ' . $editio['page_start'] . '-' . $editio['page_end'] . '</span>';
         }
-        else if (isset($editio['pagde']) && $editio['pagde']){
-            $line .= ', <span class="pagina">p. ' . $editio['pagde'] . '</span>';
+        else if (isset($editio['page_start']) && $edition['page_start']){
+            $line .= ', <span class="page">p. ' . $edition['page_start'] . '</span>';
         }
         $line .= ')';
         return $line;
@@ -346,10 +368,10 @@ class Verbatim
     static public function num(&$doc)
     {
         $num = array();
-        foreach (array('liber', 'capitulum', 'sectio') as $clavis) {
-            if (!isset($doc[$clavis])) continue;
-            if (!$doc[$clavis]) continue;
-            $num[] = $doc[$clavis];
+        foreach (array('liber', 'capitulum', 'sectio') as $cts) {
+            if (!isset($doc[$cts])) continue;
+            if (!$doc[$cts]) continue;
+            $num[] = $doc[$cts];
         }
         return implode('.', $num);
     }
@@ -360,8 +382,8 @@ class Verbatim
     static public function scope(&$doc)
     {
         $line = '';
-        if (isset($doc['volumen']) && $doc['volumen']) {
-            $line .= ', <span class="volumen">vol. ' . $doc['volumen'] . '</span>';
+        if (isset($doc['volume']) && $doc['volume']) {
+            $line .= ', <span class="volume">vol. ' . $doc['volume'] . '</span>';
         }
         /*
         else if (isset($edition['volumen']) && $edition['volumen']) {
@@ -369,11 +391,11 @@ class Verbatim
         }
         */
         // a bug, but could be found
-       if (isset($doc['pagad']) && $doc['pagad']) {
-            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '-' . $doc['pagad'] . '</span>';
+       if (isset($doc['page_end']) && $doc['page_end']) {
+            $line .= ', <span class="page">p. ' . $doc['page_start'] . '-' . $doc['page_end'] . '</span>';
         }
-        else if (isset($doc['pagde']) && $doc['pagde']) {
-            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '</span>';
+        else if (isset($doc['page_start']) && $doc['page_start']) {
+            $line .= ', <span class="page">p. ' . $doc['page_start'] . '</span>';
         }
         return $line;
     }
@@ -381,15 +403,15 @@ class Verbatim
     /**
      * All this bib, not well optimized
      */
-    static public function bibl(&$editio, &$doc)
+    static public function bibl(&$edition, &$doc)
     {
         // parts
         $line = '';
-        $line .= '<span class="auctor">' . $editio['auctor'] . '</span>';
-        $line .= ', <em class="titulus">' . $editio['titulus'] . '</em>';
+        $line .= '<span class="authors">' . $edition['authors'] . '</span>';
+        $line .= ', <em class="title">' . $edition['title'] . '</em>';
         $num = self::num($doc);
         if ($num) $line .= ', ' . $num;
-        $line .= ', ed. <span class="editor">' . $editio['editor'] . '</span>';
+        $line .= ', ed. <span class="editors">' . $edition['editors'] . '</span>';
         $line .= self::scope($doc);
         return $line;
     }

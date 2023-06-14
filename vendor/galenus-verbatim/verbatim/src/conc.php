@@ -32,7 +32,7 @@ $main = function()
     echo '<div class="conc">'."\n";
 
     $qDoc =  Verbatim::$pdo->prepare("SELECT * FROM doc WHERE id = ?");
-    $qed = Verbatim::$pdo->prepare("SELECT * FROM editio WHERE id = ?");
+    $qed = Verbatim::$pdo->prepare("SELECT * FROM edition WHERE id = ?");
 
     $in  = str_repeat('?,', count($formids) - 1) . '?';
     $sql = "SELECT COUNT(*) FROM tok WHERE $field IN ($in)";
@@ -74,12 +74,12 @@ $main = function()
             $qDoc->execute(array($tok['doc']));
             $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
 
-            $qed->execute(array($doc['editio']));
+            $qed->execute(array($doc['edition']));
             $editio = $qed->fetch(PDO::FETCH_ASSOC);
             // here URL are supposed clean
             $href = './%s?q=%s';
             echo '<h4 class="doc">'
-                . '<a href="' . sprintf($href, $doc['cts'], $qprint) . '">'
+                . '<a href="' . sprintf($href, Verbatim::cts_href($doc['cts']), $qprint) . '">'
                 . Verbatim::bibl($editio, $doc)
                 . "</a>"
                 . "</h4>\n"
@@ -88,17 +88,17 @@ $main = function()
             $html = Xt::detag($doc['html']);
         }
         // be careful, PDO output all fields as String, fixed in php 8.1
-        $de = intval($tok['charde']);
-        $ad = intval($tok['charad']);
+        $start = intval($tok['start']);
+        $end = intval($tok['end']);
         
-        $start = $de - 50;
-        if ($start < 0) $start = 0;
+        $left = $start - 50;
+        if ($left < 0) $left = 0;
         echo "<div><span class=\"kwicl\">";
-        echo mb_substr($html, $start, $de - $start);
+        echo mb_substr($html, $left, $start - $left);
         echo "</span>";
-        echo "<mark>" . mb_substr($html, $de, $ad - $de) . "</mark>";
+        echo "<mark>" . mb_substr($html, $start, $end - $start) . "</mark>";
         $len = 50;
-        echo mb_substr($html, $ad, $len);
+        echo mb_substr($html, $end, $len);
         echo "</div>\n";
     }
     echo "</div>\n";

@@ -4,7 +4,7 @@ editio	Titres
 editio.annus	Année
 editio.auctor	Auteur
 editio.caption	Table des titres
-editio.clavis	Cote
+editio.cts	CTS URN
 editio.editor	Éditeur
 editio.titulus	Titre
 editio.volumen	Volume

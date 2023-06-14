@@ -4,7 +4,7 @@ editio	Titles
 editio.annus	Year
 editio.auctor	Author
 editio.caption	Table of titles
-editio.clavis	Code
+editio.cts	CTS URN
 editio.editor	Editor
 editio.titulus	Title
 editio.volumen	Volume
@@ -29,6 +29,6 @@ conc.lems	%s occurences found for the lemmata: « %s »
 conc.orth	%s occurences found for inflexion: « %s »
 conc.orths	%s occurences found for inflexions: « %s »
 conc.search	%s occurences found for query : « %s »
-doc.notfound	<p>No document found for this cts identifier: “%s”</p>\n
+doc.notfound	<p>No document found for this cts identifier: “%s”</p>
 search.form	Form
 search.lem	Lemma

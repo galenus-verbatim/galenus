@@ -15,8 +15,8 @@ class Data {
     public static $cts;
     /** Doc record from database */
     public static $doc;
-    /** Editio record from database */
-    public static $editio;
+    /** Edition record from database */
+    public static $edition;
     /** init param */
     public static function init() {
         $cts = Http::par('cts');
@@ -28,58 +28,58 @@ class Data {
         $qDoc->execute(array($cts . '%'));
         self::$doc = $qDoc->fetch(PDO::FETCH_ASSOC);
         // the '_' as a separator  is historic
-        $cts_editio = preg_replace('@(urn:cts:[^:]+:[^:_]+).*@', '$1', $cts);
-        $sql = "SELECT * FROM editio WHERE cts = ? LIMIT 1";
+        $cts_edition = preg_replace('@(urn:cts:[^:]+:[^:_]+).*@', '$1', $cts);
+        $sql = "SELECT * FROM edition WHERE cts = ? LIMIT 1";
         $qed = Verbatim::$pdo->prepare($sql);
-        $qed->execute(array($cts_editio));
-        self::$editio = $qed->fetch(PDO::FETCH_ASSOC);
+        $qed->execute(array($cts_edition));
+        self::$edition = $qed->fetch(PDO::FETCH_ASSOC);
     }
 }
 Data::init();
 
-function title() {
+$title = function() {
     $doc = Data::$doc;
-    $editio = Data::$editio;
-    if (!$doc || !$editio) return null;
+    $edition = Data::$edition;
+    if (!$doc || !$edition) return null;
     $title = '';
-    $title .= $editio['auctor'];
+    $title .= $edition['authors'];
     $num = Verbatim::num($doc);
     if ($num) $title .= ', ' . $num;
 
-    $bibl = $editio['bibl'];
+    $bibl = $edition['bibl'];
     if ($bibl === null) $bibl = "";
     /* galeno centric, extract field from zotero record */
     preg_match('@<em class="title">(.*?)</em>@', $bibl, $matches);
     if (count($matches) >= 2) {
         $title .= '. ' .$matches[1];
-    } else if (isset($editio['title']) && $editio['title']) {
-        $title .= '. ' .$editio['title'];
+    } else if (isset($edition['title']) && $edition['title']) {
+        $title .= '. ' .$edition['title'];
     }
     /* galeno centric, extract field from zotero record */
     preg_match('@<span class="editors">(.*?)</span>@', $bibl, $matches);
     if (count($matches) >= 2) {
         $title .= $matches[1];
-    } else if (isset($editio['editor']) && $editio['editor']) {
-        $title .= ', ed. ' . $editio['editor'];
+    } else if (isset($edition['editors']) && $edition['editors']) {
+        $title .= ', ed. ' . $edition['editors'];
     }
     $title .= Verbatim::scope($doc);
     $title .= '. ' . $doc['cts'];
     $title .= ' — Galenus verbatim';
     $title = strip_tags($title);
     return $title;
-}
+};
+
 /**
  * Build a prev/next link for a document
  */
-function prevnext($direction)
+function prevnext($col)
 {
     $q = Http::par('q');
     $qstring = '';
     if ($q) $qstring = '?q=' . $q;
-    $col = ($direction == 'prev')?'ante':'post';
-    $ic = ($direction == 'prev')?'⟨':'⟩';
+    $ic = ($col == 'prev')?'⟨':'⟩';
     if (isset(Data::$doc[$col]) && Data::$doc[$col]) {
-        $class= 'prevnext ' . $direction . ' ' . $col;
+        $class= 'prevnext ' . $col;
         $a = "";
         $a .= '<a class="' . $class . '"';
         $url = Data::$doc[$col];
@@ -102,7 +102,7 @@ function bibl()
     $html[] = '<header class="doc">';
     $html[] = prevnext('prev');
 
-    $bibl = Data::$editio['bibl'];
+    $bibl = Data::$edition['bibl'];
     if ($bibl === null) $bibl = "";
     $bibl = preg_replace(
         array(
@@ -126,8 +126,8 @@ function bibl()
     if (isset($matches[0])) {
         $h1 =  $matches[0];
     }
-    else if (isset($editio['title']) && $editio['title']) {
-        $h1 =  "<h1>" . $editio['title'] . "</h1>";
+    else if (isset($edition['title']) && $edition['title']) {
+        $h1 =  "<h1>" . $edition['title'] . "</h1>";
     }
     $urn = '<div class="urn"><a class="urn" href="">urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']) . "</a></div>\n";
     echo $urn;
@@ -148,7 +148,7 @@ function bibl()
 $main = function() {
     $cts = Data::$cts;
     $doc = Data::$doc;
-    $editio = Data::$editio;
+    $edition = Data::$edition;
     if (!$doc) {
         http_response_code(404);
         echo I18n::_('doc.notfound', Data::$cts);
@@ -168,11 +168,11 @@ $main = function() {
 <div class="reader">
 <div class="toc">';
     // no nav
-    if (!isset($editio['nav']) || ! $editio['nav']) {
+    if (!isset($edition['nav']) || ! $edition['nav']) {
     }
     // no word searched
     else if (!count($formids)) {
-        $html = $editio['nav'];
+        $html = $edition['nav'];
         $html = preg_replace(
             '@ href="./' . $cts . '"@',
             '$1 class="selected"',
@@ -215,7 +215,7 @@ $main = function() {
                 $ret .= '</a>';
                 return $ret;
             },
-            $editio['nav']
+            $edition['nav']
         );
         echo $html;
     }
@@ -301,24 +301,24 @@ function js_images(&$doc)
     $vars = array();
 
     // if not in kuhn, nothing to display ?
-    if (!isset($vols['kuhn']) || !isset($vols['kuhn'][$doc['volumen']])) {
+    if (!isset($vols['kuhn']) || !isset($vols['kuhn'][$doc['volume']])) {
         return;
     }
 
-    $vars['kuhn'] = $vols['kuhn'][$doc['volumen']];
-    $vars['kuhn']['vol'] = $doc['volumen'];
+    $vars['kuhn'] = $vols['kuhn'][$doc['volume']];
+    $vars['kuhn']['vol'] = $doc['volume'];
     $vars['kuhn']['abbr'] = 'K';
     $cts = $doc['cts'];
     // _ as a separator in urn is historic
-    $cts_editio = preg_replace('@(urn:cts:[^:]+:[^:_]+).*@', '$1', $cts);
-    if (!isset($vols[$cts_editio])) {
-        echo "<h1>" . $cts_editio . "</h1>";
+    $cts_edition = preg_replace('@(urn:cts:[^:]+:[^:_]+).*@', '$1', $cts);
+    if (!isset($vols[$cts_edition])) {
+        echo "<h1>" . $cts_edition . "</h1>";
         print_r($vols);
         // log something somewhere ?
         return;
     }
 
-    $info = $vols[$cts_editio];
+    $info = $vols[$cts_edition];
     $chartier = null;
     $bale = null;
     if ($info) {

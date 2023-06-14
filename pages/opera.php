@@ -30,15 +30,13 @@ if (file_exists($pres_file)) {
 }
 ?>
 <?php 
+$html = file_get_contents($html_dir . '/opera_bib.html');
 // for dev on windows, rewrite url with ':'
 if (Galenus::$config['win']) {
-    $html = file_get_contents($html_dir . '/opera_bib.html');
     $html = preg_replace('@./urn:@', './urn/', $html);
-    echo $html;
 }
-else {
-    readfile($html_dir . '/opera_bib.html'); // table is required 
-}
+
+echo $html;
 ?>
             </main>
         </div>

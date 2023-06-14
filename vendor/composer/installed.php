@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '582d8fafb9eb0edea64b1fec7cfee9e8064f9cc2',
+        'reference' => '23c174c0f0885a731a1d167d63128e9988d9df52',
         'name' => 'galenus-verbatim/teinte_galenus',
         'dev' => true,
     ),
@@ -36,7 +36,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '582d8fafb9eb0edea64b1fec7cfee9e8064f9cc2',
+            'reference' => '23c174c0f0885a731a1d167d63128e9988d9df52',
             'dev_requirement' => false,
         ),
         'galenus-verbatim/verbatim' => array(
@@ -47,7 +47,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => '3d8089811324af6f5e5465fb2dbe065816df98fa',
+            'reference' => '171d0156233ce99869b3231909370082d34e5dfc',
             'dev_requirement' => false,
         ),
         'oeuvres/kit' => array(
@@ -58,7 +58,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => 'ddff3e09688a077b569980ba0922b1995e0f9637',
+            'reference' => '369f0c3e902963fdbbaff8c61c3d01d0973c031c',
             'dev_requirement' => false,
         ),
         'oeuvres/teinte' => array(

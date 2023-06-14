@@ -1,9 +1,10 @@
 :root {
     --bg: #000;
     --text: #fff;
+    --textlo:rgb(210, 210, 200, 0.6);
+    --texta: rgba(255, 255, 255, 0.5);
     --bglo: rgb(66, 66, 66);
-    --texta: rgb(255, 255, 255, 0.5);
-    --link: #00ff00;
+    --link:rgb(210, 255, 200, 0.6);
     --bghi: #003300;
     --bg2: rgb(102, 102, 102);
     --text2: rgb(33, 33, 33);
@@ -273,7 +274,6 @@ body {
 
 div.banner {
     position: relative;
-    color: var(--bg);
 }
 
 div.banner img.banner {
@@ -283,39 +283,38 @@ div.banner img.banner {
 
 div.banner .moto,
 div.banner .titles {
-    background-color: var(--texta);
-    box-shadow: 0px 0px 0 var(--texta);
 }
 
 div.banner .titles {
-    position: absolute;
-    font-weight: bold;
-    top: 1vw;
-    left: 2vw;
+    /* position: absolute; */
+    padding: 1vw 2vw 1vw 2vw;
+    position: relative;
 }
 
 div.banner .title {
-    font-size: 4vw;
+    font-size: 3vw;
+    font-weight: bold;
     line-height: 100%;
 }
 
 div.banner .titlesub {
-    font-size: 3vw;
+    font-size: 2.5vw;
+    font-style: italic;
 }
 
 div.banner .moto {
     font-size: 2.2vw;
     line-height: 100%;
     font-weight: bold;
-    position: absolute;
     bottom: 1vw;
     right: 1vw;
     padding: 0.5ex 1em;
 }
 
 #header {
-    background-color: var(--bg2);
-    color: var(--text2);
+    background-color: var(--bglo);
+    color: var(--textlo);
+    text-shadow: var(--bg) 1px 1px 5px;
 }
 
 #page {
@@ -927,7 +926,7 @@ table.freqs {
     background-color: var(--bg);
 }
 
-td.clavis {
+td.cts {
     white-space: nowrap;
 }
 
@@ -939,7 +938,7 @@ td.nb {
     padding-right: 3px;
 }
 
-td.clavis a,
+td.cts a,
 td.orth a,
 td.lem a {
     display: block;
