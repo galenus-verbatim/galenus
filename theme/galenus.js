@@ -158,13 +158,13 @@ if (div) {
         pageViewer.resize();
     }
 
-    let but = document.getElementById('imago_ante');
+    let but = document.getElementById('image_prev');
     if (but) {
         but.onclick = function() {
             imagoViso(-1);
         }
     }
-    but = document.getElementById('imago_post');
+    but = document.getElementById('image_next');
     if (but) {
             but.onclick = function() {
             imagoViso(+1);
@@ -225,7 +225,7 @@ if (div) {
                 let title = '';
                 if (dat.title) title = text + ' source : ' + dat.title.replace('%%', pno);
                 image.alt = title;
-                const header = document.getElementById('imago_titulus');
+                const header = document.getElementById('image_title');
                 if (header) header.innerHTML = title;
                 pageViewer.update();
                 pageViewer.resize();
@@ -329,4 +329,25 @@ if (div) {
         event.preventDefault();
     });
 
+}());
+
+(function() {
+    let lastScrollY = window.scrollY;
+    const header = document.getElementById('header');
+    // hide header on scroll
+    window.addEventListener('scroll', (event) => {
+        let scrollY = window.scrollY;
+        if ( lastScrollY < scrollY) {
+            header.classList.add("down");
+            header.classList.remove("up");
+        }
+        // nothing for up
+        /*
+        else {
+            header.classList.remove("down");
+            header.classList.add("up");
+        }
+        */
+        lastScrollY = scrollY;
+    });
 }());

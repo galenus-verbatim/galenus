@@ -14,118 +14,50 @@
   xmlns="http://www.w3.org/1999/xhtml"
   exclude-result-prefixes="bib dc dcterms foaf link prism rdf z" 
   >
-  <xsl:include href="galenzot_html.xsl"/>
-  <xsl:output method="xml" indent="yes" encoding="UTF-8" omit-xml-declaration="yes"/>
+  <xsl:output method="text" indent="yes" encoding="UTF-8" omit-xml-declaration="yes"/>
   
   <!-- 
-Convert Zotero RDF as HTML meta block for reimport meta
+Convert Zotero RDF as colums to feed a database
+    cts     TEXT UNIQUE NOT NULL, 
+    title                   TEXT, 
+    date                    TEXT,  
+    authors                 TEXT,  Surname, Given Name; Smith, Jane
+    editors                 TEXT,  Surname, Given Name; Smith, Jane
+    language                TEXT,
+    book_title              TEXT,
+    volume                  TEXT,
+    series                  TEXT,
+    page_start              TEXT,
+    page_end                TEXT,
+    publisher               TEXT,
+
    -->
   
   
   
   <xsl:template match="/">
-    
-    <article id="editiones" class="text">
-      <xsl:for-each select="/*/bib:*[dc:subject = '_verbatim']">
-        <!-- Galenus first -->
-        <xsl:sort select=".//foaf:surname"/>
-        <xsl:sort select="dc:subject/dcterms:LCC/rdf:value"/>
-        <xsl:apply-templates select="." mode="verbatim"/>
-      </xsl:for-each>
-    </article>
+    <xsl:text>cts&#9;title&#9;date&#9;authors&#9;editors&#9;language&#9;book_title&#9;volume&#9;series&#9;page_start&#9;page_end&#9;publisher&#10;</xsl:text>
+  </xsl:template>
+
+
+  <xsl:template match="bib:BookSection | bib:Book" mode="meta">
+    <xsl:text>&#10;</xsl:text>
+  </xsl:template>
+
+  <xsl:template match="bib:authors | bib:editors" mode="meta">
+    <xsl:for-each select="rdf:Seq/rdf:li">
+      <xsl:apply-templates select="*"/>
+      <xsl:if test="position() != last()">; </xsl:if>
+    </xsl:for-each>
+  </xsl:template>
+
+  <xsl:template match="foaf:Person" mode="meta">
+    <xsl:value-of select="normalize-space(foaf:surname)"/>
+    <xsl:if test="foaf:givenName">
+      <xsl:text>, </xsl:text>
+      <xsl:value-of select="normalize-space(foaf:givenName)"/>
+    </xsl:if>
   </xsl:template>
   
-  <xsl:template match="bib:BookSection | bib:Book" mode="verbatim">
-    <xsl:variable name="id">
-      <xsl:call-template name="id"/>
-    </xsl:variable>
-    <xsl:variable name="fichtner_no" select="normalize-space(dc:subject/dcterms:LCC/rdf:value)"/>
-    <xsl:variable name="url" select="dc:identifier/dcterms:URI/rdf:value"/>
-    <!-- Legacy
-      <xsl:for-each select="key('about', link:link/@rdf:resource)/dc:identifier">
-        <xsl:variable name="str" select="normalize-space(.)"/>
-        <xsl:choose>
-          <xsl:when test="contains($str, 'galenus-verbatim')">
-            <xsl:value-of select="$str"/>
-          </xsl:when>
-        </xsl:choose>
-      </xsl:for-each>
-    -->
-    <section id="{$id}">
-      <xsl:call-template name="class">
-        <xsl:with-param name="class">editio</xsl:with-param>
-      </xsl:call-template>
-      <div class="opus_tituli">
-        <xsl:apply-templates select="key('opus', $fichtner_no)" mode="cartouche"/>
-        <xsl:variable name="self" select="."/>
-        <!-- other editions online -->
-        <xsl:for-each select="key('verbatim', $fichtner_no)">
-          <xsl:if test="count(.|$self) = 2">
-            <div class="editionalt">
-              <xsl:text>altera editio: </xsl:text>
-              <xsl:apply-templates select="." mode="short"/>
-            </div>
-          </xsl:if>
-        </xsl:for-each>
-      </div>
-      <!-- book info -->
-      <h1 class="editio">
-        <!--
-        <xsl:call-template name="authors"/>
-        -->
-        <!-- auto exact link -->
-        <a class="title" href="{$url}">
-          <xsl:apply-templates select="dc:title"/>
-        </a>
-        <xsl:call-template name="editors"/>
-        <xsl:for-each select="dc:date[1]">
-          <xsl:text>, </xsl:text>
-          <xsl:value-of select="."/>
-        </xsl:for-each>
-        <span class="scope">
-          <xsl:variable name="scope">
-            <xsl:for-each select="dcterms:isPartOf/bib:Book/prism:volume">
-              <xsl:text>, </xsl:text>
-              <xsl:apply-templates select="."/>
-            </xsl:for-each>
-            <xsl:for-each select="bib:pages">
-              <xsl:text>, </xsl:text>
-              <xsl:apply-templates select="."/>
-            </xsl:for-each>
-          </xsl:variable>
-          <!-- text only, will be replaced -->
-          <xsl:value-of select="$scope"/>
-        </span>
-        <xsl:text>.</xsl:text>
-        <xsl:call-template name="urn-editio"/>
-      </h1>
-      
-    </section>
-  </xsl:template>
-  
-  <!-- book record for a text page -->
-  <xsl:template match="bib:Book[not(bib:editors)]" mode="cartouche">
-    <xsl:variable name="fichtner_no" select="normalize-space(dc:subject/dcterms:LCC/rdf:value)"/>
-    <h4 class="opus_titlemain">
-      <xsl:call-template name="authors"/>
-      <em class="title">
-        <xsl:apply-templates select="dc:title"/>
-      </em>
-      <xsl:text> </xsl:text>
-      
-      <xsl:for-each select="z:shortTitle">
-        <span class="shortTitle">
-          <xsl:text>(</xsl:text>
-          <em class="title">
-            <xsl:apply-templates/>
-          </em>
-          <xsl:text>)</xsl:text>
-        </span>
-      </xsl:for-each>
-      
-      <xsl:text> </xsl:text>
-      <xsl:call-template name="fichtner_link"/>
-    </h4>
-    <xsl:call-template name="opus_tituli"/>
-  </xsl:template>
+
 </xsl:transform>

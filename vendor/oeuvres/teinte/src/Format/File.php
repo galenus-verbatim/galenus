@@ -27,9 +27,9 @@ class File
     /** filename without extension */
     protected ?string $filename;
     /** file freshness */
-    protected int $filemtime;
+    protected ?int $filemtime;
     /** file size */
-    protected int $filesize;
+    protected ?int $filesize;
     /** file content if has been loaded */
     protected ?string $contents = null;
 
@@ -41,14 +41,34 @@ class File
         I18n::load(dirname(__DIR__) . '/teinte_en.tsv');
         self::$init = true;
     }
+    /**
+     * Load a file lazily, return nothing, used by child classes.
+     */
+    public function load(string $file): bool
+    {
+        $this->contents = null;
+        $this->file = $file;
+        if (!Filesys::readable($file)) {
+            // Filesys logging
+            $this->filename = null;
+            $this->filemtime = null;
+            $this->filesize = null;
+            return false;
+        }
+        $this->filename = pathinfo($file, PATHINFO_FILENAME);
+        $this->filemtime = filemtime($file);
+        $this->filesize = filesize($file); // ?? if URL ?
+        return true;
+    }
 
     /**
      * Get a normalized known format from extension
      */
-    static public function path2format(?string $file): ?string
+    static public function path2format(?string $path): ?string
     {
-        if (!$file) return null;
-        $ext = pathinfo('.' . $file, PATHINFO_EXTENSION);
+        if (!$path) return null;
+        // take note of '.'
+        $ext = pathinfo('.' . basename($path), PATHINFO_EXTENSION);
         $ext = strtolower($ext);
         if (!isset(self::$ext2format[$ext])) return null;
         return self::$ext2format[$ext];
@@ -57,7 +77,7 @@ class File
     /**
      * Mime for a known format
      */
-    static public function mime(?string $format): ?string
+    static public function format2mime(?string $format): ?string
     {
         if (!$format) return null;
         if (!isset(self::$formats[$format])) return null;
@@ -67,7 +87,7 @@ class File
     /**
      * Extension for a known format
      */
-    static public function ext(?string $format): ?string
+    static public function format2ext(?string $format): ?string
     {
         if (!$format) return null;
         if (!isset(self::$formats[$format])) return null;
@@ -85,23 +105,6 @@ class File
         $format = ucfirst($format);
         $class = "Oeuvres\\Teinte\\Format\\" . $format;
         return $class;
-    }
-
-    /**
-     * Load a file lazily, return nothing, used by child classes.
-     */
-    public function load(string $file): bool
-    {
-        if (!Filesys::readable($file)) {
-            // Filesys logging
-            return false;
-        }
-        // if file does not exists do something ?
-        $this->file = $file;
-        $this->filename = pathinfo($file, PATHINFO_FILENAME);
-        $this->filemtime = filemtime($file);
-        $this->filesize = filesize($file); // ?? if URL ?
-        return true;
     }
 
     /**

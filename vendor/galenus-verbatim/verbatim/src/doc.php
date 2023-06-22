@@ -11,8 +11,8 @@ class Data {
     public static $cts;
     /** Doc record from database */
     public static $doc;
-    /** Editio record from database */
-    public static $editio;
+    /** Edition record from database */
+    public static $edition;
     /** init param */
     public static function init() {
         $cts = Http::par('cts');
@@ -25,10 +25,10 @@ class Data {
         $qDoc->execute(array($cts. '%'));
         self::$doc = $qDoc->fetch(PDO::FETCH_ASSOC);
         
-        $sql = "SELECT * FROM editio WHERE id = ? LIMIT 1";
+        $sql = "SELECT * FROM edition WHERE id = ? LIMIT 1";
         $qed = Verbatim::$pdo->prepare($sql);
-        $qed->execute([self::$doc['editio']]);
-        self::$editio = $qed->fetch(PDO::FETCH_ASSOC);
+        $qed->execute([self::$doc['edition']]);
+        self::$edition = $qed->fetch(PDO::FETCH_ASSOC);
     }
 }
 Data::init();
@@ -38,14 +38,14 @@ Data::init();
  */
 $title = function() {
     $doc = Data::$doc;
-    $editio = Data::$editio;
-    if (!$doc || !$editio) return null;
+    $edition = Data::$edition;
+    if (!$doc || !$edition) return null;
     $s = '';
-    $s .= $editio['auctor'];
-    $s .= '. ' .$editio['titulus'];
+    $s .= $edition['authors'];
+    $s .= '. ' .$edition['title'];
     $num = Verbatim::num($doc);
     if ($num) $s .= ', ' . $num;
-    $s .= ', ed. ' . $editio['editor'];
+    $s .= ', ed. ' . $edition['editors'];
     $s .= Verbatim::scope($doc);
     $s .= '.  ' . $doc['cts'];
     $s .= ' — ' . Verbatim::name();
@@ -59,7 +59,7 @@ $title = function() {
 $main = function() {
     $cts = Data::$cts;
     $doc = Data::$doc;
-    $editio = Data::$editio;
+    $edition = Data::$edition;
     if (!$doc) {
         http_response_code(404);
         echo I18n::_('doc.notfound', Data::$cts);
@@ -79,23 +79,23 @@ $main = function() {
 ?>
 <div class="reader">
     <div class="toc">
-        <?= Verbatim::nav($editio, $doc, $formids) ?>
+        <?= Verbatim::nav($edition, $doc, $formids) ?>
     </div>
     <div class="doc">
         <main>
             <header class="doc">
-                <?= Verbatim::ante($doc) ?>
+                <?= Verbatim::prev($doc) ?>
                 <div>
-                    <?= Verbatim::bibl($editio, $doc) ?>
+                    <?= Verbatim::bibl($edition, $doc) ?>
                 </div>
-                <?= Verbatim::post($doc) ?>
+                <?= Verbatim::next($doc) ?>
             </header>
-            <div class="doc">
+            <div class="doc text">
                 <?= Verbatim::hidoc($doc, $formids) ?>
             </div>
             <footer class="doc">
-                <?= Verbatim::ante($doc) ?>
-                <?= Verbatim::post($doc) ?>
+                <?= Verbatim::prev($doc) ?>
+                <?= Verbatim::next($doc) ?>
             </footer>
         </main>
     </div>

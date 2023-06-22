@@ -115,13 +115,16 @@ var Tree = {
                 li.className = Tree.MORE + " " + li.className;
             }
             li.ul = ul; // set the root ul
-            li.onclick = function (e) { return Tree.click(this, e); }
+            // note capture=false, to allow links target
+            li.addEventListener('click', Tree.click, false);
             // hilite current link in this item
             var links = li.getElementsByTagName("a");
             if (!links.length) continue;
             // this loop will go inside all links of the <li>, especially children <ul>, bad
             // for(var j=0; j < links.length; j++) {
             a = links[0];
+            // build 
+
             parent = a;
             // for a folder with no link, do not hilite here
             while (parent = parent.parentNode) {
@@ -176,51 +179,76 @@ var Tree = {
         */
     },
 
+        /**
+     * For event.target, get first element of name
+     * @param {*} el 
+     * @param {*} name 
+     * @returns 
+     */
+    selfOrAncestor: function(el, name) {
+        if (!el) return false;
+        if (!el.tagName) return false;
+        while (el.tagName.toLowerCase() != name) {
+            el = el.parentNode;
+            if (!el) return false;
+            let tag = el.tagName.toLowerCase();
+            if (tag == 'div' || tag == 'nav' || tag == 'body') return false;
+        }
+        return el;
+    },
 
     /**
      * Change ClassName of a <li> onclick to open/close
      */
-    click: function (li, e) {
-        if (Tree.className != null) li = this;
-        if (!li) return false;
-        var ret = false;
-        var className = "";
-        var here = "";
-        if (li.className.indexOf(Tree.LESS) > -1) className = " " + Tree.MORE;
-        else if (li.className.indexOf(Tree.MORE) > -1) className = " " + Tree.LESS;
-        // if click in a link, force open
-        var ev = e || event,
-            src = ev.target || ev.srcElement;
-        while (src && src.tagName.toLowerCase() != "li") {
-            if (src.tagName.toLowerCase() == 'a') {
-                // if link, hilite the parent li
-                className = " " + Tree.LESS;
-                here = true;
-                ret = true;
-                break;
+    click: function (event, close=null) {
+        // do not propagate event to parents
+        if (event && event.stopPropagation) event.stopPropagation();
+        // open or close ?
+        src = event.target;
+        // Click in a link ? force open
+        const a = Tree.selfOrAncestor(event.target, 'a');
+        // click in a link force open
+        if (a) { // propagate
+            close = false;
+        }
+        let li = Tree.selfOrAncestor(event.target, 'li');
+        if (!li) {
+            // ???
+            console.log("Not LI ?");
+            return;
+        }
+        // unhilight last
+        if (Tree.lastHere) {
+            Tree.lastHere.classList.remove(Tree.HERE);
+        }
+        Tree.lastHere = li;
+        li.classList.add(Tree.HERE);
+        if (close === null) {
+            close = li.classList.contains(Tree.LESS);
+        }
+        if (close) {
+            // be careful of leaf without children
+            if (li.classList.contains(Tree.LESS)) {
+                li.classList.remove(Tree.LESS);
+                li.classList.add(Tree.MORE);
             }
-            src = src.parentNode;
         }
-        // unset the last of this list, and set this one
-        if (here) {
-            // set it at document level
-            if (Tree.lastHere) Tree.lastHere.className = Tree.lastHere.className.replace(Tree.reHereDel, '')
-            li.className = li.className.replace(Tree.reHereDel, '') + " " + Tree.HERE;
-            Tree.lastHere = li;
+        else  {
+            // recursive open
+            do {
+                if (li.classList.contains(Tree.MORE)) {
+                    li.classList.remove(Tree.MORE);
+                    li.classList.add(Tree.LESS);
+                }
+                li = Tree.selfOrAncestor(li.parentNode, 'li');
+            } while (li);
         }
-        // change class only if already less or more
-        if (li.className.search(Tree.reLessmore) > -1) li.className = li.className.replace(Tree.reLessmore, ' ') + className;
-        // alert(li.className+" "+className);
-        // stop propagation
-        if (ev && document.all) ev.cancelBubble = true;
-        if (ev && ev.stopPropagation) ev.stopPropagation();
-        return ret;
     },
     /**
      * Recursively open li ancestors
      */
     open: function () {
-        var li; // don't forget or may produce some strange var collapse
+        let li; // don't forget or may produce some strange var collapse
         for (i = arguments.length - 1; i >= 0; i--) {
             li = arguments[i];
             if (li.className == null) li = document.getElementById(arguments[i]);
@@ -274,6 +302,54 @@ var Tree = {
         // here it's OK, but an event scroll the page to its right place after
         return false;
     }
+
+    /**
+     * Snchronyze scroll with toc
+     */
+    /*
+    scroll: function() {
+        var up = false;
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollY < Liser.lastScrollY) up = true;
+        Liser.lastScrollY = (scrollY <= 0) ? 0 : scrollY; // phone scroll could be negative
+
+
+        // les premières notes sont elles en vue ?
+        var id = Liser.noterefs[0].hash;
+        if (id[0] == '#') id = id.substring(1);
+        var note = document.getElementById(id);
+        if (Liser.isVisible(note)) {
+            Liser.notebox.innerHTML = "";
+            Liser.notebox.style.visibility = "hidden";
+            return;
+        }
+        var count = 0;
+        for (var i = 0, len = Liser.noterefs.length; i < len; i++) {
+            var ref = Liser.noterefs[i];
+            var id = ref.hash;
+            if (id[0] == '#') id = id.substring(1);
+            var idCopy = id + "Copy";
+            var noteCopy = document.getElementById(idCopy);
+            if (Liser.isVisible(ref)) {
+
+                count++;
+                if (noteCopy) continue; // déjà affichée
+                var note = document.getElementById(id);
+                if (!note) continue; // no note ? bad
+                noteCopy = note.cloneNode(true);
+                noteCopy.id = idCopy;
+                if (up) Liser.notebox.insertBefore(noteCopy, Liser.notebox.firstChild); // prepend not for MS
+                else Liser.notebox.appendChild(noteCopy);
+            } else {
+                if (!noteCopy) continue;
+                noteCopy.parentNode.removeChild(noteCopy);
+            }
+        }
+        if (!count) Liser.notebox.style.visibility = "hidden";
+        else Liser.notebox.style.visibility = "visible";
+    }
+    */
+
 }
 
 
@@ -285,8 +361,40 @@ if (window.document.body) {
     Tree.load();
 } else if (window.addEventListener) {
     window.addEventListener('load', Tree.load, false);
-} else if (window.attachEvent) {
-    if (!Tree.loaded) window.attachEvent('onload', Tree.load);
-    // window.attachEvent('onload', Tree.autotoc);
-    window.attachEvent('onload', Notes.load);
 }
+
+(function() {
+    const treeBack = function(event) {
+        const a = Tree.selfOrAncestor(event.target, 'a');
+        let hash = a.hash;
+        if (!hash) return;
+        if (hash.startsWith('#')) hash = hash.substring(1);
+        if (!hash.startsWith('tree_')) return;
+
+
+        const target = document.getElementById(hash);
+        const li = Tree.selfOrAncestor(target, 'li');
+        if (!li) return;
+
+        event.preventDefault();
+        // rewrite the hash
+        let div = a.parentNode;
+        while (!div.id) {
+            div = div.parentNode;
+            if (!div) break;
+        }
+        if (div && div.id) {
+            if (history.replaceState) {
+                history.replaceState(null, null, '#' + div.id);
+            }
+        }
+        li.click(event, false);
+        li.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+    };
+
+    const titles = document.querySelectorAll(".tree_back");
+    titles.forEach(function(el) {
+        el.addEventListener('click', treeBack, true);
+    });
+
+}());

@@ -8,8 +8,8 @@ use GalenusVerbatim\Verbatim\{Verbatim};
 
 $page = ltrim(Route::url_request(), '/');
 $body_class = $page;
-if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
-    $body_class = 'tlg';
+if (strpos($page, 'cts:') !== false) {
+    $body_class = 'cts';
 }
 $cts = Http::par('kuhn', '');
 $lang = Route::getAtt("lang");
@@ -27,21 +27,22 @@ $lang = Route::getAtt("lang");
         <link rel="stylesheet" href="<?= Route::home_href() ?>theme/galenus.css"/>
     </head>
     <body class="<?=$body_class?>">
-<div id="all">
-    <header id="header">
-        <div class="banner">
-            <div class="titles">
-                <a href="<?= Route::home_href() ?>.">
-                    <div class="title">Galenus verbatim</div>
-                    <div class="titlesub">Γαληνὸς κατὰ λέξιν</div>
-                </a>
-            </div>
-            <div class="moto"><?= I18n::_('template.moto') ?></div>
-            <img class="banner" src="<?= Route::home_href() ?>theme/galenus-verbatim.jpg" />
+<header id="header"  class="nav-down">
+    <div class="banner">
+        <div class="titles">
+            <a href="<?= Route::home_href() ?>.">
+                <div class="title">Galenus verbatim</div>
+                <div class="titlesub">Γαληνὸς κατὰ λέξιν</div>
+            </a>
         </div>
-    </header>
+        <div class="moto"><?= I18n::_('template.moto') ?></div>
+        <img class="banner" src="<?= Route::home_href() ?>theme/galenus-verbatim.jpg" />
+    </div>
+</header>
+<div id="all">
     <div id="content">
         <nav id="tabs" class="tabs">
+            <span class="tab">Galenus<br/>Verbatim</span>
             <form action="" onsubmit="this.action = encodeURIComponent(this.cts.value.replaceAll(':', '_'));">
                 <label for="cts"><?= I18n::_('cts.label') ?></label>
                 <br/>
@@ -51,7 +52,7 @@ $lang = Route::getAtt("lang");
                     value="<?= htmlspecialchars($cts) ?>"
                 />
             </form>
-            <?= Route::tab('', '[2306] ' . I18n::_('template.opera')) ?>
+            <?= Route::tab('', I18n::_('template.opera')) ?>
             <?php 
             if ($page == 'tlg') {
                 // if doc visible, add a buttoon search in doc search in doc

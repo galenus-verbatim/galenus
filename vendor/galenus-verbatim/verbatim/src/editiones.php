@@ -15,22 +15,22 @@ $main = function() {
     $href = 'conc?f=lem&amp;q=%s';
     echo '
 <article class="table">
-<table class="table claves">
+<table class="table cts">
     <caption>' . I18n::_('editio.caption') . '</caption>
     <thead>
         <tr>
             <th></th>
             <th>'. I18n::_('editio.cts') .'</th>
-            <th>'. I18n::_('editio.auctor') .'</th>
-            <th>'. I18n::_('editio.titulus') .'</th>
-            <th>'. I18n::_('editio.editor') .'</th>
-            <th>'. I18n::_('editio.volumen') .'</th>
+            <th>'. I18n::_('editio.author') .'</th>
+            <th>'. I18n::_('editio.title') .'</th>
+            <th>'. I18n::_('editio.editors') .'</th>
+            <th>'. I18n::_('editio.volume') .'</th>
             <th>'. I18n::_('editio.annus') .'</th>
         </tr>
     <thead>
     <tbody>
 ';
-    $sql = "SELECT cts, auctor, titulus, editor, volumen, annuspub FROM editio";
+    $sql = "SELECT cts, authors, title, editors, volume, date FROM edition";
     $q = Verbatim::$pdo->prepare($sql);
     $q->execute();
     $i = 1;
@@ -41,11 +41,11 @@ $main = function() {
         <tr>
             <td class="no">' . $i++ . '</td>
             <td class="cts"><a href="' . $href . '">' . $row['cts'] . '</a></td> 
-            <td>' . $row['auctor'] . '</td>
-            <td>' . $row['titulus'] . '</td>
-            <td>' . $row['editor'] . '</td>
-            <td>' . $row['volumen'] . '</td>
-            <td>' . $row['annuspub'] . '</td>
+            <td>' . $row['authors'] . '</td>
+            <td>' . $row['title'] . '</td>
+            <td>' . $row['editors'] . '</td>
+            <td>' . $row['volume'] . '</td>
+            <td>' . $row['date'] . '</td>
         </tr>';
     }
     echo '

@@ -24,6 +24,27 @@
     --text3: #666;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-color: var(--bglo) var(--bg);
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bglo);
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid transparent;
+    /* creates padding around scroll thumb */
+}
+
 section.opus {
     padding: 1rem;
 }
@@ -34,9 +55,12 @@ section.opus {
 }
 
 header.doc {
+    background-color: var(--bg3);
+    /*
     position: sticky;
     top: 60px;
     z-index: 10;
+    */
 }
 
 header.opus .urn {
@@ -215,6 +239,10 @@ li.editio a:hover * {
 
 #biblio {
     background-color: var(--bg);
+    max-width: 50rem;
+    height: calc(100vh - 160px);
+    overflow-y: scroll;
+    scroll-padding: 2.5rem;
 }
 
 #biblio>* {
@@ -228,8 +256,12 @@ section.verbatim {
     margin: 0;
 }
 
+section.opus {
+    border: 5px solid transparent;
+}
+
 section.opus:target {
-    background-color: var(--bg3);
+    border-color: var(--bglo);
 }
 
 section.editio h1,
@@ -305,8 +337,7 @@ a.opus {
 #opera {
     position: relative;
     display: flex;
-    padding: 0;
-    margin-top: 3vw;
+    padding: 20px;
 }
 
 #opera #navs {
@@ -314,13 +345,15 @@ a.opus {
     flex-shrink: 0;
     width: 25vw;
     position: sticky;
-    top: 80px;
-    height: calc(100vh - 80px);
+    top: 60px;
+    height: calc(100vh - 160px);
     bottom: 0;
-    overflow-y: scroll;
+    /*
     background-color: var(--bg3);
+    */
     color: var(--bg2);
     padding: 0 0 10vh 0;
+    overflow-y: scroll;
 }
 
 #navs select {
@@ -331,6 +364,8 @@ a.opus {
     position: sticky;
     margin-bottom: 2rem;
 }
+
+
 
 /* page click */
 .ed1page.view,
@@ -352,15 +387,6 @@ th .pb.view {
     right: 0;
 }
 
-
-/* ensure page number visible */
-:target::before {
-    content: "";
-    display: block;
-    height: 15rem;
-    margin: -15rem 0 0 0;
-    visibility: hidden;
-}
 
 .pbmark {
     padding: 0;
@@ -397,9 +423,7 @@ aside.toc {
     position: relative;
 } 
 
-#logos > a > img {
-    height: 50px;
-}
+
 nav.tabs .tab.zotero {
     justify-content: end;
     flex-grow: 0;
@@ -414,3 +438,194 @@ nav.tabs .tab.zotero {
 #tabs input {
     -moz-user-select: -moz-none;
 }
+/* The text window */
+.reader > .doc {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* top: 60px; */
+    height: calc(100vh - 120px);
+    overflow-y: scroll;
+    scroll-padding: 2.5rem;
+}
+
+section.section {
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+section.section:target {
+    box-shadow: -10px 0 5px var(--bglo);
+    margin: 0;
+}
+
+section.opus:target {
+    border-color: var(--bglo);
+}
+
+/* For verbatim.css */
+#pagimage {
+    background-color: var(--bg3);
+}
+
+#pagimage header > .prev, #pagimage header > .next {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 0.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--link);
+    cursor: pointer;
+  }
+
+/* no width for galenus, let room for image */
+#content .container {
+    max-width: 100% !important;
+}
+.reader .toc {
+    position: relative;
+    max-width: 20em;
+    font-size: 75%;
+    height: calc(100vh - 120px);
+    top: 0;
+    overflow-y: scroll;
+}
+
+footer.doc {
+    background-color: var(--bg3);
+}
+footer.doc a.prevnext:hover {
+    background-color: var(--bg);
+}
+
+p {
+    text-indent: 0;
+}
+
+/* ensure page number visible */
+/*
+:target::before {
+    content: "";
+    display: block;
+    height: 15rem;
+    margin: -15rem 0 0 0;
+    visibility: hidden;
+}
+*/
+
+#content {
+    padding: 0;
+}
+
+
+
+#footer {
+    height: 60px;
+}
+
+
+#footer,
+#footer #logos,
+#footer #logos a {
+    position: relative;
+}
+#footer #logos,
+#footer #logos a {
+    max-height: 100%;
+}
+
+#footer #logos > a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+} 
+#logos > a > img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#footer img {
+    opacity: 0.5;
+}
+#footer:hover img {
+    opacity: 1;
+    transition: opacity .3s ease-in-out
+}
+.tab.left {
+    display: flex;
+    text-decoration: none;
+    padding: 0.2rem 0.5rem 0.7rem 0.5rem;
+    text-align: left;
+}
+
+label.head {
+    font-weight: bold;
+}
+
+a.head {
+    font-weight: bold;
+    opacity: 0.8;
+    color:inherit;
+    text-decoration: none;
+}
+
+a.head:hover {
+    opacity: 1;
+}
+a.tree_back:hover::before {
+    content: '❮';
+    position: absolute;
+    margin-left: -1em;
+    margin-top: -0.1em;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    text-decoration: none;
+    color: inherit;
+}
+#all {
+    height: 100%;
+}
+#tabs {
+    position: relative;
+}
+#content {
+    flex-grow: 0;
+    position: relative;
+    padding: 0;
+}
+body.cts #content {
+    height: calc(100vh - 120px);
+}
+
+body.cts #header {
+    display: none;
+}
+body.cts #footer {
+    /* bottom: 0; */ 
+}
+/*
+#header.down {
+    top: -80px;
+    position:absolute;
+    z-index: -5;
+    opacity: 0;
+    transition: top 1s ease-in-out;
+}
+*/
+#image_nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

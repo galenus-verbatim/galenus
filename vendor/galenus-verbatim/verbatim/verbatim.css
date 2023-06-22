@@ -599,7 +599,6 @@ div.toc {
     background-color: var(--bg3);
     color: var(--bg2);
     padding: 1em 0 10vh 0;
-    font-size: x-small;
 }
 
 nav>a,
@@ -642,12 +641,12 @@ a small {
     color: var(--text);
 }
 
-div.doc {
+.text.doc {
     width: 40em;
     background-color: var(--bg);
     color: var(--text);
     position: relative;
-    padding: 0;
+    padding: 1rem;
 }
 
 header.opus {
@@ -658,18 +657,21 @@ header.opus {
 header.doc {
     padding: 0;
     margin: 0;
-    background-color: var(--bg3);
+    background-color: var(--bglo);
     display: flex;
     align-items: stretch;
     justify-content: space-between;
 }
 
-header.doc h1 {
+header.doc > * {
     padding: 0.5rem 0;
+}
+
+header.doc > div {
     margin: 0;
     text-align: center;
     font-size: 1.2rem;
-    min-height: 2rem;
+    min-height: 3rem;
     color: var(--text);
 }
 
@@ -723,7 +725,7 @@ footer.doc>* {
     width: 100%;
 }
 
-footer.doc a.post {
+footer.doc a.next {
     text-align: right;
     display: block;
 }
@@ -810,8 +812,8 @@ div.reader {
     padding: 0.5rem 1rem;
 }
 
-#pagimage header > .ante,
-#pagimage header > .post {
+#pagimage header > .prev,
+#pagimage header > .next {
     display: block;
     font-size: 2rem;
     font-weight: bold;
@@ -824,8 +826,8 @@ div.reader {
     cursor: pointer;
 }
 
-#pagimage header > .ante:hover,
-#pagimage header > .post:hover {
+header > .prev:hover,
+header > .next:hover {
     background-color: var(--bg);
 }
 

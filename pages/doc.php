@@ -223,12 +223,13 @@ $main = function() {
 </div>';
 
 echo '
-<div class="doc">
-    <main>';
+<div class="doc text">
+';
     echo bibl();
     echo '<div class="text">';
 
     $html = $doc['html'];
+
     // if a word to find, get lem_id or orth_id
     // A word to hilite
     if (count($forms)) {
@@ -270,14 +271,13 @@ echo '
     echo prevnext('next');
     echo '
     </footer>
-    </main>
 </div>';
     echo '
     <div id="pagimage">
-        <header id="imago_nav">
-            <span id="imago_ante" class="ante" href="#" class="entree"><div>⟨</div></span>
-            <div id="imago_titulus">Titre image</div>
-            <span id="imago_post" class="post" href="#" class="entree"><div>⟩</div></span>
+        <header id="image_nav">
+            <span id="image_prev" class="prev" href="#" class="entree"><div>⟨</div></span>
+            <div id="image_title">Cliquer un n° de page pour en afficher l’image</div>
+            <span id="image_next" class="next" href="#" class="entree"><div>⟩</div></span>
         </header>
         <div>
             <div id="viewcont">

@@ -13,7 +13,7 @@ use Oeuvres\Xsl\{Xpack};
 
 
 // testing if there is a docx, test date
-Log::setLogger(new LoggerWeb(LogLevel::DEBUG));
+// Log::setLogger(new LoggerWeb(LogLevel::DEBUG));
 // a caller 
 if (!isset($docx_file)) {
     $name = Http::par('page', trim(Route::url_request(), '/\\'));
@@ -40,7 +40,7 @@ $docx->tei();
 $xsl_file = Xpack::dir() . 'tei_html_article.xsl';
 Xt::transformToUri(
     $xsl_file,
-    $docx->dom(),
+    $docx->teiDoc(),
     $html_file
 );
 return false;

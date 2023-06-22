@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '23c174c0f0885a731a1d167d63128e9988d9df52',
+        'reference' => '066eb37e14e31c7f8dc5c6a6363a51dafa6db1fe',
         'name' => 'galenus-verbatim/teinte_galenus',
         'dev' => true,
     ),
@@ -36,7 +36,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '23c174c0f0885a731a1d167d63128e9988d9df52',
+            'reference' => '066eb37e14e31c7f8dc5c6a6363a51dafa6db1fe',
             'dev_requirement' => false,
         ),
         'galenus-verbatim/verbatim' => array(
@@ -47,7 +47,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => '171d0156233ce99869b3231909370082d34e5dfc',
+            'reference' => '92c8c07844699a8cccdabe6299e501a9eba798bd',
             'dev_requirement' => false,
         ),
         'oeuvres/kit' => array(
@@ -58,7 +58,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => '369f0c3e902963fdbbaff8c61c3d01d0973c031c',
+            'reference' => '3da4c853b5ed8513f5130bd5650c8e2c132b3c23',
             'dev_requirement' => false,
         ),
         'oeuvres/teinte' => array(
@@ -69,7 +69,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => 'b478bcf7e5671d14461aec77b5d7f847c1be978c',
+            'reference' => '16e2656c919c9c793081a657a622892c7a6efa45',
             'dev_requirement' => false,
         ),
         'oeuvres/xsl' => array(
@@ -80,7 +80,7 @@
             'aliases' => array(
                 0 => '9999999-dev',
             ),
-            'reference' => '80ec7463855517a9bee5c189f51b1b1ac85c7890',
+            'reference' => 'e29a1a6a49097dd36c36505d2a4c5692183373c2',
             'dev_requirement' => false,
         ),
         'psr/log' => array(

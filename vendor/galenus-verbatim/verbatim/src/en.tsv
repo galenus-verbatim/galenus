@@ -1,13 +1,16 @@
 key	message
 app	Verbatim
 editio	Titles
-editio.annus	Year
-editio.auctor	Author
+editio.date	Date
+editio.author	Author
+editio.authors	Author(s)
 editio.caption	Table of titles
 editio.cts	CTS URN
 editio.editor	Editor
-editio.titulus	Title
-editio.volumen	Volume
+editio.editors	Editor(s)
+editio.title	Title
+editio.volume	Volume
+editio.year	Year
 nostop	Full words
 pos.l	art.
 pos.n	nom

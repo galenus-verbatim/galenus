@@ -13,16 +13,77 @@ declare(strict_types=1);
 namespace Oeuvres\Teinte\Format;
 
 use Exception, DOMDocument, DOMXpath;
-use Oeuvres\Kit\{Log};
+use Oeuvres\Kit\{Filesys,Log, Xt};
 use Oeuvres\Teinte\Tei2\{AbstractTei2};
 
 /**
  * A tei file with export strategies
  */
-class Tei extends Xml
+class Tei extends File
 {
+    use Teiable;
     /** Array of templates, registred by format when relevant */
     protected array $templates = [];
+
+
+    /**
+     * Load XML/TEI as a file (preferred way to hav some metas).
+     */
+    public function load(string $src_file): bool
+    {
+        $this->teiReset();
+        if (!parent::{__FUNCTION__}(...func_get_args())) {
+            return false;
+        }
+        $this->loadXml($this->contents());
+        return true;
+    }
+
+    /**
+     * Load XML/TEI as a string, normalize and load it as DOM
+     */
+    public function loadXml(string $xml):DOMDocument
+    {
+        $this->teiReset();
+        $tei = static::lint($xml);
+        $this->tei = $tei;
+        // spaces are normalized upper, keep them
+        // set dom properties before loading
+        $dom = new DOMDocument();
+        $dom->substituteEntities = true;
+        $dom->preserveWhiteSpace = true;
+        $dom->formatOutput = false;
+        $this->teiDoc = Xt::loadXml($tei, $dom);
+        if (!$this->teiDoc) {
+            throw new Exception("XML malformation");
+        }
+        return $this->teiDoc;
+    }
+
+    /**
+     * Load a dom directy, 
+     */
+    public function loadDoc(DOMDocument $dom)
+    {
+        $this->teiReset();
+        $this->teiDoc = $dom;   
+    }
+
+    /**
+     * Nothing to do, already TEI
+     */
+    public function teiMake(?array $pars = null): void
+    {
+        if (
+            $this->teiXml == null 
+            && $this->teiDoc == null 
+            && !$this->teiDoc->documentElement
+        ) {
+            throw new Exception("No XML/TEI loaded, use Tei::loadXml() or Tei::loadDoc()");
+            
+        }
+
+    }
 
     private function pars(string $format, ?array $pars = null)
     {
@@ -39,13 +100,24 @@ class Tei extends Xml
     }
 
     /**
+     * Check if Tei file is in state to be exported
+     */
+    public function domCheck()
+    {
+
+    }
+
+    /**
      * Transform current dom and write to file.
      */
     public function toUri(string $format, String $uri, ?array $pars = null)
     {
+        if (!Filesys::writable($uri)) {
+            throw new Exception("“{$uri}” not writable as a destination file");
+        }
         $transfo = AbstractTei2::transfo($format);
         $pars = $this->pars($format, $pars);
-        $transfo::toUri($this->dom, $uri, $pars);
+        $transfo::toUri($this->teiDoc, $uri, $pars);
     }
 
     /**
@@ -56,7 +128,7 @@ class Tei extends Xml
     {
         $transfo = AbstractTei2::transfo($format);
         $pars = $this->pars($format, $pars);
-        return $transfo::toXml($this->dom, $pars);
+        return $transfo::toXml($this->teiDoc, $pars);
     }
 
     /**
@@ -67,7 +139,7 @@ class Tei extends Xml
     {
         $transfo = AbstractTei2::transfo($format);
         $pars = $this->pars($format, $pars);
-        return $transfo::toDoc($this->dom, $pars);
+        return $transfo::toDoc($this->teiDoc, $pars);
     }
 
     /**
@@ -88,12 +160,12 @@ class Tei extends Xml
     {
         if (!is_file($tmpl_file)) {
             throw new \InvalidArgumentException(
-                "Template: \"\033[91m$tmpl_file\033[0m\" is not a valid file"
+                "Template: \"$tmpl_file\" is not a valid file"
             );
         }
         if (!AbstractTei2::has($format)) {
             throw new \InvalidArgumentException(
-                "Template: \"\033[91m$format\033[0m\" format not yet available as a TEI export"
+                "Template: \"$format\" format not yet available as a TEI export"
             );
         }
         // validate extension ?
@@ -136,7 +208,7 @@ class Tei extends Xml
      */
     public function meta()
     {
-        $meta = self::metaDom($this->dom, $this->xpath());
+        $meta = self::metaDom($this->teiDoc, $this->xpath());
         $meta['code'] = pathinfo($this->file, PATHINFO_FILENAME);
         $meta['filename'] = $this->filename();
         $meta['filemtime'] = $this->filemtime();
@@ -246,8 +318,8 @@ class Tei extends Xml
     public function images($hrefdir = null, $dstdir = null)
     {
         if ($dstdir) $dstdir = rtrim($dstdir, '/\\') . '/';
-        // $dom = $this->dom->cloneNode(true); // do not clone, keep the change of links
-        $dom = $this->dom;
+        // $dom = $this->teiDoc->cloneNode(true); // do not clone, keep the change of links
+        $dom = $this->teiDoc;
         $count = 1;
         $nl = $dom->getElementsByTagNameNS('http://www.tei-c.org/ns/1.0', 'graphic');
         $pad = strlen('' . $nl->count());

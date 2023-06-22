@@ -118,12 +118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/galenus-verbatim/verbatim.git",
-                "reference": "171d0156233ce99869b3231909370082d34e5dfc"
+                "reference": "92c8c07844699a8cccdabe6299e501a9eba798bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/galenus-verbatim/verbatim/zipball/171d0156233ce99869b3231909370082d34e5dfc",
-                "reference": "171d0156233ce99869b3231909370082d34e5dfc",
+                "url": "https://api.github.com/repos/galenus-verbatim/verbatim/zipball/92c8c07844699a8cccdabe6299e501a9eba798bd",
+                "reference": "92c8c07844699a8cccdabe6299e501a9eba798bd",
                 "shasum": ""
             },
             "require": {
@@ -132,7 +132,7 @@
                 "oeuvres/kit": "dev-main",
                 "php": ">=7.2"
             },
-            "time": "2023-06-13T23:57:16+00:00",
+            "time": "2023-06-14T09:13:14+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",
@@ -174,12 +174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oeuvres/kit.git",
-                "reference": "369f0c3e902963fdbbaff8c61c3d01d0973c031c"
+                "reference": "3da4c853b5ed8513f5130bd5650c8e2c132b3c23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oeuvres/kit/zipball/369f0c3e902963fdbbaff8c61c3d01d0973c031c",
-                "reference": "369f0c3e902963fdbbaff8c61c3d01d0973c031c",
+                "url": "https://api.github.com/repos/oeuvres/kit/zipball/3da4c853b5ed8513f5130bd5650c8e2c132b3c23",
+                "reference": "3da4c853b5ed8513f5130bd5650c8e2c132b3c23",
                 "shasum": ""
             },
             "require": {
@@ -189,7 +189,7 @@
                 "php": ">=7.2",
                 "psr/log": "1.1.4"
             },
-            "time": "2023-06-12T17:17:01+00:00",
+            "time": "2023-06-19T02:56:05+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",
@@ -233,12 +233,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oeuvres/teinte_php.git",
-                "reference": "b478bcf7e5671d14461aec77b5d7f847c1be978c"
+                "reference": "16e2656c919c9c793081a657a622892c7a6efa45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oeuvres/teinte_php/zipball/b478bcf7e5671d14461aec77b5d7f847c1be978c",
-                "reference": "b478bcf7e5671d14461aec77b5d7f847c1be978c",
+                "url": "https://api.github.com/repos/oeuvres/teinte_php/zipball/16e2656c919c9c793081a657a622892c7a6efa45",
+                "reference": "16e2656c919c9c793081a657a622892c7a6efa45",
                 "shasum": ""
             },
             "require": {
@@ -248,7 +248,7 @@
                 "oeuvres/xsl": "dev-main",
                 "php": ">=7.2"
             },
-            "time": "2023-06-07T20:15:15+00:00",
+            "time": "2023-06-19T01:11:49+00:00",
             "default-branch": true,
             "bin": [
                 "bin/teinte"
@@ -284,15 +284,15 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oeuvres/teinte_xsl.git",
-                "reference": "80ec7463855517a9bee5c189f51b1b1ac85c7890"
+                "reference": "e29a1a6a49097dd36c36505d2a4c5692183373c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oeuvres/teinte_xsl/zipball/80ec7463855517a9bee5c189f51b1b1ac85c7890",
-                "reference": "80ec7463855517a9bee5c189f51b1b1ac85c7890",
+                "url": "https://api.github.com/repos/oeuvres/teinte_xsl/zipball/e29a1a6a49097dd36c36505d2a4c5692183373c2",
+                "reference": "e29a1a6a49097dd36c36505d2a4c5692183373c2",
                 "shasum": ""
             },
-            "time": "2023-06-11T22:49:31+00:00",
+            "time": "2023-06-19T00:54:26+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",
