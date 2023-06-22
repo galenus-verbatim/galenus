@@ -198,7 +198,7 @@ $main = function() {
         // occurrences by chapter ?
         $html = preg_replace_callback(
             array(
-                '@<a href="(./)?([^"]+)">([^<]+)</a>@',
+                '@<a href="(\./)?([^"]+)">([^<]+)</a>@',
             ),
             function ($matches) use ($cts, $q, $qTok, $params, $i){
                 $params[$i] = $matches[2];
