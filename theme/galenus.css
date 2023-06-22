@@ -502,8 +502,8 @@ section.opus:target {
 .reader .toc {
     background-color: var(--bglo);
     position: relative;
-    min-width: 20em;
-    max-width: 30em;
+    min-width: 15em;
+    max-width: 20em;
     font-size: 75%;
     top: 0;
     overflow-y: scroll;
