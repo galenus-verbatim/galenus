@@ -9,6 +9,8 @@ require_once(dirname(__DIR__) . "/Galenus.php");
 use Oeuvres\Kit\{Http, I18n, Route};
 use GalenusVerbatim\Verbatim\{Verbatim};
 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 
 class Data {
     /** requested cts */
@@ -201,6 +203,7 @@ $main = function() {
                 '@<a href="(\./)?([^"]+)">([^<]+)</a>@',
             ),
             function ($matches) use ($cts, $q, $qTok, $params, $i){
+
                 $params[$i] = $matches[2];
                 $qTok->execute($params);
                 list($count) = $qTok->fetch();

@@ -25,7 +25,9 @@ Galenus::init();
 class Galenus
 {
     /** configuration parameters */
-    static public $config;
+    static public $config = [
+        'win' => false,
+    ];
 
     /**
      * Init static things
@@ -34,7 +36,8 @@ class Galenus
     {
         $config_file = __DIR__ . '/config.php';
         if (file_exists($config_file)) {
-            self::$config = include($config_file);
+            $conf = include($config_file);
+            self::$config = array_merge(self::$config, $conf);
         }
     }
 
