@@ -9,9 +9,6 @@ require_once(dirname(__DIR__) . "/Galenus.php");
 use Oeuvres\Kit\{Http, I18n, Route};
 use GalenusVerbatim\Verbatim\{Verbatim};
 
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
-
 class Data {
     /** requested cts */
     public static $cts;
@@ -217,7 +214,7 @@ $main = function() {
                     $href .= str_replace('urn:', 'urn/', $matches[2]);
                 }
                 else {
-                    $href .= $matches[1];
+                    $href .= $matches[2];
                 }
                 $ret .= ' href="' . $href . '?q=' . $q . '"';
                 $ret .= '>';
