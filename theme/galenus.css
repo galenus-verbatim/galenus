@@ -11,8 +11,9 @@
     --link: #e09143;
     --link2: rgba(224, 145, 67, 0.5);
     --link3: #9c652e;
-    --bg2: rgb(102, 102, 102);
-    --bg2a: rgba(102, 102, 102, 0.8);
+    --bg2: rgb(102, 102, 110);
+    --bg2a: rgba(80, 80, 90, 0.8);
+    --bg2b: rgba(120, 120, 105, 0.7);
     /*
     --bg2: rgba(71, 50, 29, 0.8);
     --bg2a: rgba(71, 50, 29, 0.8);
@@ -20,8 +21,8 @@
     --text2: rgb(236, 214, 190);
     --text2hi: #fff;
     --text2inv: #fff;
-    --bg3: #f0f0f0;
-    --text3: #666;
+    --bg3: #f0f0f5;
+    --text3: #665;
 }
 
 * {
@@ -29,7 +30,7 @@
 }
 
 html {
-    scrollbar-color: var(--bgloa) var(--bg);
+    scrollbar-color: var(--bg2b) var(--bg);
     scrollbar-width: thin;
 }
 
@@ -38,7 +39,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--bgloa);
+    background: var(--bg2b);
     border-radius: 20px;
     /* roundness of the scroll thumb */
     border: 3px solid transparent;
@@ -116,7 +117,7 @@ div.banner .moto {
 }
 
 div.banner {
-    color: var(--bg2);
+    color: var(--bg2a);
 }
 
 section.editio h1,
@@ -161,7 +162,7 @@ a.lb {
 
 a.lb:hover {
     text-decoration: none;
-    background-color: var(--bg2);
+    background-color: var(--bg2a);
     color: var(--text2hi);
 }
 
@@ -430,6 +431,10 @@ nav.tabs .tab.zotero {
 }
 
 #footer,
+nav.tabs {
+    background-color: var(--bg2a);
+}
+#footer,
 #tabs,
 #header {
     user-select: none;
@@ -636,3 +641,6 @@ body.cts #footer {
     align-items: center;
 }
 
+.tree li::before {
+    color: #fff;
+}

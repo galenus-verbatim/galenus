@@ -210,6 +210,19 @@ var Tree = {
         // click in a link force open
         if (a) { // propagate
             close = false;
+            let id = a.hash;
+            if (id.startsWith('#')) id = id.substring(1);
+            const div = document.getElementById(id);
+            /* Bugg
+            if (div) {
+                event.preventDefault();
+                div.scrollIntoView({
+                    behavior: 'smooth',
+                    block: "center", 
+                    inline: "nearest"
+                });
+            }
+            */
         }
         let li = Tree.selfOrAncestor(event.target, 'li');
         if (!li) {
