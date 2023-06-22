@@ -4,7 +4,7 @@
     --bghi: #e09143;
     --texthi: #fff;
     --bglo: rgb(236, 214, 190);
-    --bgloa: rgba(236, 214, 190, 0.85);
+    --bgloa: rgba(236, 214, 190, 0.80);
     --bgmark: var(--bgloa);
     --textlo: #666;
     --textinv: #000;
@@ -29,7 +29,7 @@
 }
 
 html {
-    scrollbar-color: var(--bglo) var(--bg);
+    scrollbar-color: var(--bgloa) var(--bg);
     scrollbar-width: thin;
 }
 
@@ -38,7 +38,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--bglo);
+    background: var(--bgloa);
     border-radius: 20px;
     /* roundness of the scroll thumb */
     border: 3px solid transparent;
@@ -438,24 +438,28 @@ nav.tabs .tab.zotero {
 #tabs input {
     -moz-user-select: -moz-none;
 }
+.reader {
+    height: calc(100vh - 160px);
+}
 /* The text window */
 .reader > .doc {
     padding: 0;
     display: flex;
     flex-direction: column;
-    /* top: 60px; */
-    height: calc(100vh - 120px);
+    justify-content: space-between;
+    height: 100%;
     overflow-y: scroll;
     scroll-padding: 2.5rem;
 }
 
 section.section {
     padding: 0.5rem 0 0.5rem 0;
+    margin: 0;
 }
 
 section.section:target {
-    box-shadow: -10px 0 5px var(--bglo);
-    margin: 0;
+    box-shadow: 5px -5px 5px var(--bglo);
+    margin-top: 5px;
 }
 
 section.opus:target {
@@ -465,6 +469,7 @@ section.opus:target {
 /* For verbatim.css */
 #pagimage {
     background-color: var(--bg3);
+    border-left: solid 20px var(--bglo);
 }
 
 #pagimage header > .prev, #pagimage header > .next {
@@ -481,20 +486,22 @@ section.opus:target {
   }
 
 /* no width for galenus, let room for image */
-#content .container {
+.cts #content .container {
     max-width: 100% !important;
+    padding: 20px;
 }
 .reader .toc {
+    background-color: var(--bglo);
     position: relative;
     max-width: 20em;
     font-size: 75%;
-    height: calc(100vh - 120px);
     top: 0;
     overflow-y: scroll;
 }
 
 footer.doc {
     background-color: var(--bg3);
+    height: 60px;
 }
 footer.doc a.prevnext:hover {
     background-color: var(--bg);
@@ -553,7 +560,7 @@ p {
 }
 #footer:hover img {
     opacity: 1;
-    transition: opacity .3s ease-in-out
+    transition: opacity .2s ease-in-out
 }
 .tab.left {
     display: flex;

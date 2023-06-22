@@ -775,10 +775,6 @@ div.reader {
 }
 
 .reader .toc {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 60px;
-    height: calc(100vh - 60px);
     overflow: auto;
     min-width: 10rem;
 }
@@ -787,18 +783,14 @@ div.reader {
     flex-shrink: 0;
 }
 
-.reader #pagimage {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 60px;
-    height: calc(100vh - 60px);
+#pagimage {
     width: 100%;
     max-width: none;
     display: flex;
     flex-direction: column;
 }
 
-.reader #pagimage>div {
+#pagimage>div {
     flex-grow: 5;
 }
 
