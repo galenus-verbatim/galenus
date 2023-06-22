@@ -169,20 +169,23 @@ $main = function() {
 <div class="toc">';
     // no nav
     if (!isset($edition['nav']) || ! $edition['nav']) {
+        $html = '';
+    }
+    else {
+        $html = $edition['nav'];
     }
     // no word searched
-    else if (!count($formids)) {
-        $html = $edition['nav'];
+    if (!count($formids)) {
+        // selected
         $html = preg_replace(
             '@ href="./' . $cts . '"@',
             '$1 class="selected"',
             $html
         );
-        // win hack
+        // the win hack
         if (Galenus::$config['win']) {
             $html = str_replace('./urn:', Route::home_href() . 'urn/', $html);
         }
-
         echo $html;
     }
     // calculate occurrences by chapter
@@ -198,7 +201,7 @@ $main = function() {
                 '@<a href="(./)?([^"]+)">([^<]+)</a>@',
             ),
             function ($matches) use ($cts, $q, $qTok, $params, $i){
-                $params[$i] = $matches[1];
+                $params[$i] = $matches[2];
                 $qTok->execute($params);
                 list($count) = $qTok->fetch();
                 $ret = '';
@@ -206,7 +209,14 @@ $main = function() {
                 if ($matches[2] == $cts) {
                     $ret .= ' class="selected"';
                 }
-                $ret .= ' href="' . $matches[1] . $matches[2] . '?q=' . $q . '"';
+                $href = Route::home_href();
+                if (Galenus::$config['win']) {
+                    $href .= str_replace('urn:', 'urn/', $matches[2]);
+                }
+                else {
+                    $href .= $matches[1];
+                }
+                $ret .= ' href="' . $href . '?q=' . $q . '"';
                 $ret .= '>';
                 $ret .= $matches[3];
                 if ($count) {
@@ -215,7 +225,7 @@ $main = function() {
                 $ret .= '</a>';
                 return $ret;
             },
-            $edition['nav']
+            $html
         );
         echo $html;
     }
@@ -237,17 +247,17 @@ echo '
         $sql = "SELECT * FROM tok WHERE $field IN ($in) AND doc = {$doc['id']}";
         $qTok =  Verbatim::$pdo->prepare($sql);
         $qTok->execute($formids);
-        $start = 0;
+        $offset = 0;
         while ($tok = $qTok->fetch(PDO::FETCH_ASSOC)) {
-            $charde = intval($tok['charde']);
-            $charad = intval($tok['charad']);
-            echo mb_substr($html, $start, $charde - $start);
+            $start = intval($tok['start']);
+            $end = intval($tok['end']);
+            echo mb_substr($html, $offset, $start - $offset);
             echo "<mark>";
-            echo mb_substr($html, $charde, $charad - $charde);
+            echo mb_substr($html, $start, $end - $start);
             echo "</mark>";
-            $start = $charad;
+            $offset = $end;
         }
-        $html = mb_substr($html, $start, mb_strlen($html) - $start);
+        $html = mb_substr($html, $offset, mb_strlen($html) - $offset);
     }
     // transform line breaks in links 
     // <span class="lb" data-page="1.1" data-line="1" id="l1.1.1">

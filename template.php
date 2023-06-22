@@ -42,7 +42,7 @@ $lang = Route::getAtt("lang");
 <div id="all">
     <div id="content">
         <nav id="tabs" class="tabs">
-            <span class="tab">Galenus<br/>Verbatim</span>
+            <a class="tab" href="https://galenus-verbatim.huma-num.fr/">Galenus<br/>Verbatim</a>
             <form action="<?= Route::home_href() ?>" onsubmit="this.action = this.action + encodeURIComponent(this.cts.value.replaceAll(':', '_'));">
                 <label for="cts"><?= I18n::_('cts.label') ?></label>
                 <br/>

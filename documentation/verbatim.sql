@@ -10,82 +10,87 @@ PRAGMA foreign_keys = 0; -- W. for efficiency
 DROP TABLE IF EXISTS opus;
 CREATE table opus (
 -- Opus when more than one edition of same text
-    id          INTEGER, -- rowid auto
-    clavis      TEXT UNIQUE NOT NULL, -- ! identifier
-    bibl        BLOB,                 -- ! html bibl record
+    id                   INTEGER, -- rowid auto
+    cts     TEXT UNIQUE NOT NULL, -- ! cts identifier for url
+    bibl                    BLOB, -- ! html bibl record
     PRIMARY KEY(id ASC)
 );
-CREATE UNIQUE INDEX opus_clavis ON opus(clavis);
+CREATE UNIQUE INDEX opus_cts ON opus(cts);
 
-DROP TABLE IF EXISTS editio;
-CREATE table editio (
+DROP TABLE IF EXISTS edition;
+CREATE table edition (
 -- Source XML file
-    id          INTEGER, -- rowid auto
+    id                   INTEGER, -- rowid auto
     -- must, file infos and content
-    clavis      TEXT UNIQUE NOT NULL, -- ! source filename without extension, unique for base
-    bibl        BLOB,                 -- ! html text ready to display
-    epoch       INTEGER NOT NULL,     -- ! file modified time
-    octets      INTEGER NOT NULL,     -- ! filesize
-    titulus     TEXT NOT NULL,        -- ! title of an edition
-    nav         BLOB,                 -- ? html table of contents if more than one chapter
-    -- should, bibliographic info
-    auctor      TEXT,    -- ? name of an author
-    editor      TEXT,    -- ? name of an editor
-    editio      TEXT,    -- ? code for an edittion
-    volumen     TEXT,    -- ? volume
-    annuspub    INTEGER, -- ? publication year of the edition
-    pagde       INTEGER, -- ? page from
-    pagad       INTEGER, -- ? page to
-    titulbrev   TEXT,    -- ? title abbreviated
-    annuscrea   INTEGER, -- ? creation year
+    cts     TEXT UNIQUE NOT NULL, -- ! cts identifier for url
+    file    TEXT UNIQUE NOT NULL, -- ! source xml filename without extension
+    epoch       INTEGER NOT NULL, -- ! file modified time
+    bytes       INTEGER NOT NULL, -- ! filesize
+    nav                     BLOB, -- ? html table of contents
+    bibl                    BLOB, -- ! html text ready to display
+    -- bibliographic info as zotero codes for html meta
+    -- https://www.zotero.org/support/dev/exposing_metadata
+    title                   TEXT, -- 
+    date                    TEXT, -- 
+    authors                 TEXT, -- Surname, Given Name; Smith, Jane
+    editors                 TEXT, -- Surname, Given Name; Smith, Jane
+    language                TEXT, --
+    book_title              TEXT, --
+    volume                  TEXT,
+    series                  TEXT,
+    page_start              TEXT, -- 
+    page_end                TEXT, -- 
+    publisher               TEXT, -- 
+
+
     PRIMARY KEY(id ASC)
 );
-CREATE UNIQUE INDEX IF NOT EXISTS editio_clavis ON editio(clavis);
+CREATE UNIQUE INDEX IF NOT EXISTS edition_cts ON edition(cts);
 
 
 -- Schema to store lemmatized texts
 DROP TABLE IF EXISTS doc;
 CREATE table doc (
 -- an indexed HTML document
-    id          INTEGER, -- rowid auto
+    id                   INTEGER, -- rowid auto
     -- must, file infos and content
-    clavis      TEXT UNIQUE NOT NULL, -- ! identifier for section
-    html        BLOB NOT NULL,        -- ! html text ready to display
-    editio      INTEGER NOT NULL,     -- ! link to the edition
-    ante        INTEGER, -- ? previous document
-    post        INTEGER, -- ? next document
+    cts     TEXT UNIQUE NOT NULL, -- ! cts identifier for url
+    html           BLOB NOT NULL, -- ! html text ready to display
+    edition     INTEGER NOT NULL, -- ! link to the edition
+    prev                    TEXT, -- ? cts of previous document
+    next                    TEXT, -- ? cts of next document
 
     -- should, bibliographic info
-    editor      TEXT,    -- ? replicated from edition, for efficient filtering
-    titulus     TEXT,    -- ? title of the document if relevant
+    editors                 TEXT, -- ? replicated from editio, for efficiency
+    title                   TEXT, -- ? title of the document if relevant
     
-    volumen     TEXT,    -- ? analytic, for edition on more than one
-    pagde       INTEGER, -- ? page from
-    linde       INTEGER, -- ? first line of first page
-    pagad       INTEGER, -- ? page to
-    linad       INTEGER, -- ? last line of last page
+    volume                  TEXT, -- ? analytic, for edition on more than one
+    page_start              TEXT, -- ? page from
+    line_start           INTEGER, -- ? first line of first page
+    page_end             INTEGER, -- ? page to
+    line_end             INTEGER, -- ? last line of last page
 
-    liber       TEXT,    -- ? analytic,
-    capitulum   TEXT,    -- ? analytic,
-    sectio      TEXT,    -- ? analytic,
+    liber                   TEXT, -- ? analytic,
+    capitulum               TEXT, -- ? analytic,
+    sectio                  TEXT, -- ? analytic,
     PRIMARY KEY(id ASC)
 );
-CREATE UNIQUE INDEX IF NOT EXISTS doc_code ON doc(clavis);
-CREATE INDEX IF NOT EXISTS doc_redir ON doc(editor, volumen, pagde, pagad);
+CREATE UNIQUE INDEX IF NOT EXISTS doc_cts ON doc(cts);
+CREATE INDEX IF NOT EXISTS doc_redir ON doc(editors, volume, page_start, page_end);
 
 
 DROP TABLE IF EXISTS tok;
 CREATE TABLE tok (
 -- compiled table of occurrences
-    id          INTEGER, -- rowid auto
-    doc         INTEGER NOT NULL,  -- ! doc id
-    orth        INTEGER NOT NULL,  -- ! normalized orthographic form id
-    charde      INTEGER NOT NULL,  -- ! start offset in source file, utf8 chars
-    charad      INTEGER NOT NULL,  -- ! size of token, utf8 chars
-    cat         TEXT    NOT NULL,  -- ! word category id
-    lem         INTEGER NOT NULL,  -- ! lemma form id
-    pag         INTEGER,           -- ? page number
-    linea       INTEGER,           -- ? line number
+    id                   INTEGER, -- rowid auto
+    doc         INTEGER NOT NULL, -- ! doc id
+    orth        INTEGER NOT NULL, -- ! normalized orthographic form id
+    start       INTEGER NOT NULL, -- ! start index in source file, utf8 chars
+    end         INTEGER NOT NULL, -- ! end index
+    cat            TEXT NOT NULL, -- ! word category id
+    lem         INTEGER NOT NULL, -- ! lemma form id
+    page                    TEXT, -- ? page number, maybe not int, ex: 8.410 
+    line                 INTEGER, -- ? line number
     PRIMARY KEY(id ASC)
 );
  -- search an orthographic form in all or some documents
@@ -94,19 +99,17 @@ CREATE INDEX IF NOT EXISTS tok_orth ON tok(orth, doc);
 CREATE INDEX IF NOT EXISTS tok_lem ON tok(lem, doc);
 -- list pos
 CREATE INDEX IF NOT EXISTS tok_cat ON tok(cat);
--- search position by line
-CREATE INDEX IF NOT EXISTS tok_linea ON tok(doc, pag, linea);
 
 
 DROP TABLE IF EXISTS orth;
 CREATE TABLE orth (
 -- Index of orthographic forms
-    id          INTEGER, -- rowid auto
-    form        TEXT NOT NULL,     -- ! the letters
-    deform      TEXT NOT NULL,     -- ! letters without accents
-    lem         INTEGER,           -- ! (form, cat) -> lemma
-    cat         TEXT,              -- ! word category from leammatizer
-    flag        INTEGER,           -- ? local flag
+    id                   INTEGER, -- rowid auto
+    form           TEXT NOT NULL, -- ! the letters
+    deform         TEXT NOT NULL, -- ! letters without accents
+    lem                  INTEGER, -- ! (form, cat) -> lemma
+    cat                     TEXT, -- ! word category from leammatizer
+    flag                 INTEGER, -- ? local flag
     PRIMARY KEY(id ASC)
 );
 CREATE INDEX IF NOT EXISTS orth_deform ON orth(deform);
@@ -117,11 +120,11 @@ CREATE INDEX IF NOT EXISTS orth_flag ON orth(flag);
 DROP TABLE IF EXISTS lem;
 CREATE TABLE lem (
 -- Index of lemma
-    id          INTEGER, -- rowid auto
-    form        TEXT NOT NULL,     -- ! the letters
-    deform      TEXT NOT NULL,     -- ! letters without accents
-    cat         TEXT,              -- ! word category id
-    flag        INTEGER,           -- ? local flag
+    id                   INTEGER, -- rowid auto
+    form           TEXT NOT NULL, -- ! the letters
+    deform         TEXT NOT NULL, -- ! letters without accents
+    cat                     TEXT, -- ! word category id
+    flag                 INTEGER, -- ? local flag
     PRIMARY KEY(id ASC)
 );
 CREATE INDEX IF NOT EXISTS lem_deform ON lem(deform);

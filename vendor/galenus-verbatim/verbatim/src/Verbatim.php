@@ -193,7 +193,7 @@ class Verbatim
             $out .= "</mark>";
             $offset = $end;
         }
-        // $out .= mb_substr($html, $start, mb_strlen($html) - $start);
+        $out .= mb_substr($html, $offset, mb_strlen($html) - $offset);
         return $out;
     }
 
