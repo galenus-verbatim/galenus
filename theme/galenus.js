@@ -294,8 +294,7 @@ if (div) {
 }());
 /** Make line numbers selectable */
 (function() {
-    
-    const main = document.querySelector('main');
+    const main = document.querySelector('div.doc div.text');
     if (!main) return;
     main.addEventListener('copy', (event) => {
         helper = document.createElement("div");

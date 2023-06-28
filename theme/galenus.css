@@ -658,8 +658,10 @@ body.cts #footer {
 }
 
 .tree li::before {
-    color: #fff;
+    color: var(--bg2);
 }
+
+
 
 blockquote.lemma {
     padding: 0;
