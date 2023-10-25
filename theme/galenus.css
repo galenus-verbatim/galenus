@@ -316,12 +316,21 @@ section.opus div.titlesh section.opus div.title {
     font-style: italic;
 }
 
+.original-title em { /* original title is here greek */ 
+    font-style: normal;
+}
+
 span.urn {
     white-space: nowrap;
 }
 
 .AbbrEnCGT::before {
     content: '(CGT) ';
+}
+
+li.label {
+    display: block;
+    font-weight: bold;
 }
 
 .surname {
@@ -576,6 +585,35 @@ p {
     text-decoration: none;
     padding: 0.2rem 0.5rem 0.7rem 0.5rem;
     text-align: left;
+}
+
+a.editio,
+div.editio {
+    padding: 0.2rem 0.5rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+}
+
+a.editio {
+    display:block;
+}
+
+a.editio:hover {
+    background-color: #fff;
+    text-decoration: none;
+}
+
+section.opus a.editio {
+    border: 1px transparent solid;
+}
+
+section.opus a.editio:hover {
+    border-color: var(--bg2);
+}
+
+.editio label {
+    font-weight: bold;
+    color: var(--bg2);
 }
 
 label.head {

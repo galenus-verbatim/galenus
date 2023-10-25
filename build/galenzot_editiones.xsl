@@ -62,14 +62,27 @@
         <xsl:apply-templates select="key('opus', $fichtner_no)" mode="cartouche"/>
         <xsl:variable name="self" select="."/>
         <!-- other editions online -->
-        <xsl:for-each select="key('verbatim', $fichtner_no)">
-          <xsl:if test="count(.|$self) = 2">
-            <div class="editionalt">
-              <xsl:text>altera editio: </xsl:text>
-              <xsl:apply-templates select="." mode="short"/>
-            </div>
-          </xsl:if>
+        <xsl:for-each select="key('verbatim_grc', $fichtner_no)[count(.|$self) = 2]">
+          <xsl:apply-templates select="." mode="short">
+            <xsl:with-param name="label">
+              <xsl:if test="position() = 1">
+                <label>altera editio: </label>
+              </xsl:if>
+            </xsl:with-param>
+          </xsl:apply-templates>
         </xsl:for-each>
+        <xsl:call-template name="edcrit"/>
+        <!-- translations -->
+        <xsl:for-each select="key('verbatim_lat', $fichtner_no)">
+          <xsl:apply-templates select="." mode="short">
+            <xsl:with-param name="label">
+              <xsl:if test="position() = 1">
+                <label>translatio Latina: </label>
+              </xsl:if>
+            </xsl:with-param>
+          </xsl:apply-templates>
+        </xsl:for-each>
+        <xsl:call-template name="transl"/>
       </div>
       <!-- book info -->
       <h1 class="editio">
@@ -128,6 +141,8 @@
       
       <xsl:text> </xsl:text>
       <xsl:call-template name="fichtner_link"/>
+      <xsl:text> </xsl:text>
+      <xsl:call-template name="gallat_link"/>
     </h4>
     <xsl:call-template name="opus_tituli"/>
   </xsl:template>

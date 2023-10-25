@@ -23,12 +23,20 @@
     match="/*/bib:*[dc:subject = '_opus']"
     use="normalize-space(dc:subject/dcterms:LCC/rdf:value)"
   />
-  <xsl:key name="verbatim" 
-    match="/*/bib:*[dc:subject = '_verbatim']"
+  <xsl:key name="verbatim_grc" 
+    match="/*/bib:*[dc:subject = '_verbatim' and dc:subject = '_grc']"
+    use="normalize-space(dc:subject/dcterms:LCC/rdf:value)"
+  />
+  <xsl:key name="verbatim_lat" 
+    match="/*/bib:*[dc:subject = '_verbatim' and dc:subject = '_lat']"
     use="normalize-space(dc:subject/dcterms:LCC/rdf:value)"
   />
   <xsl:key name="edcrit" 
     match="/*/bib:*[dc:subject = '_edcrit']"
+    use="normalize-space(dc:subject/dcterms:LCC/rdf:value)"
+  />
+  <xsl:key name="transl" 
+    match="/*/bib:*[dc:subject = '_transl']"
     use="normalize-space(dc:subject/dcterms:LCC/rdf:value)"
   />
   
@@ -63,9 +71,7 @@
           <xsl:apply-templates select="$opus/z:shortTitle"/>
         </xsl:when>
         <xsl:otherwise>
-          <em class="title">
-            <xsl:apply-templates select="dc:title"/>
-          </em>
+          <xsl:apply-templates select="dc:title"/>
         </xsl:otherwise>
       </xsl:choose>
     </a>
@@ -163,9 +169,7 @@
       </xsl:call-template>
       <h1>
         <xsl:call-template name="authors"/>
-        <em class="title">
-          <xsl:apply-templates select="dc:title"/>
-        </em>
+        <xsl:apply-templates select="dc:title"/>
         <xsl:variable name="title" select="normalize-space(dc:title)"/>
         <xsl:for-each select="z:shortTitle">
           <xsl:if test="normalize-space(.) != $title">
@@ -209,40 +213,65 @@
           <xsl:value-of select="." disable-output-escaping="yes"/>
         </div>
       </xsl:for-each>
-      <!-- editions -->
-      <xsl:variable name="verbatim">
-        <xsl:for-each select="key('verbatim', $fichtner_no)">
+      <!-- editio grc -->
+      <xsl:for-each select="key('verbatim_grc', $fichtner_no)">
+        <!-- <xsl:sort select="dc:identifier/dcterms:URI/rdf:value"/> -->
+        <xsl:sort select="dc:date"/>
+        <xsl:apply-templates select="." mode="short"/>
+      </xsl:for-each>
+      <xsl:call-template name="edcrit"/>
+      <!-- editio lat -->
+      <xsl:variable name="verbatim_lat">
+        <xsl:for-each select="key('verbatim_lat', $fichtner_no)">
           <!-- <xsl:sort select="dc:identifier/dcterms:URI/rdf:value"/> -->
           <xsl:sort select="dc:date"/>
-          <li class="editio">
-            <xsl:apply-templates select="." mode="short"/>
-          </li>
+          <xsl:apply-templates select="." mode="short"/>
         </xsl:for-each>
       </xsl:variable>
-      <xsl:if test="$verbatim != ''">
-        <ul class="editio verbatim">
-          <xsl:copy-of select="$verbatim"/>
-        </ul>
+      <xsl:if test="$verbatim_lat != ''">
+          <label class="editio">translatio Latina: </label>
+          <xsl:copy-of select="$verbatim_lat"/>
       </xsl:if>
-      <xsl:variable name="critica">
-        <xsl:for-each select="key('edcrit', $fichtner_no)">
-          <!-- <xsl:sort select="dc:identifier/dcterms:URI/rdf:value"/> -->
-          <xsl:sort select="dc:date"/>
-          <li class="editio">
-            <xsl:apply-templates select="." mode="short"/>
-          </li>
-        </xsl:for-each>
-      </xsl:variable>
-      <xsl:if test="$critica != ''">
-        <div class="editio critica">
-          <header>editio critica:</header>
-          <ul class="editio critica">
-            <xsl:copy-of select="$critica"/>
-          </ul>
-        </div>
-      </xsl:if>
-      
+      <xsl:call-template name="transl"/>
     </section>
+  </xsl:template>
+  
+  <xsl:template name="edcrit">
+    <xsl:variable name="fichtner_no" select="normalize-space(dc:subject/dcterms:LCC/rdf:value)"/>
+    <xsl:variable name="edcrit">
+      <xsl:for-each select="key('edcrit', $fichtner_no)">
+        <!-- <xsl:sort select="dc:identifier/dcterms:URI/rdf:value"/> -->
+        <xsl:sort select="dc:date"/>
+        <xsl:apply-templates select="." mode="edcrit"/>
+        <xsl:if test="position() != last()">; </xsl:if>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:if test="$edcrit != ''">
+      <div class="editio critica">
+        <label>editio critica: </label>
+        <xsl:copy-of select="$edcrit"/>
+        <xsl:text>.</xsl:text>
+      </div>
+    </xsl:if>
+  </xsl:template>
+  
+  <xsl:template name="transl">
+    <xsl:variable name="fichtner_no" select="normalize-space(dc:subject/dcterms:LCC/rdf:value)"/>
+    <xsl:variable name="transl">
+      <xsl:for-each select="key('transl', $fichtner_no)">
+        <!-- <xsl:sort select="dc:identifier/dcterms:URI/rdf:value"/> -->
+        <xsl:sort select="dc:date"/>
+        <xsl:apply-templates select="." mode="transl"/>
+        <xsl:if test="position() != last()">; </xsl:if>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:if test="$transl != ''">
+      <div class="editio critica">
+        <label>translationes recentiores: </label>
+        <xsl:copy-of select="$transl"/>
+        <xsl:text>.</xsl:text>
+      </div>
+    </xsl:if>
   </xsl:template>
   
   <!-- Alt titles in extra field -->
@@ -285,14 +314,54 @@
     </span>
     <xsl:text> </xsl:text>
   </xsl:template>
+
+  <!-- For _transl and _edcrit -->
+  <xsl:template match="bib:*" mode="edcrit">
+    <xsl:if test="bib:editors">
+      <xsl:variable name="count" select="count(bib:editors/rdf:Seq/rdf:li)"/>
+      <xsl:for-each select="bib:editors/rdf:Seq/rdf:li">
+        <!-- foaf:Person -->
+        <xsl:apply-templates select="foaf:Person"/>
+        <xsl:if test="position() != last()">, </xsl:if>
+      </xsl:for-each>
+    </xsl:if>
+      
+    <xsl:for-each select="dc:date[1]">
+      <xsl:text>, </xsl:text>
+      <xsl:value-of select="."/>
+    </xsl:for-each>
+  </xsl:template>
+
+  <xsl:template match="bib:*" mode="transl">
+    <xsl:if test="z:translators">
+      <xsl:for-each select="z:translators/rdf:Seq/rdf:li">
+        <xsl:apply-templates select="foaf:Person"/>
+        <xsl:if test="position() != last()">, </xsl:if>
+      </xsl:for-each>
+    </xsl:if>
+    <xsl:for-each select="dc:date[1]">
+      <xsl:text>, </xsl:text>
+      <xsl:value-of select="."/>
+    </xsl:for-each>
+    <xsl:text> (</xsl:text>
+    <xsl:choose>
+      <xsl:when test="contains(z:language, 'grc;')">
+        <xsl:value-of select="substring-after(z:language, 'grc;')"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="z:language"/>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:text>)</xsl:text>
+  </xsl:template>
   
   <!-- Should be an edition 
-  
   Galenus. « Adhortatio ad artes addiscendas ». In Opera omnia, édité par Karl Gottlob Kühn, 1:1‑39. Medicorum graecorum opera quae exstant [sic] 1. Lipsiae: in officina C. Cnoblochii, 1821. urn:cts:greekLit:tlg0057.tlg001.1st1K-grc1.
 
 Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:greekLit:tlg0057.tlg001.1st1K-grc2.
   -->
   <xsl:template match="bib:*" mode="short">
+    <xsl:param name="label"/>
     <xsl:variable name="url">
       <xsl:choose>
         <xsl:when test="dc:subject = '_legendum'"/>
@@ -301,38 +370,33 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    <xsl:for-each select="dc:title">
+    <xsl:variable name="el">
       <xsl:choose>
-        <xsl:when test="$url != ''">
-          <a class="title">
-            <xsl:choose>
-              <xsl:when test="contains($url, 'galenus-verbatim.huma-num.fr/')">
-                <xsl:attribute name="class">title verbatim</xsl:attribute>
-                <xsl:attribute name="href">
-                  <xsl:text>./</xsl:text>
-                  <xsl:value-of select="substring-after($url, 'galenus-verbatim.huma-num.fr/')"/>
-                </xsl:attribute>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:attribute name="class">title external</xsl:attribute>
-                <xsl:attribute name="target">_blank</xsl:attribute>
-                <xsl:attribute name="rel">noopener</xsl:attribute>
-                <xsl:attribute name="href">
-                  <xsl:value-of select="$url"/>
-                </xsl:attribute>
-              </xsl:otherwise>
-            </xsl:choose>
-            <xsl:apply-templates/>
-          </a>
+        <xsl:when test="$url = ''">div</xsl:when>
+        <xsl:otherwise>a</xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:element name="{$el}">
+      <xsl:choose>
+        <xsl:when test="$url = ''"/>
+        <xsl:when test="contains($url, 'galenus-verbatim.huma-num.fr/')">
+          <xsl:attribute name="class">editio verbatim</xsl:attribute>
+          <xsl:attribute name="href">
+            <xsl:text>./</xsl:text>
+            <xsl:value-of select="substring-after($url, 'galenus-verbatim.huma-num.fr/')"/>
+          </xsl:attribute>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:apply-templates/>
+          <xsl:attribute name="class">editio external</xsl:attribute>
+          <xsl:attribute name="target">_blank</xsl:attribute>
+          <xsl:attribute name="rel">noopener</xsl:attribute>
+          <xsl:attribute name="href">
+            <xsl:value-of select="$url"/>
+          </xsl:attribute>
         </xsl:otherwise>
       </xsl:choose>
-      <!--
-      <xsl:if test="position() = last()">. </xsl:if>
-      -->
-    </xsl:for-each>
+      <xsl:copy-of select="$label"/>
+      <xsl:apply-templates select="dc:title"/>
     <!-- No
     <xsl:for-each select="dcterms:isPartOf/bib:Book/dc:title[normalize-space(.) != '']">
       <xsl:if test="position() = 1">
@@ -345,21 +409,22 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
       </em>
     </xsl:for-each>
     -->
-    <xsl:call-template name="editors"/>
-    <xsl:for-each select="dc:date[1]">
-      <xsl:text>, </xsl:text>
-      <xsl:value-of select="."/>
-    </xsl:for-each>
-    <xsl:for-each select="dcterms:isPartOf/bib:Book/prism:volume">
-      <xsl:text>, </xsl:text>
-      <xsl:apply-templates select="."/>
-    </xsl:for-each>
-    <xsl:for-each select="bib:pages">
-      <xsl:text>, </xsl:text>
-      <xsl:apply-templates select="."/>
-    </xsl:for-each>
-    <xsl:text>.</xsl:text>
-    <xsl:call-template name="urn-editio"/>
+      <xsl:call-template name="editors"/>
+      <xsl:for-each select="dc:date[1]">
+        <xsl:text>, </xsl:text>
+        <xsl:value-of select="."/>
+      </xsl:for-each>
+      <xsl:for-each select="dcterms:isPartOf/bib:Book/prism:volume">
+        <xsl:text>, </xsl:text>
+        <xsl:apply-templates select="."/>
+      </xsl:for-each>
+      <xsl:for-each select="bib:pages">
+        <xsl:text>, </xsl:text>
+        <xsl:apply-templates select="."/>
+      </xsl:for-each>
+      <xsl:text>.</xsl:text>
+      <xsl:call-template name="urn-editio"/>
+    </xsl:element>
   </xsl:template>
 
   <xsl:template name="urn-editio">
@@ -368,6 +433,7 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
       <xsl:text> </xsl:text>
       <span class="urn">
         <xsl:text>urn:cts:greekLit:</xsl:text>
+        <!--
         <xsl:choose>
           <xsl:when test="contains($urn, '.1st1K')">
             <xsl:value-of select="substring-before($urn, '.1st1K')"/>
@@ -385,6 +451,8 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
             <xsl:value-of select="$urn"/>
           </xsl:otherwise>
         </xsl:choose>
+        -->
+        <xsl:value-of select="$urn"/>
       </span>
     </xsl:if>    
   </xsl:template>
@@ -432,10 +500,9 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
     <xsl:value-of select="foaf:givenName"/>
   </xsl:template>
 
-  <xsl:template match="bib:editors//foaf:Person">
+  <xsl:template match="bib:editors//foaf:Person | z:translators//foaf:Person">
     <xsl:value-of select="foaf:surname"/>
   </xsl:template>
-  
   
   <xsl:template match="z:shortTitle">
     <xsl:apply-templates/>
@@ -446,7 +513,9 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
   </xsl:template>
   
   <xsl:template match="dc:title">
-    <xsl:apply-templates/>
+    <em class="title">
+      <xsl:apply-templates/>
+    </em>
   </xsl:template>
   
   <xsl:template match="bib:Memo">
