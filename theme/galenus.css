@@ -611,7 +611,8 @@ section.opus a.editio:hover {
     border-color: var(--bg2);
 }
 
-.editio label {
+.editio label,
+label.editio {
     font-weight: bold;
     color: var(--bg2);
 }
