@@ -44,17 +44,22 @@ LGPL  http://www.gnu.org/licenses/lgpl.html
   <style level="0" name="corpsdetexte2"/>
   <style level="0" name="corpsdetexte3"/>
   <style level="0" name="defaultparagraphfont"/>
+  <style level="0" name="footnotereference"/>
   <style level="0" name="normal"/>
   <style level="0" name="normal1"/>
   <style level="0" name="notedebasdepage"/>
   <style level="0" name="notesdebasdepage"/>
   <style level="0" name="notedefin"/>
   <style level="0" name="notesdefin"/>
+  <style level="0" name="texteducorps"/>
+  <style level="0" name="texteducorps0"/>
   <style level="0" name="texteducorps1"/>
   <style level="0" name="texteducorps2"/>
+  <style level="0" name="texteducorps20"/>
   <style level="0" name="texteducorps3"/>
   <style level="0" name="texteducorps4"/>
   <style level="0" name="texteducorps5"/>
+  <style level="0" name="texteducorps50"/>
   <style level="0" name="texteducorps6"/>
   <style level="0" name="titre1car"/>
   <style level="0" name="titre2car"/>
@@ -115,11 +120,14 @@ LGPL  http://www.gnu.org/licenses/lgpl.html
   <style level="p" name="epigraphl" element="l" parent="epigraph" doc="true"/>
   <style level="p" name="endnote" element="note"/>
   <style level="p" name="entry" element="entry" doc="true"/>
+  <style level="p" name="espce" element="label" attribute="type" value="species"/>
+  <style level="p" name="espece" element="label" attribute="type" value="species"/>
   <style level="p" name="exemple" element="quote" parent="entryFree"/>
   <style level="p" name="figure" element="figure"/>
   <style level="p" name="footnote" element="p"/><!-- in odt, used inside notes -->
   <style level="p" name="form" element="form" parent="entryFree"/>
   <style level="p" name="fw" element="fw" doc="true"/>
+  <style level="p" name="genre" element="label" attribute="type" value="genus"/>
   <style level="p" name="heading" element="label" attribute="type" value="head"/>
   <style level="p" name="headsub" element="head" attribute="type" value="sub"/>
   <style level="p" name="headsub1" element="head" attribute="type" value="sub"/>
@@ -149,6 +157,8 @@ LGPL  http://www.gnu.org/licenses/lgpl.html
   <style level="p" name="listcontents" element="item" parent="dl"/>
   <style level="p" name="lg" element="l" parent="lg" doc="true"/>
   <style level="p" name="note" element="p" parent="notep"/>
+  <style level="p" name="obs" element="p" parent="quote" rend="keep"/>
+  <style level="p" name="observation" element="p" parent="quote" rend="keep"/>
   <style level="p" name="opener" element="opener" doc="true"/>
   <style level="p" name="p" element="p" rend="keep" doc="true"/>
   <style level="p" name="pb" element="pb" doc="true"/>
@@ -203,6 +213,7 @@ LGPL  http://www.gnu.org/licenses/lgpl.html
   <style level="p" name="texteenvers" element="l" parent="lg"/>
   <style level="p" name="term" element="term" parent="index" doc="true"/>
   <style level="p" name="trailer" element="trailer" doc="true"/>
+  <style level="p" name="var" element="label" attribute="type" value="variety"/>
   <style level="p" name="vers" element="l"/>
   <style level="p" name="versrompu" element="l" attribute="type" value="part"/>
   <style level="p" name="xml" element="eg"/>

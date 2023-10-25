@@ -309,6 +309,7 @@
         <w:pStyle w:val="{$style}"/>
       </w:pPr>
       <xsl:call-template name="anchor"/>
+      <!-- hide @n ?
       <xsl:if test="parent::*/@n">
         <w:r>
           <w:rPr>
@@ -321,6 +322,7 @@
           </w:t>
         </w:r>
       </xsl:if>
+      -->
       <xsl:for-each select="preceding-sibling::tei:head[@type='kicker']">
         <xsl:call-template name="char"/>
         <w:r>
@@ -477,6 +479,7 @@ ancestor::tei:p or ancestor::tei:l or parent::tei:cell
             <xsl:when test="self::tei:p and parent::tei:note">Notedebasdepage</xsl:when>
             <xsl:when test="self::tei:p and parent::tei:quote">Quote</xsl:when>
             <xsl:when test="self::tei:p and parent::tei:sp">Sp</xsl:when>
+            <xsl:when test="self::tei:label and @type='head'">subhead</xsl:when>
             <xsl:otherwise>
               <xsl:value-of select="translate(substring(local-name(), 1, 1), $lc, $uc)"/>
               <xsl:value-of select="substring(local-name(), 2)"/>
@@ -488,6 +491,7 @@ ancestor::tei:p or ancestor::tei:l or parent::tei:cell
             <xsl:when test="self::tei:p and parent::tei:note">Notedebasdepage</xsl:when>
             <xsl:when test="self::tei:p and parent::tei:quote">quote</xsl:when>
             <xsl:when test="self::tei:p and parent::tei:sp">sp</xsl:when>
+            <xsl:when test="self::tei:label and @type='head'">subhead</xsl:when>
             <xsl:otherwise>
               <xsl:value-of select="local-name()"/>
             </xsl:otherwise>
@@ -1002,6 +1006,8 @@ ancestor::tei:p or ancestor::tei:l or parent::tei:cell
             <xsl:value-of select="$style"/>
           </xsl:when>
           <xsl:when test="@type and @type != '' and not(contains(@type,  ' '))">
+            <xsl:value-of select="local-name()"/>
+            <xsl:if test="self::tei:label">c</xsl:if>
             <xsl:value-of select="
               translate(
                 normalize-space(@type),
@@ -1224,39 +1230,10 @@ ancestor::tei:p or ancestor::tei:l or parent::tei:cell
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
-  <!-- Utile ou parasite ? -->
+  <!-- Better to hide in source, not relevant for  -->
   <xsl:template match="comment()">
     <xsl:comment>
       <xsl:value-of select="."/>
     </xsl:comment>
-    <xsl:choose>
-      <xsl:when test="ancestor::*[text()[normalize-space(.) != '']]">
-        <w:r>
-          <w:rPr>
-            <w:rStyle w:val="Marquedecommentaire"/>
-          </w:rPr>
-          <w:commentReference>
-            <xsl:attribute name="w:id">
-              <xsl:call-template name="id"/>
-            </xsl:attribute>
-          </w:commentReference>
-        </w:r>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="$lf"/>
-        <w:p>
-          <w:pPr>
-            <w:pStyle w:val="Marquedecommentaire"/>
-          </w:pPr>
-          <w:r>
-            <w:commentReference>
-              <xsl:attribute name="w:id">
-                <xsl:call-template name="id"/>
-              </xsl:attribute>
-            </w:commentReference>
-          </w:r>
-        </w:p>
-      </xsl:otherwise>
-    </xsl:choose>
   </xsl:template>
 </xsl:transform>

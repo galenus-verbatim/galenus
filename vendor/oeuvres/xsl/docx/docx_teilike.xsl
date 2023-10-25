@@ -19,8 +19,9 @@
   exclude-result-prefixes="a mc pic pkg r rels teinte o v w wp"
   >
   <xsl:output encoding="UTF-8" indent="no" omit-xml-declaration="yes"/>
-  <xsl:variable name="UC">ABCDEFGHIJKLMNOPQRSTUVWXYZ</xsl:variable>
-  <xsl:variable name="lc">abcdefghijklmnopqrstuvwxyz</xsl:variable>
+  <xsl:variable name="idfrom" >ABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÄÉÈÊÏÎÔÖÛÜÇàâäéèêëïîöôüûÆŒ</xsl:variable>
+  <xsl:variable name="idto"   >abcdefghijklmnopqrstuvwxyzaaaeeeiioouucaaaeeeeiioouuee</xsl:variable>
+  <xsl:variable name="idchars">abcdefghijklmnopqrstuvwxyz0123456789_</xsl:variable>
   <xsl:key name="footnotes" match="//w:footnotes/w:footnote" use="@w:id"/>
   <xsl:key name="endnotes" match="//w:endnotes/w:endnote" use="@w:id"/>
   <xsl:key name="document.xml.rels" 
@@ -35,6 +36,10 @@
   <xsl:key name="w:style" 
     match="w:style" 
     use="@w:styleId"/>
+  <xsl:key name="w:num" 
+    match="w:num" 
+    use="@w:numId"/>
+  <xsl:key name="w:abstractNum" match="w:abstractNum" use="@w:abstractNumId"/>
   <xsl:key name="teinte_p" 
     match="teinte:style[@level='p']" 
     use="@name"/>
@@ -71,9 +76,17 @@
   </xsl:template>
   <!-- block -->
   <xsl:template match="w:p">
-    <xsl:variable name="pStyle" select="normalize-space(translate(w:pPr/w:pStyle/@w:val, $UC, $lc))"/>
-    <xsl:variable name="teinte_p" select="key('teinte_p', $pStyle)"/>
     <xsl:variable name="w:style" select="key('w:style', w:pPr/w:pStyle/@w:val)"/>
+    <!-- normalize a style name -->
+    <xsl:variable name="style_name">
+      <xsl:variable name="name" select="normalize-space(translate($w:style/w:name/@w:val, $idfrom, $idto))"/>
+      <xsl:variable name="oddchars" select="translate($name, $idchars, '')"/>
+      <xsl:variable name="id" select="translate($name, $oddchars, '')"/>
+      <xsl:variable name="char1" select="substring($id, 1, 1)"/>
+      <xsl:if test="$char1 != '' and contains('0123456789', $char1)">_</xsl:if>
+      <xsl:value-of select="$id"/>
+    </xsl:variable>
+    <xsl:variable name="teinte_p" select="key('teinte_p', $style_name)"/>
     <xsl:variable name="lvl" select="$w:style/w:pPr/w:outlineLvl/@w:val"/>
     <xsl:choose>
       <!-- para in table cell -->
@@ -95,8 +108,17 @@
     <xsl:variable name="_rend">
       <xsl:if test="number(w:pPr/w:ind/@w:hanging) &gt; 150"> hanging </xsl:if>
       <xsl:if test="number(w:pPr/w:ind/@w:firstLine) &gt; 150"> indent </xsl:if>
-      <xsl:text> </xsl:text>
-      <xsl:value-of select="w:pPr/w:jc/@w:val"/>
+      <xsl:variable name="jc" select="normalize-space(w:pPr/w:jc/@w:val)"/>
+      <xsl:choose>
+        <xsl:when test="$jc = ''"/>
+        <xsl:when test="$jc = 'both'"/>
+        <xsl:when test="$jc = 'left'"/>
+        <xsl:when test="$jc = 'right'"> right</xsl:when>
+        <xsl:otherwise>
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="$jc"/>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:variable>
     <xsl:variable name="rend" select="normalize-space($_rend)"/>
     <xsl:choose>
@@ -107,11 +129,20 @@
       </xsl:when>
       <!-- list item, TODO listStyle, see in w:pPr/w:numPr/w:numId/@w:val -->
       <xsl:when test="w:pPr/w:numPr">
-        <item level="{w:pPr/w:numPr/w:ilvl/@w:val + 1}">
+        <xsl:variable name="w:ilvl" select="number(w:pPr/w:numPr/w:ilvl/@w:val)"/>
+        <xsl:variable name="w:numId" select="number(w:pPr/w:numPr/w:numId/@w:val)"/>
+        <!-- 
+  <w:num w:numId="4">
+    <w:abstractNumId w:val="36"/>
+  </w:num>
+  -->
+        <xsl:variable name="w:abstractNumId" select="number(key('w:num', $w:numId)/w:abstractNumId/@w:val)"/>
+        <xsl:variable name="w:abstractNum" select="key('w:abstractNum', $w:abstractNumId)"/>
+        <item level="{$w:ilvl + 1}" rend="{$w:abstractNum/w:lvl[@w:ilvl = $w:ilvl]/w:numFmt/@w:val}">
           <xsl:apply-templates select="w:hyperlink | w:r"/>
         </item>
       </xsl:when>
-      <xsl:when test="$pStyle = '' or key('teinte_0', $pStyle)">
+      <xsl:when test="$style_name = '' or key('teinte_0', $style_name)">
         <p>
           <xsl:if test="$rend != ''">
             <xsl:attribute name="rend">
@@ -151,10 +182,10 @@
         </xsl:element>
       </xsl:when>
       <!-- Output unknown style -->
-      <xsl:when test="$pStyle != ''">
+      <xsl:when test="$style_name != ''">
         <xsl:variable name="el">
-          <xsl:if test="translate(substring($pStyle, 1, 1), 'abcdefghijklmnopqrstuvwxyz', '') != ''">_</xsl:if>
-          <xsl:value-of select="$pStyle"/>
+          <xsl:if test="translate(substring($style_name, 1, 1), 'abcdefghijklmnopqrstuvwxyz', '') != ''">_</xsl:if>
+          <xsl:value-of select="$style_name"/>
         </xsl:variable>
         <xsl:element name="{$el}">
           <xsl:if test="$rend != ''">
@@ -268,12 +299,13 @@
  -->
   <xsl:template match="wp:extent">
     <xsl:attribute name="width">
-      <xsl:value-of select="@cx"/>
+      <xsl:value-of select="round(number(@cx) div 36000)"/>
+      <xsl:text>mm</xsl:text>
     </xsl:attribute>
     <xsl:attribute name="height">
-      <xsl:value-of select="@cy"/>
+      <xsl:value-of select="round(number(@cy) div 36000)"/>
+      <xsl:text>mm</xsl:text>
     </xsl:attribute>
-    <xsl:attribute name="subtype">unit:EMU</xsl:attribute>
   </xsl:template>
 
   <xsl:template match="v:imagedata/@o:title">
@@ -314,9 +346,28 @@ Seen
         
 -->
     <!-- style tag -->
-    <xsl:variable name="w:style" select="key('w:style', w:rPr/w:rStyle/@w:val)"/>
-    <xsl:variable name="class" select="normalize-space(translate(w:rPr/w:rStyle/@w:val, $UC, $lc))"/>
-    <xsl:variable name="teinte_c" select="key('teinte_c', $class)"/>
+    <xsl:variable name="w:rStyle" select="w:rPr/w:rStyle/@w:val"/>
+    <xsl:variable name="w:style" select="key('w:style', $w:rStyle)"/>
+    <!-- normalize a style name -->
+    <xsl:variable name="style_name">
+      <xsl:if test="$w:rStyle != ''">
+        <xsl:variable name="name" select="normalize-space(translate($w:style/w:name/@w:val, $idfrom, $idto))"/>
+        <xsl:variable name="oddchars" select="translate($name, $idchars, '')"/>
+        <xsl:variable name="id" select="translate($name, $oddchars, '')"/>
+        <xsl:variable name="char1" select="substring($id, 1, 1)"/>
+        <xsl:if test="$char1 != '' and contains('0123456789', $char1)">_</xsl:if>
+        <xsl:value-of select="$id"/>
+      </xsl:if>
+    </xsl:variable>
+    
+    
+    <xsl:variable name="teinte_c" select="key('teinte_c', style_name)"/>
+    
+    <!--
+    <xsl:comment>
+      <xsl:copy-of select="$w:rStyle"/>
+    </xsl:comment>
+    -->
     <!-- process children in order, for line breaks, see <w:br/> in LibreOffice -->
     <xsl:variable name="t">
       <xsl:apply-templates select="*"/>
@@ -361,7 +412,12 @@ Seen
         <xsl:when test="$val1 != ''">
           <xsl:value-of select="$val1"/>
         </xsl:when>
-        <xsl:otherwise>true</xsl:otherwise>
+        <xsl:when test="$val2 = '0' or $val2 ='false' or $val2 = 'off'"/>
+        <xsl:when test="$val2 != ''">
+          <xsl:value-of select="$val2"/>
+        </xsl:when>
+        <!-- silent presence -->
+        <xsl:when test="w:rPr/w:i">i</xsl:when>
       </xsl:choose>
     </xsl:variable>
     <!-- bold, dangerous in titles, to think -->
@@ -374,9 +430,12 @@ Seen
         <xsl:when test="$val1 != ''">
           <xsl:value-of select="$val1"/>
         </xsl:when>
-        <xsl:when test="w:rPr/w:b">true</xsl:when>
         <xsl:when test="$val2 = '0' or $val2 ='false' or $val2 = 'off'"/>
-        <xsl:otherwise/>
+        <xsl:when test="$val2 != ''">
+          <xsl:value-of select="$val2"/>
+        </xsl:when>
+        <!-- silent presence -->
+        <xsl:when test="w:rPr/w:b">b</xsl:when>
       </xsl:choose>
     </xsl:variable>
     
@@ -464,13 +523,13 @@ Seen
     <xsl:variable name="el">
       <xsl:choose>
         <!-- elements not starting by a letter -->
-        <xsl:when test="translate(substring($class, 1, 1), 'abcdefghijklmnopqrstuvwxyz', '') != ''">_</xsl:when>
+        <xsl:when test="translate(substring($style_name, 1, 1), 'abcdefghijklmnopqrstuvwxyz', '') != ''">_</xsl:when>
       </xsl:choose>
-      <xsl:value-of select="$class"/>
+      <xsl:value-of select="$style_name"/>
     </xsl:variable>
     <xsl:variable name="xml10">
       <xsl:choose>
-        <xsl:when test="$class = ''">
+        <xsl:when test="$style_name = ''">
           <xsl:copy-of select="$xml5"/>
         </xsl:when>
         <!-- redundant -->
@@ -482,7 +541,7 @@ Seen
             <xsl:copy-of select="$xml5"/>
           </xsl:element>
         </xsl:when>
-        <xsl:when test="key('teinte_0', $class)">
+        <xsl:when test="key('teinte_0', $style_name)">
           <xsl:copy-of select="$xml5"/>
         </xsl:when>
         <!-- auto style Calibre -->
@@ -490,7 +549,7 @@ Seen
           <xsl:variable name="val" select="$w:style/w:rPr/w:i/@w:val"/>
           <xsl:choose>
             <xsl:when test="$val = '' or $val = '0' or $val ='false' or $val = 'off'">
-              <seg rend="{$class}">
+              <seg rend="{$style_name}">
                 <xsl:copy-of select="$xml5"/>
               </seg>
             </xsl:when>
@@ -501,7 +560,7 @@ Seen
             </xsl:otherwise>
           </xsl:choose>
         </xsl:when>
-        <xsl:when test="$class != ''">
+        <xsl:when test="$style_name != ''">
           <xsl:element name="{$el}">
             <xsl:copy-of select="$xml5"/>
           </xsl:element>

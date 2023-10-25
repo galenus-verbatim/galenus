@@ -194,8 +194,12 @@ td.lb::before {
 h1 a.external {
     font-size: 80%;
     font-weight: 100;
+    color: var(--link3);
 }
 
+a.external:hover::after {
+    position: relative;
+}
 /** biblio */
 
 header.editio {

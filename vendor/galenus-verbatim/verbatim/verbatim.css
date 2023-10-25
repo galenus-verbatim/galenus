@@ -1083,7 +1083,7 @@ a.external {
 a.external:hover::after {
     content: ' ';
     display: inline-block;
-    position: absolute;
+    /* position: absolute; */
     background-color: var(--bg);
     background-repeat: no-repeat;
     background-size: 1em;

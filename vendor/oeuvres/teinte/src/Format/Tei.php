@@ -29,44 +29,52 @@ class Tei extends File
     /**
      * Load XML/TEI as a file (preferred way to hav some metas).
      */
-    public function load(string $src_file): bool
+    public function open(string $src_file): bool
     {
         $this->teiReset();
-        if (!parent::{__FUNCTION__}(...func_get_args())) {
+        if (!parent::open($src_file)) {
+            // parent has return false, probably an error 
             return false;
         }
-        $this->loadXml($this->contents());
+        $this->loadXML($this->contents());
+        // set DocumentURI for xi:include resolution
+        $this->teiDOM->documentURI = "file:///" . str_replace('\\', '/', realpath($src_file));
+        // inclusions done, XML has change
+        if ($this->teiDOM->xinclude()) {
+            $this->teiXML = $this->teiDOM->saveXML();
+        }
         return true;
     }
+
 
     /**
      * Load XML/TEI as a string, normalize and load it as DOM
      */
-    public function loadXml(string $xml):DOMDocument
+    public function loadXML(string $xml):DOMDocument
     {
         $this->teiReset();
         $tei = static::lint($xml);
-        $this->tei = $tei;
+        $this->teiXML = $tei;
         // spaces are normalized upper, keep them
         // set dom properties before loading
         $dom = new DOMDocument();
         $dom->substituteEntities = true;
         $dom->preserveWhiteSpace = true;
         $dom->formatOutput = false;
-        $this->teiDoc = Xt::loadXml($tei, $dom);
-        if (!$this->teiDoc) {
+        $this->teiDOM = Xt::loadXML($tei, $dom);
+        if (!$this->teiDOM) {
             throw new Exception("XML malformation");
         }
-        return $this->teiDoc;
+        return $this->teiDOM;
     }
 
     /**
-     * Load a dom directy, 
+     * Load a dom directly, 
      */
     public function loadDoc(DOMDocument $dom)
     {
         $this->teiReset();
-        $this->teiDoc = $dom;   
+        $this->teiDOM = $dom;
     }
 
     /**
@@ -75,11 +83,11 @@ class Tei extends File
     public function teiMake(?array $pars = null): void
     {
         if (
-            $this->teiXml == null 
-            && $this->teiDoc == null 
-            && !$this->teiDoc->documentElement
+            $this->teiXML == null 
+            || $this->teiDOM == null 
+            || !$this->teiDOM->documentElement
         ) {
-            throw new Exception("No XML/TEI loaded, use Tei::loadXml() or Tei::loadDoc()");
+            throw new Exception("No XML/TEI loaded, use Tei::() or Tei::loadDoc()");
             
         }
 
@@ -115,9 +123,14 @@ class Tei extends File
         if (!Filesys::writable($uri)) {
             throw new Exception("“{$uri}” not writable as a destination file");
         }
+        if ($format == 'tei') {
+            // TODO : copy linked images 
+            file_put_contents($uri, $this->teiXML());
+            return;
+        } 
         $transfo = AbstractTei2::transfo($format);
         $pars = $this->pars($format, $pars);
-        $transfo::toUri($this->teiDoc, $uri, $pars);
+        $transfo::toUri($this->teiDOM, $uri, $pars);
     }
 
     /**
@@ -128,7 +141,7 @@ class Tei extends File
     {
         $transfo = AbstractTei2::transfo($format);
         $pars = $this->pars($format, $pars);
-        return $transfo::toXml($this->teiDoc, $pars);
+        return $transfo::toXml($this->teiDOM, $pars);
     }
 
     /**
@@ -139,7 +152,7 @@ class Tei extends File
     {
         $transfo = AbstractTei2::transfo($format);
         $pars = $this->pars($format, $pars);
-        return $transfo::toDoc($this->teiDoc, $pars);
+        return $transfo::toDoc($this->teiDOM, $pars);
     }
 
     /**
@@ -208,7 +221,7 @@ class Tei extends File
      */
     public function meta()
     {
-        $meta = self::metaDom($this->teiDoc, $this->xpath());
+        $meta = self::dc($this->teiDOM);
         $meta['code'] = pathinfo($this->file, PATHINFO_FILENAME);
         $meta['filename'] = $this->filename();
         $meta['filemtime'] = $this->filemtime();
@@ -217,11 +230,11 @@ class Tei extends File
     }
 
     /**
-     * Return an array of metadata from a dom document
+     * Return an array of metadata from a TEI DOM document
      */
-    public static function metaDom($dom, $xpath = null)
+    public static function dc($DOM)
     {
-        if ($xpath == null) $xpath = new DOMXpath($dom);
+        $xpath = new DOMXpath($DOM);
         $xpath->registerNamespace('tei', "http://www.tei-c.org/ns/1.0");
 
         $meta = array();
@@ -289,8 +302,6 @@ class Tei extends File
         }
         if (!$meta['issued'] && isset($value) && is_numeric($value)) $meta['issued'] = $value;
         $meta['source'] = null;
-
-
         return $meta;
     }
 
@@ -308,38 +319,61 @@ class Tei extends File
     */
 
     /**
-     * Extract <graphic> elements from a DOM doc, copy linked images in a flat dstdir
-     * copy linked images in an images folder $dstdir, and modify relative link
+     * Extract <graphic> elements from a DOM doc,
+     * copy linked images in a flat img_dir
+     * and modify relative link
      *
-     * $hrefdir : a href prefix to redirest generated links
-     * $dstdir : a folder if images should be copied
+     * $href_dir : a href prefix to redirest generated links
+     * $dst_dir : a folder if images should be copied
      * return : a doc with updated links to image
      */
-    public function images($hrefdir = null, $dstdir = null)
+    public static function imagesCopy($doc, $img_dir = null, $img_href = null)
     {
-        if ($dstdir) $dstdir = rtrim($dstdir, '/\\') . '/';
-        // $dom = $this->teiDoc->cloneNode(true); // do not clone, keep the change of links
-        $dom = $this->teiDoc;
+        if (!$doc->documentURI) {
+            throw new Exception("DOMDocument has no documentURI property to resolve relative path to images");
+        }
+        if ($doc->documentURI == getcwd()) {
+            throw new Exception("DOMDocument has no documentURI property to resolve relative path to images");
+        }
+        if ($img_dir) {
+            $img_dir = rtrim($img_dir, '/\\') . '/';
+        }
+        if ($img_href) {
+            $img_href = rtrim($img_href, '/\\') . '/';
+        }
         $count = 1;
-        $nl = $dom->getElementsByTagNameNS('http://www.tei-c.org/ns/1.0', 'graphic');
+        $nl = $doc->getElementsByTagNameNS('http://www.tei-c.org/ns/1.0', 'graphic');
         $pad = strlen('' . $nl->count());
+        $found = false;
         foreach ($nl as $el) {
-            $this->img($el->getAttributeNode("url"), str_pad(strval($count), $pad, '0', STR_PAD_LEFT), $hrefdir, $dstdir);
+            // create image directory only if an image is found
+            if (!$found) {
+                // do not clean dir here, tex resources may have 
+                Filesys::mkdir($img_dir);
+
+            }
+            self::graphic(
+                $el->getAttributeNode("url"), 
+                str_pad(strval($count), $pad, '0', STR_PAD_LEFT), 
+                $img_dir,
+                $img_href, 
+            );
             $count++;
         }
         /*
-    do not store images of pages, especially in tif
-    foreach ($doc->getElementsByTagNameNS('http://www.tei-c.org/ns/1.0', 'pb') as $el) {
-      $this->img($el->getAttributeNode("facs"), $hrefTei, $dstdir, $hrefSqlite);
-    }
-    */
-        return $dom;
+        do not store images of pages, especially in tif
+        foreach ($doc->getElementsByTagNameNS('http://www.tei-c.org/ns/1.0', 'pb') as $el) {
+        $this->img($el->getAttributeNode("facs"), $hrefTei, $dstdir, $hrefSqlite);
+        }
+        */
     }
     /**
      * Process one image
      */
-    public function img($att, $count, $hrefdir = "", $dstdir = null)
+    private static function graphic($att, $count, $img_dir = "", $img_href = "")
     {
+        $doc_dir = dirname($att->ownerDocument->documentURI);
+        $doc_name = strtok(pathinfo($att->ownerDocument->documentURI, PATHINFO_FILENAME), '_');
         if (!isset($att) || !$att || !$att->value) {
             return;
         }
@@ -348,38 +382,36 @@ class Tei extends File
         if (strpos($src, 'data:image') === 0) {
             return;
         }
-        // test if coming fron the internet
-        if (substr($src, 0, 4) == 'http');
-        // test if relative file path
-        else if (file_exists($test = dirname($this->file) . '/' . $src)) {
-            $src = $test;
+        // if coming from the internet, keep full url
+        if (substr($src, 0, 4) == 'http') {
+
         }
-        /*
-        // vendor specific etc/filename.jpg
-        else if (isset(self::$pars['srcdir']) 
-            && file_exists($test = self::$pars['srcdir'] . self::$pars['filename'] . '/' . substr($src, strpos($src, '/') + 1))
-        ) $src = $test;
-        */
+        else if (realpath($src)) {
+            $src = realpath($src);
+        }
+        // test if relative file path
+        else if (file_exists("$doc_dir/$src")) {
+            $src = "$doc_dir/$src";
+        }
         // if not file exists, escape and alert (?)
         else if (!file_exists($src)) {
             Log::warning("Image not found: " . $src);
             return;
         }
         $srcparts = pathinfo($src);
-        // check if image name starts by filename, if not, force it
-        if (substr($srcparts['filename'], 0, strlen($this->filename)) !== $this->filename) $srcparts['filename'] = $this->filename . '_' . $count;
-
+        // if image name starts by filename, keep it as is
+        // probably thought to be unique for file
+        if (substr($srcparts['filename'], 0, strlen($doc_name)) !== $doc_name) {
+            $srcparts['filename'] = $doc_name . '_' . $count;
+        }
         // test first if dst dir provides for copy
-        if (isset($dstdir)) {
-            if (!file_exists($dstdir)) {
-                mkdir($dstdir, 0775, true);
-                @chmod($dstdir, 0775);
-            }
-            $dst = $dstdir . $srcparts['filename'] . '.' . $srcparts['extension'];
+        if (isset($img_dir)) {
+            Filesys::mkdir($img_dir);
+            $dst = $img_dir . $srcparts['filename'] . '.' . $srcparts['extension'];
             if (!copy($src, $dst)) return false; // bad copy
         }
         // changes links in TEI so that straight transform will point on the right files
-        $att->value = $hrefdir . $srcparts['filename'] . '.' . $srcparts['extension'];
+        $att->value = $img_href . $srcparts['filename'] . '.' . $srcparts['extension'];
         // resize image before copy ?
         // NO delete of <graphic> element if broken link
     }

@@ -89,6 +89,9 @@ class Filesys
      */
     public static function isabs(string $path): bool
     {
+        if (!$path) {
+            return false;
+        }
         // true if file exists
         if (realpath($path) == $path) {
             return true;
@@ -107,6 +110,15 @@ class Filesys
         }
         // A path starting with / or \ is absolute
         return ('/' === $path[0] || '\\' === $path[0]);
+    }
+
+    /**
+     * Human readable bytes
+     */
+    public static function bytes_human($bytes)
+    {
+        $i = floor(log($bytes, 1024));
+        return round($bytes / pow(1024, $i), [0,0,2,2,3][$i]).['B','kB','MB','GB','TB'][$i];
     }
 
     /**
@@ -228,7 +240,7 @@ class Filesys
     {
         // nothing to delete, go away
         if (!file_exists($path)) {
-            Log::debug("Path not found, remove impossible:\n\"$dir\"");
+            Log::debug("Path not found, remove impossible:\n\"$path\"");
             return true;
         }
         $log = [];
@@ -273,7 +285,7 @@ class Filesys
         // if dir not kept, and no more logged error, container could be deleted 
         if (!$keep && count($log) == $count) {
             if (true !== rmdir($path)) {
-                $log[] = "Dir empty but impossible to remove:\n\"$dir\"";
+                $log[] = "Dir empty but impossible to remove:\n\"$path\"";
             }
         }
     }
@@ -377,16 +389,6 @@ class Filesys
             $zip->addEmptyDir($entryPath);
             self::zipDir($zip, $srcPath, $entryPath);
         }
-    }
-
-    /**
-     * Is file path absolute ?
-     */
-    static function isPathAbs($path)
-    {
-        if (!$path) return false;
-        if ($path[0] === DIRECTORY_SEPARATOR || preg_match('~\A[A-Z]:(?![^/\\\\])~i', $path) > 0) return true;
-        return false;
     }
 
     /**

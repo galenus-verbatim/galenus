@@ -43,14 +43,14 @@ echo $html;
         <aside id="navs">
             <?php 
 $select = new Select('selnav', 'selnav', 'selnav');
-$select->add('titLat', I18n::_('zotero.titLat'));
-$select->add('fichtner', I18n::_('zotero.fichtner'));
-$select->add('kuhn', I18n::_('zotero.kuhn'));
-$select->add('titLatAbbr', I18n::_('zotero.titLatAbbr'));
-$select->add('titGrc', I18n::_('zotero.titGrc'));
-$select->add('titFra', I18n::_('zotero.titFra'));
-$select->add('titEng', I18n::_('zotero.titEng'));
-$select->add('titEngAbbr', I18n::_('zotero.titEngAbbr'));
+$select->add('titLat', false, I18n::_('zotero.titLat'));
+$select->add('fichtner', false, I18n::_('zotero.fichtner'));
+$select->add('kuhn', false, I18n::_('zotero.kuhn'));
+$select->add('titLatAbbr', false, I18n::_('zotero.titLatAbbr'));
+$select->add('titGrc', false, I18n::_('zotero.titGrc'));
+$select->add('titFra', false, I18n::_('zotero.titFra'));
+$select->add('titEng', false, I18n::_('zotero.titEng'));
+$select->add('titEngAbbr', false, I18n::_('zotero.titEngAbbr'));
 echo $select;
             ?>
 <?php readfile($html_dir . '/opera_navs.html') ?>
