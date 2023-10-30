@@ -103,14 +103,20 @@ function bibl()
 
     $bibl = Data::$edition['bibl'];
     if ($bibl === null) $bibl = "";
+    // preg_match();
+    $url = 'https://github.com/galenus-verbatim/galenus_cts/tree/master/data/';
+    preg_match('/urn:cts:[^:]+:(([^\.]+)\.([^\.]+)[^:]+)/', Data::$doc['cts'], $matches);
+    $url .= $matches[2] . "/" . $matches[3] . "/" . $matches[1] . ".xml";
     $bibl = preg_replace(
         array(
             '@<span class="scope">.*?</span>@',
             '@<span class="editors">@',
+            '@<span class="urn">' . Data::$edition['cts'] . '</span>@'
         ),
         array(
             Verbatim::scope(Data::$doc),
             ', '.Verbatim::num(Data::$doc).'$0',
+            '<a href="' . $url . '" class="epidoc" target="_blank" rel="noopener">' . Data::$doc['cts'] . '</a>',
         ), 
         $bibl
     );

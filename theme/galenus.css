@@ -197,6 +197,24 @@ h1 a.external {
     color: var(--link3);
 }
 
+a.epidoc {
+    color: var(--link3) !important;
+}
+
+a.epidoc::after {
+    display: inline-block;
+    margin-left: 1ex;
+    content: ' ';
+    width: 1em;
+    background-image: url('logo_epidoc.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+a.epidoc:hover {
+    text-decoration: underline;
+}
+
 a.external:hover::after {
     position: relative;
 }

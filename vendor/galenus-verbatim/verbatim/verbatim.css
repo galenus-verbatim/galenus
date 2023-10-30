@@ -558,6 +558,11 @@ span.lb::before {
     content: '\A';
 }
 
+p>span.lb:first-child::before,
+div.l>span.lb:first-child::before {
+    content: '';
+}
+
 span.lb[data-line]::after,
 span.lb.rule[data-line]::before {
     box-sizing: border-box;
@@ -571,18 +576,12 @@ span.lb.rule[data-line]::before {
     color: var(--textlo);
 }
 
-div.l>span.lb:first-child::before {
-    content: '';
-}
-
-
 /*
 span.pb[data-line]::before {
     display: block;
     content: ' ';
 }
 */
-
 
 
 span.lb[data-line]:target::after {
@@ -775,6 +774,10 @@ div.reader {
 }
 
 .reader .toc {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+    height: calc(100vh - 60px);
     overflow: auto;
     min-width: 10rem;
 }
@@ -783,14 +786,18 @@ div.reader {
     flex-shrink: 0;
 }
 
-#pagimage {
+.reader #pagimage {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+    height: calc(100vh - 60px);
     width: 100%;
     max-width: none;
     display: flex;
     flex-direction: column;
 }
 
-#pagimage>div {
+.reader #pagimage>div {
     flex-grow: 5;
 }
 
@@ -1083,7 +1090,7 @@ a.external {
 a.external:hover::after {
     content: ' ';
     display: inline-block;
-    /* position: absolute; */
+    position: absolute;
     background-color: var(--bg);
     background-repeat: no-repeat;
     background-size: 1em;

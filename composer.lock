@@ -117,12 +117,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/galenus-verbatim/verbatim.git",
-                "reference": "92c8c07844699a8cccdabe6299e501a9eba798bd"
+                "reference": "c50a26d36461e50e3e303a0c0d82da0783d75e77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/galenus-verbatim/verbatim/zipball/92c8c07844699a8cccdabe6299e501a9eba798bd",
-                "reference": "92c8c07844699a8cccdabe6299e501a9eba798bd",
+                "url": "https://api.github.com/repos/galenus-verbatim/verbatim/zipball/c50a26d36461e50e3e303a0c0d82da0783d75e77",
+                "reference": "c50a26d36461e50e3e303a0c0d82da0783d75e77",
                 "shasum": ""
             },
             "require": {
@@ -162,7 +162,7 @@
                 "issues": "https://github.com/galenus-verbatim/verbatim/issues",
                 "source": "https://github.com/galenus-verbatim/verbatim/tree/main"
             },
-            "time": "2023-06-14T09:13:14+00:00"
+            "time": "2023-10-26T14:38:50+00:00"
         },
         {
             "name": "oeuvres/kit",
