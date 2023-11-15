@@ -12,26 +12,28 @@
   xmlns:v="urn:schemas-microsoft-com:vml"
   xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
   xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+  xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape"
 
   xmlns:teinte="https://github.com/oeuvres/teinte_xsl"
 
   xmlns="http://www.tei-c.org/ns/1.0"
-  exclude-result-prefixes="a mc pic pkg r rels teinte o v w wp"
+  exclude-result-prefixes="a mc pic pkg r rels teinte o v w wp wps"
   >
   <xsl:output encoding="UTF-8" indent="no" omit-xml-declaration="yes"/>
+  <xsl:param name="file"/>
   <xsl:variable name="idfrom" >ABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÄÉÈÊÏÎÔÖÛÜÇàâäéèêëïîöôüûÆŒ</xsl:variable>
   <xsl:variable name="idto"   >abcdefghijklmnopqrstuvwxyzaaaeeeiioouucaaaeeeeiioouuee</xsl:variable>
-  <xsl:variable name="idchars">abcdefghijklmnopqrstuvwxyz0123456789_</xsl:variable>
+  <xsl:variable name="idchars">abcdefghijklmnopqrstuvwxyz0123456789</xsl:variable>
   <xsl:key name="footnotes" match="//w:footnotes/w:footnote" use="@w:id"/>
   <xsl:key name="endnotes" match="//w:endnotes/w:endnote" use="@w:id"/>
   <xsl:key name="document.xml.rels" 
     match="/pkg:package/pkg:part[@pkg:name = '/word/_rels/document.xml.rels']/pkg:xmlData/*/rels:Relationship" 
     use="@Id"/>
   <xsl:key name="footnotes.xml.rels" 
-    match="/pkg:package/pkg:part[@pkg:name = '/word/_rels/ootnotes.xml.rels']/pkg:xmlData/*/rels:Relationship" 
+    match="/pkg:package/pkg:part[@pkg:name = '/word/_rels/footnotes.xml.rels']/pkg:xmlData/*/rels:Relationship" 
     use="@Id"/>
   <xsl:key name="endnotes.xml.rels" 
-    match="/pkg:package/pkg:part[@pkg:name = '/word/_rels/ndnotes.xml.rels']/pkg:xmlData/*/rels:Relationship" 
+    match="/pkg:package/pkg:part[@pkg:name = '/word/_rels/endnotes.xml.rels']/pkg:xmlData/*/rels:Relationship" 
     use="@Id"/>
   <xsl:key name="w:style" 
     match="w:style" 
@@ -71,9 +73,13 @@
     </body>
   </xsl:template>
   <!-- Go through -->
-  <xsl:template match="mc:AlternateContent | mc:Choice | mc:Fallback">
+  <xsl:template match="mc:AlternateContent">
     <xsl:apply-templates select="*"/>
   </xsl:template>
+  <xsl:template match="mc:Choice">
+    <xsl:apply-templates select="*[1]"/>
+  </xsl:template>
+  <xsl:template match="mc:Fallback"/>
   <!-- block -->
   <xsl:template match="w:p">
     <xsl:variable name="w:style" select="key('w:style', w:pPr/w:pStyle/@w:val)"/>
@@ -215,7 +221,7 @@
     <xsl:text>&#10;</xsl:text>
     <lb/>
   </xsl:template>
-  <xsl:template match="w:br[@w:type='page']">
+  <xsl:template match="w:br[@w:type='page' or @w:type='column']">
     <xsl:text>&#10;</xsl:text>
     <pb/>
     <xsl:text>&#10;</xsl:text>
@@ -265,33 +271,59 @@
 </w:pict>
 -->
   <xsl:template match="w:drawing | w:pict">
-    <xsl:text>&#10;</xsl:text>
+    <xsl:if test="not(wp:anchor)">
+      <xsl:text>&#10;</xsl:text>
+    </xsl:if>
     <figure>
+      <xsl:if test="wp:anchor">
+        <xsl:attribute name="place">anchor</xsl:attribute>
+      </xsl:if>
       <xsl:text>&#10;  </xsl:text>
-      <graphic>
-        <xsl:variable name="target">
-          <xsl:choose>
-            <xsl:when test="v:shape/v:imagedata">
+      <xsl:choose>
+        <xsl:when test="v:shape/v:imagedata">
+          <graphic>
+            <xsl:apply-templates select="wp:*/wp:extent"/>
+            <xsl:attribute name="url">
+              <xsl:if test="$file != ''">
+                <xsl:text>zip://</xsl:text>
+                <xsl:value-of select="$file"/>
+                <xsl:text>#</xsl:text>
+              </xsl:if>
               <xsl:call-template name="target">
                 <xsl:with-param name="id" select="v:shape/v:imagedata/@r:id"/>
               </xsl:call-template>
-            </xsl:when>
-            <xsl:when test="wp:inline/a:graphic/a:graphicData/pic:pic/pic:blipFill/a:blip">
+            </xsl:attribute>
+          </graphic>
+        </xsl:when>
+        <xsl:when test="wp:*/a:graphic/a:graphicData/pic:pic/pic:blipFill/a:blip">
+          <graphic>
+            <xsl:apply-templates select="wp:*/wp:extent"/>
+            <xsl:attribute name="url">
+              <xsl:if test="$file != ''">
+                <xsl:text>zip://</xsl:text>
+                <xsl:value-of select="$file"/>
+                <xsl:text>#</xsl:text>
+              </xsl:if>
               <xsl:call-template name="target">
-                <xsl:with-param name="id" select="wp:inline/a:graphic/a:graphicData/pic:pic/pic:blipFill/a:blip/@r:embed"/>
+                <xsl:with-param name="id" select="wp:*/a:graphic/a:graphicData/pic:pic/pic:blipFill/a:blip/@r:embed"/>
               </xsl:call-template>
-            </xsl:when>
-          </xsl:choose>
-        </xsl:variable>
-        <xsl:attribute name="url">
-          <xsl:value-of select="$target"/>
-        </xsl:attribute>
-        <xsl:apply-templates select="wp:inline/wp:extent"/>
-      </graphic>
+            </xsl:attribute>
+          </graphic>
+        </xsl:when>
+        <!-- text box -->
+        <xsl:when test="wp:*/a:graphic/a:graphicData/wps:wsp/wps:txbx/w:txbxContent">
+          <xsl:apply-templates select="wp:*/a:graphic/a:graphicData/wps:wsp/wps:txbx/w:txbxContent/*"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:comment> frame not interpreted </xsl:comment>
+        </xsl:otherwise>
+      </xsl:choose>
       <xsl:apply-templates select="v:shape/v:imagedata/@o:title"/>
       <xsl:text>&#10;</xsl:text>
     </figure>
-    <xsl:text>&#10;</xsl:text>
+    <xsl:if test="not(wp:anchor)">
+      <xsl:text>&#10;</xsl:text>
+    </xsl:if>
   </xsl:template>
 
   <!-- Image size
@@ -306,6 +338,10 @@
       <xsl:value-of select="round(number(@cy) div 36000)"/>
       <xsl:text>mm</xsl:text>
     </xsl:attribute>
+  </xsl:template>
+  
+  <xsl:template match="w:softHyphen">
+    <!-- Nothing to do with that -->
   </xsl:template>
 
   <xsl:template match="v:imagedata/@o:title">
@@ -346,22 +382,19 @@ Seen
         
 -->
     <!-- style tag -->
-    <xsl:variable name="w:rStyle" select="w:rPr/w:rStyle/@w:val"/>
-    <xsl:variable name="w:style" select="key('w:style', $w:rStyle)"/>
+    <xsl:variable name="w:style" select="key('w:style', w:rPr/w:rStyle/@w:val)"/>
     <!-- normalize a style name -->
     <xsl:variable name="style_name">
-      <xsl:if test="$w:rStyle != ''">
-        <xsl:variable name="name" select="normalize-space(translate($w:style/w:name/@w:val, $idfrom, $idto))"/>
-        <xsl:variable name="oddchars" select="translate($name, $idchars, '')"/>
-        <xsl:variable name="id" select="translate($name, $oddchars, '')"/>
-        <xsl:variable name="char1" select="substring($id, 1, 1)"/>
-        <xsl:if test="$char1 != '' and contains('0123456789', $char1)">_</xsl:if>
-        <xsl:value-of select="$id"/>
-      </xsl:if>
+      <xsl:variable name="name" select="normalize-space(translate($w:style/w:name/@w:val, $idfrom, $idto))"/>
+      <xsl:variable name="oddchars" select="translate($name, $idchars, '')"/>
+      <xsl:variable name="id" select="translate($name, $oddchars, '')"/>
+      <xsl:variable name="char1" select="substring($id, 1, 1)"/>
+      <xsl:if test="$char1 != '' and contains('0123456789', $char1)">_</xsl:if>
+      <xsl:value-of select="$id"/>
     </xsl:variable>
     
     
-    <xsl:variable name="teinte_c" select="key('teinte_c', style_name)"/>
+    <xsl:variable name="teinte_c" select="key('teinte_c', $style_name)"/>
     
     <!--
     <xsl:comment>
@@ -588,7 +621,7 @@ Seen
   <xsl:template match="w:sectPr"/>
   <!-- spaces -->
   <xsl:template match="w:tab">
-    <space type="tab">
+    <space rend="tab">
       <xsl:text>    </xsl:text>
     </space>
   </xsl:template>
@@ -707,4 +740,6 @@ Seen
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  <!-- Comments -->
+  <xsl:template match="w:commentReference"/>
 </xsl:transform>

@@ -302,12 +302,14 @@ s#</(bg|color|font|mark)_[^>]+>#</hi>#g
   <xsl:template match="tei:pb[not(text())][not(@n)]">
     <pb>
       <xsl:copy-of select="@*"/>
+      <!-- No auto numbering, is false from life docx
       <xsl:attribute name="n">
         <xsl:variable name="n">
           <xsl:number level="any"/>
         </xsl:variable>
         <xsl:value-of select="$n - 1 + $pb"/>
       </xsl:attribute>
+      -->
     </pb>
   </xsl:template>
   <!-- Notes candidates -->
@@ -516,6 +518,10 @@ s#</(bg|color|font|mark)_[^>]+>#</hi>#g
       <xsl:attribute name="type">dialogue</xsl:attribute>
       <xsl:apply-templates/>
     </list>
+  </xsl:template>
+  <!-- Para empty except a page break -->
+  <xsl:template match="*[count(*) = 1][tei:pb][not(text()[normalize-space(.) != ''])]">
+    <xsl:apply-templates/>
   </xsl:template>
   <!-- tag page number in index item -->
   <xsl:template match="tei:div[@type='index']">

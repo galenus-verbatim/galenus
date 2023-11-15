@@ -35,12 +35,16 @@ if (
 
 
 $docx = new Docx();
-$docx->load($docx_file);
-$docx->tei();
+$docx->open($docx_file);
+$docx->teiMake();
+
+// for debug
+// file_put_contents($html_file . ".xml", $docx->teiXML()); 
+
 $xsl_file = Xpack::dir() . 'tei_html_article.xsl';
 Xt::transformToUri(
     $xsl_file,
-    $docx->teiDoc(),
+    $docx->teiDOM(),
     $html_file
 );
 return false;

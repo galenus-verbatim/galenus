@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:transform version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="tei">
+<xsl:transform version="1.0" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  
+  
+  xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"
+  xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"
+  xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+  xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+  xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+  xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape"
+  
+  xmlns:tei="http://www.tei-c.org/ns/1.0" exclude-result-prefixes="tei">
   <xsl:import href="../tei_common.xsl"/>
   <xsl:param name="libreO"/>
   <xsl:param name="templPath"/>
@@ -492,6 +503,9 @@ ancestor::tei:p or ancestor::tei:l or parent::tei:cell
             <xsl:when test="self::tei:p and parent::tei:quote">quote</xsl:when>
             <xsl:when test="self::tei:p and parent::tei:sp">sp</xsl:when>
             <xsl:when test="self::tei:label and @type='head'">subhead</xsl:when>
+            <xsl:when test="self::tei:p and @type">
+              <xsl:value-of select="@type"/>
+            </xsl:when>
             <xsl:otherwise>
               <xsl:value-of select="local-name()"/>
             </xsl:otherwise>
@@ -542,7 +556,50 @@ ancestor::tei:p or ancestor::tei:l or parent::tei:cell
       </xsl:call-template>
     </w:p>
   </xsl:template>
+  
+  <xsl:template match="tei:figure">
+    <xsl:choose>
+      <xsl:when test="parent::tei:back | parent::tei:body | parent::tei:div | parent::tei:div1 | parent::tei:div2 | parent::tei:div3 | parent::tei:div4 | parent::tei:div5 | parent::tei:div6 | parent::tei:div7 | parent::tei:div8 | parent::tei:div9 | tei:front">
+        <w:p>
+          <xsl:apply-templates/>
+        </w:p>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:apply-templates/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
 
+  <xsl:template match="tei:graphic">
+    <w:r>
+      <w:drawing>
+        <wp:inline>
+          <!--
+          <wp:extent cx="1040130" cy="1040130"/>
+          -->
+          <a:graphic>
+            <a:graphicData>
+              <pic:pic>
+                <pic:blipFill>
+                  <a:blip>
+                    <xsl:attribute name="r:embed">
+                      <xsl:call-template name="id"/>
+                    </xsl:attribute>
+                  </a:blip>
+                  <!--
+                  <a:stretch>
+                    <a:fillRect/>
+                  </a:stretch>
+                  -->
+                </pic:blipFill>
+              </pic:pic>
+            </a:graphicData>
+          </a:graphic>
+        </wp:inline>
+      </w:drawing>
+    </w:r>
+  </xsl:template>
+  
   <xsl:template match="tei:entry">
     <xsl:value-of select="$lf"/>
     <w:p/>
@@ -875,7 +932,7 @@ ancestor::tei:p or ancestor::tei:l or parent::tei:cell
             <xsl:when test="@xml:id">
               <xsl:value-of select="@xml:id"/>
             </xsl:when>
-            <xsl:otherwise>p. ???</xsl:otherwise>
+            <xsl:otherwise>p. ###</xsl:otherwise>
           </xsl:choose>
           <xsl:text>]</xsl:text>
         </w:t>

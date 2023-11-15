@@ -170,12 +170,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oeuvres/kit.git",
-                "reference": "bec5eedfd6c1315560da8fd4bd9aecd597f43642"
+                "reference": "08b0a4dfa4829d6429b76832e3b51c17030d58cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oeuvres/kit/zipball/bec5eedfd6c1315560da8fd4bd9aecd597f43642",
-                "reference": "bec5eedfd6c1315560da8fd4bd9aecd597f43642",
+                "url": "https://api.github.com/repos/oeuvres/kit/zipball/08b0a4dfa4829d6429b76832e3b51c17030d58cf",
+                "reference": "08b0a4dfa4829d6429b76832e3b51c17030d58cf",
                 "shasum": ""
             },
             "require": {
@@ -221,7 +221,7 @@
                 "issues": "https://github.com/oeuvres/kit/issues",
                 "source": "https://github.com/oeuvres/kit/tree/main"
             },
-            "time": "2023-10-25T18:11:58+00:00"
+            "time": "2023-10-31T14:02:30+00:00"
         },
         {
             "name": "oeuvres/teinte",
@@ -229,12 +229,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oeuvres/teinte_php.git",
-                "reference": "e710668e11631331fe3043cd3603e9792b9c332f"
+                "reference": "15448ae054f007211fff406597098c4a7090e44a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oeuvres/teinte_php/zipball/e710668e11631331fe3043cd3603e9792b9c332f",
-                "reference": "e710668e11631331fe3043cd3603e9792b9c332f",
+                "url": "https://api.github.com/repos/oeuvres/teinte_php/zipball/15448ae054f007211fff406597098c4a7090e44a",
+                "reference": "15448ae054f007211fff406597098c4a7090e44a",
                 "shasum": ""
             },
             "require": {
@@ -272,7 +272,7 @@
                 "issues": "https://github.com/oeuvres/teinte_php/issues",
                 "source": "https://github.com/oeuvres/teinte_php/tree/main"
             },
-            "time": "2023-10-22T17:10:47+00:00"
+            "time": "2023-11-06T10:46:03+00:00"
         },
         {
             "name": "oeuvres/xsl",
@@ -280,12 +280,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/oeuvres/teinte_xsl.git",
-                "reference": "e2cd34767cdd2a80dfc7784bb76d11431bafba5c"
+                "reference": "c0cb1b80cac7d92cc4322701719439319fc8af0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oeuvres/teinte_xsl/zipball/e2cd34767cdd2a80dfc7784bb76d11431bafba5c",
-                "reference": "e2cd34767cdd2a80dfc7784bb76d11431bafba5c",
+                "url": "https://api.github.com/repos/oeuvres/teinte_xsl/zipball/c0cb1b80cac7d92cc4322701719439319fc8af0d",
+                "reference": "c0cb1b80cac7d92cc4322701719439319fc8af0d",
                 "shasum": ""
             },
             "default-branch": true,
@@ -310,7 +310,7 @@
                 "issues": "https://github.com/oeuvres/teinte_xsl/issues",
                 "source": "https://github.com/oeuvres/teinte_xsl/tree/main"
             },
-            "time": "2023-10-21T22:43:45+00:00"
+            "time": "2023-11-15T21:17:26+00:00"
         },
         {
             "name": "psr/log",
