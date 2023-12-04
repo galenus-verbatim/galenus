@@ -323,7 +323,11 @@
         "bale": "4",
         "chartier": "6"
     },
-    "urn:cts:greekLit:tlg0057.tlg038.1st1K-grc1": {
+       "urn:cts:greekLit:tlg0057.tlg037.verbatim-grc1": {
+        "bale": "4",
+        "chartier": "6"
+    },
+	"urn:cts:greekLit:tlg0057.tlg038.1st1K-grc1": {
         "bale": "3",
         "chartier": "6"
     },
