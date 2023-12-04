@@ -489,7 +489,11 @@
         "bale": "2",
         "chartier": "13"
     },
-    "urn:cts:greekLit:tlg0057.tlg082.1st1K-grc1": {
+	"urn:cts:greekLit:tlg0057.tlg079.1st1K-grc1": {
+        "bale": "2",
+        "chartier": "13"
+    },
+	"urn:cts:greekLit:tlg0057.tlg082.1st1K-grc1": {
         "bale": "4",
         "chartier": "2"
     },
@@ -569,10 +573,6 @@
     "urn:cts:greekLit:tlg0530.tlg043.1st1K-grc1": {
         "bale": "1",
         "chartier": "2"
-    },
-    "urn:cts:greekLit:tlg0057.tlg079.1st1K-grc1": {
-        "bale": "2",
-        "chartier": "13"
     },
     "urn:cts:greekLit:tlg0530.tlg032.1st1K-grc1": {
         "bale": "2",
