@@ -566,7 +566,11 @@
         "bale": "5",
         "chartier": "12"
     },
-    "urn:cts:greekLit:tlg0057.tlg114.1st1K-grc1": {
+        "urn:cts:greekLit:tlg0057.tlg104.1st1K-grc1": {
+        "bale": "4",
+        "chartier": "1"
+    },
+	"urn:cts:greekLit:tlg0057.tlg114.1st1K-grc1": {
         "bale": "1",
         "chartier": "5"
     },
