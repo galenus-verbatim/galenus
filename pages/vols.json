@@ -644,6 +644,10 @@
 	"urn:cts:greekLit:tlg0530.tlg037.1st1K-grc1": {
         "chartier": "11"
     },
+	"urn:cts:greekLit:tlg0530.tlg041.1st1K-grc1": {
+        "bale": "5",
+        "chartier": "2"
+    },
 	"urn:cts:greekLit:tlg0530.tlg043.1st1K-grc1": {
         "bale": "1",
         "chartier": "2"
