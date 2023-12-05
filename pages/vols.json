@@ -590,22 +590,26 @@
         "bale": "3",
         "chartier": "8"
     },
-	"urn:cts:greekLit:tlg0530.tlg043.1st1K-grc1": {
-        "bale": "1",
-        "chartier": "2"
+        "urn:cts:greekLit:tlg0530.tlg002.1st1K-grc1": {
+        "bale": "4",
+        "chartier": "5"
     },
-    "urn:cts:greekLit:tlg0530.tlg032.1st1K-grc1": {
-        "bale": "2",
+    	"urn:cts:greekLit:tlg0530.tlg005.1st1K-grc1": {
         "chartier": "12"
     },
-    "urn:cts:greekLit:tlg0530.tlg029.1st1K-grc1": {
-        "chartier": "10"
-    },
-    "urn:cts:greekLit:tlg0530.tlg012.1st1K-grc1": {
+        "urn:cts:greekLit:tlg0530.tlg012.1st1K-grc1": {
         "bale": "4",
         "chartier": "2"
     },
-    "urn:cts:greekLit:tlg0530.tlg005.1st1K-grc1": {
+	"urn:cts:greekLit:tlg0530.tlg029.1st1K-grc1": {
+        "chartier": "10"
+    },
+	"urn:cts:greekLit:tlg0530.tlg032.1st1K-grc1": {
+        "bale": "2",
         "chartier": "12"
-    }
+    },
+	"urn:cts:greekLit:tlg0530.tlg043.1st1K-grc1": {
+        "bale": "1",
+        "chartier": "2"
+        }
 }
